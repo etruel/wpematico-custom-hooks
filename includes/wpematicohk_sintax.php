@@ -1,0 +1,22 @@
+<?php
+add_action( 'wp_ajax_wpematicohk_sintax', 'wpematicohk_sintax_callback' );
+
+function wpematicohk_sintax_callback(){
+		check_ajax_referer('wpematicohk_nonce');
+		for($i=0; $i<count($_POST['wpematicohk_options_action_filters']);$i++){
+			$wpematicohk_all_function_filters = explode(',',$_POST['wpematicohk_functions_action_filter'][$i]);
+			for($j=0; $j<count($wpematicohk_all_function_filters);$j++){
+				if($_POST['wpematicohk_type_hook']!='filter'){
+				 	add_action($_POST['wpematicohk_options_action_filters'][$i],$wpematicohk_all_function_filters[$j],10,$_POST['wpematicohk_functions_parameters'][$i]);
+				}else{
+					add_filter($_POST['wpematicohk_options_action_filters'][$i],$wpematicohk_all_function_filters[$j],10,$_POST['wpematicohk_functions_parameters'][$i]);
+				}
+			}
+			$code = str_replace('\\','',$_POST['wpematicohk_options_functions'][$i]);
+			//code analizer
+			echo $code;
+		}
+		wp_die();
+}
+
+
