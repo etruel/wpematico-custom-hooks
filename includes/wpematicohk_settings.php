@@ -46,8 +46,12 @@ function wpematicohk_options_callback($post){
 add_filter('wpematico_settings_tabs','wpematicohk_new_tab',10,1);
 function wpematicohk_new_tab($tabs)
 {
-	$tabs['wpematico_hooks'] = __( 'Hooks', 'wpematico_hooks' );
-	return $tabs;
+
+	if(current_user_can('edit_plugins')==1){
+		$tabs['wpematico_hooks'] = __( 'Hooks', 'wpematico_hooks' );
+	}
+		return $tabs;
+	
 }
 
 add_action('wpematico_settings_tab_wpematico_hooks','wpematico_custom_hooks_page');
@@ -63,7 +67,8 @@ function wpematico_custom_hooks_page()
 			'value'=>'wp_head',
 			'parameters'=>0,
 			'template_parameter'=>'',
-			'type'=>'action'
+			'type'=>'action',
+			'description'=>'Example Description wphead'
 			
 		),
 		'hooks1'=>array(
@@ -71,14 +76,16 @@ function wpematico_custom_hooks_page()
 			'value'=>'wpematico_newimgname',
 			'parameters'=>0,
 			'template_parameter'=>'$imagen_src_real, $current_item, $campaign, $item',
-			'type'=>'filter'
+			'type'=>'filter',
+			'description'=>'Example Description newimgname'
 			
 		),
 		'hooks2'=>array(
 			'name'=>'wpematico overwrite file',
 			'value'=>'wpematico_overwrite_file',
 			'parameters'=>0,
-			'type'=>'filter'
+			'type'=>'filter',
+			'description'=>'Example Description overwrite file'
 
 		),
 		'hooks3'=>array(
@@ -86,7 +93,8 @@ function wpematico_custom_hooks_page()
 			'value'=>'wpematico_yt_altimg',
 			'parameters'=>1,
 			'template_parameter'=>'$enclosure_title',
-			'type'=>'filter'
+			'type'=>'filter',
+			'description'=> 'Example Description altimg'
 
 		),
 		'hooks4'=>array(
@@ -94,7 +102,8 @@ function wpematico_custom_hooks_page()
 			'value'=>'wpematico_yt_thumbnails',
 			'parameters'=>1,
 			'template_parameter'=>'$enclosure_thumbnails',
-			'type'=>'filter'
+			'type'=>'filter',
+			'description'=>'Example Description thumbnails'
 
 		),
 		'hooks5'=>array(
@@ -102,7 +111,8 @@ function wpematico_custom_hooks_page()
 			'value'=>'wpematico_yt_description',
 			'parameters'=>1,
 			'template_parameter'=>'$enclosure_description',
-			'type'=>'filter'
+			'type'=>'filter',
+			'description'=>'Example Description Enclosure'
 
 		),
 		'hooks6'=>array(
@@ -110,70 +120,113 @@ function wpematico_custom_hooks_page()
 			'value'=>'wpematico_get_post_content_feed',
 			'parameters'=>4,
 			'template_parameter'=>'$content,$campaign,$feed,$item',
-			'type'=>'filter'
+			'type'=>'filter',
+			'description'=>'Example Description Get content feed'
 		),
 		'hooks7'=>array(
 			'name'=>'wpematico excludes',
 			'value'=>'wpematico_excludes',
 			'parameters'=>4,
 			'template_parameter'=>'$skip,$current_item,$campaign,$item',
-			'type'=>'filter'
+			'type'=>'filter',
+			'description'=> 'Example Description'
 		),
 		'hooks8'=>array(
 			'name'=>'wpematico item parsers',
 			'value'=>'wpematico_item_parsers',
 			'parameters'=>4,
 			'template_parameter'=>'$current_item, $campaign, $feed, $item',
-			'type'=>'filter'
+			'type'=>'filter',
+			'description'=>'Example Description wphead'
 		),
 		'hooks9'=>array(
 			'name'=>'wpem dont strip tags',
 			'value'=>'wpem_dont_strip_tags',
 			'parameters'=>0,
-			'type'=>'filter'
+			'type'=>'filter',
+			'description'=>'Example Description wphead'
 		),
 		'hooks10'=>array(
 			'name'=>'wpematico post template tag',
 			'value'=>'wpematico_post_template_tag',
 			'parameters'=>5,
 			'template_parameter'=>'$vars, $current_item, $campaign, $feed, $item',
-			'type'=>'filter'
+			'type'=>'filter',
+			'description'=>'Example Description wphead'
 		),
 		'hooks11'=>array(
 			'name'=>'wpematico post template replace',
 			'value'=>'wpematico_post_template_replace',
 			'parameters'=>5,
 			'template_parameter'=>'$replace, $current_item, $campaign, $feed, $item',
-			'type'=>'filter'
+			'type'=>'filter',
+			'description'=>'Example Description wphead'
 		),
 		'hooks12'=>array(
 			'name'=>'wpematico after item parsers',
 			'value'=>'wpematico_after_item_parsers',
 			'parameters'=>4,
 			'template_parameter'=>'$current_item, $campaign, $feed, $item',
-			'type'=>'filter'
+			'type'=>'filter',
+			'description'=>'Example Description wphead'
 		),
 		'hooks13'=>array(
 			'name'=>'wpematico add template vars',
 			'value'=>'wpematico_add_template_vars',
 			'parameters'=>5,
 			'template_parameter'=>'$vars, $current_item, $campaign, $feed, $item',
-			'type'=>'filter'
+			'type'=>'filter',
+			'description'=>'Example Description wphead'
 		),
 		'hooks14'=>array(
 			'name'=>'wpematico pretags',
 			'value'=>'wpematico_pretags',
 			'parameters'=>3,
 			'template_parameter'=>'$current_item, $item, $cfg',
-			'type'=>'filter'
+			'type'=>'filter',
+			'description'=>'Example Description wphead'
 		),
 		'hooks15'=>array(
 			'name'=>'wpematico postags',
 			'value'=>'wpematico_postags',
 			'parameters'=>5,
 			'template_parameter'=>'$current_item, $item, $cfg',
-			'type'=>'filter'
+			'type'=>'filter',
+			'description'=>'Example Description wphead'
+		),
+		'hooks16'=>array(
+			'name'=>'wpepro full permalink',
+			'value'=>'wpepro_full_permalink',
+			'parameters'=>1,
+			'template_parameter'=>'$permalink',
+			'type'=>'filter',
+			'description'=>'Description Full Permanlink'
+		),
+		'hooks17'=>array(
+			'name'=>'wpematico img src url',
+			'value'=>'wpematico_img_src_url',
+			'parameters'=>1,
+			'template_parameter'=>'$imagen_src_real',
+			'type'=>'filter',
+			'description'=>'Description imagen src real'
+		),
+		'hooks18'=>array(
+			'name'=>'wpematico allowext',
+			'value'=>'wpematico_allowext',
+			'parameters'=>1,
+			'template_parameter'=>'$allowed',
+			'type'=>'filter',
+			'description'=>'Description allowed'
+		),
+		'hooks19'=>array(
+			'name'=>'wpematico post template tags',
+			'value'=>'wpematico_post_template_tags',
+			'parameters'=>5,
+			'template_parameter'=>'$vars, $current_item, $campaign, $feed, $item',
+			'type'=>'filter',
+			'description'=>'Description wpematico post template tags'
 		)
+	
 
 	);
 
@@ -224,6 +277,7 @@ function wpematico_custom_hooks_page()
 						<?php $i=0; foreach ($wpematicohk_data_filter_action as $key_hooks) { ?>
 						<div  class="postbox wpematicohk_dinamic_metabox wpematicohk_dinamic_chaplain <?php echo $key_hooks['value']; ?>">
 							<h3 class="hndle" style="font-size:20px;"><span><?php _e(''.$key_hooks["name"].'', 'wpematico_hooks' ); ?></span></h3>
+							<p style="padding-left:10px;"><?php _e(''.$key_hooks["description"].'', 'wpematico_hooks' ); ?></p>
 							<div class="inside">
 								<input type="hidden" class="wpematicohk_options_action_filters" name="wpematicohk_options_action_filters[]" value="<?php echo $key_hooks["value"]; ?>">
 								<input type="hidden" class="wpematicohk_functions_parameters" name="wpematicohk_functions_parameters[]" value="<?php echo isset($key_hooks["parameters"]) ? $key_hooks["parameters"] : 0; ?>">
