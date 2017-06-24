@@ -1,6 +1,27 @@
 <?php
 add_action( 'wp_ajax_wpematicohk_sintax', 'wpematicohk_sintax_callback' );
 
+function wpematicohk_apisintax($mycode){
+	$curl = curl_init();
+	curl_setopt_array($curl, array(
+	  CURLOPT_URL => "http://phpcodechecker.com/api/?code=".$mycode."",
+	  CURLOPT_RETURNTRANSFER => true,
+	  CURLOPT_TIMEOUT => 30,
+	  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+	  CURLOPT_CUSTOMREQUEST => "GET",
+	  CURLOPT_HTTPHEADER => array(
+	    "cache-control: no-cache"
+	  ),
+	));
+
+	$response = curl_exec($curl);
+	$err = curl_error($curl);
+	curl_close($curl);
+	$response = json_decode($response, true);
+	print_r($response);
+
+}
+
 function wpematicohk_sintax_callback(){
 		check_ajax_referer('wpematicohk_nonce');
 		for($i=0; $i<count($_POST['wpematicohk_options_action_filters']);$i++){
@@ -15,7 +36,7 @@ function wpematicohk_sintax_callback(){
 				}
 				$code = str_replace('\\','',$_POST['wpematicohk_options_functions'][$i]);
 				//code analizer
-				echo $code;
+				//wpematicohk_apisintax($code);
 			}
 		}
 		wp_die();

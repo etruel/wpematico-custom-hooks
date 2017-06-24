@@ -48,7 +48,7 @@ function wpematicohk_new_tab($tabs)
 {
 
 	if(current_user_can('edit_plugins')==1){
-		$tabs['wpematico_hooks'] = __( 'Hooks', 'wpematico_hooks' );
+		$tabs['wpematico_hooks'] = __( 'Hooks', 'wpematico_custom-hooks' );
 	}
 		return $tabs;
 	
@@ -238,34 +238,34 @@ function wpematico_custom_hooks_page()
 	<input type="hidden" name="action" value="wpematicohk_options">
 	<input type="hidden" name="_wpnonce" value="<?php echo $wpematicohk_admin_nonce; ?>">
 	<div class="wrap2">
-		<h2><?php _e( 'WPeMatico Custom Hooks', 'wpematico_hooks' );?></h2>
+		<h2><?php _e( 'WPeMatico Custom Hooks', 'wpematico_custom-hooks' );?></h2>
 		<div id="poststuff" class="metabox-holder has-right-sidebar">
 			<div id="side-info-column" class="inner-sidebar">
 				<div id="side-sortables" class="meta-box-sortables ui-sortable">
 					<div class="postbox inside">
-						<h3 class="handle"><?php _e( 'WPeMatico Hooks', 'wpematico_hooks' );?></h3>
+						<h3 class="handle"><?php _e( 'WPeMatico Hooks', 'wpematico_custom-hooks' );?></h3>
 						<div class="inside">
-							<p><?php _e('In this section we can put some example description to test','wpematico_hooks'); ?></p>
+							<p><?php _e('In this section we can put some example description to test','wpematico_custom-hooks'); ?></p>
 							<br>
-							<p><strong><?php _e('Select theme for the editor','wpematico_hooks'); ?></strong></p>
+							<p><strong><?php _e('Select theme for the editor','wpematico_custom-hooks'); ?></strong></p>
 							<select id="wpematicohk_themes_selection_editor" name="wpematicohk_theme_editor"> 
-								<option value=""><?php _e('Colors Scheme','wpematico_hooks'); ?></option>
+								<option value=""><?php _e('Colors Scheme','wpematico_custom-hooks'); ?></option>
 										<option value="monokai" <?php selected('monokai', $wpematicohk_theme_editor, true) ?>>Monokai</option>
 										<option value="blackboard" <?php selected('blackboard', $wpematicohk_theme_editor, true) ?>>Blackboard</option>
 										<option value="cobalt" <?php selected('cobalt', $wpematicohk_theme_editor, true) ?>>Cobalt</option>
 							</select>
 							<br>
-							<p><strong><?php _e('Select the hooks','wpematico_hooks'); ?></strong></p>
+							<p><strong><?php _e('Select the hooks','wpematico_custom-hooks'); ?></strong></p>
 							<select class="wpematicohk_select_actions_filters">
-								<option value=""><?php _e('All Hooks','wpematico_hooks'); ?></option>
+								<option value=""><?php _e('All Hooks','wpematico_custom-hooks'); ?></option>
 								<?php foreach ($wpematicohk_data_filter_action as $key_hooks) { ?>
 									<option tagtemplateparameter='<?php echo isset($key_hooks["template_parameter"]) ? $key_hooks["template_parameter"]: ""; ?>' tagparameters='<?php echo $key_hooks['parameters'] ?>' value="<?php echo $key_hooks['value']; ?>"><?php echo $key_hooks['name']; ?></option>
 								<?php }  ?>
 							</select>
 							<br>
 							<br>
-							<input type="button"  class="button button-primary wpematicohk_button_addfunctions" value="<?php _e('Add Functions','wpematico_hooks'); ?>">
-							<?php submit_button( __( 'Save Data', 'wpematico_hooks' ), 'primary', 'wpematicohk_save_settings', false ); ?>
+							<input type="button"  class="button button-primary wpematicohk_button_addfunctions" value="<?php _e('Add Functions','wpematico_custom-hooks'); ?>">
+							<?php submit_button( __( 'Save Data', 'wpematico_custom-hooks' ), 'primary', 'wpematicohk_save_settings', false ); ?>
 						</div>
 					</div>
 				</div>
@@ -276,8 +276,8 @@ function wpematico_custom_hooks_page()
 				<div id="normal-sortables" class="meta-box-sortables ui-sortable">
 						<?php $i=0; foreach ($wpematicohk_data_filter_action as $key_hooks) { ?>
 						<div  class="postbox wpematicohk_dinamic_metabox wpematicohk_dinamic_chaplain <?php echo $key_hooks['value']; ?>">
-							<h3 class="hndle" style="font-size:20px;"><span><?php _e(''.$key_hooks["name"].'', 'wpematico_hooks' ); ?></span></h3>
-							<p style="padding-left:10px;"><?php _e(''.$key_hooks["description"].'', 'wpematico_hooks' ); ?></p>
+							<h3 class="hndle" style="font-size:20px;"><span><?php _e(''.$key_hooks["name"].'', 'wpematico_custom-hooks' ); ?></span></h3>
+							<p style="padding-left:10px;"><?php _e(''.$key_hooks["description"].'', 'wpematico_custom-hooks' ); ?></p>
 							<div class="inside">
 								<input type="hidden" class="wpematicohk_options_action_filters" name="wpematicohk_options_action_filters[]" value="<?php echo $key_hooks["value"]; ?>">
 								<input type="hidden" class="wpematicohk_functions_parameters" name="wpematicohk_functions_parameters[]" value="<?php echo isset($key_hooks["parameters"]) ? $key_hooks["parameters"] : 0; ?>">
@@ -320,10 +320,9 @@ function wpematico_custom_hooks_page()
 				idtemp = $(this).attr("id");
 				wpematicohk_codemirror_line_function(idtemp);
 
-
 			});
 			wpematicohk_run_sintax();
-			//return false;
+			return false;
 		});
 
 		$(document).on('change','.wpematicohk_select_actions_filters',function(){

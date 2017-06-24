@@ -150,7 +150,7 @@ if( !class_exists( 'wpematicohk' ) ) {
             $lang_dir = apply_filters( 'wpematicohk_languages_directory', $lang_dir );
 
             // Traditional WordPress plugin locale filter
-            $locale = apply_filters( 'plugin_locale', get_locale(), 'wpematicohk' );
+            $locale = apply_filters( 'plugin_locale', get_locale(), 'wpematico_custom-hooks' );
             $mofile = sprintf( '%1$s-%2$s.mo', 'wpematicohk', $locale );
 
             // Setup paths to current locale file
@@ -182,8 +182,8 @@ if( !class_exists( 'wpematicohk' ) ) {
             $new_settings = array(
                 array(
                     'id'    => 'wpematicohk_settings',
-                    'name'  => '<strong>' . __( 'Plugin Name Settings', 'wpematicohk' ) . '</strong>',
-                    'desc'  => __( 'Configure Plugin Name Settings', 'wpematicohk' ),
+                    'name'  => '<strong>' . __( 'Plugin Name Settings', 'wpematico_custom-hooks' ) . '</strong>',
+                    'desc'  => __( 'Configure Plugin Name Settings', 'wpematico_custom-hooks' ),
                     'type'  => 'header',
                 )
             );
