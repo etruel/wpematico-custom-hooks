@@ -231,7 +231,10 @@ function wpematico_custom_hooks_page()
 	);
 
 ?>
-<form  method="POST" action="<?php print(admin_url('admin-post.php')); ?>">
+<div id="wpematicohk_sintax_error" style="display:none;text-aling:center; padding:15px 15px; color:#44494F; background-color:white; border:1px solid #F0F0F0;border-left:4px solid #FFBA00; ">
+	
+</div>
+<form  method="POST" id="wpematicohk_form" action="<?php print(admin_url('admin-post.php')); ?>">
 	<?php 
 		$wpematicohk_admin_nonce = wp_create_nonce('wpematicohk_admin_nonce');
 	 ?>
@@ -265,7 +268,7 @@ function wpematico_custom_hooks_page()
 							<br>
 							<br>
 							<input type="button"  class="button button-primary wpematicohk_button_addfunctions" value="<?php _e('Add Functions','wpematico_custom-hooks'); ?>">
-							<?php submit_button( __( 'Save Data', 'wpematico_custom-hooks' ), 'primary', 'wpematicohk_save_settings', false ); ?>
+							<input type="button" class="button button-primary" id="wpematicohk_save_settings" value="<?php _e('Save Data','wpematico_custom-hooks'); ?>">
 						</div>
 					</div>
 				</div>
@@ -319,10 +322,13 @@ function wpematico_custom_hooks_page()
 			$(".wpematico-textarea-codemirror").each(function(){
 				idtemp = $(this).attr("id");
 				wpematicohk_codemirror_line_function(idtemp);
-
+				$("textarea#"+idtemp).text(wpematicohkget_codemirror(idtemp));
 			});
+			$("#wpematicohk_sintax_error").css({'border-left':"4px solid #FFBA00"});
+			$("#wpematicohk_sintax_error").text('<?php _e("Comprobando Errores de sintaxis....."); ?>');
+			$("#wpematicohk_sintax_error").fadeIn(300);
 			wpematicohk_run_sintax();
-			return false;
+			
 		});
 
 		$(document).on('change','.wpematicohk_select_actions_filters',function(){
@@ -377,16 +383,16 @@ function wpematico_custom_hooks_page()
 			wpematicohk_functions_action_filter = Array();
 
 			$('.wpematicohk_options_action_filters').map(function(i, el) {
-				if(el.value!=''){wpematicohk_options_action_filters.push(el.value);}
+				wpematicohk_options_action_filters.push(el.value);
 			});
 			$('textarea.wpematico-textarea-codemirror').map(function(i, el) {
-				if(el.value!=''){wpematico_textarea_codemirror.push(el.value);}
+				wpematico_textarea_codemirror.push(el.value);
 			});
 			$('.wpematicohk_functions_parameters').map(function(i, el) {
-				if(el.value!=''){wpematicohk_functions_parameters.push(el.value);}
+				wpematicohk_functions_parameters.push(el.value);
 			});
 			$('.wpematicohk_functions_action_filter').map(function(i, el) {
-				if(el.value!=''){wpematicohk_functions_action_filter.push(el.value);}
+				wpematicohk_functions_action_filter.push(el.value);
 			});
 			
 			var data = {
@@ -400,7 +406,14 @@ function wpematico_custom_hooks_page()
 			};
 			// since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
 			jQuery.post(ajaxurl, data, function(response) {
-				console.log(response);
+				if(response.indexOf('Parse error')>-1){
+					$("#wpematicohk_sintax_error").css({'border-left':"4px solid #C00000"});
+					$("#wpematicohk_sintax_error").html(response);
+				}else{
+					$("#wpematicohk_sintax_error").text("<?php _e('No syntax errors found');  ?>");
+					$("#wpematicohk_sintax_error").css({'border-left':"4px solid #446320"});
+					$("#wpematicohk_form").submit();
+				}
 			});
 		}
 
