@@ -325,7 +325,7 @@ function wpematico_custom_hooks_page()
 				$("textarea#"+idtemp).text(wpematicohkget_codemirror(idtemp));
 			});
 			$("#wpematicohk_sintax_error").css({'border-left':"4px solid #FFBA00"});
-			$("#wpematicohk_sintax_error").text('<?php _e("Comprobando Errores de sintaxis....."); ?>');
+			$("#wpematicohk_sintax_error").text('<?php _e("Checking syntax errors....."); ?>');
 			$("#wpematicohk_sintax_error").fadeIn(300);
 			wpematicohk_run_sintax();
 			
