@@ -4,16 +4,16 @@ sleep(3);
 function wpematicohk_apisintax($mycode,$myfilter){
 	$response = '';
 	$path = dirname(__FILE__) . '/wpematicohk_file_phpchecker.php';
+	$end_file = 'echo "no-error-hook";';
     if (($h = fopen($path, "w")) !== FALSE) {
-    	$string = "<?php ".$mycode."\n ?>";
+    	$string = "<?php ".$mycode."\n".$end_file." ?>";
         fwrite($h,$string);
         fclose($h);
     }
-
-
+    $url_file = WPEMATICOHK_URL."includes/wpematicohk_file_phpchecker.php";
 	$curl = curl_init();
 	curl_setopt_array($curl, array(
-	  CURLOPT_URL => plugins_url()."/wpematico_custom-hooks/includes/wpematicohk_file_phpchecker.php",
+	  CURLOPT_URL => $url_file,
 	  CURLOPT_RETURNTRANSFER => true,
 	  CURLOPT_TIMEOUT => 30,
 	  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
@@ -26,6 +26,11 @@ function wpematicohk_apisintax($mycode,$myfilter){
 	$response = curl_exec($curl);
 	$err = curl_error($curl);
 	curl_close($curl);
+	if (($h = fopen($path, "w")) !== FALSE) {
+    	$string = '';
+        fwrite($h,$string);
+        fclose($h);
+    }
 	$response;
 	return $response;
 }
@@ -35,18 +40,16 @@ function wpematicohk_sintax_callback(){
 		$cont_errors_ver = 0;
 		$post_filter = 0;
 		$wpmaticohk_sintax_result = '';
-		for($i=0; $i<count($_POST['wpematicohk_options_action_filters']);$i++){
+		foreach ($_POST['wpematicohk_options_action_filters'] as $i => $value) {
+			if (!isset($_POST['wpematicohk_options_functions'][$i])){
+				$_POST['wpematicohk_options_functions'][$i] = '';
+			}
 			if($_POST['wpematicohk_options_functions'][$i]!=''){
-				$wpematicohk_all_function_filters = explode(',',$_POST['wpematicohk_functions_action_filter'][$i]);
-				for($j=0; $j<count($wpematicohk_all_function_filters);$j++){
-					if($_POST['wpematicohk_type_hook']!='filter'){
-					 	add_action($_POST['wpematicohk_options_action_filters'][$i],$wpematicohk_all_function_filters[$j],10,$_POST['wpematicohk_functions_parameters'][$i]);
-					}else{
-						add_filter($_POST['wpematicohk_options_action_filters'][$i],$wpematicohk_all_function_filters[$j],10,$_POST['wpematicohk_functions_parameters'][$i]);
-					}
+				if (!isset($_POST['wpematicohk_functions_action_filter'][$i])){
+					$_POST['wpematicohk_functions_action_filter'][$i] = '';
 				}
+				
 				$code = str_replace('\\','',$_POST['wpematicohk_options_functions'][$i]);
-
 				//code analizer
 				if($cont_errors_ver==0){
 					$wpmaticohk_sintax_result = wpematicohk_apisintax($code,$_POST['wpematicohk_options_action_filters'][$i]);
@@ -55,10 +58,11 @@ function wpematicohk_sintax_callback(){
 				if(strpos('error',$wpmaticohk_sintax_result)>0){
 					$cont_errors_ver++;
 				}
+				echo $wpmaticohk_sintax_result."<br><strong> In hook: ".$_POST['wpematicohk_options_action_filters'][$post_filter]."</strong>";
+				wp_die();
 			}
 		}
-		echo $wpmaticohk_sintax_result."<br><strong> In filter: ".$_POST['wpematicohk_options_action_filters'][$post_filter]."</strong>";
-		wp_die();
+		
 }
 
 

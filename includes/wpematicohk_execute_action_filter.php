@@ -1,6 +1,6 @@
 <?php
-		if(!isset($_GET['tab'])){
-			if(!isset($_POST['action'])){
+		if(!isset($_REQUEST['tab'])){
+			if(!isset($_REQUEST['action'])){
 				$wpematicohk_options = get_option('wpematicohk_datahooks');
 				for($i=0; $i<count($wpematicohk_options['wpematicohk_options_action_filters']);$i++){
 					if($wpematicohk_options['wpematicohk_options_functions'][$i]!=''){
