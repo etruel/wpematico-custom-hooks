@@ -47,16 +47,19 @@ add_filter('wpematico_settings_tabs','wpematicohk_new_tab',10,1);
 function wpematicohk_new_tab($tabs)
 {
 
-	if(current_user_can('edit_plugins')==1){
+	if(current_user_can('edit_plugins') || current_user_can('edit_themes')){
 		$tabs['wpematico_hooks'] = __( 'Hooks', 'wpematico_custom-hooks' );
 	}
-		return $tabs;
+	return $tabs;
 	
 }
 
 add_action('wpematico_settings_tab_wpematico_hooks','wpematico_custom_hooks_page');
 function wpematico_custom_hooks_page()
 {
+	if(!current_user_can('edit_plugins') && !current_user_can('edit_themes')){
+		wp_die(__( 'Security check.', 'wpematico_custom-hooks' ));
+	}
 	$wpematicohk_options_admin = get_option('wpematicohk_datahooks');
 	$wpematicohk_theme_editor = get_option('wpematicohk_theme_editor');
 	$wpematicohk_theme_editor = isset($wpematicohk_theme_editor) ? $wpematicohk_theme_editor : '';
