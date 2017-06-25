@@ -282,7 +282,7 @@ function wpematico_custom_hooks_page()
 				<div id="normal-sortables" class="meta-box-sortables ui-sortable">
 						<?php $i=0; foreach ($wpematicohk_data_filter_action as $key_hooks) { ?>
 						<div  class="postbox wpematicohk_dinamic_metabox wpematicohk_dinamic_chaplain <?php echo $key_hooks['value']; ?>">
-							<h3 class="hndle" style="font-size:20px;"><span><?php _e(''.$key_hooks["name"].'', 'wpematico_custom-hooks' ); ?></span></h3>
+							<h3 class="hndle" style="font-size:20px;"><span><?php _e(''.$key_hooks["name"].'', 'wpematico_custom-hooks' ); ?></span> <span style="float:right; background-color:#0073AA; color:white; padding:5px; font-size:14px !important;"><?php echo strtolower($key_hooks['type']); ?></span></h3>
 							<p style="padding-left:10px;"><?php _e(''.$key_hooks["description"].'', 'wpematico_custom-hooks' ); ?></p>
 							<div class="inside">
 								<input type="hidden" class="wpematicohk_options_action_filters" name="wpematicohk_options_action_filters[]" value="<?php echo $key_hooks["value"]; ?>">
