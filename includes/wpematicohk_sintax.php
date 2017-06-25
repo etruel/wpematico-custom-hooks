@@ -54,14 +54,15 @@ function wpematicohk_sintax_callback(){
 				if($cont_errors_ver==0){
 					$wpmaticohk_sintax_result = wpematicohk_apisintax($code,$_POST['wpematicohk_options_action_filters'][$i]);
 					$post_filter = $i;
+					
 				}
-				if(strpos('error',$wpmaticohk_sintax_result)>0){
+				if(strpos($wpmaticohk_sintax_result,'Parse error')>0){
 					$cont_errors_ver++;
 				}
-				echo $wpmaticohk_sintax_result."<br><strong> In hook: ".$_POST['wpematicohk_options_action_filters'][$post_filter]."</strong>";
-				wp_die();
 			}
 		}
+		echo $wpmaticohk_sintax_result."<br><strong> In hook: ".$_POST['wpematicohk_options_action_filters'][$post_filter]."</strong>";
+		wp_die();
 		
 }
 
