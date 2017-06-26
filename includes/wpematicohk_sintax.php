@@ -21,6 +21,7 @@ function wpematicohk_apisintax($mycode,$myfilter){
 		'cookies' => array()
 	    )
 	);
+	//clear file
 	if (($h = fopen($path, "w")) !== FALSE) {
     	$string = '';
         fwrite($h,$string);
@@ -46,7 +47,6 @@ function wpematicohk_sintax_callback(){
 				//code analizer
 				$wpmaticohk_sintax_result = wpematicohk_apisintax($code,$_POST['wpematicohk_options_action_filters'][$i]);
 				if(strpos($wpmaticohk_sintax_result['body'],'no-error-hook')===false){
-			    	$cont_errors_ver++;
 			    	echo $wpmaticohk_sintax_result['body']."<br><strong> In hook: ".$_POST['wpematicohk_options_action_filters'][$i]."</strong>";
 					wp_die();
 			    }
