@@ -409,7 +409,7 @@ function wpematico_custom_hooks_page()
 			};
 			// since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
 			jQuery.post(ajaxurl, data, function(response) {
-				if(response.indexOf('Parse error')>-1){
+				if(response.indexOf('no-error-hook')==(-1)){
 					$("#wpematicohk_sintax_error").css({'border-left':"4px solid #C00000"});
 					$("#wpematicohk_sintax_error").html(response);
 				}else{
