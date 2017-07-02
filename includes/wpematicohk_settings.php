@@ -98,7 +98,7 @@
 									<select class="wpematicohk_select_actions_filters">
 										<option value=""><?php _e('All Hooks','wpematico_custom-hooks'); ?></option>
 										<?php foreach ($wpematicohk_data_filter_action as $key_hooks) { ?>
-										<option tagtemplateparameter='<?php echo isset($key_hooks["template_parameter"]) ? $key_hooks["template_parameter"]: ""; ?>' tagparameters='<?php echo $key_hooks['parameters'] ?>' value="<?php echo $key_hooks['value']; ?>"><?php echo $key_hooks['name']; ?></option>
+										<option tagtypehook='<?php echo strtolower($key_hooks['type']); ?>' tagtemplateparameter='<?php echo isset($key_hooks["template_parameter"]) ? $key_hooks["template_parameter"]: ""; ?>' tagparameters='<?php echo $key_hooks['parameters'] ?>' value="<?php echo $key_hooks['value']; ?>"><?php echo $key_hooks['name']; ?></option>
 										<?php }  ?>
 									</select>
 									<br>
@@ -146,9 +146,17 @@
 		$(document).on('click','.wpematicohk_button_addfunctions',function(){
 			wpematicohk_select_text = $('.wpematicohk_select_actions_filters').val()+"_callback";
 			idtemp = 'wpematicohk_codemirror_'+$('.wpematicohk_select_actions_filters').val();
+			tagtypehook = $('.wpematicohk_select_actions_filters option:selected').attr('tagtypehook');
 			template_parameter =  $('.wpematicohk_select_actions_filters option:selected').attr('tagtemplateparameter');
 			template_function='\nfunction '+wpematicohk_select_text+'('+template_parameter+'){';
-			template_function+='\n\n}';
+			//IF ACTION ON FILTER
+			if(tagtypehook=='filter'){
+				varparameter = template_parameter.split(',');
+				if(varparameter[0]=='') varparameter[0] = '""';
+				template_function+='\n \treturn '+varparameter[0]+';\n';
+			}
+
+			template_function+='\n}';
 			//refresh codemirror editor
 			addCodemirrorFunction(idtemp,template_function);
 			wpematicohk_codemirror_line_function(idtemp);

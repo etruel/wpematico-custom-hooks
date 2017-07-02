@@ -6,7 +6,7 @@
  * Version:         1.0.0
  * Author:          etruel
  * Author URI:      http://www.netmdp.com
- * Text Domain:     WPeMatico Custom Hooks
+ * Text Domain:     wpematico_custom-hooks
  *
  * @package         etruel\WPeMatico Custom Hooks
  * @author          Esteban Truelsegaard
@@ -27,11 +27,11 @@ if( !defined( 'ABSPATH' ) ) exit;
 
 if( !class_exists( 'wpematicohk' ) ) {
 
-	// Plugin version
-	if(!defined('WPEMATICOHK_VER')) {
-		define('WPEMATICOHK_VER', '1.0' );
-	}
-	
+    // Plugin version
+    if(!defined('WPEMATICOHK_VER')) {
+        define('WPEMATICOHK_VER', '1.0' );
+    }
+    
     /**
      * Main wpematicohk class
      *
@@ -74,24 +74,24 @@ if( !class_exists( 'wpematicohk' ) ) {
          * @return      void
          */
        public static function setup_constants() {
-			// Plugin root file
-			if(!defined('WPEMATICOHK_ROOT_FILE')) {
-				define('WPEMATICOHK_ROOT_FILE', __FILE__ );
-			}
+            // Plugin root file
+            if(!defined('WPEMATICOHK_ROOT_FILE')) {
+                define('WPEMATICOHK_ROOT_FILE', __FILE__ );
+            }
             // Plugin path
-			if(!defined('WPEMATICOHK_DIR')) {
-				define('WPEMATICOHK_DIR', plugin_dir_path( __FILE__ ) );
-			}
+            if(!defined('WPEMATICOHK_DIR')) {
+                define('WPEMATICOHK_DIR', plugin_dir_path( __FILE__ ) );
+            }
             // Plugin URL
-			if(!defined('WPEMATICOHK_URL')) {
-				define('WPEMATICOHK_URL', plugin_dir_url( __FILE__ ) );
-			}
-			if(!defined('WPEMATICOHK_STORE_URL')) {
-				define('WPEMATICOHK_STORE_URL', 'https://etruel.com'); 
-			} 
-			if(!defined('WPEMATICOHK_ITEM_NAME')) {
-				define('WPEMATICOHK_ITEM_NAME', 'wpematico_hooks'); 
-			} 
+            if(!defined('WPEMATICOHK_URL')) {
+                define('WPEMATICOHK_URL', plugin_dir_url( __FILE__ ) );
+            }
+            if(!defined('WPEMATICOHK_STORE_URL')) {
+                define('WPEMATICOHK_STORE_URL', 'https://etruel.com'); 
+            } 
+            if(!defined('WPEMATICOHK_ITEM_NAME')) {
+                define('WPEMATICOHK_ITEM_NAME', 'wpematico_custom-hooks'); 
+            } 
         }
 
 
@@ -105,7 +105,7 @@ if( !class_exists( 'wpematicohk' ) ) {
         public static function includes() {
             // Include scripts
             require_once WPEMATICOHK_DIR . 'includes/wpematicohk_settings.php';
-		    require_once WPEMATICOHK_DIR . 'includes/wpematicohk_sintax.php';
+            require_once WPEMATICOHK_DIR . 'includes/wpematicohk_sintax.php';
             require_once WPEMATICOHK_DIR . 'includes/wpematicohk_execute_action_filter.php';
 
         }
@@ -122,21 +122,21 @@ if( !class_exists( 'wpematicohk' ) ) {
         }
         
 
-		
-		public static function add_updater($args) {
-			if (empty($args['wpematicohk'])) {
-				$args['wpematicohk'] = array();
-				$args['wpematicohk']['api_url'] = WPEMATICOHK_STORE_URL;
-				$args['wpematicohk']['plugin_file'] = WPEMATICOHK_ROOT_FILE;
-				$args['wpematicohk']['api_data'] = array(
-														'version' 	=> WPEMATICOHK_VER, 				// current version number
-														'item_name' => WPEMATICOHK_ITEM_NAME, 	// name of this plugin
-														'author' 	=> 'Esteban Truelsegaard'  // author of this plugin
-													);
-					
-			}
-			return $args;
-		}
+        
+        public static function add_updater($args) {
+            if (empty($args['wpematicohk'])) {
+                $args['wpematicohk'] = array();
+                $args['wpematicohk']['api_url'] = WPEMATICOHK_STORE_URL;
+                $args['wpematicohk']['plugin_file'] = WPEMATICOHK_ROOT_FILE;
+                $args['wpematicohk']['api_data'] = array(
+                                                        'version'   => WPEMATICOHK_VER,                 // current version number
+                                                        'item_name' => WPEMATICOHK_ITEM_NAME,   // name of this plugin
+                                                        'author'    => 'Esteban Truelsegaard'  // author of this plugin
+                                                    );
+                    
+            }
+            return $args;
+        }
         /**
          * Internationalization
          *
