@@ -602,14 +602,6 @@
 			'template_parameter'=>'$campaign', 
 			'type'=>'action', 
 			'description'=>'Example Description mmf_testarea_before_getcontent' 
-			), 
-			array( 
-			'name'=>'mmf_testarea_before_getcontent', 
-			'value'=>'mmf_testarea_before_getcontent', 
-			'parameters'=>1, 
-			'template_parameter'=>'$campaign', 
-			'type'=>'action', 
-			'description'=>'Example Description mmf_testarea_before_getcontent' 
 			)
 		);
 	}
