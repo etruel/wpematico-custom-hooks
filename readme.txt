@@ -9,26 +9,36 @@ Stable tag: 1.0
 Add On for WPeMatico plugin. Adds a feature to load PHP functions to the filters in the campaign execution
 
 == Description ==
-WPeMatico Custom Hooks Add-on allows to use WPeMatico from a Wordpress website.
- 
-= How it works =
 
-The Add-on will use the whole campaign data to obtain the content to be published automatically.
- 
-= Features =
+WPeMatico Custom Hooks es un complemento del plugin principal WPeMatico el cual te permite desde tu panel administrativo de wordpress ejecutar acciones y filtros que provee WPeMatico y así crear comportamientos  variantes en la ejecución de tus campañas. Es muy interesante debido a que te hará conocer más afondo  las funcionalidades de este potente  plugin de autoblogging  Y de sus debidas extensiones a nivel de desarrollo. 
 
+
+
+= Como Funciona =
+
+Este complemento te permite agregar las acciones y filtros que posee WPeMatico para realizar cambios personalizados en las campañas que ejecutes o  acciones que requieran un cambio especifico de comportamiento 
  
-= Requirements =
-As WPeMatico Add-on requires WPeMatico base plugin installed and activated.  
-PHP 5.3 or higher
-At this time does not works with Professional, Better Excerpts, Full Content and other add-ons filters.
+== FEATURES ==
+
+* Hooks actualizados de WPeMatico Core.
+* Integracion de Hooks por extension de WPeMatico Instalada. 
+* Templates de ayuda por cada hooks.
+* Editor de codigo elegante como campo de trabajo.
+* Chequeo de errores de sintaxis antes de guardar funciones creadas.
+
+
 
 == Installation ==
 
-You can either install it automatically from the WordPress admin, or do it manually:
 
-1. Unzip plugin archive and put the folder into your plugins folder (/wp-content/plugins/).
-2. Activate the plugin from the WPeMatico Extensions menu.
+Puede instalarlo  desde la pagina oficial  etruel.com 
+
+1) Descomprimelo en la carpeta plugins de tu wordpress para su seguida activacion. Es necesario tener previamente instalado WPeMatico.
+
+2) Una ves instalado dirigite al menu WPeMatico  - > Configuración  
+
+3) luego  hacer click en la pestaña 'Hooks'  para ingresar a la pagina principal del complemento
+
 
 == Frequently Asked Questions ==
 
