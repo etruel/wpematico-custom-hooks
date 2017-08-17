@@ -3,48 +3,51 @@ Contributors: albertdesinger,sniuk,etruel
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=B8V39NWK3NFQU
 Tags: wpematico, WPeMatico Custom Hooks, autoblog, rss, feed, read, matic
 Requires at least: 4.1
-Tested up to: 4.8
+Tested up to: 4.9
 Stable tag: 1.0
 
-Add On for WPeMatico plugin. Adds a feature to load PHP functions to the filters in the campaign execution
+Addon for WPeMatico. Allows you to execute PHP actions and filters right from your WordPress admin panel in order to create custom behaviors in your campaigns.
 
 == Description ==
 
-WPeMatico Custom Hooks es un complemento del plugin principal WPeMatico el cual te permite desde tu panel administrativo de wordpress ejecutar acciones y filtros que provee WPeMatico y así crear comportamientos  variantes en la ejecución de tus campañas. Es muy interesante debido a que te hará conocer más afondo  las funcionalidades de este potente  plugin de autoblogging  Y de sus debidas extensiones a nivel de desarrollo. 
+WPeMatico Custom Hooks is an addon of the main WPeMatico plugin that allows you to execute actions and filters provided by WPeMatico in order to create custom behavior in the execution of your campaigns, right from your WordPress admin panel. It's very interesting because it will let you see the functionalities of this powerful autoblogging plugin in greater depth, as well as its extensions on the development level. 
 
+= How it works =
 
-
-= Como Funciona =
-
-Este complemento te permite agregar las acciones y filtros que posee WPeMatico para realizar cambios personalizados en las campañas que ejecutes o  acciones que requieran un cambio especifico de comportamiento 
+This addon allows you to add the actions and filters that WPeMatico possesses in order to make personalized changes in the campaigns you execute or actions that require a specific change in behavior.
  
 == FEATURES ==
 
-* Hooks actualizados de WPeMatico Core.
-* Integracion de Hooks por extension de WPeMatico Instalada. 
-* Templates de ayuda por cada hooks.
-* Editor de codigo elegante como campo de trabajo.
-* Chequeo de errores de sintaxis antes de guardar funciones creadas.
+* Hooks updates from WPeMatico Core.
+* Integration of Hooks through the installed WPeMatico extension.
+* Help templates with the function for each filter or action.
+* Elegant code editor with code highlighter for programmers.
+* Syntax error check before saving the code for the functions.
 
-
+= Requirements =
+This WPeMatico addon requires the WPeMatico base plugin to be installed and activated.  
+PHP 5.3 or higher
 
 == Installation ==
 
+You can either install it automatically from the WordPress admin, or do it manually:
 
-Puede instalarlo  desde la pagina oficial  etruel.com 
+1. Unzip plugin file and put the folder into your plugins folder (/wp-content/plugins/).
 
-1) Descomprimelo en la carpeta plugins de tu wordpress para su seguida activacion. Es necesario tener previamente instalado WPeMatico.
+2. Activate the plugin from the WPeMatico Extensions menu.
 
-2) Una ves instalado dirigite al menu WPeMatico  - > Configuración  
+1) Decompress it in the WordPress plugins folder to continue with activation. You must first have WPeMatico installed.
 
-3) luego  hacer click en la pestaña 'Hooks'  para ingresar a la pagina principal del complemento
+2) Once installed, go to the WPeMatico menu  - > Configuration  
+
+3) Then, click on the 'Hooks' tab to go to the main page of the addon
 
 
 == Frequently Asked Questions ==
 
-= Can I use this plug-in without WPeMatico plugin? =
+= Can I use this addon without the WPeMatico plugin? =
 
-No. Plugin requires WPeMatico Free Version installed and activated.
+No. The addon requires WPeMatico Free Version to be installed and activated.
 
 == Screenshots ==
 
@@ -54,3 +57,6 @@ No. Plugin requires WPeMatico Free Version installed and activated.
 
 = 1.0 =
 * initial release
+
+== Upgrade Notice ==
+1.0 * initial release

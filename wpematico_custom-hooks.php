@@ -1,24 +1,30 @@
 <?php
 /**
- * Plugin Name:     WPeMatico Custom Hooks
- * Plugin URI:      https://etruel.com/downloads/wpematico_custom-hooks
- * Description:     WPeMatico Add-on starter point WPeMatico Custom Hooks plugin 
- * Version:         1.0.0
- * Author:          etruel
- * Author URI:      http://www.netmdp.com
- * Text Domain:     wpematico_custom-hooks
- *
- * @package         etruel\WPeMatico Custom Hooks
- * @author          Esteban Truelsegaard
- * @copyright       Copyright (c) 2016
- *
- *
- * - Find all instances of @todo in the plugin and update the relevant
- *   areas as necessary.
- *
- * - All functions that are not class methods MUST be prefixed with the
- *   plugin name, replacing spaces with underscores. NOT PREFIXING YOUR
- *   FUNCTIONS CAN CAUSE PLUGIN CONFLICTS!
+ * Plugin Name: WPeMatico_Custom Hooks
+ * Plugin URI:  https://etruel.com/downloads/wpematico_custom-hooks
+ * Description: WPeMatico Add-on starter point WPeMatico Custom Hooks plugin 
+ * Version:     1.0.0
+ * Author:      etruel
+ * Author URI:  https://www.netmdp.com
+ * Text Domain: wpematico_custom-hooks
+ * License:     GPL2
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: wpematico_custom-hooks
+ * Domain Path: /languages
+ * 
+ *  
+WPeMatico Custom Hooks is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+any later version.
+ 
+WPeMatico Custom Hooks is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+ 
+You should have received a copy of the GNU General Public License
+along with WPeMatico Custom Hooks. If not, see https://www.gnu.org/licenses/gpl-2.0.html.
  */
 
 
@@ -151,7 +157,7 @@ if( !class_exists( 'wpematicohk' ) ) {
 
             // Traditional WordPress plugin locale filter
             $locale = apply_filters( 'plugin_locale', get_locale(), 'wpematico_custom-hooks' );
-            $mofile = sprintf( '%1$s-%2$s.mo', 'wpematicohk', $locale );
+            $mofile = sprintf( '%1$s-%2$s.mo', 'wpematico_custom-hooks', $locale );
 
             // Setup paths to current locale file
             $mofile_local   = $lang_dir . $mofile;
@@ -159,13 +165,13 @@ if( !class_exists( 'wpematicohk' ) ) {
 
             if( file_exists( $mofile_global ) ) {
                 // Look in global /wp-content/languages/wpematicohk/ folder
-                load_textdomain( 'wpematicohk', $mofile_global );
+                load_textdomain( 'wpematico_custom-hooks', $mofile_global );
             } elseif( file_exists( $mofile_local ) ) {
                 // Look in local /wp-content/plugins/wpematico-custom-hooks/languages/ folder
-                load_textdomain( 'wpematicohk', $mofile_local );
+                load_textdomain( 'wpematico_custom-hooks', $mofile_local );
             } else {
                 // Load the default language files
-                load_plugin_textdomain( 'wpematicohk', false, $lang_dir );
+                load_plugin_textdomain( 'wpematico_custom-hooks', false, $lang_dir );
             }
         }
 
