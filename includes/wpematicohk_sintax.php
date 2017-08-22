@@ -16,6 +16,7 @@ class wpematicohk_sintax {
 	* @since 1.0.1
 	*/
 	public static function hooks() {
+		self::clean_file();
 		add_action( 'wp_ajax_wpematicohk_sintax', array(__CLASS__, 'ajax_callback') );
 	}
 	/**
@@ -60,7 +61,7 @@ class wpematicohk_sintax {
 	*/
 	public static function check($mycode, $myfilter){
 		$response = '';
-		$path = dirname(__FILE__) . '/wpematicohk_file_phpchecker.php';
+		$path = WPEMATICOHK_DIR . 'includes/wpematicohk_file_phpchecker.php';
 		$end_file = 'echo "no-error-hook";';
 	    if (($h = fopen($path, "w")) !== FALSE) {
 	    	$string = "<?php ".$mycode."\n".$end_file." ?>";
@@ -79,15 +80,24 @@ class wpematicohk_sintax {
 			'cookies' => array()
 		    )
 		);
+		self::clean_file();
+		return $response;
+		
+	}
+	/**
+	* Static function clean_file_test
+	* @access public
+	* @return void
+	* @since version
+	*/
+	public static function clean_file() {
+		$path = WPEMATICOHK_DIR . 'includes/wpematicohk_file_phpchecker.php';
 		//clear file
 		if (($h = fopen($path, "w")) !== FALSE) {
 	    	$string = '';
 	        fwrite($h,$string);
 	        fclose($h);
 	    }
-		$response;
-		return $response;
-		
 	}
 }
 endif;
