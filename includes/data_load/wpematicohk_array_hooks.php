@@ -1,4 +1,10 @@
 <?php
+
+if ( !defined('ABSPATH')) {
+	header( 'Status: 403 Forbidden' );
+	header( 'HTTP/1.1 403 Forbidden' );
+	exit();
+}
 	$wpematicohk_data_filter_action = array();
 	
 	$active_plugins = get_option( 'active_plugins' );

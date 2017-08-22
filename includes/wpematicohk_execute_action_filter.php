@@ -1,6 +1,23 @@
 <?php
+
+if ( !defined('ABSPATH')) {
+	header( 'Status: 403 Forbidden' );
+	header( 'HTTP/1.1 403 Forbidden' );
+	exit();
+}
+
+if( !class_exists( 'wpehk_filter_and_actions' ) ) :
+class wpehk_filter_and_actions {
+
+	/**
+	* Static function execute
+	* @access public
+	* @return void
+	* @since 1.0.1
+	*/
+	public static function execute() {
 		if(!isset($_REQUEST['tab'])){
-			if(!isset($_REQUEST['action'])){
+			if(!isset($_REQUEST['action'])) {
 				$wpematicohk_options = array();
 				$wpematicohk_all_function_filters = array();
 				$wpematicohk_options = get_option('wpematicohk_datahooks');
@@ -22,8 +39,13 @@
 									eval($wpematicohk_code);
 								}//closed if isset wpematico all functions filters
 							}
-						}//cierre del for
+					}
 				}//isset array foreach
 			}
 		}//closed get tab
+	}
+
+}
+endif;
+wpehk_filter_and_actions::execute();
 ?>

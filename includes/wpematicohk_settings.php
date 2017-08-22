@@ -4,59 +4,90 @@
  *	functions to add a tab with custom options in wpematico settings 
 	**/
 
-	if ( !defined('ABSPATH')) 
-	{
-		header( 'Status: 403 Forbidden' );
-		header( 'HTTP/1.1 403 Forbidden' );
-		exit();
-	}
-	add_action( 'admin_enqueue_scripts', 'wpematicohk_admin_enqueue_scripts', 999 );
-	function wpematicohk_admin_enqueue_scripts()
-	{
-	//Style
-		wp_enqueue_style( 'wpematicohk-codemirror_style',plugin_dir_url( __FILE__ ).'../assets/codemirror/css/codemirror.css');
-		wp_enqueue_style( 'wpematicohk-monokai',plugin_dir_url(__FILE__ ).'../assets/codemirror/css/monokai.css');
-		wp_enqueue_style( 'wpematicohk-colbat',plugin_dir_url(__FILE__ ).'../assets/codemirror/css/colbat.css' );
-		wp_enqueue_style( 'wpematicohk-blackboard',plugin_dir_url(__FILE__ ).'../assets/codemirror/css/blackboard.css' );
-	//Scripts
-		wp_enqueue_script( 'wpematicohk-mirrorcode',plugin_dir_url(__FILE__ ).'../assets/codemirror/js/codemirror.js', array( 'jquery') );
-		wp_enqueue_script( 'wpematicohk-javascript',plugin_dir_url(__FILE__ ).'../assets/codemirror/js/javascript.js', array( 'wpematicohk-mirrorcode'));
-		wp_enqueue_script( 'wpematicohk-xml',plugin_dir_url(__FILE__ ).'../assets/codemirror/js/xml.js', array( 'wpematicohk-mirrorcode'));
-		wp_enqueue_script( 'wpematicohk-php',plugin_dir_url(__FILE__ ).'../assets/codemirror/js/php.js', array( 'wpematicohk-mirrorcode'));
-		wp_enqueue_script( 'wpematicohk-htmlmixed',plugin_dir_url(__FILE__ ).'../assets/codemirror/js/htmlmixed.js', array( 'wpematicohk-mirrorcode','wpematicohk-xml','wpematicohk-php'));
-	}
+if ( !defined('ABSPATH')) {
+	header( 'Status: 403 Forbidden' );
+	header( 'HTTP/1.1 403 Forbidden' );
+	exit();
+}
 
-	add_action( 'admin_post_wpematicohk_options', 'wpematicohk_options_callback' );
-	function wpematicohk_options_callback($post){
-		check_admin_referer('wpematicohk_admin_nonce');
-		$wpematicohk_options = array(
-			'wpematicohk_options_action_filters'=> $_POST['wpematicohk_options_action_filters'],
-			'wpematicohk_functions_parameters'=> $_POST['wpematicohk_functions_parameters'],
-			'wpematicohk_functions_action_filter'=> $_POST['wpematicohk_functions_action_filter'],
-			'wpematicohk_options_functions'=> str_replace('\\','',$_POST['wpematicohk_options_functions']),
-			'wpematicohk_type_hook'=>$_POST['wpematicohk_type_hook']
-			);
-		update_option('wpematicohk_datahooks',$wpematicohk_options);
-		update_option('wpematicohk_theme_editor',$_POST['wpematicohk_theme_editor']);
-		wp_redirect('edit.php?post_type=wpematico&page=wpematico_settings&tab=wpematico_hooks');
+if( !class_exists( 'wpematico_hooks_settings' ) ) :
+class wpematico_hooks_settings {
 
+	/**
+	* Static function hooks
+	* @access public
+	* @return void
+	* @since 1.0.1
+	*/
+	public static function hooks() {
+		add_action( 'admin_enqueue_scripts', array(__CLASS__, 'enqueue_scripts'), 999 );
+		add_action( 'admin_post_wpematicohk_options', array(__CLASS__, 'options_callback') );
+		add_filter('wpematico_settings_tabs', array(__CLASS__, 'tabs'),10,1);
+		add_action('wpematico_settings_tab_wpematico_hooks', array(__CLASS__, 'page'));
 	}
 
+	public static function enqueue_scripts() {
+		$screen = get_current_screen();
+		if ($screen->id == 'wpematico_page_wpematico_settings') {
+			//Style
+			wp_enqueue_style( 'wpematicohk-codemirror_style', WPEMATICOHK_URL.'assets/codemirror/css/codemirror.css');
+			wp_enqueue_style( 'wpematicohk-monokai', WPEMATICOHK_URL.'assets/codemirror/css/monokai.css');
+			wp_enqueue_style( 'wpematicohk-colbat', WPEMATICOHK_URL.'assets/codemirror/css/colbat.css' );
+			wp_enqueue_style( 'wpematicohk-blackboard', WPEMATICOHK_URL.'assets/codemirror/css/blackboard.css' );
+			//Scripts
+			wp_enqueue_script( 'wpematicohk-mirrorcode', WPEMATICOHK_URL.'assets/codemirror/js/codemirror.js', array( 'jquery'), WPEMATICOHK_VER, true );
+			wp_enqueue_script( 'wpematicohk-javascript', WPEMATICOHK_URL.'assets/codemirror/js/javascript.js', array( 'wpematicohk-mirrorcode'), WPEMATICOHK_VER, true);
+			wp_enqueue_script( 'wpematicohk-xml', WPEMATICOHK_URL.'assets/codemirror/js/xml.js', array( 'wpematicohk-mirrorcode'), WPEMATICOHK_VER, true);
+			wp_enqueue_script( 'wpematicohk-php', WPEMATICOHK_URL.'assets/codemirror/js/php.js', array( 'wpematicohk-mirrorcode'), WPEMATICOHK_VER, true);
+			wp_enqueue_script( 'wpematicohk-htmlmixed', WPEMATICOHK_URL.'assets/codemirror/js/htmlmixed.js', array( 'wpematicohk-mirrorcode','wpematicohk-xml','wpematicohk-php'), WPEMATICOHK_VER, true);
+		}
+	}
 
-	add_filter('wpematico_settings_tabs','wpematicohk_new_tab',10,1);
-	function wpematicohk_new_tab($tabs)
-	{
-
+	/**
+	* Static function options_callback
+	* @access public
+	* @return void
+	* @since 1.0.1
+	*/
+	public static function options_callback() {
+		if(current_user_can('edit_plugins') || current_user_can('edit_themes')) {
+			check_admin_referer('wpematicohk_admin_nonce');
+			$wpematicohk_options = array(
+				'wpematicohk_options_action_filters'=> $_POST['wpematicohk_options_action_filters'],
+				'wpematicohk_functions_parameters'=> $_POST['wpematicohk_functions_parameters'],
+				'wpematicohk_functions_action_filter'=> $_POST['wpematicohk_functions_action_filter'],
+				'wpematicohk_options_functions'=> str_replace('\\','',$_POST['wpematicohk_options_functions']),
+				'wpematicohk_type_hook'=>$_POST['wpematicohk_type_hook']
+				);
+			update_option('wpematicohk_datahooks',$wpematicohk_options);
+			update_option('wpematicohk_theme_editor',$_POST['wpematicohk_theme_editor']);
+			wp_redirect('edit.php?post_type=wpematico&page=wpematico_settings&tab=wpematico_hooks');
+			exit;
+		} else {
+			wp_die(__( 'Security check.', 'wpematico_custom-hooks' ));
+		}
+			
+	}
+	/**
+	* Static function tabs
+	* @access public
+	* @return void
+	* @since 1.0.1
+	*/
+	public static function tabs($tabs) {
 		if(current_user_can('edit_plugins') || current_user_can('edit_themes')){
 			$tabs['wpematico_hooks'] = __( 'Hooks', 'wpematico_custom-hooks' );
 		}
 		return $tabs;
-		
 	}
 
-	add_action('wpematico_settings_tab_wpematico_hooks','wpematico_custom_hooks_page');
-	function wpematico_custom_hooks_page()
-	{
+	/**
+	* Static function 
+	* @access public
+	* @return void
+	* @since version
+	*/
+	public static function page() {
 		if(!current_user_can('edit_plugins') && !current_user_can('edit_themes')){
 			wp_die(__( 'Security check.', 'wpematico_custom-hooks' ));
 		}
@@ -288,4 +319,13 @@
 	}
 	</script>
 	<?php		
-} 
+	}	
+
+}
+endif;
+wpematico_hooks_settings::hooks();
+
+
+	
+	
+

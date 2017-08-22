@@ -3,7 +3,7 @@
  * Plugin Name: WPeMatico_Custom Hooks
  * Plugin URI:  https://etruel.com/downloads/wpematico_custom-hooks
  * Description: WPeMatico Add-on starter point WPeMatico Custom Hooks plugin 
- * Version:     1.0.0
+ * Version:     1.0.1
  * Author:      etruel
  * Author URI:  https://www.netmdp.com
  * Text Domain: wpematico_custom-hooks
@@ -31,13 +31,14 @@ along with WPeMatico Custom Hooks. If not, see https://www.gnu.org/licenses/gpl-
 // Exit if accessed directly
 if( !defined( 'ABSPATH' ) ) exit;
 
+ // Plugin version
+if(!defined('WPEMATICOHK_VER')) {
+    define('WPEMATICOHK_VER', '1.0.1' );
+}
+
+
 if( !class_exists( 'wpematicohk' ) ) {
 
-    // Plugin version
-    if(!defined('WPEMATICOHK_VER')) {
-        define('WPEMATICOHK_VER', '1.0' );
-    }
-    
     /**
      * Main wpematicohk class
      *
