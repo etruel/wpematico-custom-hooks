@@ -19,7 +19,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>0,
 			'template_parameter'=>'$imagen_src_real, $current_item, $campaign, $item',
 			'type'=>'filter',
-			'description'=>'Example Description newimgname'
+			'description'=>''
 			
 		),
 		array(
@@ -27,7 +27,7 @@ if ( !defined('ABSPATH')) {
 			'value'=>'wpematico_overwrite_file',
 			'parameters'=>0,
 			'type'=>'filter',
-			'description'=>'Example Description overwrite file'
+			'description'=>''
 
 		),
 		array(
@@ -36,7 +36,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$enclosure_title',
 			'type'=>'filter',
-			'description'=> 'Example Description altimg'
+			'description'=> ''
 
 		),
 		array(
@@ -45,7 +45,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$enclosure_thumbnails',
 			'type'=>'filter',
-			'description'=>'Example Description thumbnails'
+			'description'=>''
 
 		),
 		array(
@@ -54,7 +54,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$enclosure_description',
 			'type'=>'filter',
-			'description'=>'Example Description Enclosure'
+			'description'=>''
 
 		),
 		array(
@@ -63,7 +63,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4,
 			'template_parameter'=>'$content,$campaign,$feed,$item',
 			'type'=>'filter',
-			'description'=>'Example Description Get content feed'
+			'description'=>''
 		),
 		array(
 			'name'=>'wpematico excludes',
@@ -71,7 +71,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4,
 			'template_parameter'=>'$skip,$current_item,$campaign,$item',
 			'type'=>'filter',
-			'description'=> 'Example Description'
+			'description'=> ''
 		),
 		array(
 			'name'=>'wpematico item parsers',
@@ -79,14 +79,14 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4,
 			'template_parameter'=>'$current_item, $campaign, $feed, $item',
 			'type'=>'filter',
-			'description'=>'Example Description wpematico item parsers'
+			'description'=>''
 		),
 		array(
 			'name'=>'wpem dont strip tags',
 			'value'=>'wpem_dont_strip_tags',
 			'parameters'=>0,
 			'type'=>'filter',
-			'description'=>'Example Description Dont Strip tags'
+			'description'=>''
 		),
 		array(
 			'name'=>'wpematico post template tag',
@@ -94,7 +94,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>5,
 			'template_parameter'=>'$vars, $current_item, $campaign, $feed, $item',
 			'type'=>'filter',
-			'description'=>'Example Description wphead'
+			'description'=>''
 		),
 		array(
 			'name'=>'wpematico post template replace',
@@ -102,7 +102,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>5,
 			'template_parameter'=>'$replace, $current_item, $campaign, $feed, $item',
 			'type'=>'filter',
-			'description'=>'Example Description Wpematico post template replace'
+			'description'=>''
 		),
 		array(
 			'name'=>'wpematico after item parsers',
@@ -110,7 +110,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4,
 			'template_parameter'=>'$current_item, $campaign, $feed, $item',
 			'type'=>'filter',
-			'description'=>'Example Description wphead'
+			'description'=>''
 		),
 		array(
 			'name'=>'wpematico add template vars',
@@ -118,7 +118,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>5,
 			'template_parameter'=>'$vars, $current_item, $campaign, $feed, $item',
 			'type'=>'filter',
-			'description'=>'Example Description wphead'
+			'description'=>''
 		),
 		array(
 			'name'=>'wpematico pretags',
@@ -126,7 +126,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>3,
 			'template_parameter'=>'$current_item, $item, $cfg',
 			'type'=>'filter',
-			'description'=>'Example Description wpematico_pretags'
+			'description'=>''
 		),
 		array(
 			'name'=>'wpematico postags',
@@ -134,7 +134,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>5,
 			'template_parameter'=>'$current_item, $item, $cfg',
 			'type'=>'filter',
-			'description'=>'Example Description wphead'
+			'description'=>''
 		),
 		array(
 			'name'=>'wpepro full permalink',
@@ -142,7 +142,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$permalink',
 			'type'=>'filter',
-			'description'=>'Description Full Permanlink'
+			'description'=>''
 		),
 		array(
 			'name'=>'wpematico img src url',
@@ -150,7 +150,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$imagen_src_real',
 			'type'=>'filter',
-			'description'=>'Description imagen src url'
+			'description'=>''
 		),
 		array(
 			'name'=>'wpematico allowext',
@@ -158,7 +158,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$allowed',
 			'type'=>'filter',
-			'description'=>'Description allowed'
+			'description'=>''
 		),
 		array( 
 			'name'=>'wpematico_end_fetching', 
@@ -166,7 +166,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>'$campaign,$fetched_posts ', 
 			'type'=>'filter', 
-			'description'=>'Example Description Wpematico_end_fetching' 
+			'description'=>'' 
 		),
 		array( 
 			'name'=>'wpematico_simplepie_url', 
@@ -174,7 +174,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>3, 
 			'template_parameter'=>' $feed, $kf, $campaign', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpematico_simplepie_url' 
+			'description'=>'' 
 		), 
 		array( 
 			'name'=>'Wpematico_process_fetching', 
@@ -182,7 +182,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>' $campaign', 
 			'type'=>'filter', 
-			'description'=>'Example Description Wpematico_process_fetching' 
+			'description'=>'' 
 		), 
 		array( 
 			'name'=>'wpematico_get_author', 
@@ -190,7 +190,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>' $current_item, $campaign, $feedurl, $item ', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpematico_get_author' 
+			'description'=>'' 
 		), 
 		array( 
 			'name'=>'wpematico_get_post_content', 
@@ -198,7 +198,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>' $current_item, $campaign, $feed, $item ', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpematico_get_post_content' 
+			'description'=>'' 
 		),
 		array( 
 			'name'=>'wpematico_item_filters_pre_img', 
@@ -206,7 +206,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>' $current_item, $campaign ', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpematico_item_filters_pre_img' 
+			'description'=>'' 
 		),
 		array( 
 			'name'=>'wpematico_set_featured_img', 
@@ -214,7 +214,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>' ', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpematico_set_featured_img' 
+			'description'=>'' 
 		),
 		array( 
 			'name'=>'wpematico_get_featured_img', 
@@ -222,7 +222,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>' $current_item_images, $current_item', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpematico_get_featured_img' 
+			'description'=>'' 
 		),
 		array( 
 			'name'=>'wpematico_item_filters_pos_img', 
@@ -230,7 +230,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>' $current_item, $campaign ', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpematico_item_filters_pos_img' 
+			'description'=>'' 
 		), 
 		array( 
 			'name'=>'wpematico_addcat_description', 
@@ -238,7 +238,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'Auto Added by WPeMatico', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpematico_addcat_description' 
+			'description'=>'' 
 		), 
 		array( 
 			'name'=>'wpem_meta_data', 
@@ -246,7 +246,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$current_item', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpem_meta_data' 
+			'description'=>'' 
 		), 
 		array( 
 			'name'=>'wpem_parse_title', 
@@ -254,7 +254,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$title', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpem_parse_title' 
+			'description'=>'' 
 		),
 		array( 
 			'name'=>'wpem_parse_content', 
@@ -262,7 +262,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$content', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpem_parse_content' 
+			'description'=>'' 
 		), 
 		array( 
 			'name'=>'wpem_parse_name', 
@@ -270,7 +270,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$slug', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpem_parse_name' 
+			'description'=>'' 
 		), 
 		array( 
 			'name'=>'wpem_parse_content_filtered', 
@@ -278,7 +278,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$content', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpem_parse_content_filtered' 
+			'description'=>'' 
 		), 
 		array( 
 			'name'=>'wpem_parse_status', 
@@ -286,7 +286,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$status', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpem_parse_status' 
+			'description'=>'' 
 		), 
 		array( 
 			'name'=>'wpem_parse_post_type', 
@@ -294,7 +294,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$post_type', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpem_parse_post_type' 
+			'description'=>'' 
 		), 
 		array( 
 			'name'=>'wpem_parse_authorid', 
@@ -302,7 +302,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$authorid', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpem_parse_authorid' 
+			'description'=>'' 
 		), 
 		array( 
 			'name'=>'wpem_parse_date', 
@@ -310,7 +310,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$date', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpem_parse_date' 
+			'description'=>'' 
 		), 
 		array( 
 			'name'=>'wpem_parse_comment_status', 
@@ -318,7 +318,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$comment_status', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpem_parse_comment_status' 
+			'description'=>'' 
 		), 
 		array( 
 			'name'=>'wpematico_pre_insert_post', 
@@ -326,7 +326,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>'$args, $this->campaign', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpematico_pre_insert_post' 
+			'description'=>'' 
 		), 
 		array( 
 			'name'=>'wpematico_allow_insertpost', 
@@ -334,7 +334,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>3, 
 			'template_parameter'=>'$bool, $this, $args', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpematico_allow_insertpost' 
+			'description'=>'' 
 		),
 		array( 
 			'name'=>'wpematico_duplicates', 
@@ -342,7 +342,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>3, 
 			'template_parameter'=>'$dev,$campaign,$item', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpematico_duplicates' 
+			'description'=>'' 
 		),
 		array( 
 		'name'=>'wpematico_inserted_post', 
@@ -350,7 +350,7 @@ if ( !defined('ABSPATH')) {
 		'parameters'=>3, 
 		'template_parameter'=>'$post_id, $campaign, $item ', 
 		'type'=>'action', 
-		'description'=>'Example Description wpematico_inserted_post' 
+		'description'=>'' 
 		)
 	);
 
@@ -364,7 +364,7 @@ if ( !defined('ABSPATH')) {
 					'parameters'=>0, 
 					'template_parameter'=>'', 
 					'type'=>'filter', 
-					'description'=>'Example Description wpematico_help_settings_rrewrites'
+					'description'=>''
 					),
 					array( 
 					'name'=>'wpe_pro_ramdom_rewrites_accept_word', 
@@ -372,21 +372,21 @@ if ( !defined('ABSPATH')) {
 					'parameters'=>4, 
 					'template_parameter'=>' true, $valw, $args, $campaign', 
 					'type'=>'filter', 
-					'description'=>'Example Description wpe_pro_ramdom_rewrites_accept_word'), 
+					'description'=>''), 
 					array( 
 					'name'=>'wpe_pro_ramdom_rewrites_array', 
 					'value'=>'wpe_pro_ramdom_rewrites_array', 
 					'parameters'=>3, 
 					'template_parameter'=>'$ramdom_rewrites_array,$args,$campaign', 
 					'type'=>'filter', 
-					'description'=>'Example Description wpe_pro_ramdom_rewrites_array'),
+					'description'=>''),
 					array( 
 					'name'=>'wpem_autotags_min_length', 
 					'value'=>'wpem_autotags_min_length', 
 					'parameters'=>1, 
 					'template_parameter'=>'$length', 
 					'type'=>'filter', 
-					'description'=>'Example Description wpem_autotags_min_length'),
+					'description'=>''),
 
 					array( 
 					'name'=>'wpematico_campaign_feed_advanced_options', 
@@ -394,7 +394,7 @@ if ( !defined('ABSPATH')) {
 					'parameters'=>4, 
 					'template_parameter'=>'$feed, $campaign_data, $cfgbasic, $key', 
 					'type'=>'action', 
-					'description'=>'Example Description wpematico_campaign_feed_advanced_options')
+					'description'=>'')
 					);
 	}
 	if(array_search('wpematico_fullcontent.php', $active_plugins_names )!==FALSE){
@@ -406,7 +406,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>' $website_videos', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpemfullcontent_websites_video'
+			'description'=>''
 			), 
 			array( 
 			'name'=>'wpematico_fullcontent_folder', 
@@ -414,7 +414,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>' $customconfigdir', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpematico_fullcontent_folder'
+			'description'=>''
 			), 
 			array( 
 			'name'=>'wpepro_getfullcontent', 
@@ -422,7 +422,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>' $permalink, $campaign', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpepro_getfullcontent'  
+			'description'=>''  
 			), 
 			array( 
 			'name'=>'wpepro_getfullcontent', 
@@ -430,7 +430,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>' $next_page_url, $campaign', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpepro_getfullcontent'  
+			'description'=>''  
 			), 
 			array( 
 			'name'=>'full_html_content', 
@@ -438,7 +438,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>' $html', 
 			'type'=>'filter', 
-			'description'=>'Example Description full_html_content' 
+			'description'=>'' 
 			), 
 			array( 
 			'name'=>'wpem_unlikelyCandidates_regexp', 
@@ -446,7 +446,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$unlikelyCandidates', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpem_unlikelyCandidates_regexp'
+			'description'=>''
 			), 
 			array( 
 			'name'=>'wpem_okMaybeItsACandidate_regexp', 
@@ -454,7 +454,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$okMaybeItsACandidate', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpem_okMaybeItsACandidate_regexp' 
+			'description'=>'' 
 			), 
 			array( 
 			'name'=>'wpem_positive_regexp', 
@@ -462,7 +462,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$positive', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpem_positive_regexp'
+			'description'=>''
 			), 
 			array( 
 			'name'=>'wpem_negative_regexp', 
@@ -470,7 +470,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$negative', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpem_negative_regexp'
+			'description'=>''
 			), 
 			array( 
 			'name'=>'wpem_video_regexp', 
@@ -478,7 +478,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$regexvideo ', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpem_video_regexp'
+			'description'=>''
 			),
 
 			array( 
@@ -487,7 +487,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>5, 
 			'template_parameter'=>' $html, $current_item, $campaign, $feed, $item', 
 			'type'=>'action', 
-			'description'=>'Example Description after_full_html_content'
+			'description'=>''
 			)
 		);
 	}
@@ -500,7 +500,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>' $ret, $api', 
 			'type'=>'filter', 
-			'description'=>'Example Description polyglot_can_use_api' 
+			'description'=>'' 
 			), 
 			array( 
 			'name'=>'polyglot_get_apis', 
@@ -508,7 +508,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>' $list_api', 
 			'type'=>'filter', 
-			'description'=>'Example Description polyglot_get_apis' 
+			'description'=>'' 
 			), 
 			array( 
 			'name'=>'polyglot_get_idioms_options', 
@@ -516,7 +516,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>' $options', 
 			'type'=>'filter', 
-			'description'=>'Example Description polyglot_get_idioms_options' 
+			'description'=>'' 
 			), 
 			array( 
 			'name'=>'polyglot_process_type', 
@@ -524,7 +524,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>' $process, $campaign', 
 			'type'=>'filter', 
-			'description'=>'Example Description polyglot_process_type' 
+			'description'=>'' 
 			), 
 			array( 
 			'name'=>'polyglot_process', 
@@ -532,7 +532,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'', 
 			'type'=>'filter', 
-			'description'=>'Example Description polyglot_process' 
+			'description'=>'' 
 			)
 		);
 	}
@@ -545,7 +545,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$better_excerpts', 
 			'type'=>'filter', 
-			'description'=>'Example Description wpematico_better_excerpts_checks' 
+			'description'=>'' 
 			),
 			array( 
 			'name'=>'wpem_after_better_excerpts_fields', 
@@ -553,7 +553,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$better_excerpts', 
 			'type'=>'action', 
-			'description'=>'Example Description wpem_after_better_excerpts_fields' 
+			'description'=>'' 
 			)
 		);
 	}
@@ -567,7 +567,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$mmfdata', 
 			'type'=>'filter', 
-			'description'=>'Example Description make_me_feed_pre_save_post' 
+			'description'=>'' 
 			), 
 			array( 
 			'name'=>'mmf_getcontents_args', 
@@ -575,7 +575,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'array("curl"=>TRUE)', 
 			'type'=>'filter', 
-			'description'=>'Example Description mmf_getcontents_args' 
+			'description'=>'' 
 			),
 			array( 
 			'name'=>'make_me_feed_metaboxes', 
@@ -583,7 +583,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$post', 
 			'type'=>'action', 
-			'description'=>'Example Description make_me_feed_metaboxes' 
+			'description'=>'' 
 			), 
 			array( 
 			'name'=>'make_me_feed_urls_box', 
@@ -591,7 +591,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>0, 
 			'template_parameter'=>'', 
 			'type'=>'action', 
-			'description'=>'Example Description make_me_feed_urls_box' 
+			'description'=>'' 
 			), 
 			array( 
 			'name'=>'make_me_feed_post_saved', 
@@ -599,7 +599,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>0, 
 			'template_parameter'=>'', 
 			'type'=>'action', 
-			'description'=>'Example Description make_me_feed_post_saved' 
+			'description'=>'' 
 			), 
 			array( 
 			'name'=>'mmf_testarea_before_getcontent', 
@@ -607,7 +607,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$campaign', 
 			'type'=>'action', 
-			'description'=>'Example Description mmf_testarea_before_getcontent' 
+			'description'=>'' 
 			)
 		);
 	}
@@ -620,7 +620,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$fbf_post_type_array', 
 			'type'=>'filter', 
-			'description'=>'Example Description fbf_campaign_post_type_array' 
+			'description'=>'' 
 			)
 		);
 	}

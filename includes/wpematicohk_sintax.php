@@ -32,19 +32,25 @@ class wpematicohk_sintax {
 		check_ajax_referer('wpematicohk_nonce');
 		$wpmaticohk_sintax_result = '';
 		foreach ($_POST['wpematicohk_options_action_filters'] as $i => $value) {
+
+			$_POST['wpematicohk_options_action_filters'][$i] = sanitize_text_field($_POST['wpematicohk_options_action_filters'][$i]);
+
 			if (!isset($_POST['wpematicohk_options_functions'][$i])){
 				$_POST['wpematicohk_options_functions'][$i] = '';
 			}
+
+
 			if($_POST['wpematicohk_options_functions'][$i]!=''){
 				if (!isset($_POST['wpematicohk_functions_action_filter'][$i])){
 					$_POST['wpematicohk_functions_action_filter'][$i] = '';
 				}
+				$_POST['wpematicohk_functions_action_filter'][$i] = sanitize_text_field($_POST['wpematicohk_functions_action_filter'][$i]);
 				
-				$code = str_replace('\\','',$_POST['wpematicohk_options_functions'][$i]);
-					//code analizer
+				$code = wp_unslash($_POST['wpematicohk_options_functions'][$i]);
+					
 				$wpmaticohk_sintax_result = self::check($code,$_POST['wpematicohk_options_action_filters'][$i]);
 				if(strpos($wpmaticohk_sintax_result['body'],'no-error-hook')===false){
-				    echo $wpmaticohk_sintax_result['body']."<br><strong> In hook: ".$_POST['wpematicohk_options_action_filters'][$i]."</strong>";
+				    echo $wpmaticohk_sintax_result['body']."<br><strong> In hook: ".esc_html($_POST['wpematicohk_options_action_filters'][$i])."</strong>";
 					wp_die();
 				}
 			}
@@ -62,9 +68,9 @@ class wpematicohk_sintax {
 	public static function check($mycode, $myfilter){
 		$response = '';
 		$path = WPEMATICOHK_DIR . 'includes/wpematicohk_file_phpchecker.php';
-		$end_file = 'echo "no-error-hook";';
+		$start_file = 'die("no-error-hook");';
 	    if (($h = fopen($path, "w")) !== FALSE) {
-	    	$string = "<?php ".$mycode."\n".$end_file." ?>";
+	    	$string = "<?php ".$start_file."\n".$mycode."\n ?>";
 	        fwrite($h,$string);
 	        fclose($h);
 	    }

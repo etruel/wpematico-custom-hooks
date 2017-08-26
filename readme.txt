@@ -57,7 +57,11 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 = 1.0.1 =
 * Limitados los archivos de scripts y styles para enqueue en solo el setting page del custom hooks.
 * Limitar el acceso directo a los archivos del plugin.
-* Limitar a ejecutar funciones de guardado y de verificacion de sintaxis a solo usuarios que puedan modificar los temas o los plugin.
+* Removidas las descripciones de ejemplos que no describen nada.
+* Limitar la ejecucion de acciones de guardado y de verificacion de sintaxis a solo usuarios que puedan modificar los temas o los plugin.
+* Se ha limpiado el guardado de las variables en las opciones y el codigo es guardado en base64.
+* Solucionado el problema de que no se ejecutaba los hooks en el run manualmente del WPeMatico.
+* Ahora el codigo no se ejecutara en el chequeo de sintaxis.
 
 = 1.0 =
 * initial release

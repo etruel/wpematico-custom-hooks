@@ -52,15 +52,47 @@ class wpematico_hooks_settings {
 	public static function options_callback() {
 		if(current_user_can('edit_plugins') || current_user_can('edit_themes')) {
 			check_admin_referer('wpematicohk_admin_nonce');
+			$wpematico_hooks = array();
+			if (!empty($_POST['wpematicohk_options_action_filters']) && is_array($_POST['wpematicohk_options_action_filters'])){
+				foreach ($_POST['wpematicohk_options_action_filters'] as $key => $value) {
+					$wpematico_hooks[] = sanitize_text_field($value);
+				}
+			}
+			$functions_parameters = array();
+			if (!empty($_POST['wpematicohk_functions_parameters']) && is_array($_POST['wpematicohk_functions_parameters'])){
+				foreach ($_POST['wpematicohk_functions_parameters'] as $key => $value) {
+					$functions_parameters[] = intval($value);
+				}
+			}
+			$action_filters = array();
+			if (!empty($_POST['wpematicohk_functions_action_filter']) && is_array($_POST['wpematicohk_functions_action_filter'])){
+				foreach ($_POST['wpematicohk_functions_action_filter'] as $key => $value) {
+					$action_filters[] = sanitize_text_field($value);
+				}
+			}
+
+			$options_functions = array();
+			if (!empty($_POST['wpematicohk_options_functions']) && is_array($_POST['wpematicohk_options_functions'])){
+				foreach ($_POST['wpematicohk_options_functions'] as $key => $value) {
+					$options_functions[] = base64_encode(wp_unslash($value));
+				}
+			}
+			$type_hook = array();
+			if (!empty($_POST['wpematicohk_type_hook']) && is_array($_POST['wpematicohk_type_hook'])){
+				foreach ($_POST['wpematicohk_type_hook'] as $key => $value) {
+					$type_hook[] = sanitize_text_field($value);
+				}
+			}
+			
 			$wpematicohk_options = array(
-				'wpematicohk_options_action_filters'=> $_POST['wpematicohk_options_action_filters'],
-				'wpematicohk_functions_parameters'=> $_POST['wpematicohk_functions_parameters'],
-				'wpematicohk_functions_action_filter'=> $_POST['wpematicohk_functions_action_filter'],
-				'wpematicohk_options_functions'=> str_replace('\\','',$_POST['wpematicohk_options_functions']),
-				'wpematicohk_type_hook'=>$_POST['wpematicohk_type_hook']
+					'wpematicohk_options_action_filters'=> $wpematico_hooks,
+					'wpematicohk_functions_parameters'=> $functions_parameters,
+					'wpematicohk_functions_action_filter'=> $action_filters,
+					'wpematicohk_options_functions'=> $options_functions,
+					'wpematicohk_type_hook'=> $type_hook
 				);
-			update_option('wpematicohk_datahooks',$wpematicohk_options);
-			update_option('wpematicohk_theme_editor',$_POST['wpematicohk_theme_editor']);
+			update_option('wpematicohk_datahooks', $wpematicohk_options);
+			update_option('wpematicohk_theme_editor', sanitize_text_field($_POST['wpematicohk_theme_editor']));
 			wp_redirect('edit.php?post_type=wpematico&page=wpematico_settings&tab=wpematico_hooks');
 			exit;
 		} else {
@@ -149,11 +181,16 @@ class wpematico_hooks_settings {
 									<h3 class="hndle" style="font-size:20px;"><span><?php _e(''.$key_hooks["name"].'', 'wpematico_custom-hooks' ); ?></span> <span style="float:right; background-color:#0073AA; color:white; padding:5px; font-size:14px !important;"><?php echo strtolower($key_hooks['type']); ?></span></h3>
 									<p style="padding-left:10px;"><?php _e(''.$key_hooks["description"].'', 'wpematico_custom-hooks' ); ?></p>
 									<div class="inside">
-										<input type="hidden" class="wpematicohk_options_action_filters" name="wpematicohk_options_action_filters[]" value="<?php echo $key_hooks["value"]; ?>">
-										<input type="hidden" class="wpematicohk_functions_parameters" name="wpematicohk_functions_parameters[]" value="<?php echo isset($key_hooks["parameters"]) ? $key_hooks["parameters"] : 0; ?>">
-										<input type="hidden" name="wpematicohk_functions_action_filter[]" class='wpematicohk_codemirror_<?php echo $key_hooks["value"]; ?>' value="<?php echo $wpematicohk_options_admin['wpematicohk_functions_action_filter'][$i]; ?>">
-										<input type="hidden" name="wpematicohk_type_hook[]" value="<?php echo $key_hooks["type"]; ?>">
-										<textarea name="wpematicohk_options_functions[]" class="wpematico-textarea-codemirror" id="wpematicohk_codemirror_<?php echo $key_hooks["value"]; ?>" style="width:100%; height:100px;"><?php echo isset($wpematicohk_options_admin['wpematicohk_options_functions'][$i]) ? $wpematicohk_options_admin['wpematicohk_options_functions'][$i] : ''; ?></textarea>
+										<input type="hidden" class="wpematicohk_options_action_filters" name="wpematicohk_options_action_filters[]" value="<?php echo esc_attr($key_hooks["value"]); ?>">
+										<input type="hidden" class="wpematicohk_functions_parameters" name="wpematicohk_functions_parameters[]" value="<?php echo esc_attr(isset($key_hooks["parameters"]) ? $key_hooks["parameters"] : 0); ?>">
+										<input type="hidden" name="wpematicohk_functions_action_filter[]" class='wpematicohk_codemirror_<?php echo esc_attr($key_hooks["value"]); ?>' value="<?php echo $wpematicohk_options_admin['wpematicohk_functions_action_filter'][$i]; ?>">
+										<input type="hidden" name="wpematicohk_type_hook[]" value="<?php echo esc_attr($key_hooks["type"]); ?>">
+										<?php 
+										$content_code_function = isset($wpematicohk_options_admin['wpematicohk_options_functions'][$i]) ? $wpematicohk_options_admin['wpematicohk_options_functions'][$i] : ''; 
+										$content_code_function = base64_decode($content_code_function);
+										$content_code_function = esc_textarea( $content_code_function );
+										?>
+										<textarea name="wpematicohk_options_functions[]" class="wpematico-textarea-codemirror" id="wpematicohk_codemirror_<?php echo $key_hooks["value"]; ?>" style="width:100%; height:100px;"><?php echo $content_code_function; ?></textarea>
 									</div>
 								</div>
 								<?php $i++; } ?>
