@@ -55,12 +55,12 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 
 == Changelog ==
 = 1.0.1 = Aug 27, 2017 
-* Tweaks Javacripts and styles only loads in the settings page of the plugin.
-* Tweaks to limit save and verify code sintax just for user roles with edit_plugins or edit_themes capabilities.
+* Tweaks JavaScript and styles only loads in the settings page of the plugin.
+* Tweaks to limit save and verify code syntax just for user roles with edit_plugins or edit_themes capabilities.
 * Tweaks on sanitize and escape the form fields and variables to print or save.
 * Tweaks for JavaScript and styles printed in the php, now have their own files .js and .css.
 * Fixes the hooks didn't executed when runs manually a campaign in WPeMatico.
-* Fixes the sintax error checking to avoid execute code in the process.
+* Fixes the syntax error checking to avoid execute code in the process.
 * Fixes to avoid direct accesses to the files.
 * Removed unuseful comments and examples.
 
