@@ -31,26 +31,21 @@ class wpematicohk_sintax {
 		}
 		check_ajax_referer('wpematicohk_nonce');
 		$wpmaticohk_sintax_result = '';
+		if (!isset($_POST['wpematicohk_options_action_filters'])) {
+			$_POST['wpematicohk_options_action_filters'] = array();
+		}
 		foreach ($_POST['wpematicohk_options_action_filters'] as $i => $value) {
 
-			$_POST['wpematicohk_options_action_filters'][$i] = sanitize_text_field($_POST['wpematicohk_options_action_filters'][$i]);
 
-			if (!isset($_POST['wpematicohk_options_functions'][$i])){
-				$_POST['wpematicohk_options_functions'][$i] = '';
-			}
-
-
-			if($_POST['wpematicohk_options_functions'][$i]!=''){
-				if (!isset($_POST['wpematicohk_functions_action_filter'][$i])){
-					$_POST['wpematicohk_functions_action_filter'][$i] = '';
-				}
-				$_POST['wpematicohk_functions_action_filter'][$i] = sanitize_text_field($_POST['wpematicohk_functions_action_filter'][$i]);
+			$current_action_filter = sanitize_text_field($_POST['wpematicohk_options_action_filters'][$i]);
+			
+			if(!empty($_POST['wpematicohk_options_functions'][$i])){
 				
 				$code = wp_unslash($_POST['wpematicohk_options_functions'][$i]);
 					
-				$wpmaticohk_sintax_result = self::check($code,$_POST['wpematicohk_options_action_filters'][$i]);
+				$wpmaticohk_sintax_result = self::check($code, $current_action_filter);
 				if(strpos($wpmaticohk_sintax_result['body'],'no-error-hook')===false){
-				    echo $wpmaticohk_sintax_result['body']."<br><strong> In hook: ".esc_html($_POST['wpematicohk_options_action_filters'][$i])."</strong>";
+				    echo esc_html($wpmaticohk_sintax_result['body']).'<br><strong> In hook: '.esc_html($current_action_filter).'</strong>';
 					wp_die();
 				}
 			}
@@ -94,7 +89,7 @@ class wpematicohk_sintax {
 	* Static function clean_file_test
 	* @access public
 	* @return void
-	* @since version
+	* @since 1.0.1
 	*/
 	public static function clean_file() {
 		$path = WPEMATICOHK_DIR . 'includes/wpematicohk_file_phpchecker.php';

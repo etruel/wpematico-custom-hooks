@@ -1,0 +1,29 @@
+#wpematicohk_sintax_error {
+	display:none;
+	text-aling:center; 
+	padding:15px 15px; 
+	color:#44494F; 
+	background-color:white; 
+	border:1px solid #F0F0F0;
+	border-left:4px solid #FFBA00; 
+}
+.CodeMirror {
+	width: 100% !important;
+}
+.hook-name {
+	font-size:20px;
+}
+.hook-description {
+	padding-left:10px;
+}
+.hook-type {
+	float:right; 
+	background-color:#0073AA; 
+	color:white; 
+	padding:5px; 
+	font-size:14px !important;
+}
+.wpematico-textarea-codemirror {
+	width:100%; 
+	height:100px;
+}

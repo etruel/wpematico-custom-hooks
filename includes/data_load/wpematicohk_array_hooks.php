@@ -625,6 +625,6 @@ if ( !defined('ABSPATH')) {
 		);
 	}
 
-
+$wpematicohk_data_filter_action = apply_filters('wpematico_hooks_data_filter_action', $wpematicohk_data_filter_action);
 	
 ?>

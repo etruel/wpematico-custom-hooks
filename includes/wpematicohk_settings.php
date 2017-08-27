@@ -30,6 +30,7 @@ class wpematico_hooks_settings {
 		$screen = get_current_screen();
 		if ($screen->id == 'wpematico_page_wpematico_settings') {
 			//Style
+			wp_enqueue_style( 'wpematicohk-settings-styles', WPEMATICOHK_URL.'assets/css/wpehk_settings.css');
 			wp_enqueue_style( 'wpematicohk-codemirror_style', WPEMATICOHK_URL.'assets/codemirror/css/codemirror.css');
 			wp_enqueue_style( 'wpematicohk-monokai', WPEMATICOHK_URL.'assets/codemirror/css/monokai.css');
 			wp_enqueue_style( 'wpematicohk-colbat', WPEMATICOHK_URL.'assets/codemirror/css/colbat.css' );
@@ -40,6 +41,16 @@ class wpematico_hooks_settings {
 			wp_enqueue_script( 'wpematicohk-xml', WPEMATICOHK_URL.'assets/codemirror/js/xml.js', array( 'wpematicohk-mirrorcode'), WPEMATICOHK_VER, true);
 			wp_enqueue_script( 'wpematicohk-php', WPEMATICOHK_URL.'assets/codemirror/js/php.js', array( 'wpematicohk-mirrorcode'), WPEMATICOHK_VER, true);
 			wp_enqueue_script( 'wpematicohk-htmlmixed', WPEMATICOHK_URL.'assets/codemirror/js/htmlmixed.js', array( 'wpematicohk-mirrorcode','wpematicohk-xml','wpematicohk-php'), WPEMATICOHK_VER, true);
+			wp_enqueue_script( 'wpematicohk-settings', WPEMATICOHK_URL.'assets/js/wpehk_settings.js', array( 'wpematicohk-mirrorcode','wpematicohk-xml','wpematicohk-php'), WPEMATICOHK_VER, true);
+			wp_localize_script( 'wpematicohk-settings', 'wpematicohk_object',
+				array(
+						'theme_editor'  		=> get_option('wpematicohk_theme_editor', ''),
+						'nonce' 				=> wp_create_nonce('wpematicohk_nonce'),
+						'text_checking_syntax'	=> __('Checking syntax errors...', 'wpematico_custom-hooks'),
+						'text_no_error_syntax'	=> __('No syntax errors found', 'wpematico_custom-hooks'),
+					)
+				);
+
 		}
 	}
 
@@ -74,7 +85,7 @@ class wpematico_hooks_settings {
 			$options_functions = array();
 			if (!empty($_POST['wpematicohk_options_functions']) && is_array($_POST['wpematicohk_options_functions'])){
 				foreach ($_POST['wpematicohk_options_functions'] as $key => $value) {
-					$options_functions[] = base64_encode(wp_unslash($value));
+					$options_functions[] = wp_unslash($value);
 				}
 			}
 			$type_hook = array();
@@ -117,7 +128,7 @@ class wpematico_hooks_settings {
 	* Static function 
 	* @access public
 	* @return void
-	* @since version
+	* @since 1.0.1
 	*/
 	public static function page() {
 		if(!current_user_can('edit_plugins') && !current_user_can('edit_themes')){
@@ -130,7 +141,7 @@ class wpematico_hooks_settings {
 		include("data_load/wpematicohk_array_hooks.php");
 
 		?>
-		<div id="wpematicohk_sintax_error" style="display:none;text-aling:center; padding:15px 15px; color:#44494F; background-color:white; border:1px solid #F0F0F0;border-left:4px solid #FFBA00; ">
+		<div id="wpematicohk_sintax_error">
 			
 		</div>
 		<form  method="POST" id="wpematicohk_form" action="<?php print(admin_url('admin-post.php')); ?>">
@@ -161,7 +172,7 @@ class wpematico_hooks_settings {
 									<select class="wpematicohk_select_actions_filters">
 										<option value=""><?php _e('All Hooks','wpematico_custom-hooks'); ?></option>
 										<?php foreach ($wpematicohk_data_filter_action as $key_hooks) { ?>
-										<option tagtypehook='<?php echo strtolower($key_hooks['type']); ?>' tagtemplateparameter='<?php echo isset($key_hooks["template_parameter"]) ? $key_hooks["template_parameter"]: ""; ?>' tagparameters='<?php echo $key_hooks['parameters'] ?>' value="<?php echo $key_hooks['value']; ?>"><?php echo $key_hooks['name']; ?></option>
+										<option tagtypehook='<?php echo esc_attr(strtolower($key_hooks['type'])); ?>' tagtemplateparameter='<?php echo esc_attr(isset($key_hooks["template_parameter"]) ? $key_hooks["template_parameter"]: ""); ?>' tagparameters='<?php echo esc_attr($key_hooks['parameters']); ?>' value="<?php echo esc_attr($key_hooks['value']); ?>"><?php echo esc_html($key_hooks['name']); ?></option>
 										<?php }  ?>
 									</select>
 									<br>
@@ -177,20 +188,19 @@ class wpematico_hooks_settings {
 						<div id="post-body-content">
 							<div id="normal-sortables" class="meta-box-sortables ui-sortable">
 								<?php $i=0; foreach ($wpematicohk_data_filter_action as $key_hooks) { ?>
-								<div  class="postbox wpematicohk_dinamic_metabox wpematicohk_dinamic_chaplain <?php echo $key_hooks['value']; ?>">
-									<h3 class="hndle" style="font-size:20px;"><span><?php _e(''.$key_hooks["name"].'', 'wpematico_custom-hooks' ); ?></span> <span style="float:right; background-color:#0073AA; color:white; padding:5px; font-size:14px !important;"><?php echo strtolower($key_hooks['type']); ?></span></h3>
-									<p style="padding-left:10px;"><?php _e(''.$key_hooks["description"].'', 'wpematico_custom-hooks' ); ?></p>
+								<div  class="postbox wpematicohk_dinamic_metabox wpematicohk_dinamic_chaplain <?php echo esc_attr($key_hooks['value']); ?>">
+									<h3 class="hndle hook-name"><span><?php echo esc_html($key_hooks["name"]); ?></span> <span class="hook-type"><?php echo esc_html(strtolower($key_hooks['type'])); ?></span></h3>
+									<p class="hook-description"><?php echo esc_html($key_hooks["description"]); ?></p>
 									<div class="inside">
 										<input type="hidden" class="wpematicohk_options_action_filters" name="wpematicohk_options_action_filters[]" value="<?php echo esc_attr($key_hooks["value"]); ?>">
 										<input type="hidden" class="wpematicohk_functions_parameters" name="wpematicohk_functions_parameters[]" value="<?php echo esc_attr(isset($key_hooks["parameters"]) ? $key_hooks["parameters"] : 0); ?>">
-										<input type="hidden" name="wpematicohk_functions_action_filter[]" class='wpematicohk_codemirror_<?php echo esc_attr($key_hooks["value"]); ?>' value="<?php echo $wpematicohk_options_admin['wpematicohk_functions_action_filter'][$i]; ?>">
+										<input type="hidden" name="wpematicohk_functions_action_filter[]" class='wpematicohk_codemirror_<?php echo esc_attr($key_hooks["value"]); ?>' value="<?php echo esc_attr($wpematicohk_options_admin['wpematicohk_functions_action_filter'][$i]); ?>">
 										<input type="hidden" name="wpematicohk_type_hook[]" value="<?php echo esc_attr($key_hooks["type"]); ?>">
 										<?php 
 										$content_code_function = isset($wpematicohk_options_admin['wpematicohk_options_functions'][$i]) ? $wpematicohk_options_admin['wpematicohk_options_functions'][$i] : ''; 
-										$content_code_function = base64_decode($content_code_function);
 										$content_code_function = esc_textarea( $content_code_function );
 										?>
-										<textarea name="wpematicohk_options_functions[]" class="wpematico-textarea-codemirror" id="wpematicohk_codemirror_<?php echo $key_hooks["value"]; ?>" style="width:100%; height:100px;"><?php echo $content_code_function; ?></textarea>
+										<textarea name="wpematicohk_options_functions[]" class="wpematico-textarea-codemirror" id="wpematicohk_codemirror_<?php echo esc_attr($key_hooks["value"]); ?>"><?php echo $content_code_function; ?></textarea>
 									</div>
 								</div>
 								<?php $i++; } ?>
@@ -201,160 +211,7 @@ class wpematico_hooks_settings {
 				</div>
 			</div>
 		</form>
-		<style type="text/css">
-		.CodeMirror{
-			width: 100% !important;
-		}
-		</style>
-		<script type="text/javascript">
-		var codemirror_editor = Array();
-		jQuery(document).ready(function($){
-			
-		//create template function
-		$(document).on('click','.wpematicohk_button_addfunctions',function(){
-			wpematicohk_select_text = $('.wpematicohk_select_actions_filters').val()+"_callback";
-			idtemp = 'wpematicohk_codemirror_'+$('.wpematicohk_select_actions_filters').val();
-			tagtypehook = $('.wpematicohk_select_actions_filters option:selected').attr('tagtypehook');
-			template_parameter =  $('.wpematicohk_select_actions_filters option:selected').attr('tagtemplateparameter');
-			template_function='\nfunction '+wpematicohk_select_text+'('+template_parameter+'){';
-			//IF ACTION ON FILTER
-			if(tagtypehook=='filter'){
-				varparameter = template_parameter.split(',');
-				if(varparameter[0]=='') varparameter[0] = '""';
-				template_function+='\n \treturn '+varparameter[0]+';\n';
-			}
 
-			template_function+='\n}';
-			//refresh codemirror editor
-			addCodemirrorFunction(idtemp,template_function);
-			wpematicohk_codemirror_line_function(idtemp);
-			$("textarea#"+idtemp).text(wpematicohkget_codemirror(idtemp));
-		});
-		$(document).on('click','#wpematicohk_save_settings',function(){
-			$(".wpematico-textarea-codemirror").each(function(){
-				idtemp = $(this).attr("id");
-				wpematicohk_codemirror_line_function(idtemp);
-				$("textarea#"+idtemp).text(wpematicohkget_codemirror(idtemp));
-			});
-			$("#wpematicohk_sintax_error").css({'border-left':"4px solid #FFBA00"});
-			$("#wpematicohk_sintax_error").text('<?php _e("Checking syntax errors....."); ?>');
-			$("#wpematicohk_sintax_error").fadeIn(300);
-			wpematicohk_run_sintax();
-			
-		});
-
-		$(document).on('change','.wpematicohk_select_actions_filters',function(){
-			wpematicohk_select_text = $('.wpematicohk_select_actions_filters').val();
-			if(wpematicohk_select_text!=''){
-				$(".wpematicohk_dinamic_chaplain").hide(0);
-				$("."+wpematicohk_select_text).show(0);
-			}else{
-				$(".wpematicohk_dinamic_chaplain").show(0);
-			}
-		});
-		//select theme editor
-		$(document).on('change','#wpematicohk_themes_selection_editor',function(){
-			mytheme = $(this).val();
-			$(".wpematico-textarea-codemirror").each(function(){
-				idtemp = $(this).attr("id");
-				wpematicohk_selectTheme(mytheme,idtemp);
-			});	
-		});
-
-		function wpematicohk_codemirror_line_function(idtemp){
-			cont_lines_code = 0;
-			function_lines_code = '';
-			$("textarea#"+idtemp+"").parent().find('.CodeMirror pre.CodeMirror-line').each(function(i){
-				if($(this).find('span').text().indexOf(' function')>-1){
-					//none
-				}else if($(this).find('span').text().indexOf('function')>-1){
-					fn = $(this).find('span').text()+'}';
-					fnStr = fn.toString().substr('function '.length),
-					result_function = fnStr.substr(0, fnStr.indexOf('('));
-						if(cont_lines_code>0){function_lines_code+=','+result_function; }else{function_lines_code+=result_function};
-						cont_lines_code++;
-					}
-				});
-			//add functions split ,
-			$("."+idtemp).val(function_lines_code);
-		}
-
-		//create Multiple Editors in codemirror javascript each
-		function multiple_codemirror(){
-			$(".wpematico-textarea-codemirror").each(function(){
-				idtemp = $(this).attr("id");
-				codemirror_editor[idtemp] = editor(idtemp);
-				codemirror_editor[idtemp].refresh();
-			});	
-		}
-		//creating ajax function sintax ejecute
-		function wpematicohk_run_sintax(){
-			wpematico_textarea_codemirror = Array();
-			wpematicohk_options_action_filters = Array();
-			wpematicohk_functions_parameters = Array();
-			wpematicohk_functions_action_filter = Array();
-
-			$('.wpematicohk_options_action_filters').map(function(i, el) {
-				wpematicohk_options_action_filters.push(el.value);
-			});
-			$('textarea.wpematico-textarea-codemirror').map(function(i, el) {
-				wpematico_textarea_codemirror.push(el.value);
-			});
-			$('.wpematicohk_functions_parameters').map(function(i, el) {
-				wpematicohk_functions_parameters.push(el.value);
-			});
-			$('.wpematicohk_functions_action_filter').map(function(i, el) {
-				wpematicohk_functions_action_filter.push(el.value);
-			});
-			
-			var data = {
-				'action': 'wpematicohk_sintax',
-				_ajax_nonce : "<?php echo $wpematicohk_nonce; ?>",
-				'wpematicohk_options_functions':wpematico_textarea_codemirror,
-				'wpematicohk_options_action_filters':wpematicohk_options_action_filters,
-				'wpematicohk_functions_parameters':wpematicohk_functions_parameters,
-				'wpematicohk_functions_action_filter':wpematicohk_functions_action_filter
-				
-			};
-			// since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
-			jQuery.post(ajaxurl, data, function(response) {
-				if(response.indexOf('no-error-hook')==(-1)){
-					$("#wpematicohk_sintax_error").css({'border-left':"4px solid #C00000"});
-					$("#wpematicohk_sintax_error").html(response);
-				}else{
-					$("#wpematicohk_sintax_error").text("<?php _e('No syntax errors found');  ?>");
-					$("#wpematicohk_sintax_error").css({'border-left':"4px solid #446320"});
-					$("#wpematicohk_form").submit();
-				}
-			});
-		}
-
-
-		multiple_codemirror();
-	});
-
-	//Create Multiple Editors in CodeMirror
-	function editor(id)
-	{
-		return CodeMirror.fromTextArea(document.getElementById(id), {
-			lineNumbers: true,
-			mode : "xml",
-			theme: "<?php echo $wpematicohk_theme_editor; ?>",
-			indentWithTabs: false,
-			htmlMode: true,
-			readOnly: false,
-		});
-	}
-	function wpematicohk_selectTheme(theme,id){
-		codemirror_editor[id].setOption("theme", theme);
-	}
-	function addCodemirrorFunction(id,myfunction){
-		codemirror_editor[id].setValue(codemirror_editor[id].getValue()+myfunction);
-	}
-	function wpematicohkget_codemirror(id){
-		return codemirror_editor[id].getValue();
-	}
-	</script>
 	<?php		
 	}	
 

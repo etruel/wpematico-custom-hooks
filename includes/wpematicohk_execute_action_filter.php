@@ -46,7 +46,7 @@ class wpehk_filter_and_actions {
 								 	add_filter($wpematicohk_options['wpematicohk_options_action_filters'][$i],$wpematicohk_all_function_filters[$j],10,$wpematicohk_options['wpematicohk_functions_parameters'][$i]);
 								}
 							}
-							$wpematicohk_code = wp_unslash(base64_decode($wpematicohk_options['wpematicohk_options_functions'][$i]));
+							$wpematicohk_code = wp_unslash($wpematicohk_options['wpematicohk_options_functions'][$i]);
 							eval($wpematicohk_code);
 						}//closed if isset wpematico all functions filters
 					}
