@@ -62,7 +62,7 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 * Se ha limpiado el guardado de las variables en las opciones.
 * Solucionado el problema de que no se ejecutaba los hooks en el run manualmente del WPeMatico.
 * Ahora el codigo no se ejecutara en el chequeo de sintaxis.
-* Se ha separado los codigos JavaScript y CSS del PHP, y se ha escapado las impreciones en el HTML.
+* Se ha separado los codigos JavaScript y CSS del PHP, y se ha escapado las impresiones de datos en el HTML.
 
 = 1.0 =
 * initial release
