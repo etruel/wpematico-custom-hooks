@@ -54,7 +54,7 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 1. Settings page.  Fields to fill.
 
 == Changelog ==
-= 1.0.1 =
+= 1.0.1 = Aug 27, 2017 
 * Tweaks Javacripts and styles only loads in the settings page of the plugin.
 * Tweaks to limit save and verify code sintax just for user roles with edit_plugins or edit_themes capabilities.
 * Tweaks on sanitize and escape the form fields and variables to print or save.
@@ -68,4 +68,4 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 * initial release
 
 == Upgrade Notice ==
-1.1 * Lot of improvements and security fixes
+1.0.1 * Lot of improvements and security fixes

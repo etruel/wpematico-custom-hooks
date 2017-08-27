@@ -1,63 +1,51 @@
-=== WPeMatico Custom Hooks===
-Contributors: albertdesinger
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TVCMLX5GTQ2T2
-Tags: dinamic , dinamic text , contact form dinamic text, visual form, contact, form, contact form, feedback, email, ajax, captcha, akismet, multilingual
+=== WPeMatico Custom Hooks ===
+Contributors: albertdesinger,sniuk,etruel
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=B8V39NWK3NFQU
+Tags: wpematico, WPeMatico Custom Hooks, autoblog, rss, feed, read, matic
 Requires at least: 4.1
-Tested up to: 4.7
-Stable tag: 2.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tested up to: 4.9
+Stable tag: 1.0.1
 
-Adds a Contact Form 7 Dynamic Vars  and a code highlighter for contact form 7 forms.  ADD-on.  Requires Contact Form 7 Plugin.
+Addon for WPeMatico. Allows you to execute PHP actions and filters right from your WordPress admin panel in order to create custom behaviors in your campaigns.
 
-== Descripción ==
+== Description ==
 
-Este plugins esta basicamente pensado para desarrolladores. ¿Que hace en si? Se trata de una extension para el contact form 7 el cual te permitira  incrustar codigo php en este caso variables, funciones y shortocdes  los cuales retornen un valor variante es decir dinamico.  De esta forma hacemos de nuestros formularios estaticos lo cual  se restringen por el mismo contact form a hacer de este un formulario capaz de responder a cualquier peticion del desarrollador segun  sea el caso.
+WPeMatico Custom Hooks is an addon of the main WPeMatico plugin that allows you to execute actions and filters provided by WPeMatico in order to create custom behavior in the execution of your campaigns, right from your WordPress admin panel. It's very interesting because it will let you see the functionalities of this powerful autoblogging plugin in greater depth, as well as its extensions on the development level. 
 
-Las formas de utilizar el plugin serian las siguientes:
+= How it works =
 
-* En un texto: Para agregar valores dinamicos en un formulario de CF7 sin la nesecidad de ser una caja de texto puedes utilizar el shortcode creado especial mente para estos casos el cual seria  [dinamic_vars 'dinamic_var:mivariable'].  La palabra 'mivariable' seria la que contenga el valor que se carga dinamicamente es decir seria la variable php llamada $mivariable.  Si esta posee un valor como por ejemplo $mivariable = 'MUNDO';  si queremos mostrar ese valor en nuestr formulario adaptarlo a un texto existente del mismo seria: HOLA [dinamic_vars 'dinamic_var':'mivariable'] lo que devolveria 'HOLA MUNDO'. 
+This addon allows you to add the actions and filters that WPeMatico possesses in order to make personalized changes in the campaigns you execute or actions that require a specific change in behavior.
+ 
+== FEATURES ==
 
-* En un Campo:  Para agregar valores dinamicos en un campo de texto no hay nesecidad de utilizar shortcodes especiales para esto basta con colocar el mismo atributo 'dinamic_var:tuvariable' en cualquier campo  tomando como ejemplo la primera caracteristica  el cual de la misma forma retornaria el valor y lo mostraria en el campo. Por ejemplo un boton submit con un valor dinamico seria asi:  [submit 'dinamic_var:tuvariabledinamica'] en donde tuvariabledinamica es la que tengas en tu codigo y desees mostrar el valor que posee en cualquier campo de texto, boton etc. Facil no? 
+* Hooks updates from WPeMatico Core.
+* Integration of Hooks through the installed WPeMatico extension.
+* Help templates with the function for each filter or action.
+* Elegant code editor with code highlighter for programmers.
+* Syntax error check before saving the code for the functions.
 
-*Para ambos casos de arriba tambien podemos llamar funciones php que creemos y nos retornen un valor en especifico. Para esto no utilizamos la propiedad 'dinamic_var:mivariable' si no que utilizamos 'dinamic_function:mifuncion'  en donde la palabra 'mifuncion' sera el nombre de la funcion que creemos en nuestro codigo php la cual nos retornara un valor variante  o especifico.
+= Requirements =
+This WPeMatico addon requires the WPeMatico base plugin to be installed and activated.  
+PHP 5.3 or higher
 
+== Installation ==
 
-*Para ambos los dos primeros casos  tambien podemos llamar shortcodes php que creemos y nos retornen un valor en especifico.De la misma forma  contiene su atributo personal el cual para  llamarlo a la acción seria  'dinamic_shortcode:mishortcode'  en donde la palabra 'mishortcode' sera el nombre de la shortcode que creemos en nuestro codigo php la cual nos retornara un valor variante  o especifico. Tome en cuenta que no es necesario encerrar los shortcodes que llamemos en nuestros campos o textos con corchetes con solo el nombre como se muestra tal cual en el ejemplo podemos llamarlos a la acción. 
+You can either install it automatically from the WordPress admin, or do it manually:
 
+1. Unzip plugin file and put the folder into your plugins folder (/wp-content/plugins/).
 
-== Instalación ==
+2. Activate the plugin from the WPeMatico Extensions menu.
 
-Puede instalarlo automáticamente desde el administrador de WordPress o hacerlo manualmente:
+1) Decompress it in the WordPress plugins folder to continue with activation. You must first have WPeMatico installed.
 
-= Uso del Administrador de Plugins =
+2) Once installed, go to the WPeMatico menu  - > Configuration  
 
-1. Haga clic en Plugins
-2. Haga clic en Agregar nuevo
-3. Búsqueda de 'Formulario de contacto 7 Dynamic Vars`
-4. Haga clic en Instalar
-5. Haga clic en Instalar ahora.
-6. Haga clic en Activar complemento
-
-
-==  Manual ==
-
-Cargue la carpeta `contact-form-7-dinamic-vars` al directorio `wp-content/plugins/`
-2. Active el plugin a través del menú "Plugins" en WordPress
-
-== Screenshots ==
+3) Then, click on the 'Hooks' tab to go to the main page of the addon
 
 
-1. Primero mostramos las variables que tienen un valor el cual queremos visualizar en   nuestro formulario de contacto 7
+== Frequently Asked Questions ==
 
-2. Para llamar a las variables en nuestro formulario de contacto 7 usamos  ambas variables dinamicas segun su tipo. La primera obtiene el valor de la variable $mytitle y lo mostraremos como un título de la página. 
-La segunda forma muestra el valor de $myvalue esto lo hace dentro del campo de texto
+= Can I use this addon without the WPeMatico plugin? =
 
-3. Finalmente vemos cómo los datos que las variables habían almacenado se muestran de forma satisfactoria en nuestro formulario de contacto. Simple no
-
-
-== Changelog ==
-
-= 1.0 =
-Plugins en su version beta
+No. The addon requires WPeMatico Free Version to be installed and activated.
 
