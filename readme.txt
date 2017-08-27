@@ -55,17 +55,17 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 
 == Changelog ==
 = 1.0.1 =
-* Limitados los archivos de scripts y styles para enqueue en solo el setting page del custom hooks.
-* Limitar el acceso directo a los archivos del plugin.
-* Removidas las descripciones de ejemplos que no describen nada.
-* Limitar la ejecucion de acciones de guardado y de verificacion de sintaxis a solo usuarios que puedan modificar los temas o los plugin.
-* Se ha limpiado el guardado de las variables en las opciones.
-* Solucionado el problema de que no se ejecutaba los hooks en el run manualmente del WPeMatico.
-* Ahora el codigo no se ejecutara en el chequeo de sintaxis.
-* Se ha separado los codigos JavaScript y CSS del PHP, y se ha escapado las impresiones de datos en el HTML.
+* Tweaks Javacripts and styles only loads in the settings page of the plugin.
+* Tweaks to limit save and verify code sintax just for user roles with edit_plugins or edit_themes capabilities.
+* Tweaks on sanitize and escape the form fields and variables to print or save.
+* Tweaks for JavaScript and styles printed in the php, now have their own files .js and .css.
+* Fixes the hooks didn't executed when runs manually a campaign in WPeMatico.
+* Fixes the sintax error checking to avoid execute code in the process.
+* Fixes to avoid direct accesses to the files.
+* Removed unuseful comments and examples.
 
 = 1.0 =
 * initial release
 
 == Upgrade Notice ==
-1.0 * initial release
+1.1 * Lot of improvements and security fixes

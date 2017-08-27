@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WPeMatico_Custom Hooks
+ * Plugin Name: WPeMatico Custom Hooks
  * Plugin URI:  https://etruel.com/downloads/wpematico_custom-hooks
  * Description: WPeMatico Add-on starter point WPeMatico Custom Hooks plugin 
  * Version:     1.0.1
