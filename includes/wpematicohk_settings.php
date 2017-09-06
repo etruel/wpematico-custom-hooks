@@ -46,8 +46,8 @@ class wpematico_hooks_settings {
 				array(
 						'theme_editor'  		=> get_option('wpematicohk_theme_editor', ''),
 						'nonce' 				=> wp_create_nonce('wpematicohk_nonce'),
-						'text_checking_syntax'	=> __('Checking syntax errors...', 'wpematico_custom-hooks'),
-						'text_no_error_syntax'	=> __('No syntax errors found', 'wpematico_custom-hooks'),
+						'text_checking_syntax'	=> __('Checking syntax errors...', 'wpematico-custom-hooks'),
+						'text_no_error_syntax'	=> __('No syntax errors found', 'wpematico-custom-hooks'),
 					)
 				);
 
@@ -107,7 +107,7 @@ class wpematico_hooks_settings {
 			wp_redirect('edit.php?post_type=wpematico&page=wpematico_settings&tab=wpematico_hooks');
 			exit;
 		} else {
-			wp_die(__( 'Security check.', 'wpematico_custom-hooks' ));
+			wp_die(__( 'Security check.', 'wpematico-custom-hooks' ));
 		}
 			
 	}
@@ -119,7 +119,7 @@ class wpematico_hooks_settings {
 	*/
 	public static function tabs($tabs) {
 		if(current_user_can('edit_plugins') || current_user_can('edit_themes')){
-			$tabs['wpematico_hooks'] = __( 'Hooks', 'wpematico_custom-hooks' );
+			$tabs['wpematico_hooks'] = __( 'Hooks', 'wpematico-custom-hooks' );
 		}
 		return $tabs;
 	}
@@ -132,7 +132,7 @@ class wpematico_hooks_settings {
 	*/
 	public static function page() {
 		if(!current_user_can('edit_plugins') && !current_user_can('edit_themes')){
-			wp_die(__( 'Security check.', 'wpematico_custom-hooks' ));
+			wp_die(__( 'Security check.', 'wpematico-custom-hooks' ));
 		}
 		$wpematicohk_options_admin = get_option('wpematicohk_datahooks');
 		$wpematicohk_theme_editor = get_option('wpematicohk_theme_editor');
@@ -151,36 +151,74 @@ class wpematico_hooks_settings {
 			<input type="hidden" name="action" value="wpematicohk_options">
 			<input type="hidden" name="_wpnonce" value="<?php echo $wpematicohk_admin_nonce; ?>">
 			<div class="wrap2">
-				<h2><?php _e( 'WPeMatico Custom Hooks', 'wpematico_custom-hooks' );?></h2>
+				<h2><?php _e( 'WPeMatico Custom Hooks', 'wpematico-custom-hooks' );?></h2>
 				<div id="poststuff" class="metabox-holder has-right-sidebar">
 					<div id="side-info-column" class="inner-sidebar">
 						<div id="side-sortables" class="meta-box-sortables ui-sortable">
 							<div class="postbox inside">
-								<h3 class="handle"><?php _e( 'WPeMatico Hooks', 'wpematico_custom-hooks' );?></h3>
+								<button type="button" class="handlediv button-link" aria-expanded="true">
+									<span class="screen-reader-text"><?php _e('Click to toggle'); ?></span>
+									<span class="toggle-indicator" aria-hidden="true"></span>
+								</button>
+								<h3 class="handle"><?php _e( 'About WPeMatico Custom Hooks', 'wpematico-custom-hooks' );?></h3>
 								<div class="inside">
-									<p><?php _e('In this section we can put some example description to test','wpematico_custom-hooks'); ?></p>
-									<br>
-									<p><strong><?php _e('Select theme for the editor','wpematico_custom-hooks'); ?></strong></p>
+									<p id="left1" onmouseover="jQuery(this).css('opacity',0.9);" onmouseout="jQuery(this).css('opacity',0.5);" style="text-align:center;opacity: 0.5;"><a href="http://www.wpematico.com" target="_Blank" title="Go to new WPeMatico WebSite"><img style="width: 100%;" src="<?php echo WPeMatico :: $uri ; ?>/images/icon-512x512.jpg" title=""></a><br />
+										<b>WPeMatico Custom Hooks <?php echo WPEMATICOHK_VER; ?></b></p>
+									<p><?php _e( 'Thanks for test, use and enjoy this plugin.', 'wpematico' );?></p>
+									<p></p>
+									<p><?php _e( 'If you like it and want to thank, you can write a 5 star review on Wordpress.', 'wpematico' );?></p>
+									<style type="text/css">#linkrate:before { content: "\2605\2605\2605\2605\2605";font-size: 18px;}
+									#linkrate { font-size: 18px;}</style>
+									<p style="text-align: center;">
+										<a href="https://wordpress.org/support/plugin/wpematico-custom-hooks/reviews?filter=5&rate=5#new-post" id="linkrate" class="button" target="_Blank" title="Click here to rate the plugin on Wordpress">  Rate </a>
+									</p>
+									<p></p>
+								</div>
+							</div>
+							<div class="postbox inside">
+								<h3 class="handle"><?php _e( 'Settings', 'wpematico-custom-hooks' );?></h3>
+								<div class="inside">
+									<p><?php _e('Select the editor theme and the filter you want to hook with a function.','wpematico-custom-hooks'); ?></p>
+									
+									<p><strong><?php _e('Select theme for the editor','wpematico-custom-hooks'); ?></strong></p>
 									<select id="wpematicohk_themes_selection_editor" name="wpematicohk_theme_editor"> 
-										<option value=""><?php _e('Colors Scheme','wpematico_custom-hooks'); ?></option>
+										<option value=""><?php _e('Colors Scheme','wpematico-custom-hooks'); ?></option>
 										<option value="monokai" <?php selected('monokai', $wpematicohk_theme_editor, true) ?>>Monokai</option>
 										<option value="blackboard" <?php selected('blackboard', $wpematicohk_theme_editor, true) ?>>Blackboard</option>
 										<option value="cobalt" <?php selected('cobalt', $wpematicohk_theme_editor, true) ?>>Cobalt</option>
 									</select>
 									<br>
-									<p><strong><?php _e('Select the hooks','wpematico_custom-hooks'); ?></strong></p>
+									<p><strong><?php _e('Select the hooks','wpematico-custom-hooks'); ?></strong></p>
 									<select class="wpematicohk_select_actions_filters">
-										<option value=""><?php _e('All Hooks','wpematico_custom-hooks'); ?></option>
+										<option value=""><?php _e('All Hooks','wpematico-custom-hooks'); ?></option>
 										<?php foreach ($wpematicohk_data_filter_action as $key_hooks) { ?>
 										<option tagtypehook='<?php echo esc_attr(strtolower($key_hooks['type'])); ?>' tagtemplateparameter='<?php echo esc_attr(isset($key_hooks["template_parameter"]) ? $key_hooks["template_parameter"]: ""); ?>' tagparameters='<?php echo esc_attr($key_hooks['parameters']); ?>' value="<?php echo esc_attr($key_hooks['value']); ?>"><?php echo esc_html($key_hooks['name']); ?></option>
 										<?php }  ?>
 									</select>
 									<br>
 									<br>
-									<input type="button"  class="button button-primary wpematicohk_button_addfunctions" value="<?php _e('Add Functions','wpematico_custom-hooks'); ?>">
-									<input type="button" class="button button-primary" id="wpematicohk_save_settings" value="<?php _e('Save Data','wpematico_custom-hooks'); ?>">
+									<input type="button"  class="button button-primary wpematicohk_button_addfunctions" value="<?php _e('Add Functions','wpematico-custom-hooks'); ?>">
+									<input type="button" class="button button-primary" id="wpematicohk_save_settings" value="<?php _e('Save Data','wpematico-custom-hooks'); ?>">
 								</div>
 							</div>
+							<div class="postbox inside">
+								<button type="button" class="handlediv button-link" aria-expanded="true">
+									<span class="screen-reader-text"><?php _e('Click to toggle'); ?></span>
+									<span class="toggle-indicator" aria-hidden="true"></span>
+								</button>
+								<h3 class="handle"><?php _e( 'Enjoy it', 'wpematico-custom-hooks' );?></h3>
+								<div class="inside">
+									<p style="text-align: center;"><?php _e( 'If you enjoy it please donate few dollars', 'wpematico-custom-hooks' );?>
+										<input type="button" class="button-secondary" name="donate" value="<?php _e( 'Click to Donate', 'wpematico-custom-hooks' );?>" onclick="javascript:window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=B8V39NWK3NFQU');return false;"/>
+									</p>
+									<p></p>
+									<p style="text-align: center;">
+										<input type="button" class="button-primary" name="buypro" value="<?php _e( 'WPeMatico Perfect Package', 'wpematico-custom-hooks' );?>" onclick="javascript:window.open('https://etruel.com/downloads/wpematico-perfect/');return false;"/>
+									</p>
+									<p></p>
+								</div>
+							</div>
+							
 						</div>
 					</div>
 					

@@ -27,7 +27,7 @@ class wpematicohk_sintax {
 	*/
 	public static function ajax_callback() {
 		if(!current_user_can('edit_plugins') && !current_user_can('edit_themes')){
-			wp_die(__( 'Security check.', 'wpematico_custom-hooks' ));
+			wp_die(__( 'Security check.', 'wpematico-custom-hooks' ));
 		}
 		check_ajax_referer('wpematicohk_nonce');
 		$wpmaticohk_sintax_result = '';

@@ -54,6 +54,11 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 1. Settings page.  Fields to fill.
 
 == Changelog ==
+= 1.0.2 = Sep 4, 2017 
+* Fix plugin text domain to wpematico-custom-hooks.
+* Added Settings and auxiliary links in the Plugin row.
+* Added in WordPress Repository.
+
 = 1.0.1 = Aug 27, 2017 
 * Tweaks JavaScript and styles only loads in the settings page of the plugin.
 * Tweaks to limit save and verify code syntax just for user roles with edit_plugins or edit_themes capabilities.
@@ -68,4 +73,4 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 * initial release
 
 == Upgrade Notice ==
-1.0.1 * Lot of improvements and security fixes
+1.0.2 * Fix plugin text domain to allow translations

@@ -3,14 +3,13 @@
  * Plugin Name: WPeMatico Custom Hooks
  * Plugin URI:  https://etruel.com/downloads/wpematico_custom-hooks
  * Description: WPeMatico Add-on starter point WPeMatico Custom Hooks plugin 
- * Version:     1.0.1
+ * Version:     1.0.2
  * Author:      etruel
  * Author URI:  https://www.netmdp.com
- * Text Domain: wpematico_custom-hooks
+ * Text Domain: wpematico-custom-hooks
  * License:     GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: wpematico_custom-hooks
- * Domain Path: /languages
+  * Domain Path: /languages
  * 
  *  
 WPeMatico Custom Hooks is free software: you can redistribute it and/or modify
@@ -33,7 +32,7 @@ if( !defined( 'ABSPATH' ) ) exit;
 
  // Plugin version
 if(!defined('WPEMATICOHK_VER')) {
-    define('WPEMATICOHK_VER', '1.0.1' );
+    define('WPEMATICOHK_VER', '1.0.2' );
 }
 
 
@@ -97,7 +96,7 @@ if( !class_exists( 'wpematicohk' ) ) {
                 define('WPEMATICOHK_STORE_URL', 'https://etruel.com'); 
             } 
             if(!defined('WPEMATICOHK_ITEM_NAME')) {
-                define('WPEMATICOHK_ITEM_NAME', 'wpematico_custom-hooks'); 
+                define('WPEMATICOHK_ITEM_NAME', 'wpematico-custom-hooks'); 
             } 
         }
 
@@ -112,6 +111,7 @@ if( !class_exists( 'wpematicohk' ) ) {
         public static function includes() {
             // Include scripts
             require_once WPEMATICOHK_DIR . 'includes/wpematicohk_settings.php';
+            require_once WPEMATICOHK_DIR . 'includes/plugin_functions.php';
             require_once WPEMATICOHK_DIR . 'includes/wpematicohk_sintax.php';
             require_once WPEMATICOHK_DIR . 'includes/wpematicohk_execute_action_filter.php';
 
@@ -157,8 +157,8 @@ if( !class_exists( 'wpematicohk' ) ) {
             $lang_dir = apply_filters( 'wpematicohk_languages_directory', $lang_dir );
 
             // Traditional WordPress plugin locale filter
-            $locale = apply_filters( 'plugin_locale', get_locale(), 'wpematico_custom-hooks' );
-            $mofile = sprintf( '%1$s-%2$s.mo', 'wpematico_custom-hooks', $locale );
+            $locale = apply_filters( 'plugin_locale', get_locale(), 'wpematico-custom-hooks' );
+            $mofile = sprintf( '%1$s-%2$s.mo', 'wpematico-custom-hooks', $locale );
 
             // Setup paths to current locale file
             $mofile_local   = $lang_dir . $mofile;
@@ -166,13 +166,13 @@ if( !class_exists( 'wpematicohk' ) ) {
 
             if( file_exists( $mofile_global ) ) {
                 // Look in global /wp-content/languages/wpematicohk/ folder
-                load_textdomain( 'wpematico_custom-hooks', $mofile_global );
+                load_textdomain( 'wpematico-custom-hooks', $mofile_global );
             } elseif( file_exists( $mofile_local ) ) {
                 // Look in local /wp-content/plugins/wpematico-custom-hooks/languages/ folder
-                load_textdomain( 'wpematico_custom-hooks', $mofile_local );
+                load_textdomain( 'wpematico-custom-hooks', $mofile_local );
             } else {
                 // Load the default language files
-                load_plugin_textdomain( 'wpematico_custom-hooks', false, $lang_dir );
+                load_plugin_textdomain( 'wpematico-custom-hooks', false, $lang_dir );
             }
         }
 
@@ -189,8 +189,8 @@ if( !class_exists( 'wpematicohk' ) ) {
             $new_settings = array(
                 array(
                     'id'    => 'wpematicohk_settings',
-                    'name'  => '<strong>' . __( 'Plugin Name Settings', 'wpematico_custom-hooks' ) . '</strong>',
-                    'desc'  => __( 'Configure Plugin Name Settings', 'wpematico_custom-hooks' ),
+                    'name'  => '<strong>' . __( 'Plugin Name Settings', 'wpematico-custom-hooks' ) . '</strong>',
+                    'desc'  => __( 'Configure Plugin Name Settings', 'wpematico-custom-hooks' ),
                     'type'  => 'header',
                 )
             );
