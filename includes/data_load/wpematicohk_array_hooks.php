@@ -16,7 +16,7 @@ if ( !defined('ABSPATH')) {
  		array(
 			'name'=>'wpematico newimgname',
 			'value'=>'wpematico_newimgname',
-			'parameters'=>0,
+			'parameters'=>4,
 			'template_parameter'=>'$imagen_src_real, $current_item, $campaign, $item',
 			'type'=>'filter',
 			'description'=>''
@@ -131,7 +131,7 @@ if ( !defined('ABSPATH')) {
 		array(
 			'name'=>'wpematico postags',
 			'value'=>'wpematico_postags',
-			'parameters'=>5,
+			'parameters'=>3,
 			'template_parameter'=>'$current_item, $item, $cfg',
 			'type'=>'filter',
 			'description'=>''
@@ -172,7 +172,7 @@ if ( !defined('ABSPATH')) {
 			'name'=>'wpematico_simplepie_url', 
 			'value'=>'wpematico_simplepie_url', 
 			'parameters'=>3, 
-			'template_parameter'=>' $feed, $kf, $campaign', 
+			'template_parameter'=>'$feed, $kf, $campaign', 
 			'type'=>'filter', 
 			'description'=>'' 
 		), 
@@ -188,7 +188,7 @@ if ( !defined('ABSPATH')) {
 			'name'=>'wpematico_get_author', 
 			'value'=>'wpematico_get_author', 
 			'parameters'=>4, 
-			'template_parameter'=>' $current_item, $campaign, $feedurl, $item ', 
+			'template_parameter'=>'$current_item, $campaign, $feedurl, $item ', 
 			'type'=>'filter', 
 			'description'=>'' 
 		), 
@@ -196,7 +196,7 @@ if ( !defined('ABSPATH')) {
 			'name'=>'wpematico_get_post_content', 
 			'value'=>'wpematico_get_post_content', 
 			'parameters'=>4, 
-			'template_parameter'=>' $current_item, $campaign, $feed, $item ', 
+			'template_parameter'=>'$current_item, $campaign, $feed, $item ', 
 			'type'=>'filter', 
 			'description'=>'' 
 		),
@@ -211,8 +211,8 @@ if ( !defined('ABSPATH')) {
 		array( 
 			'name'=>'wpematico_set_featured_img', 
 			'value'=>'wpematico_set_featured_img', 
-			'parameters'=>1, 
-			'template_parameter'=>' ', 
+			'parameters'=>4, 
+			'template_parameter'=>'$current_item, $campaign, $feed,$item', 
 			'type'=>'filter', 
 			'description'=>'' 
 		),
@@ -229,14 +229,6 @@ if ( !defined('ABSPATH')) {
 			'value'=>'wpematico_item_filters_pos_img', 
 			'parameters'=>2, 
 			'template_parameter'=>' $current_item, $campaign ', 
-			'type'=>'filter', 
-			'description'=>'' 
-		), 
-		array( 
-			'name'=>'wpematico_addcat_description', 
-			'value'=>'wpematico_addcat_description', 
-			'parameters'=>1, 
-			'template_parameter'=>'Auto Added by WPeMatico', 
 			'type'=>'filter', 
 			'description'=>'' 
 		), 
@@ -404,7 +396,7 @@ if ( !defined('ABSPATH')) {
 			'name'=>'wpemfullcontent_websites_video', 
 			'value'=>'wpemfullcontent_websites_video', 
 			'parameters'=>1, 
-			'template_parameter'=>' $website_videos', 
+			'template_parameter'=>'$website_videos', 
 			'type'=>'filter', 
 			'description'=>''
 			), 
@@ -412,7 +404,7 @@ if ( !defined('ABSPATH')) {
 			'name'=>'wpematico_fullcontent_folder', 
 			'value'=>'wpematico_fullcontent_folder', 
 			'parameters'=>1, 
-			'template_parameter'=>' $customconfigdir', 
+			'template_parameter'=>'$customconfigdir', 
 			'type'=>'filter', 
 			'description'=>''
 			), 
@@ -420,15 +412,7 @@ if ( !defined('ABSPATH')) {
 			'name'=>'wpepro_getfullcontent', 
 			'value'=>'wpepro_getfullcontent', 
 			'parameters'=>2, 
-			'template_parameter'=>' $permalink, $campaign', 
-			'type'=>'filter', 
-			'description'=>''  
-			), 
-			array( 
-			'name'=>'wpepro_getfullcontent', 
-			'value'=>'wpepro_getfullcontent', 
-			'parameters'=>2, 
-			'template_parameter'=>' $next_page_url, $campaign', 
+			'template_parameter'=>'$permalink, $campaign', 
 			'type'=>'filter', 
 			'description'=>''  
 			), 
@@ -436,7 +420,7 @@ if ( !defined('ABSPATH')) {
 			'name'=>'full_html_content', 
 			'value'=>'full_html_content', 
 			'parameters'=>1, 
-			'template_parameter'=>' $html', 
+			'template_parameter'=>'$html', 
 			'type'=>'filter', 
 			'description'=>'' 
 			), 
@@ -528,9 +512,9 @@ if ( !defined('ABSPATH')) {
 			), 
 			array( 
 			'name'=>'polyglot_process', 
-			'value'=>'polyglot_process_".$translate_process, $args, $campaign)', 
+			'value'=>'polyglot_process', 
 			'parameters'=>1, 
-			'template_parameter'=>'', 
+			'template_parameter'=>'$process', 
 			'type'=>'filter', 
 			'description'=>'' 
 			)
@@ -573,7 +557,7 @@ if ( !defined('ABSPATH')) {
 			'name'=>'mmf_getcontents_args', 
 			'value'=>'mmf_getcontents_args', 
 			'parameters'=>1, 
-			'template_parameter'=>'array("curl"=>TRUE)', 
+			'template_parameter'=>'$curl', 
 			'type'=>'filter', 
 			'description'=>'' 
 			),
