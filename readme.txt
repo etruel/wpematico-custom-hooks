@@ -56,7 +56,7 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 == Changelog ==
 = 1.0.3 = Oct 20, 2017
 *Resuelto error de guardado de imagenes al ejecutar una campaña.
-*Agregada condición para ejecutar solo los actions y filtros con funciones activas en el WPeMatico Custom Hook.
+
 
 = 1.0.2 = Sep 4, 2017 
 * Fix plugin text domain to wpematico-custom-hooks.

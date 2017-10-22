@@ -33,8 +33,6 @@ class wpehk_filter_and_actions {
 			if(isset($wpematicohk_options['wpematicohk_options_action_filters'])){
 				foreach ($wpematicohk_options['wpematicohk_options_action_filters'] as $i => $value) {
 						if(!empty(wp_unslash($wpematicohk_options['wpematicohk_options_functions'][$i]))){
-							$wpematicohk_code_value = explode('{', $wpematicohk_options['wpematicohk_options_functions'][$i]);
-							if(trim($wpematicohk_code_value[1])!='}'){
 								if(isset($wpematicohk_options['wpematicohk_functions_action_filter'][$i])){
 										 $wpematicohk_all_function_filters = explode(',',$wpematicohk_options['wpematicohk_functions_action_filter'][$i]);
 									}
@@ -49,7 +47,6 @@ class wpehk_filter_and_actions {
 										$wpematicohk_code = wp_unslash($wpematicohk_options['wpematicohk_options_functions'][$i]);
 										eval($wpematicohk_code);
 									}//closed if isset wpematico all functions filters
-							}//closed code value
 						}
 				}//closed forearch
 			}//isset array foreach
