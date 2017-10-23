@@ -65,7 +65,6 @@ if( !class_exists( 'wpematicohk' ) ) {
                 self::$instance->wphk_setup_constants();
                 self::$instance->wphk_includes();
                 self::$instance->wphk_load_textdomain();
-
             }
 
             return self::$instance;
