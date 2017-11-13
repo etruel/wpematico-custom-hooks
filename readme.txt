@@ -54,6 +54,9 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 1. Settings page.  Fields to fill.
 
 == Changelog ==
+= 1.0.4 = Nov 13, 2017
+*Restauraciòn de Valores Estandares en el archivo principal del plugin
+
 = 1.0.3 = Oct 20, 2017
 *Resuelto error de guardado de imagenes al ejecutar una campaña.
 
