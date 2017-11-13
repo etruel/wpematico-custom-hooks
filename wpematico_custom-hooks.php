@@ -62,9 +62,9 @@ if( !class_exists( 'wpematicohk' ) ) {
         public static function instance() {
             if( !self::$instance ) {
                 self::$instance = new self();
-                self::$instance->wphk_setup_constants();
-                self::$instance->wphk_includes();
-                self::$instance->wphk_load_textdomain();
+                self::$instance->setup_constants();
+                self::$instance->includes();
+                self::$instance->load_textdomain();
             }
 
             return self::$instance;
@@ -78,7 +78,7 @@ if( !class_exists( 'wpematicohk' ) ) {
          * @since       1.0.0
          * @return      void
          */
-       public static function wphk_setup_constants() {
+       public static function setup_constants() {
             // Plugin root file
             if(!defined('WPEMATICOHK_ROOT_FILE')) {
                 define('WPEMATICOHK_ROOT_FILE', __FILE__ );
@@ -107,7 +107,7 @@ if( !class_exists( 'wpematicohk' ) ) {
          * @since       1.0.0
          * @return      void
          */
-        public static function wphk_includes() {
+        public static function includes() {
             // Include scripts
             require_once WPEMATICOHK_DIR . 'includes/wpematicohk_settings.php';
             require_once WPEMATICOHK_DIR . 'includes/plugin_functions.php';
@@ -138,7 +138,7 @@ if( !class_exists( 'wpematicohk' ) ) {
          * @since       1.0.0
          * @return      void
          */
-         public static function wphk_load_textdomain() {
+         public static function load_textdomain() {
             // Set filter for language directory
             $lang_dir = WPEMATICOHK_DIR . '/languages/';
             $lang_dir = apply_filters( 'wpematicohk_languages_directory', $lang_dir );
@@ -153,10 +153,10 @@ if( !class_exists( 'wpematicohk' ) ) {
 
             if( file_exists( $mofile_global ) ) {
                 // Look in global /wp-content/languages/wpematicohk/ folder
-                wphk_load_textdomain( 'wpematico-custom-hooks', $mofile_global );
+                load_textdomain( 'wpematico-custom-hooks', $mofile_global );
             } elseif( file_exists( $mofile_local ) ) {
                 // Look in local /wp-content/plugins/wpematico-custom-hooks/languages/ folder
-                wphk_load_textdomain( 'wpematico-custom-hooks', $mofile_local );
+                load_textdomain( 'wpematico-custom-hooks', $mofile_local );
             } else {
                 // Load the default language files
                 load_plugin_textdomain( 'wpematico-custom-hooks', false, $lang_dir );
