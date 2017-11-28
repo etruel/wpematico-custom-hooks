@@ -127,14 +127,21 @@ var codemirror_editor = Array();
   //Create Multiple Editors in CodeMirror
   function editor(id)
   {
-    return CodeMirror.fromTextArea(document.getElementById(id), {
-      lineNumbers: true,
-      mode : "xml",
-      theme: wpematicohk_object.theme_editor,
-      indentWithTabs: false,
-      htmlMode: true,
-      readOnly: false,
-    });
+    if(typeof wpversion==='undefined'){
+       config = {
+          lineNumbers: true,
+          mode: "htmlmixed",
+          theme: wpematicohk_object.theme_editor,
+          indentWithTabs: false,
+          htmlMode: true,
+          readOnly: false,
+      };
+      myeditor =  CodeMirror.fromTextArea(document.getElementById(id), config);
+    }else{
+      myeditor = wp.codeEditor.initialize(jQuery("#"+id));
+      myeditor =  myeditor.codemirror;
+    }
+    return myeditor;
   }
   function wpematicohk_selectTheme(theme,id){
     codemirror_editor[id].setOption("theme", theme);
