@@ -107,10 +107,19 @@ var codemirror_editor = Array();
         'wpematicohk_functions_action_filter':wpematicohk_functions_action_filter
         
       };
+      
+      String.prototype.replaceAll = function(search, replacement) {
+        var target = this;
+        return target.split(search).join(replacement);
+    };
       // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
       jQuery.post(ajaxurl, data, function(response) {
         if(response.indexOf('no-error-hook')==(-1)){
           $("#wpematicohk_sintax_error").css({'border-left':"4px solid #C00000"});
+          response = response.replaceAll('&lt;br /&gt;','<br />');
+          response = response.replaceAll('&lt;b&gt;','<b>');
+          response = response.replaceAll('&lt;/b&gt;','</b>');
+          alert(response);
           $("#wpematicohk_sintax_error").html(response);
         }else{
           $("#wpematicohk_sintax_error").text(wpematicohk_object.text_no_error_syntax);

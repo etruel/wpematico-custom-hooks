@@ -28,6 +28,8 @@ class wpematico_hooks_settings {
 
 	public static function enqueue_scripts() {
 		$screen = get_current_screen();
+		if(get_option('wpematicohk_theme_editor')) $wpematicohk_theme_editor = get_option('wpematicohk_theme_editor'); else $wpematicohk_theme_editor='monokai';
+
 		global  $wp_version;
 
 		if ($screen->id == 'wpematico_page_wpematico_settings') {
@@ -52,14 +54,14 @@ class wpematico_hooks_settings {
 				wp_enqueue_code_editor( 
 					array( 'type' => 'text/html',
 						'codemirror' => array(
-					    'theme'=> get_option('wpematicohk_theme_editor'),
+					    'theme'=> $wpematicohk_theme_editor,
 						),
 				));
 				wp_add_inline_script('wpematicohk-settings','var wpversion=true; ');
 			}
 			wp_localize_script( 'wpematicohk-settings', 'wpematicohk_object',
 				array(
-						'theme_editor'  		=> get_option('wpematicohk_theme_editor', ''),
+						'theme_editor'  		=> $wpematicohk_theme_editor,
 						'nonce' 				=> wp_create_nonce('wpematicohk_nonce'),
 						'text_checking_syntax'	=> __('Checking syntax errors...', 'wpematico-custom-hooks'),
 						'text_no_error_syntax'	=> __('No syntax errors found', 'wpematico-custom-hooks'),
