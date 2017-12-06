@@ -119,7 +119,6 @@ var codemirror_editor = Array();
           response = response.replaceAll('&lt;br /&gt;','<br />');
           response = response.replaceAll('&lt;b&gt;','<b>');
           response = response.replaceAll('&lt;/b&gt;','</b>');
-          alert(response);
           $("#wpematicohk_sintax_error").html(response);
         }else{
           $("#wpematicohk_sintax_error").text(wpematicohk_object.text_no_error_syntax);
