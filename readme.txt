@@ -3,7 +3,7 @@ Contributors: albertdesinger,sniuk,etruel
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=B8V39NWK3NFQU
 Tags: wpematico, WPeMatico Custom Hooks, autoblog, rss, feed, read, matic
 Requires at least: 4.1
-Tested up to: 4.9
+Tested up to: 5.0
 Stable tag: trunk
 
 Addon for WPeMatico. Allows you to execute PHP actions and filters right from your WordPress admin panel in order to create custom behaviors in your campaigns.
@@ -15,7 +15,7 @@ WPeMatico Custom Hooks is an addon of the main WPeMatico plugin that allows you 
 = How it works =
 
 This addon allows you to add the actions and filters that WPeMatico possesses in order to make personalized changes in the campaigns you execute or actions that require a specific change in behavior.
- 
+
 == FEATURES ==
 
 * Hooks updates from WPeMatico Core.
@@ -54,12 +54,9 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 1. Settings page.  Fields to fill.
 
 == Changelog ==
-= 1.0.4 = Nov 13, 2017
-*Restauraciòn de Valores Estandares en el archivo principal del plugin
-
-= 1.0.3 = Oct 20, 2017
-*Resuelto error de guardado de imagenes al ejecutar una campaña.
-
+= 1.1 = Jan 27, 2018
+* Added code highlight with CodeMirror library included in WordPress since version 4.9.
+* Fixes a bug when WPeMatico saves an image from a running campaign.
 
 = 1.0.2 = Sep 4, 2017 
 * Fix plugin text domain to wpematico-custom-hooks.
@@ -80,4 +77,4 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 * initial release
 
 == Upgrade Notice ==
-1.0.2 * Fix plugin text domain to allow translations
+1.1 * recommended upgrade fixes the error on upload images.

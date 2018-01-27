@@ -3,7 +3,7 @@
  * Plugin Name: WPeMatico Custom Hooks
  * Plugin URI:  https://etruel.com/downloads/wpematico_custom-hooks
  * Description: WPeMatico Add-on starter point WPeMatico Custom Hooks plugin 
- * Version:     1.0.2
+ * Version:     1.1
  * Author:      etruel
  * Author URI:  https://www.netmdp.com
  * Text Domain: wpematico-custom-hooks
@@ -32,9 +32,8 @@ if( !defined( 'ABSPATH' ) ) exit;
 
  // Plugin version
 if(!defined('WPEMATICOHK_VER')) {
-    define('WPEMATICOHK_VER', '1.0.2' );
+    define('WPEMATICOHK_VER', '1.1' );
 }
-
 
 if( !class_exists( 'wpematicohk' ) ) {
 
@@ -127,7 +126,7 @@ if( !class_exists( 'wpematicohk' ) ) {
                                                         'item_name' => WPEMATICOHK_ITEM_NAME,   // name of this plugin
                                                         'author'    => 'Esteban Truelsegaard'  // author of this plugin
                                                     );
-                    
+
             }
             return $args;
         }
