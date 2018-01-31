@@ -54,16 +54,16 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 1. Settings page.  Fields to fill.
 
 == Changelog ==
-= 1.1 = Jan 27, 2018
+= 1.1 Jan 31, 2018 =
 * Added code highlight with CodeMirror library included in WordPress since version 4.9.
 * Fixes a bug when WPeMatico saves an image from a running campaign.
 
-= 1.0.2 = Sep 4, 2017 
+= 1.0.2 Sep 4, 2017 =
 * Fix plugin text domain to wpematico-custom-hooks.
 * Added Settings and auxiliary links in the Plugin row.
 * Added in WordPress Repository.
 
-= 1.0.1 = Aug 27, 2017 
+= 1.0.1 Aug 27, 2017 =
 * Tweaks JavaScript and styles only loads in the settings page of the plugin.
 * Tweaks to limit save and verify code syntax just for user roles with edit_plugins or edit_themes capabilities.
 * Tweaks on sanitize and escape the form fields and variables to print or save.
