@@ -153,6 +153,15 @@ if ( !defined('ABSPATH')) {
 			'description'=>''
 		),
 		array(
+			'name'=>'wpematico_imagen_src',
+			'value'=>'wpematico_imagen_src',
+			'parameters'=>1,
+			'template_parameter'=>'$imagen_src',
+			'type'=>'filter',
+			'description'=>''
+			
+		),
+		array(
 			'name'=>'wpematico allowext',
 			'value'=>'wpematico_allowext',
 			'parameters'=>1,
