@@ -54,6 +54,9 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 1. Settings page.  Fields to fill.
 
 == Changelog ==
+= 1.1.1 Feb 27, 2018 =
+* Added wpematico_imagen_src filter added in wpematico 1.9.1
+
 = 1.1 Jan 31, 2018 =
 * Added code highlight with CodeMirror library included in WordPress since version 4.9.
 * Fixes a bug when WPeMatico saves an image from a running campaign.
