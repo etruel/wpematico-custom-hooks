@@ -352,6 +352,14 @@ if ( !defined('ABSPATH')) {
 		'template_parameter'=>'$post_id, $campaign, $item ', 
 		'type'=>'action', 
 		'description'=>'' 
+		),
+		array( 
+			'name'=>'wpematico_addcat_description', 
+			'value'=>'wpematico_addcat_description', 
+			'parameters'=>2, 
+			'template_parameter'=>'$message,$catname', 
+			'type'=>'filter', 
+			'description'=>'' 
 		)
 	);
 
