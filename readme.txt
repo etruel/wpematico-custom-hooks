@@ -54,6 +54,9 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 1. Settings page.  Fields to fill.
 
 == Changelog ==
+= 1.1.2 Mar 10, 2018 =
+* Added forgotten filter wpematico_addcat_description filter to change the auto category descriptions.
+
 = 1.1.1 Feb 27, 2018 =
 * Added wpematico_imagen_src filter added in wpematico 1.9.1
 
