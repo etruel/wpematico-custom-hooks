@@ -360,6 +360,14 @@ if ( !defined('ABSPATH')) {
 			'template_parameter'=>'$message,$catname', 
 			'type'=>'filter', 
 			'description'=>'' 
+		),
+		array( 
+			'name'=>'wpematico_get_item_images', 
+			'value'=>'wpematico_get_item_images', 
+			'parameters'=>4, 
+			'template_parameter'=>'$current_item, $campaign, $item, $options_images', 
+			'type'=>'filter', 
+			'description'=>'' 
 		)
 	);
 
