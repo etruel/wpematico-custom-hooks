@@ -247,14 +247,18 @@ class wpematico_hooks_settings {
 									<h3 class="hndle hook-name"><span><?php echo esc_html($key_hooks["name"]); ?></span> <span class="hook-type"><?php echo esc_html(strtolower($key_hooks['type'])); ?></span></h3>
 									<p class="hook-description"><?php echo esc_html($key_hooks["description"]); ?></p>
 									<div class="inside">
+										<?php 
+											$content_action_filter = isset($wpematicohk_options_admin['wpematicohk_functions_action_filter'][$i]) ? $wpematicohk_options_admin['wpematicohk_functions_action_filter'][$i] : '';
+											$content_action_filter = esc_attr($content_action_filter);
+											$content_code_function = isset($wpematicohk_options_admin['wpematicohk_options_functions'][$i]) ? $wpematicohk_options_admin['wpematicohk_options_functions'][$i] : ''; 
+											$content_code_function = esc_textarea($content_code_function);
+
+										?>
 										<input type="hidden" class="wpematicohk_options_action_filters" name="wpematicohk_options_action_filters[]" value="<?php echo esc_attr($key_hooks["value"]); ?>">
 										<input type="hidden" class="wpematicohk_functions_parameters" name="wpematicohk_functions_parameters[]" value="<?php echo esc_attr(isset($key_hooks["parameters"]) ? $key_hooks["parameters"] : 0); ?>">
-										<input type="hidden" name="wpematicohk_functions_action_filter[]" class='wpematicohk_codemirror_<?php echo esc_attr($key_hooks["value"]); ?>' value="<?php echo esc_attr($wpematicohk_options_admin['wpematicohk_functions_action_filter'][$i]); ?>">
+										<input type="hidden" name="wpematicohk_functions_action_filter[]" class='wpematicohk_codemirror_<?php echo esc_attr($key_hooks["value"]); ?>' value="<?php echo $content_action_filter; ?>">
 										<input type="hidden" name="wpematicohk_type_hook[]" value="<?php echo esc_attr($key_hooks["type"]); ?>">
-										<?php 
-										$content_code_function = isset($wpematicohk_options_admin['wpematicohk_options_functions'][$i]) ? $wpematicohk_options_admin['wpematicohk_options_functions'][$i] : ''; 
-										$content_code_function = esc_textarea( $content_code_function );
-										?>
+									
 										<textarea name="wpematicohk_options_functions[]" class="wpematico-textarea-codemirror" id="wpematicohk_codemirror_<?php echo esc_attr($key_hooks["value"]); ?>"><?php echo $content_code_function; ?></textarea>
 									</div>
 								</div>
