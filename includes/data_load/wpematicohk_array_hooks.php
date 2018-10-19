@@ -324,10 +324,10 @@ if ( !defined('ABSPATH')) {
 		array( 
 			'name'=>'wpematico_pre_insert_post', 
 			'value'=>'wpematico_pre_insert_post', 
-			'parameters'=>2, 
-			'template_parameter'=>'$args, $this->campaign', 
+			'parameters'=>2,
+			'template_parameter'=>'$args, $campaign', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>''
 		), 
 		array( 
 			'name'=>'wpematico_allow_insertpost', 

@@ -54,8 +54,12 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 1. Settings page.  Fields to fill.
 
 == Changelog ==
-= 1.1.2 Mar 10, 2018 =
-* Added forgotten filter wpematico_addcat_description filter to change the auto category descriptions.
+= 1.1.2 Oct 19, 2018 =
+* Added function filter wpematico_addcat_description filter to change the auto category descriptions.
+* Added function filter Add filter wpematico_get_item_images.
+* Fixes function parameter using "$this->".
+* Fixes an issue in action filters.
+* Fixes a warning in area code on use tab for indentation.
 
 = 1.1.1 Feb 27, 2018 =
 * Added wpematico_imagen_src filter added in wpematico 1.9.1

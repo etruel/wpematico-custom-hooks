@@ -12,7 +12,7 @@ var codemirror_editor = Array();
       if(tagtypehook=='filter'){
         varparameter = template_parameter.split(',');
         if(varparameter[0]=='') varparameter[0] = '""';
-        template_function+='\n \treturn '+varparameter[0]+';\n';
+        template_function+='\n\treturn '+varparameter[0]+';\n';
       }
 
       template_function+='\n}';

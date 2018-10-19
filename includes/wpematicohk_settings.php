@@ -179,7 +179,10 @@ class wpematico_hooks_settings {
 								</button>
 								<h3 class="handle"><?php _e( 'About WPeMatico Custom Hooks', 'wpematico-custom-hooks' );?></h3>
 								<div class="inside">
-									<p id="left1" onmouseover="jQuery(this).css('opacity',0.9);" onmouseout="jQuery(this).css('opacity',0.5);" style="text-align:center;opacity: 0.5;"><a href="http://www.wpematico.com" target="_Blank" title="Go to new WPeMatico WebSite"><img style="width: 100%;" src="<?php echo WPeMatico :: $uri ; ?>/images/icon-512x512.jpg" title=""></a><br />
+									<p id="left1" onmouseover="jQuery(this).css('opacity',0.9);" onmouseout="jQuery(this).css('opacity',0.5);" style="text-align:center;opacity: 0.5;">
+										<a href="http://www.wpematico.com" target="_Blank" title="Go to new WPeMatico WebSite">
+											<img style="width: 100%;" src="<?php echo WPeMatico :: $uri ; ?>/images/wpematico-hooks_200x100.png" title="">
+										</a><br />
 										<b>WPeMatico Custom Hooks <?php echo WPEMATICOHK_VER; ?></b></p>
 									<p><?php _e( 'Thanks for test, use and enjoy this plugin.', 'wpematico' );?></p>
 									<p></p>
