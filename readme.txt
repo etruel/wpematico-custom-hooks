@@ -87,4 +87,4 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 * initial release
 
 == Upgrade Notice ==
-1.1 * recommended upgrade fixes the error on upload images.
+1.1.2 * recommended upgrade.
