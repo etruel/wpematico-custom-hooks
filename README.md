@@ -3,8 +3,8 @@ Contributors: albertdesinger,sniuk,etruel
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=B8V39NWK3NFQU
 Tags: wpematico, WPeMatico Custom Hooks, autoblog, rss, feed, read, matic
 Requires at least: 4.1
-Tested up to: 4.9
-Stable tag: 1.0.1
+Tested up to: 5.0
+Stable tag: trunk
 
 Addon for WPeMatico. Allows you to execute PHP actions and filters right from your WordPress admin panel in order to create custom behaviors in your campaigns.
 
@@ -15,7 +15,7 @@ WPeMatico Custom Hooks is an addon of the main WPeMatico plugin that allows you 
 = How it works =
 
 This addon allows you to add the actions and filters that WPeMatico possesses in order to make personalized changes in the campaigns you execute or actions that require a specific change in behavior.
- 
+
 == FEATURES ==
 
 * Hooks updates from WPeMatico Core.
@@ -49,3 +49,39 @@ You can either install it automatically from the WordPress admin, or do it manua
 
 No. The addon requires WPeMatico Free Version to be installed and activated.
 
+== Screenshots ==
+
+1. Settings page.  Fields to fill.
+
+== Changelog ==
+= 1.1.2 Oct 19, 2018 =
+* Added function filter wpematico_addcat_description filter to change the auto category descriptions.
+* Added function filter Add filter wpematico_get_item_images.
+* Fixes function parameter using "$this->".
+* Fixes an issue in action filters.
+* Fixes a warning in area code on use tab for indentation.
+
+= 1.1.1 Feb 27, 2018 =
+* Added wpematico_imagen_src filter added in wpematico 1.9.1
+
+= 1.1 Jan 31, 2018 =
+* Added code highlight with CodeMirror library included in WordPress since version 4.9.
+* Fixes a bug when WPeMatico saves an image from a running campaign.
+
+= 1.0.2 Sep 4, 2017 =
+* Fix plugin text domain to wpematico-custom-hooks.
+* Added Settings and auxiliary links in the Plugin row.
+* Added in WordPress Repository.
+
+= 1.0.1 Aug 27, 2017 =
+* Tweaks JavaScript and styles only loads in the settings page of the plugin.
+* Tweaks to limit save and verify code syntax just for user roles with edit_plugins or edit_themes capabilities.
+* Tweaks on sanitize and escape the form fields and variables to print or save.
+* Tweaks for JavaScript and styles printed in the php, now have their own files .js and .css.
+* Fixes the hooks didn't executed when runs manually a campaign in WPeMatico.
+* Fixes the syntax error checking to avoid execute code in the process.
+* Fixes to avoid direct accesses to the files.
+* Removed unuseful comments and examples.
+
+= 1.0 =
+* initial release
