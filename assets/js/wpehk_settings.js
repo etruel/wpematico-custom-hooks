@@ -34,6 +34,18 @@ var codemirror_editor = Array();
       
     });
 
+    var idArray = [];
+    var count = 0;
+    $('.wpematicohk_dinamic_metabox').each(function () {
+        idArray.push(this.id);
+        if($('#wpematicohk_codemirror_'+idArray[count]).val()!=''){
+            $('#'+idArray[count]).show();
+        }else{
+            $('#'+idArray[count]).hide();
+        }
+        count++;
+    });
+
     $(document).on('change','.wpematicohk_select_actions_filters',function(){
       wpematicohk_select_text = $('.wpematicohk_select_actions_filters').val();
       if(wpematicohk_select_text!=''){

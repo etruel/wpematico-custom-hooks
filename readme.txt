@@ -1,9 +1,9 @@
 === WPeMatico Custom Hooks ===
-Contributors: albertdesinger,sniuk,etruel
+Contributors: etruel,sniuk,manuelge
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=B8V39NWK3NFQU
 Tags: wpematico, WPeMatico Custom Hooks, autoblog, rss, feed, read, matic
 Requires at least: 4.1
-Tested up to: 5.0
+Tested up to: 5.3
 Stable tag: trunk
 
 Addon for WPeMatico. Allows you to execute PHP actions and filters right from your WordPress admin panel in order to create custom behaviors in your campaigns.
@@ -54,6 +54,11 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 1. Settings page.  Fields to fill.
 
 == Changelog ==
+= 1.1.3 Aug 21, 2019 =
+* Improves the Settings->Hooks screens. Now all is more intuitive.
+* Hide all textareas without codes or filters.
+* Updated all spanish translations.
+
 = 1.1.2 Oct 19, 2018 =
 * Added function filter wpematico_addcat_description filter to change the auto category descriptions.
 * Added function filter Add filter wpematico_get_item_images.
