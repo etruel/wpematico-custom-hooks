@@ -54,6 +54,10 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 1. Settings page.  Fields to fill.
 
 == Changelog ==
+= 1.2 Jun 20, 2020 =
+* Added new filters.
+* Bump version 5.4.1 WP.
+
 = 1.1.3 Aug 21, 2019 =
 * Improves the Settings->Hooks screens. Now all is more intuitive.
 * Hide all textareas without codes or filters.
