@@ -597,49 +597,28 @@ if ( !defined('ABSPATH')) {
 	if(array_search( 'wpematicopro.php', $active_plugins_names )!==FALSE){
 		array_push($wpematicohk_data_filter_action,
 					array( 
-					'name'=>'wpematico_help_settings_rrewrites', 
-					'value'=>'wpematico_help_settings_rrewrites', 
-					'parameters'=>0, 
-					'template_parameter'=>'', 
-					'type'=>'filter', 
-					'description'=>''
-					),
-					array( 
-					'name'=>'wpe_pro_ramdom_rewrites_accept_word', 
-					'value'=>'wpe_pro_ramdom_rewrites_accept_word', 
-					'parameters'=>4, 
-					'template_parameter'=>' true, $valw, $args, $campaign', 
-					'type'=>'filter', 
-					'description'=>''), 
-					array( 
-					'name'=>'wpe_pro_ramdom_rewrites_array', 
-					'value'=>'wpe_pro_ramdom_rewrites_array', 
-					'parameters'=>3, 
-					'template_parameter'=>'$ramdom_rewrites_array,$args,$campaign', 
-					'type'=>'filter', 
-					'description'=>''),
-					array( 
-					'name'=>'wpem_autotags_min_length', 
-					'value'=>'wpem_autotags_min_length', 
+					'name'=>'Wpempro feed name author', 
+					'value'=>'wpempro_feed_name_author', 
 					'parameters'=>1, 
-					'template_parameter'=>'$length', 
+					'template_parameter'=>'$feed_name_author', 
 					'type'=>'filter', 
-					'description'=>''),
-
+					'description'=>'Filter to allow an external parser for the author name'),
 					array( 
-					'name'=>'wpematico_campaign_feed_advanced_options', 
-					'value'=>'wpematico_campaign_feed_advanced_options', 
-					'parameters'=>4, 
-					'template_parameter'=>'$feed, $campaign_data, $cfgbasic, $key', 
-					'type'=>'action', 
-					'description'=>'')
-					);
+					'name'=>'Date from tag namespace', 
+					'value'=>'date_from_tag_namespace', 
+					'parameters'=>5, 
+					'template_parameter'=>'$namespace, $current_item, $campaign, $feed, $item', 
+					'type'=>'filter', 
+					'description'=>'Allows change a namespace')
+
+		)
+					;
 	}
 	if(array_search('wpematico_fullcontent.php', $active_plugins_names )!==FALSE){
 		//WPEMATICO ADD ONS FULL CONTENT
 		array_push($wpematicohk_data_filter_action,
 			array( 
-			'name'=>'wpemfullcontent_websites_video', 
+			'name'=>'Wpemfullcontent websites video', 
 			'value'=>'wpemfullcontent_websites_video', 
 			'parameters'=>1, 
 			'template_parameter'=>'$website_videos', 
@@ -647,7 +626,7 @@ if ( !defined('ABSPATH')) {
 			'description'=>''
 			), 
 			array( 
-			'name'=>'wpematico_fullcontent_folder', 
+			'name'=>'Wpematico fullcontent folder', 
 			'value'=>'wpematico_fullcontent_folder', 
 			'parameters'=>1, 
 			'template_parameter'=>'$customconfigdir', 
@@ -655,7 +634,7 @@ if ( !defined('ABSPATH')) {
 			'description'=>''
 			), 
 			array( 
-			'name'=>'wpepro_getfullcontent', 
+			'name'=>'Wpepro getfullcontent', 
 			'value'=>'wpepro_getfullcontent', 
 			'parameters'=>2, 
 			'template_parameter'=>'$permalink, $campaign', 
@@ -663,7 +642,7 @@ if ( !defined('ABSPATH')) {
 			'description'=>''  
 			), 
 			array( 
-			'name'=>'full_html_content', 
+			'name'=>'Full html content', 
 			'value'=>'full_html_content', 
 			'parameters'=>1, 
 			'template_parameter'=>'$html', 
@@ -671,48 +650,7 @@ if ( !defined('ABSPATH')) {
 			'description'=>'' 
 			), 
 			array( 
-			'name'=>'wpem_unlikelyCandidates_regexp', 
-			'value'=>'wpem_unlikelyCandidates_regexp', 
-			'parameters'=>1, 
-			'template_parameter'=>'$unlikelyCandidates', 
-			'type'=>'filter', 
-			'description'=>''
-			), 
-			array( 
-			'name'=>'wpem_okMaybeItsACandidate_regexp', 
-			'value'=>'wpem_okMaybeItsACandidate_regexp', 
-			'parameters'=>1, 
-			'template_parameter'=>'$okMaybeItsACandidate', 
-			'type'=>'filter', 
-			'description'=>'' 
-			), 
-			array( 
-			'name'=>'wpem_positive_regexp', 
-			'value'=>'wpem_positive_regexp', 
-			'parameters'=>1, 
-			'template_parameter'=>'$positive', 
-			'type'=>'filter', 
-			'description'=>''
-			), 
-			array( 
-			'name'=>'wpem_negative_regexp', 
-			'value'=>'wpem_negative_regexp', 
-			'parameters'=>1, 
-			'template_parameter'=>'$negative', 
-			'type'=>'filter', 
-			'description'=>''
-			), 
-			array( 
-			'name'=>'wpem_video_regexp', 
-			'value'=>'wpem_video_regexp', 
-			'parameters'=>1, 
-			'template_parameter'=>'$regexvideo ', 
-			'type'=>'filter', 
-			'description'=>''
-			),
-
-			array( 
-			'name'=>'after_full_html_content', 
+			'name'=>'After full html content', 
 			'value'=>'after_full_html_content', 
 			'parameters'=>5, 
 			'template_parameter'=>' $html, $current_item, $campaign, $feed, $item', 
