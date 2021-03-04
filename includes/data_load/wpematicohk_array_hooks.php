@@ -19,7 +19,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$string',
 			'type'=>'filter',
-			'description'=>'This filter convert a string to UTF-8 if its has a different encoding.'
+			'description'=>'This filter convert a string to UTF-8 if its has a different encoding.',
+			'group' => 'Format'
 			
 		),
  		array(
@@ -28,7 +29,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4,
 			'template_parameter'=>'$imagen_src_real, $current_item, $campaign, $item',
 			'type'=>'filter',
-			'description'=>'Rename the img'
+			'description'=>'Rename the img',
+			'group' => 'Image'
 			
 		),
 		array(
@@ -37,7 +39,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$enclosure_title',
 			'type'=>'filter',
-			'description'=> 'Parse title the video'
+			'description'=> 'Parse title the video',
+			'group' => 'Youtube'
 
 		),
 		array(
@@ -46,7 +49,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$enclosure_thumbnails',
 			'type'=>'filter',
-			'description'=>'Parse thumbnails the video'
+			'description'=>'Parse thumbnails the video',
+			'group' => 'Youtube'
 
 		),
 		array(
@@ -55,7 +59,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$enclosure_description',
 			'type'=>'filter',
-			'description'=>'Parse description the video'
+			'description'=>'Parse description the video',
+			'group' => 'Youtube'
 
 		),
 		array(
@@ -80,14 +85,18 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4,
 			'template_parameter'=>'$current_item, $campaign, $feed, $item',
 			'type'=>'filter',
-			'description'=>'Parses an item content'
+			'description'=>'Parses an item content',
+			'group' => 'Parser'
+
 		),
 		array(
 			'name'=>'wpem dont strip tags',
 			'value'=>'wpem_dont_strip_tags',
 			'parameters'=>0,
 			'type'=>'filter',
-			'description'=>'Strip all HTML tags before apply template '
+			'description'=>'Strip all HTML tags before apply template ',
+			'group' => 'Tag'
+			
 		),
 		array(
 			'name'=>'wpematico after item parsers',
@@ -95,7 +104,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4,
 			'template_parameter'=>'$current_item, $campaign, $feed, $item',
 			'type'=>'filter',
-			'description'=>''
+			'description'=>'This filter is executed after parsing the content.',
+			'group' => 'Parser'
 		),
 		array(
 			'name'=>'wpematico add template vars',
@@ -111,7 +121,9 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>3,
 			'template_parameter'=>'$current_item, $item, $cfg',
 			'type'=>'filter',
-			'description'=>'Filters pretags content'
+			'description'=>'Filters pretags content',
+			'group' => 'Tag'
+
 		),
 		array(
 			'name'=>'wpematico postags',
@@ -119,7 +131,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>3,
 			'template_parameter'=>'$current_item, $item, $cfg',
 			'type'=>'filter',
-			'description'=>'Filters postags content'
+			'description'=>'Filters postags content',
+			'group' => 'Tag'
 		),
 		array(
 			'name'=>'wpepro full permalink',
@@ -135,7 +148,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$imagen_src_real',
 			'type'=>'filter',
-			'description'=>'Get the url img'
+			'description'=>'Get the url img',
+			'group' => 'Image'
 		),
 		array(
 			'name'=>'wpematico imagen src',
@@ -143,7 +157,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$imagen_src',
 			'type'=>'filter',
-			'description'=>'Img source'
+			'description'=>'Img source',
+			'group' => 'Image'
 			
 		),
 		array(
@@ -184,7 +199,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $feedurl, $item ', 
 			'type'=>'filter', 
-			'description'=>'Get the author item' 
+			'description'=>'Get the author item',
+			'group' => 'Author' 
 		), 
 		array( 
 			'name'=>'wpematico get post content', 
@@ -200,7 +216,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>' $current_item, $campaign ', 
 			'type'=>'filter', 
-			'description'=>'Parse and upload images' 
+			'description'=>'Parse and upload images',
+			'group' => 'Image' 
 		),
 		array( 
 			'name'=>'wpematico set featured img', 
@@ -208,7 +225,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $feed,$item', 
 			'type'=>'filter', 
-			'description'=>'Set image the featured img' 
+			'description'=>'Set image the featured img',
+			'group' => 'Image' 
 		),
 		array( 
 			'name'=>'wpematico get featured img', 
@@ -216,7 +234,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>' $current_item_images, $current_item', 
 			'type'=>'filter', 
-			'description'=>'Get image the featured img' 
+			'description'=>'Get image the featured img',
+			'group' => 'Image' 
 		),
 		array( 
 			'name'=>'wpematico item filters pos img', 
@@ -224,7 +243,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>' $current_item, $campaign ', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' => 'Image' 
 		),
 		array( 
 			'name'=>'wpematico before insert autocats', 
@@ -232,7 +252,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>' $autocats, $this ', 
 			'type'=>'filter', 
-			'description'=>'Filters the array of categories obtained by simplepie to be parsed before inserted into the database' 
+			'description'=>'Filters the array of categories obtained by simplepie to be parsed before inserted into the database',
+			'group' => 'Category' 
 		),  
 		array( 
 			'name'=>'wpem meta data', 
@@ -248,7 +269,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$title', 
 			'type'=>'filter', 
-			'description'=>'Parse the title' 
+			'description'=>'Parse the title',
+			'group' => 'Parser' 
 		),
 		array( 
 			'name'=>'wpem parse content', 
@@ -256,7 +278,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$content', 
 			'type'=>'filter', 
-			'description'=>'Parse the content' 
+			'description'=>'Parse the content',
+			'group' => 'Parser' 
 		), 
 		array( 
 			'name'=>'wpem parse name', 
@@ -264,7 +287,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$slug', 
 			'type'=>'filter', 
-			'description'=>'Slug parser' 
+			'description'=>'Slug parser',
+			'group' => 'Parser' 
 		), 
 		array( 
 			'name'=>'wpem parse content filtered', 
@@ -272,7 +296,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$content', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' => 'Parser' 
 		), 
 		array( 
 			'name'=>'wpem parse status', 
@@ -280,7 +305,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$status', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' => 'Parser' 
 		), 
 		array( 
 			'name'=>'wpem parse post type', 
@@ -288,7 +314,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$post_type', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' => 'Parser' 
 		), 
 		array( 
 			'name'=>'wpem parse authorid', 
@@ -296,7 +323,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$authorid', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Author id',
+			'group' => 'Author'  
 		), 
 		array( 
 			'name'=>'wpem parse date', 
@@ -304,7 +332,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$date', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' => 'Parser'
 		), 
 		array( 
 			'name'=>'wpem parse comment status', 
@@ -312,7 +341,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$comment_status', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' => 'Parser' 
 		), 
 		array( 
 			'name'=>'wpematico pre insert post', 
@@ -352,7 +382,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>'$message,$catname', 
 			'type'=>'filter', 
-			'description'=>'Add description category' 
+			'description'=>'Add description category',
+			'group' => 'Category' 
 		),
 		array( 
 			'name'=>'wpematico get item images', 
@@ -428,7 +459,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>'$current_item, $campaign', 
 			'type'=>'filter', 
-			'description'=>'Parse and upload audio' 
+			'description'=>'Parse and upload audio',
+			'group' => 'Audio' 
 		),
 		array( 
 			'name'=>'wpematico item filters pre video', 
@@ -436,7 +468,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>'$current_item, $campaign', 
 			'type'=>'filter', 
-			'description'=>'Parse and upload video' 
+			'description'=>'Parse and upload video',
+			'group' => 'Video' 
 		),
 		array( 
 			'name'=>'wpematico item pos media', 
@@ -460,7 +493,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$excerpt', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' => 'Parser' 
 		),
 		array( 
 			'name'=>'wpem parse parent', 
@@ -468,7 +502,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$post_parent', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' => 'Parser' 
 		),
 		array( 
 			'name'=>'wpematico featured image attach id', 
@@ -492,7 +527,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>3, 
 			'template_parameter'=>'$categories, $item, $cfg', 
 			'type'=>'filter', 
-			'description'=>'Filter the array of categories to be parsed before inserted into the database.' 
+			'description'=>'Filter the array of categories to be parsed before inserted into the database.',
+			'group' => 'Category'  
 		),
 		array( 
 			'name'=>'wpematico images parser', 
@@ -500,7 +536,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>6, 
 			'template_parameter'=>'"default", $current_item, $campaign, $feed, $item, $options_images', 
 			'type'=>'filter', 
-			'description'=>'Filters images, upload and replace on text item content' 
+			'description'=>'Filters images, upload and replace on text item content',
+			'group' => 'Parser' 
 		),
 		array( 
 			'name'=>'wpematico pattern img', 
@@ -508,7 +545,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'"/<img[^>]+>/i"', 
 			'type'=>'filter', 
-			'description'=>'Returns all images of the content' 
+			'description'=>'Returns all images of the content',
+			'group' => 'Image' 
 		),
 		array( 
 			'name'=>'wpematico fifu meta', 
@@ -524,7 +562,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$video', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' => 'Youtube' 
 		),
 		array( 
 			'name'=>'wpematico get item audios', 
@@ -532,7 +571,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $item, $options_audios', 
 			'type'=>'filter', 
-			'description'=>'Filters audios, upload and replace on text item content' 
+			'description'=>'Filters audios, upload and replace on text item content',
+			'group' => 'Audio' 
 		),
 		array( 
 			'name'=>'wpematico audio src url', 
@@ -540,7 +580,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$audio_src_real', 
 			'type'=>'filter', 
-			'description'=>'Strip all white space on audios URLs.' 
+			'description'=>'Strip all white space on audios URLs.',
+			'group' => 'Audio' 
 		),
 		array( 
 			'name'=>'wpematico allowext audio', 
@@ -548,7 +589,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$allowed_audio', 
 			'type'=>'filter', 
-			'description'=>'Strip all white space on audios original source.' 
+			'description'=>'Strip all white space on audios original source.',
+			'group' => 'Audio' 
 		),
 		array( 
 			'name'=>'wpematico new audio name', 
@@ -556,7 +598,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>'sanitize_file_name(urlencode(basename($audio_src_without_query))), $current_item, $options_audios, $item', 
 			'type'=>'filter', 
-			'description'=>'Strip all white space on audios store.' 
+			'description'=>'Strip all white space on audios store.',
+			'group' => 'Audio' 
 		),
 		array( 
 			'name'=>'wpematico get item videos', 
@@ -564,7 +607,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $item, $options_videos', 
 			'type'=>'filter', 
-			'description'=>'Filters videos, upload and replace on text item content' 
+			'description'=>'Filters videos, upload and replace on text item content',
+			'group' => 'Video' 
 		),
 		array( 
 			'name'=>'wpematico video src url', 
@@ -572,7 +616,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$video_src_real', 
 			'type'=>'filter', 
-			'description'=>'Strip all white space on videos URLs.' 
+			'description'=>'Strip all white space on videos URLs.',
+			'group' => 'Video' 
 		),
 		array( 
 			'name'=>'wpematico allowext video', 
@@ -580,7 +625,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$allowed_video', 
 			'type'=>'filter', 
-			'description'=>'Strip all white space on videos original source.' 
+			'description'=>'Strip all white space on videos original source.',
+			'group' => 'Video' 
 		),
 		array( 
 			'name'=>'wpematico new video name', 
@@ -588,7 +634,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>'sanitize_file_name(urlencode(basename($video_src_without_query))), $current_item, $campaign, $item', 
 			'type'=>'filter', 
-			'description'=>'Strip all white space on videos store .' 
+			'description'=>'Strip all white space on videos store .',
+			'group' => 'Video' 
 		),	
 	);
 
@@ -602,14 +649,16 @@ if ( !defined('ABSPATH')) {
 					'parameters'=>1, 
 					'template_parameter'=>'$feed_name_author', 
 					'type'=>'filter', 
-					'description'=>'Filter to allow an external parser for the author name'),
+					'description'=>'Filter to allow an external parser for the author name',
+					'group' => 'Professional'),
 					array( 
 					'name'=>'Date from tag namespace', 
 					'value'=>'date_from_tag_namespace', 
 					'parameters'=>5, 
 					'template_parameter'=>'$namespace, $current_item, $campaign, $feed, $item', 
 					'type'=>'filter', 
-					'description'=>'Allows change a namespace')
+					'description'=>'Allows change a namespace',
+					'group' => 'Professional')
 
 		)
 					;
@@ -623,7 +672,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$website_videos', 
 			'type'=>'filter', 
-			'description'=>''
+			'description'=>'',
+			'group' => 'Full Content'
 			), 
 			array( 
 			'name'=>'Wpematico fullcontent folder', 
@@ -631,7 +681,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$customconfigdir', 
 			'type'=>'filter', 
-			'description'=>''
+			'description'=>'',
+			'group' => 'Full Content'
 			), 
 			array( 
 			'name'=>'Wpepro getfullcontent', 
@@ -639,7 +690,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>'$permalink, $campaign', 
 			'type'=>'filter', 
-			'description'=>''  
+			'description'=>'',
+			'group' => 'Full Content'  
 			), 
 			array( 
 			'name'=>'Full html content', 
@@ -647,7 +699,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$html', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' => 'Full Content' 
 			), 
 			array( 
 			'name'=>'After full html content', 
@@ -655,7 +708,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>5, 
 			'template_parameter'=>' $html, $current_item, $campaign, $feed, $item', 
 			'type'=>'action', 
-			'description'=>''
+			'description'=>'',
+			'group' => 'Full Content'
 			)
 		);
 	}
