@@ -29,7 +29,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4,
 			'template_parameter'=>'$imagen_src_real, $current_item, $campaign, $item',
 			'type'=>'filter',
-			'description'=>'Rename the img',
+			'description'=>'Rename the image',
 			'group' => 'Image'
 			
 		),
@@ -69,7 +69,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4,
 			'template_parameter'=>'$content,$campaign,$feed,$item',
 			'type'=>'filter',
-			'description'=>'Get feed content'
+			'description'=>'Get post content from feed',
+			'group' =>'Content'
 		),
 		array(
 			'name'=>'wpematico excludes',
@@ -77,7 +78,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4,
 			'template_parameter'=>'$skip,$current_item,$campaign,$item',
 			'type'=>'filter',
-			'description'=> 'Filter to skip item or not'
+			'description'=> 'Filter to skip item or not',
+			'group' =>'Skip item'
 		),
 		array(
 			'name'=>'wpematico item parsers',
@@ -85,7 +87,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4,
 			'template_parameter'=>'$current_item, $campaign, $feed, $item',
 			'type'=>'filter',
-			'description'=>'Parses an item content',
+			'description'=>'Parses items content',
 			'group' => 'Parser'
 
 		),
@@ -94,7 +96,7 @@ if ( !defined('ABSPATH')) {
 			'value'=>'wpem_dont_strip_tags',
 			'parameters'=>0,
 			'type'=>'filter',
-			'description'=>'Strip all HTML tags before apply template ',
+			'description'=>'Strip all HTML tags from content',
 			'group' => 'Tag'
 			
 		),
@@ -113,7 +115,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>5,
 			'template_parameter'=>'$vars, $current_item, $campaign, $feed, $item',
 			'type'=>'filter',
-			'description'=>'Add template vars'
+			'description'=>'Add template variables',
+			'group' =>'Template'
 		),
 		array(
 			'name'=>'wpematico pretags',
@@ -121,7 +124,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>3,
 			'template_parameter'=>'$current_item, $item, $cfg',
 			'type'=>'filter',
-			'description'=>'Filters pretags content',
+			'description'=>'Filter before creating and inserting tags',
 			'group' => 'Tag'
 
 		),
@@ -131,7 +134,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>3,
 			'template_parameter'=>'$current_item, $item, $cfg',
 			'type'=>'filter',
-			'description'=>'Filters postags content',
+			'description'=>'Filter after creating and inserting tags',
 			'group' => 'Tag'
 		),
 		array(
@@ -140,7 +143,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$permalink',
 			'type'=>'filter',
-			'description'=>'Get the permalink'
+			'description'=>'The item permalink',
+			'group' =>'Permalink'
 		),
 		array(
 			'name'=>'wpematico img src url',
@@ -157,7 +161,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$imagen_src',
 			'type'=>'filter',
-			'description'=>'Img source',
+			'description'=>'Image source',
 			'group' => 'Image'
 			
 		),
@@ -167,7 +171,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$allowed',
 			'type'=>'filter',
-			'description'=>'Fetch and Store the Image'
+			'description'=>'Allow images extensions',
+			'group' =>'Image'
 		),
 		array( 
 			'name'=>'wpematico end fetching', 
@@ -175,7 +180,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>'$campaign,$fetched_posts ', 
 			'type'=>'filter', 
-			'description'=>'Get the last fetch' 
+			'description'=>'After finishing the fetch',
+			'group' =>'Fetch'
 		),
 		array( 
 			'name'=>'wpematico simplepie url', 
@@ -183,7 +189,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>3, 
 			'template_parameter'=>'$feed, $kf, $campaign', 
 			'type'=>'filter', 
-			'description'=>'This filter is used to access the feed' 
+			'description'=>'Filter for SimplePie Library when accessing the feed',
+			'group' =>'Settings'
 		), 
 		array( 
 			'name'=>'Wpematico process fetching', 
@@ -191,7 +198,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>' $campaign', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'This filter is executed during the fetching process',
+			'group' =>'Fetch'
 		), 
 		array( 
 			'name'=>'wpematico get author', 
@@ -199,8 +207,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $feedurl, $item ', 
 			'type'=>'filter', 
-			'description'=>'Get the author item',
-			'group' => 'Author' 
+			'description'=>'Get the items author',
+			'group' => 'Author'
 		), 
 		array( 
 			'name'=>'wpematico get post content', 
@@ -208,7 +216,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $feed, $item ', 
 			'type'=>'filter', 
-			'description'=>'Get the content post' 
+			'description'=>'Get the post content',
+			'group' =>'Content'
 		),
 		array( 
 			'name'=>'wpematico item filters pre img', 
@@ -261,7 +270,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$meta', 
 			'type'=>'filter', 
-			'description'=>'Filter the array of meta fields to be parsed before attached to the post.' 
+			'description'=>'Filter the array of meta fields to be parsed before attached to the post.' ,
+			'group' =>'Metafields'
 		), 
 		array( 
 			'name'=>'wpem parse title', 
@@ -269,7 +279,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$title', 
 			'type'=>'filter', 
-			'description'=>'Parse the title',
+			'description'=>'Parse the post title',
 			'group' => 'Parser' 
 		),
 		array( 
@@ -278,7 +288,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$content', 
 			'type'=>'filter', 
-			'description'=>'Parse the content',
+			'description'=>'Parse the post content',
 			'group' => 'Parser' 
 		), 
 		array( 
@@ -287,7 +297,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$slug', 
 			'type'=>'filter', 
-			'description'=>'Slug parser',
+			'description'=>'Post slug',
 			'group' => 'Parser' 
 		), 
 		array( 
@@ -296,7 +306,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$content', 
 			'type'=>'filter', 
-			'description'=>'',
+			'description'=>'Content filtered',
 			'group' => 'Parser' 
 		), 
 		array( 
@@ -305,7 +315,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$status', 
 			'type'=>'filter', 
-			'description'=>'',
+			'description'=>'Post status',
 			'group' => 'Parser' 
 		), 
 		array( 
@@ -314,7 +324,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$post_type', 
 			'type'=>'filter', 
-			'description'=>'',
+			'description'=>'Post Type',
 			'group' => 'Parser' 
 		), 
 		array( 
@@ -323,7 +333,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$authorid', 
 			'type'=>'filter', 
-			'description'=>'Author id',
+			'description'=>'Author ID',
 			'group' => 'Author'  
 		), 
 		array( 
@@ -350,7 +360,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2,
 			'template_parameter'=>'$args, $campaign', 
 			'type'=>'filter', 
-			'description'=>''
+			'description'=>'',
+			'group' =>'Fetch'
 		), 
 		array( 
 			'name'=>'wpematico allow insertpost', 
@@ -358,7 +369,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>3, 
 			'template_parameter'=>'$bool, $this, $args', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'' ,
+			'group' =>'Fetch'
 		),
 		array( 
 			'name'=>'wpematico duplicates', 
@@ -366,7 +378,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>3, 
 			'template_parameter'=>'$dev,$campaign,$item', 
 			'type'=>'filter', 
-			'description'=>'Fetch the duplicate post' 
+			'description'=>'Fetch the duplicate post',
+			'group' =>'Duplicate Controls'
 		),
 		array( 
 			'name'=>'wpematico inserted post', 
@@ -374,7 +387,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>3, 
 			'template_parameter'=>'$post_id, $campaign, $item ', 
 			'type'=>'action', 
-			'description'=>'' 
+			'description'=>'' ,
+			'group' =>'Fetch'
 		),
 		array( 
 			'name'=>'wpematico addcat description', 
@@ -391,8 +405,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $item, $options_images', 
 			'type'=>'filter', 
-			'description'=>'Get the images item.
-			' 
+			'description'=>'Get the images item.',
+			'group' =>'Image'
 		),
 		/***************************************************************/
 		/*******************NEW FILTERS 1.2 VERSION*********************/
@@ -403,7 +417,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$cfg', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Fetch'
 		),
 		array( 
 			'name'=>'admin memory limit', 
@@ -411,7 +426,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$memory', 
 			'type'=>'filter', 
-			'description'=>'This filter is used to change the memory limit. default is "256M"' 
+			'description'=>'This filter is used to change the memory limit. default is "256M"',
+			'group' =>'Settings' 
 		),
 		array( 
 			'name'=>'wpematico fetch feed params', 
@@ -419,7 +435,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>3, 
 			'template_parameter'=>'$fetch_feed_params, $kf, $campaign', 
 			'type'=>'filter', 
-			'description'=>'Fetch params feed' 
+			'description'=>'Fetch params feed',
+			'group' =>'Fetch'
 		),
 		array( 
 			'name'=>'wpematico max duplicated hashes count', 
@@ -427,7 +444,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>3, 
 			'template_parameter'=>'20, $this->campaign_id, $feed', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Duplicate Controls'
 		),
 		array( 
 			'name'=>'wpematico get feeddate', 
@@ -435,7 +453,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>5, 
 			'template_parameter'=>'$itemdate, $current_item, $campaign, $feedurl, $item', 
 			'type'=>'filter', 
-			'description'=>'Get the feed date' 
+			'description'=>'Get the feed date',
+			'group' =>'Date'
 		),
 		array( 
 			'name'=>'wpematico get post excerpt feed', 
@@ -443,7 +462,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>'$item, $campaign, $feed, $item', 
 			'type'=>'filter', 
-			'description'=>'Get the excerpt post' 
+			'description'=>'Get the excerpt post',
+			'group' =>'Content'
 		),
 		array( 
 			'name'=>'wpematico item pre media', 
@@ -451,7 +471,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $feed, $item', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Media'
 		),
 		array( 
 			'name'=>'wpematico item filters pre audio', 
@@ -477,7 +498,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $feed, $item', 
 			'type'=>'filter', 
-			'description'=>'Get the media item ' 
+			'description'=>'Get the media item ' ,
+			'group' =>'Media'
 		),
 		array( 
 			'name'=>'wpematico pos item filters', 
@@ -485,7 +507,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $feed, $item', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Fetch'
 		),
 		array( 
 			'name'=>'wpem parse excerpt', 
@@ -511,7 +534,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>5, 
 			'template_parameter'=>'$featured_image_attach_id, $post_id, $current_item, $campaign, $item', 
 			'type'=>'filter', 
-			'description'=>'Get the id image' 
+			'description'=>'Get the id image',
+			'group' =>'Image'
 		),
 		array( 
 			'name'=>'Wpematico end fetching', 
@@ -519,7 +543,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>'$campaign, $fetched_posts', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Fetch'
 		),
 		array( 
 			'name'=>'wpematico categories after filters', 
@@ -554,7 +579,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>'$wpematico_fifu_meta, $current_item', 
 			'type'=>'filter', 
-			'description'=>'Fifu meta' 
+			'description'=>'Metafields' 
 		),
 		array( 
 			'name'=>'wpematico yt video', 
@@ -722,7 +747,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>' $ret, $api', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Polyglot'
 			), 
 			array( 
 			'name'=>'polyglot_get_apis', 
@@ -730,7 +756,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>' $list_api', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Polyglot'
 			), 
 			array( 
 			'name'=>'polyglot_get_idioms_options', 
@@ -738,7 +765,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>' $options', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Polyglot'
 			), 
 			array( 
 			'name'=>'polyglot_process_type', 
@@ -746,7 +774,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>' $process, $campaign', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Polyglot' 
 			), 
 			array( 
 			'name'=>'polyglot_process', 
@@ -754,7 +783,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$process', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Polyglot' 
 			)
 		);
 	}
@@ -767,7 +797,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$better_excerpts', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Better Excerpt' 
 			),
 			array( 
 			'name'=>'wpem_after_better_excerpts_fields', 
@@ -775,11 +806,12 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$better_excerpts', 
 			'type'=>'action', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Better Excerpt' 
 			)
 		);
 	}
-	//WPEMATICO MAKE FULL
+	//WPEMATICO MAKE ME FEED
 	if(array_search( 'make-me-feed.php', $active_plugins_names )!==FALSE){
 		array_push($wpematicohk_data_filter_action,
 
@@ -789,7 +821,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$mmfdata', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Make Me Feed' 
 			), 
 			array( 
 			'name'=>'mmf_getcontents_args', 
@@ -797,7 +830,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$curl', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Make Me Feed' 
 			),
 			array( 
 			'name'=>'make_me_feed_metaboxes', 
@@ -805,7 +839,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$post', 
 			'type'=>'action', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Make Me Feed' 
 			), 
 			array( 
 			'name'=>'make_me_feed_urls_box', 
@@ -813,7 +848,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>0, 
 			'template_parameter'=>'', 
 			'type'=>'action', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Make Me Feed' 
 			), 
 			array( 
 			'name'=>'make_me_feed_post_saved', 
@@ -821,7 +857,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>0, 
 			'template_parameter'=>'', 
 			'type'=>'action', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Make Me Feed' 
 			), 
 			array( 
 			'name'=>'mmf_testarea_before_getcontent', 
@@ -829,7 +866,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$campaign', 
 			'type'=>'action', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Make Me Feed' 
 			)
 		);
 	}
@@ -842,7 +880,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$fbf_post_type_array', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Facebook Fetcher' 
 			)
 		);
 	}
