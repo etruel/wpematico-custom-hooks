@@ -12,23 +12,26 @@ if ( !defined('ABSPATH')) {
 
 
 	//SET ACTIONS AND FILTERS WPEMATICO CAMPAIGN
- 	array_push($wpematicohk_data_filter_action,
+	 array_push($wpematicohk_data_filter_action,
+		array(
+			'name'=>'wpematico custom chrset',
+			'value'=>'wpematico_custom_chrset',
+			'parameters'=>1,
+			'template_parameter'=>'$string',
+			'type'=>'filter',
+			'description'=>'This filter convert a string to UTF-8 if its has a different encoding.',
+			'group' => 'Format'
+			
+		),
  		array(
 			'name'=>'wpematico newimgname',
 			'value'=>'wpematico_newimgname',
 			'parameters'=>4,
 			'template_parameter'=>'$imagen_src_real, $current_item, $campaign, $item',
 			'type'=>'filter',
-			'description'=>''
+			'description'=>'Rename the image',
+			'group' => 'Image'
 			
-		),
-		array(
-			'name'=>'wpematico overwrite file',
-			'value'=>'wpematico_overwrite_file',
-			'parameters'=>0,
-			'type'=>'filter',
-			'description'=>''
-
 		),
 		array(
 			'name'=>'wpematico yt altimg',
@@ -36,7 +39,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$enclosure_title',
 			'type'=>'filter',
-			'description'=> ''
+			'description'=> 'Parse title the video',
+			'group' => 'Youtube'
 
 		),
 		array(
@@ -45,7 +49,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$enclosure_thumbnails',
 			'type'=>'filter',
-			'description'=>''
+			'description'=>'Parse thumbnails the video',
+			'group' => 'Youtube'
 
 		),
 		array(
@@ -54,7 +59,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$enclosure_description',
 			'type'=>'filter',
-			'description'=>''
+			'description'=>'Parse description the video',
+			'group' => 'Youtube'
 
 		),
 		array(
@@ -63,7 +69,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4,
 			'template_parameter'=>'$content,$campaign,$feed,$item',
 			'type'=>'filter',
-			'description'=>''
+			'description'=>'Get post content from feed',
+			'group' =>'Content'
 		),
 		array(
 			'name'=>'wpematico excludes',
@@ -71,7 +78,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4,
 			'template_parameter'=>'$skip,$current_item,$campaign,$item',
 			'type'=>'filter',
-			'description'=> ''
+			'description'=> 'Filter to skip item or not',
+			'group' =>'Skip item'
 		),
 		array(
 			'name'=>'wpematico item parsers',
@@ -79,30 +87,18 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4,
 			'template_parameter'=>'$current_item, $campaign, $feed, $item',
 			'type'=>'filter',
-			'description'=>''
+			'description'=>'Parses items content',
+			'group' => 'Parser'
+
 		),
 		array(
 			'name'=>'wpem dont strip tags',
 			'value'=>'wpem_dont_strip_tags',
 			'parameters'=>0,
 			'type'=>'filter',
-			'description'=>''
-		),
-		array(
-			'name'=>'wpematico post template tag',
-			'value'=>'wpematico_post_template_tag',
-			'parameters'=>5,
-			'template_parameter'=>'$vars, $current_item, $campaign, $feed, $item',
-			'type'=>'filter',
-			'description'=>''
-		),
-		array(
-			'name'=>'wpematico post template replace',
-			'value'=>'wpematico_post_template_replace',
-			'parameters'=>5,
-			'template_parameter'=>'$replace, $current_item, $campaign, $feed, $item',
-			'type'=>'filter',
-			'description'=>''
+			'description'=>'Strip all HTML tags from content',
+			'group' => 'Tag'
+			
 		),
 		array(
 			'name'=>'wpematico after item parsers',
@@ -110,7 +106,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4,
 			'template_parameter'=>'$current_item, $campaign, $feed, $item',
 			'type'=>'filter',
-			'description'=>''
+			'description'=>'This filter is executed after parsing the content.',
+			'group' => 'Parser'
 		),
 		array(
 			'name'=>'wpematico add template vars',
@@ -118,7 +115,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>5,
 			'template_parameter'=>'$vars, $current_item, $campaign, $feed, $item',
 			'type'=>'filter',
-			'description'=>''
+			'description'=>'Add template variables',
+			'group' =>'Template'
 		),
 		array(
 			'name'=>'wpematico pretags',
@@ -126,7 +124,9 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>3,
 			'template_parameter'=>'$current_item, $item, $cfg',
 			'type'=>'filter',
-			'description'=>''
+			'description'=>'Filter before creating and inserting tags',
+			'group' => 'Tag'
+
 		),
 		array(
 			'name'=>'wpematico postags',
@@ -134,7 +134,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>3,
 			'template_parameter'=>'$current_item, $item, $cfg',
 			'type'=>'filter',
-			'description'=>''
+			'description'=>'Filter after creating and inserting tags',
+			'group' => 'Tag'
 		),
 		array(
 			'name'=>'wpepro full permalink',
@@ -142,7 +143,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$permalink',
 			'type'=>'filter',
-			'description'=>''
+			'description'=>'The item permalink',
+			'group' =>'Permalink'
 		),
 		array(
 			'name'=>'wpematico img src url',
@@ -150,15 +152,17 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$imagen_src_real',
 			'type'=>'filter',
-			'description'=>''
+			'description'=>'Get the url img',
+			'group' => 'Image'
 		),
 		array(
-			'name'=>'wpematico_imagen_src',
+			'name'=>'wpematico imagen src',
 			'value'=>'wpematico_imagen_src',
 			'parameters'=>1,
 			'template_parameter'=>'$imagen_src',
 			'type'=>'filter',
-			'description'=>''
+			'description'=>'Image source',
+			'group' => 'Image'
 			
 		),
 		array(
@@ -167,644 +171,497 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$allowed',
 			'type'=>'filter',
-			'description'=>''
+			'description'=>'Allow images extensions',
+			'group' =>'Image'
 		),
 		array( 
-			'name'=>'wpematico_end_fetching', 
+			'name'=>'wpematico end fetching', 
 			'value'=>'wpematico_end_fetching', 
 			'parameters'=>2, 
 			'template_parameter'=>'$campaign,$fetched_posts ', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'After finishing the fetch',
+			'group' =>'Fetch'
 		),
 		array( 
-			'name'=>'wpematico_simplepie_url', 
+			'name'=>'wpematico simplepie url', 
 			'value'=>'wpematico_simplepie_url', 
 			'parameters'=>3, 
 			'template_parameter'=>'$feed, $kf, $campaign', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Filter for SimplePie Library when accessing the feed',
+			'group' =>'Settings'
 		), 
 		array( 
-			'name'=>'Wpematico_process_fetching', 
+			'name'=>'Wpematico process fetching', 
 			'value'=>'Wpematico_process_fetching', 
 			'parameters'=>1, 
 			'template_parameter'=>' $campaign', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'This filter is executed during the fetching process',
+			'group' =>'Fetch'
 		), 
 		array( 
-			'name'=>'wpematico_get_author', 
+			'name'=>'wpematico get author', 
 			'value'=>'wpematico_get_author', 
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $feedurl, $item ', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Get the items author',
+			'group' => 'Author'
 		), 
 		array( 
-			'name'=>'wpematico_get_post_content', 
+			'name'=>'wpematico get post content', 
 			'value'=>'wpematico_get_post_content', 
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $feed, $item ', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Get the post content',
+			'group' =>'Content'
 		),
 		array( 
-			'name'=>'wpematico_item_filters_pre_img', 
+			'name'=>'wpematico item filters pre img', 
 			'value'=>'wpematico_item_filters_pre_img', 
 			'parameters'=>2, 
 			'template_parameter'=>' $current_item, $campaign ', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Parse and upload images',
+			'group' => 'Image' 
 		),
 		array( 
-			'name'=>'wpematico_set_featured_img', 
+			'name'=>'wpematico set featured img', 
 			'value'=>'wpematico_set_featured_img', 
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $feed,$item', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Set image the featured img',
+			'group' => 'Image' 
 		),
 		array( 
-			'name'=>'wpematico_get_featured_img', 
+			'name'=>'wpematico get featured img', 
 			'value'=>'wpematico_get_featured_img', 
 			'parameters'=>2, 
 			'template_parameter'=>' $current_item_images, $current_item', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Get image the featured img',
+			'group' => 'Image' 
 		),
 		array( 
-			'name'=>'wpematico_item_filters_pos_img', 
+			'name'=>'wpematico item filters pos img', 
 			'value'=>'wpematico_item_filters_pos_img', 
 			'parameters'=>2, 
 			'template_parameter'=>' $current_item, $campaign ', 
 			'type'=>'filter', 
-			'description'=>'' 
-		), 
+			'description'=>'',
+			'group' => 'Image' 
+		),
 		array( 
-			'name'=>'wpem_meta_data', 
+			'name'=>'wpematico before insert autocats', 
+			'value'=>'wpematico_before_insert_autocats', 
+			'parameters'=>2, 
+			'template_parameter'=>' $autocats, $this ', 
+			'type'=>'filter', 
+			'description'=>'Filters the array of categories obtained by simplepie to be parsed before inserted into the database',
+			'group' => 'Category' 
+		),  
+		array( 
+			'name'=>'wpem meta data', 
 			'value'=>'wpem_meta_data', 
 			'parameters'=>1, 
-			'template_parameter'=>'$current_item', 
+			'template_parameter'=>'$meta', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Filter the array of meta fields to be parsed before attached to the post.' ,
+			'group' =>'Metafields'
 		), 
 		array( 
-			'name'=>'wpem_parse_title', 
+			'name'=>'wpem parse title', 
 			'value'=>'wpem_parse_title', 
 			'parameters'=>1, 
 			'template_parameter'=>'$title', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Parse the post title',
+			'group' => 'Parser' 
 		),
 		array( 
-			'name'=>'wpem_parse_content', 
+			'name'=>'wpem parse content', 
 			'value'=>'wpem_parse_content', 
 			'parameters'=>1, 
 			'template_parameter'=>'$content', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Parse the post content',
+			'group' => 'Parser' 
 		), 
 		array( 
-			'name'=>'wpem_parse_name', 
+			'name'=>'wpem parse name', 
 			'value'=>'wpem_parse_name', 
 			'parameters'=>1, 
 			'template_parameter'=>'$slug', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Post slug',
+			'group' => 'Parser' 
 		), 
 		array( 
-			'name'=>'wpem_parse_content_filtered', 
+			'name'=>'wpem parse content filtered', 
 			'value'=>'wpem_parse_content_filtered', 
 			'parameters'=>1, 
 			'template_parameter'=>'$content', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Content filtered',
+			'group' => 'Parser' 
 		), 
 		array( 
-			'name'=>'wpem_parse_status', 
+			'name'=>'wpem parse status', 
 			'value'=>'wpem_parse_status', 
 			'parameters'=>1, 
 			'template_parameter'=>'$status', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Post status',
+			'group' => 'Parser' 
 		), 
 		array( 
-			'name'=>'wpem_parse_post_type', 
+			'name'=>'wpem parse post type', 
 			'value'=>'wpem_parse_post_type', 
 			'parameters'=>1, 
 			'template_parameter'=>'$post_type', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Post Type',
+			'group' => 'Parser' 
 		), 
 		array( 
-			'name'=>'wpem_parse_authorid', 
+			'name'=>'wpem parse authorid', 
 			'value'=>'wpem_parse_authorid', 
 			'parameters'=>1, 
 			'template_parameter'=>'$authorid', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Author ID',
+			'group' => 'Author'  
 		), 
 		array( 
-			'name'=>'wpem_parse_date', 
+			'name'=>'wpem parse date', 
 			'value'=>'wpem_parse_date', 
 			'parameters'=>1, 
 			'template_parameter'=>'$date', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' => 'Parser'
 		), 
 		array( 
-			'name'=>'wpem_parse_comment_status', 
+			'name'=>'wpem parse comment status', 
 			'value'=>'wpem_parse_comment_status', 
 			'parameters'=>1, 
 			'template_parameter'=>'$comment_status', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' => 'Parser' 
 		), 
 		array( 
-			'name'=>'wpematico_pre_insert_post', 
+			'name'=>'wpematico pre insert post', 
 			'value'=>'wpematico_pre_insert_post', 
 			'parameters'=>2,
 			'template_parameter'=>'$args, $campaign', 
 			'type'=>'filter', 
-			'description'=>''
+			'description'=>'',
+			'group' =>'Fetch'
 		), 
 		array( 
-			'name'=>'wpematico_allow_insertpost', 
+			'name'=>'wpematico allow insertpost', 
 			'value'=>'wpematico_allow_insertpost', 
 			'parameters'=>3, 
 			'template_parameter'=>'$bool, $this, $args', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'' ,
+			'group' =>'Fetch'
 		),
 		array( 
-			'name'=>'wpematico_duplicates', 
+			'name'=>'wpematico duplicates', 
 			'value'=>'wpematico_duplicates', 
 			'parameters'=>3, 
 			'template_parameter'=>'$dev,$campaign,$item', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Fetch the duplicate post',
+			'group' =>'Duplicate Controls'
 		),
 		array( 
-			'name'=>'wpematico_inserted_post', 
+			'name'=>'wpematico inserted post', 
 			'value'=>'wpematico_inserted_post', 
 			'parameters'=>3, 
 			'template_parameter'=>'$post_id, $campaign, $item ', 
 			'type'=>'action', 
-			'description'=>'' 
+			'description'=>'' ,
+			'group' =>'Fetch'
 		),
 		array( 
-			'name'=>'wpematico_addcat_description', 
+			'name'=>'wpematico addcat description', 
 			'value'=>'wpematico_addcat_description', 
 			'parameters'=>2, 
 			'template_parameter'=>'$message,$catname', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Add description category',
+			'group' => 'Category' 
 		),
 		array( 
-			'name'=>'wpematico_get_item_images', 
+			'name'=>'wpematico get item images', 
 			'value'=>'wpematico_get_item_images', 
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $item, $options_images', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Get the images item.',
+			'group' =>'Image'
 		),
 		/***************************************************************/
 		/*******************NEW FILTERS 1.2 VERSION*********************/
 		/***************************************************************/
 		array( 
-			'name'=>'wpematico_check_options', 
+			'name'=>'wpematico check options', 
 			'value'=>'wpematico_check_options', 
 			'parameters'=>1, 
 			'template_parameter'=>'$cfg', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Fetch'
 		),
 		array( 
-			'name'=>'wpematico_fetch_feed_params', 
+			'name'=>'admin memory limit', 
+			'value'=>'admin_memory_limit', 
+			'parameters'=>1, 
+			'template_parameter'=>'$memory', 
+			'type'=>'filter', 
+			'description'=>'This filter is used to change the memory limit. default is "256M"',
+			'group' =>'Settings' 
+		),
+		array( 
+			'name'=>'wpematico fetch feed params', 
 			'value'=>'wpematico_fetch_feed_params', 
 			'parameters'=>3, 
 			'template_parameter'=>'$fetch_feed_params, $kf, $campaign', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Fetch params feed',
+			'group' =>'Fetch'
 		),
 		array( 
-			'name'=>'wpematico_max_duplicated_hashes_count', 
+			'name'=>'wpematico max duplicated hashes count', 
 			'value'=>'wpematico_max_duplicated_hashes_count', 
 			'parameters'=>3, 
 			'template_parameter'=>'20, $this->campaign_id, $feed', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Duplicate Controls'
 		),
 		array( 
-			'name'=>'wpematico_get_feeddate', 
+			'name'=>'wpematico get feeddate', 
 			'value'=>'wpematico_get_feeddate', 
 			'parameters'=>5, 
 			'template_parameter'=>'$itemdate, $current_item, $campaign, $feedurl, $item', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Get the feed date',
+			'group' =>'Date'
 		),
 		array( 
-			'name'=>'wpematico_get_post_excerpt_feed', 
+			'name'=>'wpematico get post excerpt feed', 
 			'value'=>'wpematico_get_post_excerpt_feed', 
 			'parameters'=>4, 
 			'template_parameter'=>'$item, $campaign, $feed, $item', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Get the excerpt post',
+			'group' =>'Content'
 		),
 		array( 
-			'name'=>'wpematico_item_pre_media', 
+			'name'=>'wpematico item pre media', 
 			'value'=>'wpematico_item_pre_media', 
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $feed, $item', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Media'
 		),
 		array( 
-			'name'=>'wpematico_item_filters_pre_audio', 
+			'name'=>'wpematico item filters pre audio', 
 			'value'=>'wpematico_item_filters_pre_audio', 
 			'parameters'=>2, 
 			'template_parameter'=>'$current_item, $campaign', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Parse and upload audio',
+			'group' => 'Audio' 
 		),
 		array( 
-			'name'=>'wpematico_item_filters_pre_video', 
+			'name'=>'wpematico item filters pre video', 
 			'value'=>'wpematico_item_filters_pre_video', 
 			'parameters'=>2, 
 			'template_parameter'=>'$current_item, $campaign', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Parse and upload video',
+			'group' => 'Video' 
 		),
 		array( 
-			'name'=>'wpematico_item_pos_media', 
+			'name'=>'wpematico item pos media', 
 			'value'=>'wpematico_item_pos_media', 
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $feed, $item', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Get the media item ' ,
+			'group' =>'Media'
 		),
 		array( 
-			'name'=>'wpematico_pos_item_filters', 
+			'name'=>'wpematico pos item filters', 
 			'value'=>'wpematico_pos_item_filters', 
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $feed, $item', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Fetch'
 		),
 		array( 
-			'name'=>'wpem_parse_excerpt', 
+			'name'=>'wpem parse excerpt', 
 			'value'=>'wpem_parse_excerpt', 
 			'parameters'=>1, 
 			'template_parameter'=>'$excerpt', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' => 'Parser' 
 		),
 		array( 
-			'name'=>'wpem_parse_parent', 
+			'name'=>'wpem parse parent', 
 			'value'=>'wpem_parse_parent', 
 			'parameters'=>1, 
 			'template_parameter'=>'$post_parent', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' => 'Parser' 
 		),
 		array( 
-			'name'=>'wpematico_featured_image_attach_id', 
+			'name'=>'wpematico featured image attach id', 
 			'value'=>'wpematico_featured_image_attach_id', 
 			'parameters'=>5, 
 			'template_parameter'=>'$featured_image_attach_id, $post_id, $current_item, $campaign, $item', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Get the id image',
+			'group' =>'Image'
 		),
 		array( 
-			'name'=>'Wpematico_end_fetching', 
+			'name'=>'Wpematico end fetching', 
 			'value'=>'Wpematico_end_fetching', 
 			'parameters'=>2, 
 			'template_parameter'=>'$campaign, $fetched_posts', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Fetch'
 		),
 		array( 
-			'name'=>'wpematico_post_template_tags', 
-			'value'=>'wpematico_post_template_tags', 
-			'parameters'=>5, 
-			'template_parameter'=>'$vars, $current_item, $campaign, $feed, $item', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'wpematico_categories_after_filters', 
+			'name'=>'wpematico categories after filters', 
 			'value'=>'wpematico_categories_after_filters', 
 			'parameters'=>3, 
 			'template_parameter'=>'$categories, $item, $cfg', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Filter the array of categories to be parsed before inserted into the database.',
+			'group' => 'Category'  
 		),
 		array( 
-			'name'=>'wpematico_images_parser', 
+			'name'=>'wpematico images parser', 
 			'value'=>'wpematico_images_parser', 
 			'parameters'=>6, 
 			'template_parameter'=>'"default", $current_item, $campaign, $feed, $item, $options_images', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Filters images, upload and replace on text item content',
+			'group' => 'Parser' 
 		),
 		array( 
-			'name'=>'wpematico_pattern_img', 
+			'name'=>'wpematico pattern img', 
 			'value'=>'wpematico_pattern_img', 
 			'parameters'=>1, 
 			'template_parameter'=>'"/<img[^>]+>/i"', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Returns all images of the content',
+			'group' => 'Image' 
 		),
 		array( 
-			'name'=>'wpematico_fifu_meta', 
+			'name'=>'wpematico fifu meta', 
 			'value'=>'wpematico_fifu_meta', 
 			'parameters'=>2, 
 			'template_parameter'=>'$wpematico_fifu_meta, $current_item', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Metafields' 
 		),
 		array( 
-			'name'=>'wpematico_yt_video', 
+			'name'=>'wpematico yt video', 
 			'value'=>'wpematico_yt_video', 
 			'parameters'=>1, 
 			'template_parameter'=>'$video', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' => 'Youtube' 
 		),
 		array( 
-			'name'=>'wpematico_get_item_audios', 
+			'name'=>'wpematico get item audios', 
 			'value'=>'wpematico_get_item_audios', 
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $item, $options_audios', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Filters audios, upload and replace on text item content',
+			'group' => 'Audio' 
 		),
 		array( 
-			'name'=>'wpematico_audio_src_url', 
+			'name'=>'wpematico audio src url', 
 			'value'=>'wpematico_audio_src_url', 
 			'parameters'=>1, 
 			'template_parameter'=>'$audio_src_real', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Strip all white space on audios URLs.',
+			'group' => 'Audio' 
 		),
 		array( 
-			'name'=>'wpematico_allowext_audio', 
+			'name'=>'wpematico allowext audio', 
 			'value'=>'wpematico_allowext_audio', 
 			'parameters'=>1, 
 			'template_parameter'=>'$allowed_audio', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Strip all white space on audios original source.',
+			'group' => 'Audio' 
 		),
 		array( 
-			'name'=>'wpematico_new_audio_name', 
+			'name'=>'wpematico new audio name', 
 			'value'=>'wpematico_new_audio_name', 
 			'parameters'=>4, 
 			'template_parameter'=>'sanitize_file_name(urlencode(basename($audio_src_without_query))), $current_item, $options_audios, $item', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Strip all white space on audios store.',
+			'group' => 'Audio' 
 		),
 		array( 
-			'name'=>'wpematico_get_item_videos', 
+			'name'=>'wpematico get item videos', 
 			'value'=>'wpematico_get_item_videos', 
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $item, $options_videos', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Filters videos, upload and replace on text item content',
+			'group' => 'Video' 
 		),
 		array( 
-			'name'=>'wpematico_video_src_url', 
+			'name'=>'wpematico video src url', 
 			'value'=>'wpematico_video_src_url', 
 			'parameters'=>1, 
 			'template_parameter'=>'$video_src_real', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Strip all white space on videos URLs.',
+			'group' => 'Video' 
 		),
 		array( 
-			'name'=>'wpematico_allowext_video', 
+			'name'=>'wpematico allowext video', 
 			'value'=>'wpematico_allowext_video', 
 			'parameters'=>1, 
 			'template_parameter'=>'$allowed_video', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'Strip all white space on videos original source.',
+			'group' => 'Video' 
 		),
 		array( 
-			'name'=>'wpematico_new_video_name', 
+			'name'=>'wpematico new video name', 
 			'value'=>'wpematico_new_video_name', 
 			'parameters'=>4, 
 			'template_parameter'=>'sanitize_file_name(urlencode(basename($video_src_without_query))), $current_item, $campaign, $item', 
 			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'wpematico_check_campaigndata', 
-			'value'=>'wpematico_check_campaigndata', 
-			'parameters'=>1, 
-			'template_parameter'=>'$campaign', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'wpematico_campaign_type_options', 
-			'value'=>'wpematico_campaign_type_options', 
-			'parameters'=>1, 
-			'template_parameter'=>'$options', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'wpematico_template_tags_campaign_edit', 
-			'value'=>'wpematico_template_tags_campaign_edit', 
-			'parameters'=>1, 
-			'template_parameter'=>'$tags_array', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'wpematico_cronperiods', 
-			'value'=>'wpematico_cronperiods', 
-			'parameters'=>1, 
-			'template_parameter'=>'$cronperiods', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'wpematico_campaign_type_validate_feed_before_save', 
-			'value'=>'wpematico_campaign_type_validate_feed_before_save', 
-			'parameters'=>2, 
-			'template_parameter'=>'array("feed", "youtube", "bbpress", "ebay"), $_POST', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'wpematico_check_fetch_feed_params', 
-			'value'=>'wpematico_check_fetch_feed_params', 
-			'parameters'=>3, 
-			'template_parameter'=>'$fetch_feed_params, $kf, $post_campaign', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'wpematico_presave_campaign', 
-			'value'=>'wpematico_presave_campaign', 
-			'parameters'=>1, 
-			'template_parameter'=>'$campaign', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'wpematico_preview_fetch_feed_params', 
-			'value'=>'wpematico_preview_fetch_feed_params', 
-			'parameters'=>2, 
-			'template_parameter'=>'$fetch_feed_params, 0, $campaign', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'wpematico_preview_item_fetch_params', 
-			'value'=>'wpematico_preview_item_fetch_params', 
-			'parameters'=>3, 
-			'template_parameter'=>'$fetch_feed_params, 0, $campaign', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'wpematico_preview_item_campaign', 
-			'value'=>'wpematico_preview_item_campaign', 
-			'parameters'=>3, 
-			'template_parameter'=>'$fetch_feed_params, 0, $campaign', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'wpematico_duplicate_options', 
-			'value'=>'wpematico_duplicate_options', 
-			'parameters'=>3, 
-			'template_parameter'=>'$options, $settings, $campaign', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'wpematico_images_options', 
-			'value'=>'wpematico_images_options', 
-			'parameters'=>3, 
-			'template_parameter'=>'$options, $settings, $campaign', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'wpematico_audios_options', 
-			'value'=>'wpematico_audios_options', 
-			'parameters'=>3, 
-			'template_parameter'=>'$options, $settings, $campaign', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'wpematico_videos_options', 
-			'value'=>'wpematico_videos_options', 
-			'parameters'=>3, 
-			'template_parameter'=>'$options, $settings, $campaign', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'get_wpematico_images_allowed_mimes', 
-			'value'=>'get_wpematico_images_allowed_mimes', 
-			'parameters'=>1, 
-			'template_parameter'=>'$return', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'get_wpematico_audios_allowed_mimes', 
-			'value'=>'get_wpematico_audios_allowed_mimes', 
-			'parameters'=>1, 
-			'template_parameter'=>'$return', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'get_wpematico_audios_allowed_mimes', 
-			'value'=>'get_wpematico_audios_allowed_mimes', 
-			'parameters'=>1, 
-			'template_parameter'=>'$return', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'get_wpematico_videos_allowed_mimes', 
-			'value'=>'get_wpematico_videos_allowed_mimes', 
-			'parameters'=>1, 
-			'template_parameter'=>'$return', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'get_wpematico_videos_allowed_mimes', 
-			'value'=>'get_wpematico_videos_allowed_mimes', 
-			'parameters'=>1, 
-			'template_parameter'=>'$return', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'pro_check_campaigndata', 
-			'value'=>'pro_check_campaigndata', 
-			'parameters'=>2, 
-			'template_parameter'=>'$campaigndata, $post_data', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'wpematico_before_update_campaign', 
-			'value'=>'wpematico_before_update_campaign', 
-			'parameters'=>1, 
-			'template_parameter'=>'$campaign', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'wpematico_simplepie_user_agent', 
-			'value'=>'wpematico_simplepie_user_agent', 
-			'parameters'=>2, 
-			'template_parameter'=>'$user_agent, $url', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'wpematico_fetchfeed', 
-			'value'=>'wpematico_fetchfeed', 
-			'parameters'=>2, 
-			'template_parameter'=>'$feed, $url', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'wpematico_fetch_feed_params_test', 
-			'value'=>'wpematico_fetch_feed_params_test', 
-			'parameters'=>3, 
-			'template_parameter'=>'$fetch_feed_params, 0, $_POST', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'wpematico_get_contents_request_params', 
-			'value'=>'wpematico_get_contents_request_params', 
-			'parameters'=>2, 
-			'template_parameter'=>'$arg, $url', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-		array( 
-			'name'=>'wpematico_before_get_content', 
-			'value'=>'wpematico_before_get_content', 
-			'parameters'=>3, 
-			'template_parameter'=>'false, $aux, $url', 
-			'type'=>'filter', 
-			'description'=>'' 
-		),
-
+			'description'=>'Strip all white space on videos store .',
+			'group' => 'Video' 
+		),	
 	);
 
 
@@ -812,127 +669,72 @@ if ( !defined('ABSPATH')) {
 	if(array_search( 'wpematicopro.php', $active_plugins_names )!==FALSE){
 		array_push($wpematicohk_data_filter_action,
 					array( 
-					'name'=>'wpematico_help_settings_rrewrites', 
-					'value'=>'wpematico_help_settings_rrewrites', 
-					'parameters'=>0, 
-					'template_parameter'=>'', 
-					'type'=>'filter', 
-					'description'=>''
-					),
-					array( 
-					'name'=>'wpe_pro_ramdom_rewrites_accept_word', 
-					'value'=>'wpe_pro_ramdom_rewrites_accept_word', 
-					'parameters'=>4, 
-					'template_parameter'=>' true, $valw, $args, $campaign', 
-					'type'=>'filter', 
-					'description'=>''), 
-					array( 
-					'name'=>'wpe_pro_ramdom_rewrites_array', 
-					'value'=>'wpe_pro_ramdom_rewrites_array', 
-					'parameters'=>3, 
-					'template_parameter'=>'$ramdom_rewrites_array,$args,$campaign', 
-					'type'=>'filter', 
-					'description'=>''),
-					array( 
-					'name'=>'wpem_autotags_min_length', 
-					'value'=>'wpem_autotags_min_length', 
+					'name'=>'Wpempro feed name author', 
+					'value'=>'wpempro_feed_name_author', 
 					'parameters'=>1, 
-					'template_parameter'=>'$length', 
+					'template_parameter'=>'$feed_name_author', 
 					'type'=>'filter', 
-					'description'=>''),
-
+					'description'=>'Filter to allow an external parser for the author name',
+					'group' => 'Professional'),
 					array( 
-					'name'=>'wpematico_campaign_feed_advanced_options', 
-					'value'=>'wpematico_campaign_feed_advanced_options', 
-					'parameters'=>4, 
-					'template_parameter'=>'$feed, $campaign_data, $cfgbasic, $key', 
-					'type'=>'action', 
-					'description'=>'')
-					);
+					'name'=>'Date from tag namespace', 
+					'value'=>'date_from_tag_namespace', 
+					'parameters'=>5, 
+					'template_parameter'=>'$namespace, $current_item, $campaign, $feed, $item', 
+					'type'=>'filter', 
+					'description'=>'Allows change a namespace',
+					'group' => 'Professional')
+
+		)
+					;
 	}
 	if(array_search('wpematico_fullcontent.php', $active_plugins_names )!==FALSE){
 		//WPEMATICO ADD ONS FULL CONTENT
 		array_push($wpematicohk_data_filter_action,
 			array( 
-			'name'=>'wpemfullcontent_websites_video', 
+			'name'=>'Wpemfullcontent websites video', 
 			'value'=>'wpemfullcontent_websites_video', 
 			'parameters'=>1, 
 			'template_parameter'=>'$website_videos', 
 			'type'=>'filter', 
-			'description'=>''
+			'description'=>'',
+			'group' => 'Full Content'
 			), 
 			array( 
-			'name'=>'wpematico_fullcontent_folder', 
+			'name'=>'Wpematico fullcontent folder', 
 			'value'=>'wpematico_fullcontent_folder', 
 			'parameters'=>1, 
 			'template_parameter'=>'$customconfigdir', 
 			'type'=>'filter', 
-			'description'=>''
+			'description'=>'',
+			'group' => 'Full Content'
 			), 
 			array( 
-			'name'=>'wpepro_getfullcontent', 
+			'name'=>'Wpepro getfullcontent', 
 			'value'=>'wpepro_getfullcontent', 
 			'parameters'=>2, 
 			'template_parameter'=>'$permalink, $campaign', 
 			'type'=>'filter', 
-			'description'=>''  
+			'description'=>'',
+			'group' => 'Full Content'  
 			), 
 			array( 
-			'name'=>'full_html_content', 
+			'name'=>'Full html content', 
 			'value'=>'full_html_content', 
 			'parameters'=>1, 
 			'template_parameter'=>'$html', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' => 'Full Content' 
 			), 
 			array( 
-			'name'=>'wpem_unlikelyCandidates_regexp', 
-			'value'=>'wpem_unlikelyCandidates_regexp', 
-			'parameters'=>1, 
-			'template_parameter'=>'$unlikelyCandidates', 
-			'type'=>'filter', 
-			'description'=>''
-			), 
-			array( 
-			'name'=>'wpem_okMaybeItsACandidate_regexp', 
-			'value'=>'wpem_okMaybeItsACandidate_regexp', 
-			'parameters'=>1, 
-			'template_parameter'=>'$okMaybeItsACandidate', 
-			'type'=>'filter', 
-			'description'=>'' 
-			), 
-			array( 
-			'name'=>'wpem_positive_regexp', 
-			'value'=>'wpem_positive_regexp', 
-			'parameters'=>1, 
-			'template_parameter'=>'$positive', 
-			'type'=>'filter', 
-			'description'=>''
-			), 
-			array( 
-			'name'=>'wpem_negative_regexp', 
-			'value'=>'wpem_negative_regexp', 
-			'parameters'=>1, 
-			'template_parameter'=>'$negative', 
-			'type'=>'filter', 
-			'description'=>''
-			), 
-			array( 
-			'name'=>'wpem_video_regexp', 
-			'value'=>'wpem_video_regexp', 
-			'parameters'=>1, 
-			'template_parameter'=>'$regexvideo ', 
-			'type'=>'filter', 
-			'description'=>''
-			),
-
-			array( 
-			'name'=>'after_full_html_content', 
+			'name'=>'After full html content', 
 			'value'=>'after_full_html_content', 
 			'parameters'=>5, 
 			'template_parameter'=>' $html, $current_item, $campaign, $feed, $item', 
 			'type'=>'action', 
-			'description'=>''
+			'description'=>'',
+			'group' => 'Full Content'
 			)
 		);
 	}
@@ -945,7 +747,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>' $ret, $api', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Polyglot'
 			), 
 			array( 
 			'name'=>'polyglot_get_apis', 
@@ -953,7 +756,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>' $list_api', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Polyglot'
 			), 
 			array( 
 			'name'=>'polyglot_get_idioms_options', 
@@ -961,7 +765,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>' $options', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Polyglot'
 			), 
 			array( 
 			'name'=>'polyglot_process_type', 
@@ -969,7 +774,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>' $process, $campaign', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Polyglot' 
 			), 
 			array( 
 			'name'=>'polyglot_process', 
@@ -977,7 +783,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$process', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Polyglot' 
 			)
 		);
 	}
@@ -990,7 +797,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$better_excerpts', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Better Excerpt' 
 			),
 			array( 
 			'name'=>'wpem_after_better_excerpts_fields', 
@@ -998,11 +806,12 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$better_excerpts', 
 			'type'=>'action', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Better Excerpt' 
 			)
 		);
 	}
-	//WPEMATICO MAKE FULL
+	//WPEMATICO MAKE ME FEED
 	if(array_search( 'make-me-feed.php', $active_plugins_names )!==FALSE){
 		array_push($wpematicohk_data_filter_action,
 
@@ -1012,7 +821,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$mmfdata', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Make Me Feed' 
 			), 
 			array( 
 			'name'=>'mmf_getcontents_args', 
@@ -1020,7 +830,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$curl', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Make Me Feed' 
 			),
 			array( 
 			'name'=>'make_me_feed_metaboxes', 
@@ -1028,7 +839,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$post', 
 			'type'=>'action', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Make Me Feed' 
 			), 
 			array( 
 			'name'=>'make_me_feed_urls_box', 
@@ -1036,7 +848,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>0, 
 			'template_parameter'=>'', 
 			'type'=>'action', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Make Me Feed' 
 			), 
 			array( 
 			'name'=>'make_me_feed_post_saved', 
@@ -1044,7 +857,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>0, 
 			'template_parameter'=>'', 
 			'type'=>'action', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Make Me Feed' 
 			), 
 			array( 
 			'name'=>'mmf_testarea_before_getcontent', 
@@ -1052,7 +866,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$campaign', 
 			'type'=>'action', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Make Me Feed' 
 			)
 		);
 	}
@@ -1065,7 +880,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$fbf_post_type_array', 
 			'type'=>'filter', 
-			'description'=>'' 
+			'description'=>'',
+			'group' =>'Facebook Fetcher' 
 			)
 		);
 	}
