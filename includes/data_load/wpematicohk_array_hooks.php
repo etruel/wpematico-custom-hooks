@@ -19,7 +19,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$string',
 			'type'=>'filter',
-			'description'=>'This filter convert a string to UTF-8 if its has a different encoding.',
+			'description' => 'This filter convert a string to UTF-8 if its has a different encoding.',
 			'group' => 'Format'
 			
 		),
