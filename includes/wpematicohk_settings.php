@@ -50,16 +50,19 @@ if(!class_exists('wpematico_hooks_settings')) :
 					wp_enqueue_script('wpematicohk-javascript', WPEMATICOHK_URL . 'assets/codemirror/js/javascript.js', array('wpematicohk-mirrorcode'), WPEMATICOHK_VER, true);
 					wp_enqueue_script('wpematicohk-xml', WPEMATICOHK_URL . 'assets/codemirror/js/xml.js', array('wpematicohk-mirrorcode'), WPEMATICOHK_VER, true);
 					wp_enqueue_script('wpematicohk-php', WPEMATICOHK_URL . 'assets/codemirror/js/php.js', array('wpematicohk-mirrorcode'), WPEMATICOHK_VER, true);
+						//we import the clike file because the documentation recommends it, but apparently it does not require it https://codemirror.net/mode/php/ 
+					//wp_enqueue_script('wpematicohk-clike', WPEMATICOHK_URL . 'assets/codemirror/js/clike.js', array('wpematicohk-mirrorcode'), WPEMATICOHK_VER, true);
 					wp_enqueue_script('wpematicohk-htmlmixed', WPEMATICOHK_URL . 'assets/codemirror/js/htmlmixed.js', array('wpematicohk-mirrorcode', 'wpematicohk-xml', 'wpematicohk-php'), WPEMATICOHK_VER, true);
 					wp_enqueue_script('wpematicohk-settings', WPEMATICOHK_URL . 'assets/js/wpehk_settings.js', array('wpematicohk-mirrorcode', 'wpematicohk-xml', 'wpematicohk-php'), WPEMATICOHK_VER, true);
 				}else {
 					wp_enqueue_script('wpematicohk-settings', WPEMATICOHK_URL . 'assets/js/wpehk_settings.js', array('jquery'), WPEMATICOHK_VER, true);
 					wp_enqueue_code_editor(
-						array('type'		 => 'text/html',
+						array(
+							'type' => 'text/x-php',  //previously "text / html"
 							'codemirror' => array(
 								'theme' => $wpematicohk_theme_editor,
 							),
-					));
+						));
 					wp_add_inline_script('wpematicohk-settings', 'var wpversion=true; ');
 				}
 				wp_localize_script('wpematicohk-settings', 'wpematicohk_object',
