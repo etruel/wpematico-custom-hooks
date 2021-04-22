@@ -19,7 +19,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$string',
 			'type'=>'filter',
-			'description' => 'This filter convert a string to UTF-8 if its has a different encoding.',
+			'description' => __('This filter convert a string to UTF-8 if its has a different encoding.','wpematico-custom-hooks'),
 			'group' => 'Format'
 			
 		),
@@ -29,7 +29,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4,
 			'template_parameter'=>'$imagen_src_real, $current_item, $campaign, $item',
 			'type'=>'filter',
-			'description'=>'Rename the image',
+			'description'=>__('Rename the image','wpematico-custom-hooks'),
 			'group' => 'Image'
 			
 		),
@@ -39,7 +39,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$enclosure_title',
 			'type'=>'filter',
-			'description'=> 'Parse title the video',
+			'description'=>__('Parse title the video','wpematico-custom-hooks'),
 			'group' => 'Youtube'
 
 		),
@@ -49,7 +49,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$enclosure_thumbnails',
 			'type'=>'filter',
-			'description'=>'Parse thumbnails the video',
+			'description'=>__('Parse thumbnails the video','wpematico-custom-hooks'),
 			'group' => 'Youtube'
 
 		),
@@ -59,7 +59,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$enclosure_description',
 			'type'=>'filter',
-			'description'=>'Parse description the video',
+			'description'=>__('Parse description the video','wpematico-custom-hooks'),
 			'group' => 'Youtube'
 
 		),
@@ -69,7 +69,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4,
 			'template_parameter'=>'$content,$campaign,$feed,$item',
 			'type'=>'filter',
-			'description'=>'Get post content from feed',
+			'description'=>__('Get post content from feed','wpematico-custom-hooks'),
 			'group' =>'Content'
 		),
 		array(
@@ -78,7 +78,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4,
 			'template_parameter'=>'$skip,$current_item,$campaign,$item',
 			'type'=>'filter',
-			'description'=> 'Filter to skip item or not',
+			'description'=>__('Filter to skip item or not','wpematico-custom-hooks'),
 			'group' =>'Skip item'
 		),
 		array(
@@ -87,7 +87,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4,
 			'template_parameter'=>'$current_item, $campaign, $feed, $item',
 			'type'=>'filter',
-			'description'=>'Parses items content',
+			'description'=>__('Parses items content','wpematico-custom-hooks'),
 			'group' => 'Parser'
 
 		),
@@ -96,7 +96,7 @@ if ( !defined('ABSPATH')) {
 			'value'=>'wpem_dont_strip_tags',
 			'parameters'=>0,
 			'type'=>'filter',
-			'description'=>'Strip all HTML tags from content',
+			'description'=>__('Strip all HTML tags from content','wpematico-custom-hooks'),
 			'group' => 'Tag'
 			
 		),
@@ -106,7 +106,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4,
 			'template_parameter'=>'$current_item, $campaign, $feed, $item',
 			'type'=>'filter',
-			'description'=>'This filter is executed after parsing the content.',
+			'description'=>__('This filter is executed after parsing the content.','wpematico-custom-hooks'),
 			'group' => 'Parser'
 		),
 		array(
@@ -115,7 +115,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>5,
 			'template_parameter'=>'$vars, $current_item, $campaign, $feed, $item',
 			'type'=>'filter',
-			'description'=>'Add template variables',
+			'description'=>__('Add template variables','wpematico-custom-hooks'),
 			'group' =>'Template'
 		),
 		array(
@@ -124,7 +124,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>3,
 			'template_parameter'=>'$current_item, $item, $cfg',
 			'type'=>'filter',
-			'description'=>'Filter before creating and inserting tags',
+			'description'=>__('Filter before creating and inserting tags','wpematico-custom-hooks'),
 			'group' => 'Tag'
 
 		),
@@ -134,7 +134,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>3,
 			'template_parameter'=>'$current_item, $item, $cfg',
 			'type'=>'filter',
-			'description'=>'Filter after creating and inserting tags',
+			'description'=>__('Filter after creating and inserting tags','wpematico-custom-hooks'),
 			'group' => 'Tag'
 		),
 		array(
@@ -143,7 +143,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$permalink',
 			'type'=>'filter',
-			'description'=>'The item permalink',
+			'description'=>__('The item permalink','wpematico-custom-hooks'),
 			'group' =>'Permalink'
 		),
 		array(
@@ -152,7 +152,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$imagen_src_real',
 			'type'=>'filter',
-			'description'=>'Get the url img',
+			'description'=>__('Get the url img','wpematico-custom-hooks'),
 			'group' => 'Image'
 		),
 		array(
@@ -161,7 +161,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$imagen_src',
 			'type'=>'filter',
-			'description'=>'Image source',
+			'description'=>__('Image source','wpematico-custom-hooks'),
 			'group' => 'Image'
 			
 		),
@@ -171,7 +171,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1,
 			'template_parameter'=>'$allowed',
 			'type'=>'filter',
-			'description'=>'Allow images extensions',
+			'description'=>__('Allow images extensions','wpematico-custom-hooks'),
 			'group' =>'Image'
 		),
 		array( 
@@ -180,7 +180,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>'$campaign,$fetched_posts ', 
 			'type'=>'filter', 
-			'description'=>'After finishing the fetch',
+			'description'=>__('After finishing the fetch','wpematico-custom-hooks'),
 			'group' =>'Fetch'
 		),
 		array( 
@@ -189,7 +189,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>3, 
 			'template_parameter'=>'$feed, $kf, $campaign', 
 			'type'=>'filter', 
-			'description'=>'Filter for SimplePie Library when accessing the feed',
+			'description'=>__('Filter for SimplePie Library when accessing the feed','wpematico-custom-hooks'),
 			'group' =>'Settings'
 		), 
 		array( 
@@ -198,7 +198,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>' $campaign', 
 			'type'=>'filter', 
-			'description'=>'This filter is executed during the fetching process',
+			'description'=>__('This filter is executed during the fetching process','wpematico-custom-hooks'),
 			'group' =>'Fetch'
 		), 
 		array( 
@@ -207,7 +207,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $feedurl, $item ', 
 			'type'=>'filter', 
-			'description'=>'Get the items author',
+			'description'=>__('Get the items author','wpematico-custom-hooks'),
 			'group' => 'Author'
 		), 
 		array( 
@@ -216,7 +216,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $feed, $item ', 
 			'type'=>'filter', 
-			'description'=>'Get the post content',
+			'description'=>__('Get the post content','wpematico-custom-hooks'),
 			'group' =>'Content'
 		),
 		array( 
@@ -225,7 +225,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>' $current_item, $campaign ', 
 			'type'=>'filter', 
-			'description'=>'Parse and upload images',
+			'description'=>__('Parse and upload images','wpematico-custom-hooks'),
 			'group' => 'Image' 
 		),
 		array( 
@@ -234,7 +234,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $feed,$item', 
 			'type'=>'filter', 
-			'description'=>'Set image the featured img',
+			'description'=>__('Set image the featured img','wpematico-custom-hooks'),
 			'group' => 'Image' 
 		),
 		array( 
@@ -243,7 +243,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>' $current_item_images, $current_item', 
 			'type'=>'filter', 
-			'description'=>'Get image the featured img',
+			'description'=>__('Get image the featured img','wpematico-custom-hooks'),
 			'group' => 'Image' 
 		),
 		array( 
@@ -261,7 +261,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>' $autocats, $this ', 
 			'type'=>'filter', 
-			'description'=>'Filters the array of categories obtained by simplepie to be parsed before inserted into the database',
+			'description'=>__('Filters the array of categories obtained by simplepie to be parsed before inserted into the database','wpematico-custom-hooks'),
 			'group' => 'Category' 
 		),  
 		array( 
@@ -270,7 +270,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$meta', 
 			'type'=>'filter', 
-			'description'=>'Filter the array of meta fields to be parsed before attached to the post.' ,
+			'description'=>__('Filter the array of meta fields to be parsed before attached to the post.','wpematico-custom-hooks'),
 			'group' =>'Metafields'
 		), 
 		array( 
@@ -279,7 +279,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$title', 
 			'type'=>'filter', 
-			'description'=>'Parse the post title',
+			'description'=>__('Parse the post title','wpematico-custom-hooks'),
 			'group' => 'Parser' 
 		),
 		array( 
@@ -288,7 +288,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$content', 
 			'type'=>'filter', 
-			'description'=>'Parse the post content',
+			'description'=>__('Parse the post content','wpematico-custom-hooks'),
 			'group' => 'Parser' 
 		), 
 		array( 
@@ -297,7 +297,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$slug', 
 			'type'=>'filter', 
-			'description'=>'Post slug',
+			'description'=>__('Post slug','wpematico-custom-hooks'),
 			'group' => 'Parser' 
 		), 
 		array( 
@@ -306,7 +306,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$content', 
 			'type'=>'filter', 
-			'description'=>'Content filtered',
+			'description'=>__('Content filtered','wpematico-custom-hooks'),
 			'group' => 'Parser' 
 		), 
 		array( 
@@ -315,7 +315,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$status', 
 			'type'=>'filter', 
-			'description'=>'Post status',
+			'description'=>__('Post status','wpematico-custom-hooks'),
 			'group' => 'Parser' 
 		), 
 		array( 
@@ -324,7 +324,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$post_type', 
 			'type'=>'filter', 
-			'description'=>'Post Type',
+			'description'=>__('Post Type','wpematico-custom-hooks'),
 			'group' => 'Parser' 
 		), 
 		array( 
@@ -333,7 +333,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$authorid', 
 			'type'=>'filter', 
-			'description'=>'Author ID',
+			'description'=>__('Author ID','wpematico-custom-hooks'),
 			'group' => 'Author'  
 		), 
 		array( 
@@ -378,7 +378,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>3, 
 			'template_parameter'=>'$dev,$campaign,$item', 
 			'type'=>'filter', 
-			'description'=>'Fetch the duplicate post',
+			'description'=>__('Fetch the duplicate post','wpematico-custom-hooks'),
 			'group' =>'Duplicate Controls'
 		),
 		array( 
@@ -396,7 +396,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>'$message,$catname', 
 			'type'=>'filter', 
-			'description'=>'Add description category',
+			'description'=>__('Add description category','wpematico-custom-hooks'),
 			'group' => 'Category' 
 		),
 		array( 
@@ -405,7 +405,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $item, $options_images', 
 			'type'=>'filter', 
-			'description'=>'Get the images item.',
+			'description'=>__('Get the images item.','wpematico-custom-hooks'),
 			'group' =>'Image'
 		),
 		/***************************************************************/
@@ -426,7 +426,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$memory', 
 			'type'=>'filter', 
-			'description'=>'This filter is used to change the memory limit. default is "256M"',
+			'description'=>__('This filter is used to change the memory limit. default is "256M"','wpematico-custom-hooks'),
 			'group' =>'Settings' 
 		),
 		array( 
@@ -435,7 +435,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>3, 
 			'template_parameter'=>'$fetch_feed_params, $kf, $campaign', 
 			'type'=>'filter', 
-			'description'=>'Fetch params feed',
+			'description'=>__('Fetch params feed','wpematico-custom-hooks'),
 			'group' =>'Fetch'
 		),
 		array( 
@@ -453,7 +453,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>5, 
 			'template_parameter'=>'$itemdate, $current_item, $campaign, $feedurl, $item', 
 			'type'=>'filter', 
-			'description'=>'Get the feed date',
+			'description'=>__('Get the feed date','wpematico-custom-hooks'),
 			'group' =>'Date'
 		),
 		array( 
@@ -462,7 +462,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>'$item, $campaign, $feed, $item', 
 			'type'=>'filter', 
-			'description'=>'Get the excerpt post',
+			'description'=>__('Get the excerpt post','wpematico-custom-hooks'),
 			'group' =>'Content'
 		),
 		array( 
@@ -480,7 +480,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>'$current_item, $campaign', 
 			'type'=>'filter', 
-			'description'=>'Parse and upload audio',
+			'description'=>__('Parse and upload audio','wpematico-custom-hooks'),
 			'group' => 'Audio' 
 		),
 		array( 
@@ -489,7 +489,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>'$current_item, $campaign', 
 			'type'=>'filter', 
-			'description'=>'Parse and upload video',
+			'description'=>__('Parse and upload video','wpematico-custom-hooks'),
 			'group' => 'Video' 
 		),
 		array( 
@@ -498,7 +498,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $feed, $item', 
 			'type'=>'filter', 
-			'description'=>'Get the media item ' ,
+			'description'=>__('Get the media item ','wpematico-custom-hooks'),
 			'group' =>'Media'
 		),
 		array( 
@@ -534,7 +534,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>5, 
 			'template_parameter'=>'$featured_image_attach_id, $post_id, $current_item, $campaign, $item', 
 			'type'=>'filter', 
-			'description'=>'Get the id image',
+			'description'=>__('Get the id image','wpematico-custom-hooks'),
 			'group' =>'Image'
 		),
 		array( 
@@ -552,7 +552,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>3, 
 			'template_parameter'=>'$categories, $item, $cfg', 
 			'type'=>'filter', 
-			'description'=>'Filter the array of categories to be parsed before inserted into the database.',
+			'description'=>__('Filter the array of categories to be parsed before inserted into the database.','wpematico-custom-hooks'),
 			'group' => 'Category'  
 		),
 		array( 
@@ -561,7 +561,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>6, 
 			'template_parameter'=>'"default", $current_item, $campaign, $feed, $item, $options_images', 
 			'type'=>'filter', 
-			'description'=>'Filters images, upload and replace on text item content',
+			'description'=>__('Filters images, upload and replace on text item content','wpematico-custom-hooks'),
 			'group' => 'Parser' 
 		),
 		array( 
@@ -570,7 +570,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'"/<img[^>]+>/i"', 
 			'type'=>'filter', 
-			'description'=>'Returns all images of the content',
+			'description'=>__('Returns all images of the content','wpematico-custom-hooks'),
 			'group' => 'Image' 
 		),
 		array( 
@@ -579,7 +579,8 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>2, 
 			'template_parameter'=>'$wpematico_fifu_meta, $current_item', 
 			'type'=>'filter', 
-			'description'=>'Metafields' 
+			'description'=>__('Get Metafields','wpematico-custom-hooks'),
+			'group' => 'Metafields' 
 		),
 		array( 
 			'name'=>'wpematico yt video', 
@@ -596,7 +597,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $item, $options_audios', 
 			'type'=>'filter', 
-			'description'=>'Filters audios, upload and replace on text item content',
+			'description'=>__('Filters audios, upload and replace on text item content','wpematico-custom-hooks'),
 			'group' => 'Audio' 
 		),
 		array( 
@@ -605,7 +606,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$audio_src_real', 
 			'type'=>'filter', 
-			'description'=>'Strip all white space on audios URLs.',
+			'description'=>__('Strip all white space on audios URLs.','wpematico-custom-hooks'),
 			'group' => 'Audio' 
 		),
 		array( 
@@ -614,7 +615,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$allowed_audio', 
 			'type'=>'filter', 
-			'description'=>'Strip all white space on audios original source.',
+			'description'=>__('Strip all white space on audios original source.','wpematico-custom-hooks'),
 			'group' => 'Audio' 
 		),
 		array( 
@@ -623,7 +624,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>'sanitize_file_name(urlencode(basename($audio_src_without_query))), $current_item, $options_audios, $item', 
 			'type'=>'filter', 
-			'description'=>'Strip all white space on audios store.',
+			'description'=>__('Strip all white space on audios store.','wpematico-custom-hooks'),
 			'group' => 'Audio' 
 		),
 		array( 
@@ -632,7 +633,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>'$current_item, $campaign, $item, $options_videos', 
 			'type'=>'filter', 
-			'description'=>'Filters videos, upload and replace on text item content',
+			'description'=>__('Filters videos, upload and replace on text item content','wpematico-custom-hooks'),
 			'group' => 'Video' 
 		),
 		array( 
@@ -641,7 +642,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>1, 
 			'template_parameter'=>'$video_src_real', 
 			'type'=>'filter', 
-			'description'=>'Strip all white space on videos URLs.',
+			'description'=>__('Strip all white space on videos URLs.','wpematico-custom-hooks'),
 			'group' => 'Video' 
 		),
 		array( 
@@ -659,7 +660,7 @@ if ( !defined('ABSPATH')) {
 			'parameters'=>4, 
 			'template_parameter'=>'sanitize_file_name(urlencode(basename($video_src_without_query))), $current_item, $campaign, $item', 
 			'type'=>'filter', 
-			'description'=>'Strip all white space on videos store .',
+			'description'=>__('Strip all white space on videos store .','wpematico-custom-hooks'),
 			'group' => 'Video' 
 		),	
 	);
@@ -682,7 +683,7 @@ if ( !defined('ABSPATH')) {
 					'parameters'=>5, 
 					'template_parameter'=>'$namespace, $current_item, $campaign, $feed, $item', 
 					'type'=>'filter', 
-					'description'=>'Allows change a namespace',
+					'description'=>__('Allows change a namespace','wpematico-custom-hooks'),
 					'group' => 'Professional')
 
 		)
