@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: wpematico, WPeMatico Custom Hooks, autoblog, rss, feed, read, matic
 Requires at least: 4.1
 Tested up to: 5.7.1
-Stable tag: trunk BETA
+Stable tag: trunk
 
 Addon for WPeMatico. Allows you to execute PHP actions and filters right from your WordPress admin panel in order to create custom behaviors in your campaigns.
 
@@ -54,8 +54,9 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 1. Settings page.  Fields to fill.
 
 == Changelog ==
-= 1.2 Apr 20, 2021 =
+= 1.2 Apr 29, 2021 =
 * Added new filters of WPeMatico and many of its extensions.
+* Fixes codemirror for rich text code.
 * Introducing Filters groups to find them easier.
 * Improved many help tips on filter selection.
 * Bump WordPress version to 5.7.1
