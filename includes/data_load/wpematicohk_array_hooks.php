@@ -662,7 +662,7 @@ if ( !defined('ABSPATH')) {
 			'type'=>'filter', 
 			'description'=>__('Strip all white space on videos store .','wpematico-custom-hooks'),
 			'group' => 'Video' 
-		),	
+		)	
 	);
 
 
