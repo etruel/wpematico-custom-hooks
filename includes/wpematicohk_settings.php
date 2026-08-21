@@ -184,31 +184,67 @@ if (!class_exists('wpematico_hooks_settings')) :
 			<?php
 		}
 
+		
 		/**
-		 * Static function 
+		 * Display the settings page for Custom Hooks.
+		 * Called via wpematico_settings_tab_wpematico_hooks action.
+		 *
 		 * @access public
-		 * @return void
 		 * @since 1.0.1
+		 * @return void
 		 */
 		public static function page() {
 			global $wpematicohk_theme_editor, $wpematicohk_data_filter_action;
+			
+			// Check user capabilities
 			if (!current_user_can('edit_plugins') && !current_user_can('edit_themes')) {
 				wp_die(__('Security check.', 'wpematico-custom-hooks'));
 			}
-			$wpematicohk_options_admin = get_option('wpematicohk_datahooks');
-			$wpematicohk_theme_editor = get_option('wpematicohk_theme_editor');
-			$wpematicohk_theme_editor = isset($wpematicohk_theme_editor) ? $wpematicohk_theme_editor : 'monokai';
-			$wpematicohk_nonce = wp_create_nonce('wpematicohk_nonce');
-			include("data_load/wpematicohk_array_hooks.php");
 
-			$printmb = false;  // If not exists any filter the metabox is printed in the middle
-			for ($i = 0; $i < count($wpematicohk_options_admin['wpematicohk_options_functions']); $i++) {
-				if (!empty($wpematicohk_options_admin['wpematicohk_options_functions'][$i])) {
-					$printmb = true;
-					// If exists at least one filter code the metabox is printed in sidebar
-					break;
+			// Define default options structure
+			$default_options = array(
+				'wpematicohk_options_action_filters' => array(),
+				'wpematicohk_functions_parameters'   => array(),
+				'wpematicohk_functions_action_filter' => array(),
+				'wpematicohk_options_functions'      => array(),
+				'wpematicohk_type_hook'              => array()
+			);
+
+			// Retrieve stored options or fallback to defaults
+			$wpematicohk_options_admin = get_option('wpematicohk_datahooks', $default_options);
+			
+			// Ensure we have a valid array
+			if (!is_array($wpematicohk_options_admin)) {
+				$wpematicohk_options_admin = $default_options;
+			}
+
+			// Ensure each expected key exists and is an array
+			foreach ($default_options as $key => $val) {
+				if (!isset($wpematicohk_options_admin[$key]) || !is_array($wpematicohk_options_admin[$key])) {
+					$wpematicohk_options_admin[$key] = array();
 				}
 			}
+
+			// Load the hooks list (must be before using $wpematicohk_data_filter_action)
+			include("data_load/wpematicohk_array_hooks.php");
+			if (!isset($wpematicohk_data_filter_action) || !is_array($wpematicohk_data_filter_action)) {
+				$wpematicohk_data_filter_action = array();
+			}
+
+			// Editor theme setting
+			$wpematicohk_theme_editor = get_option('wpematicohk_theme_editor', 'monokai');
+
+			// Determine if we have any stored function code (to decide sidebar placement)
+			$printmb = false;
+			if (!empty($wpematicohk_options_admin['wpematicohk_options_functions'])) {
+				foreach ($wpematicohk_options_admin['wpematicohk_options_functions'] as $func) {
+					if (!empty($func)) {
+						$printmb = true;
+						break;
+					}
+				}
+			}
+			// Output the HTML (unchanged from here)
 			?>
 			<div id="wpematicohk_sintax_error">
 
@@ -231,11 +267,10 @@ if (!class_exists('wpematico_hooks_settings')) :
 									</button>
 									<h3 class="handle"><?php _e('About WPeMatico Custom Hooks', 'wpematico-custom-hooks'); ?></h3>
 									<div class="inside">
-										<p id="left1" onmouseover="jQuery(this).css('opacity', 0.9);" onmouseout="jQuery(this).css('opacity', 0.5);" style="text-align:center;opacity: 0.5;">
-											<a href="http://www.wpematico.com" target="_Blank" title="Go to new WPeMatico WebSite">
-												<img style="width: 100%;" src="<?php echo WPeMatico :: $uri; ?>/images/wpematico-hooks_200x100.png" title="">
-											</a><br />
-											<b>WPeMatico Custom Hooks <?php echo WPEMATICOHK_VER; ?></b></p>
+										<a href="https://wordpress.org/plugins/wpematico-custom-hooks/" target="_Blank" title="Go to new WPeMatico WebSite">
+											<img style="width: 100%;" src="<?php echo WPEMATICOHK_URL . 'assets/img/wpematico-custom-hooks-256x128.jpg' ?>" title="WPeMatico Custom Hooks" alt="WPeMatico Custom Hooks" />
+										</a><br />
+										<p><b>WPeMatico Custom Hooks <?php echo WPEMATICOHK_VER; ?></b></p>
 										<p><?php _e('Thanks for test, use and enjoy this plugin.', 'wpematico'); ?></p>
 										<p></p>
 										<p><?php _e('If you like it and want to thank, you can write a 5 star review on Wordpress.', 'wpematico'); ?></p>
