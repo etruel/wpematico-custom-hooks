@@ -6,6 +6,34 @@ if (!defined('ABSPATH')) {
 	exit();
 }
 
+/**
+ * Whether the running WPeMatico core is 2.9 or newer.
+ *
+ * 2.9 moved the admin menu under the top level wpematico_dashboard page and wrapped every
+ * settings tab in its own <form>, so the screen has to be rendered differently.
+ *
+ * Always version_compare(): a string comparison reports '2.10' as lower than '2.9'.
+ *
+ * @return bool
+ */
+function wpematicohk_core_is_29() {
+	return defined('WPEMATICO_VERSION') && version_compare(WPEMATICO_VERSION, '2.9', '>=');
+}
+
+/**
+ * URL of the WPeMatico settings screen for the running core.
+ *
+ * @param string $tab Tab to open. Empty for the settings landing page.
+ * @return string
+ */
+function wpematicohk_settings_url($tab = 'wpematico_hooks') {
+	$page = wpematicohk_core_is_29() ? 'admin.php?page=wpematico_settings' : 'edit.php?post_type=wpematico&page=wpematico_settings';
+	if (!empty($tab)) {
+		$page .= '&tab=' . rawurlencode($tab);
+	}
+	return admin_url($page);
+}
+
 add_action('admin_init', 'wpematicohk_admin_init');
 
 function wpematicohk_admin_init() {
@@ -43,7 +71,7 @@ function wpematicohk_init_action_links($data) {
 	return array_merge(
 			$data,
 			array(
-				'<a href="' . admin_url('edit.php?post_type=wpematico&page=wpematico_settings&tab=wpematico_hooks') . '" title="' . __('Go to WPeMatico Custom Hooks Settings Page') . '">' . __('Settings') . '</a>',
+				'<a href="' . esc_url(wpematicohk_settings_url()) . '" title="' . esc_attr__('Go to WPeMatico Custom Hooks Settings Page', 'wpematico-custom-hooks') . '">' . esc_html__('Settings', 'wpematico-custom-hooks') . '</a>',
 			)
 	);
 }

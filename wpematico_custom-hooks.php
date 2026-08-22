@@ -1,9 +1,10 @@
 <?php
 /**
  * Plugin Name: WPeMatico Custom Hooks
- * Plugin URI:  https://etruel.com/downloads/wpematico_custom-hooks
+ * Requires Plugins: wpematico
+ * Plugin URI:  https://etruel.com/downloads/wpematico-custom-hooks/
  * Description: WPeMatico Add-on starter point WPeMatico Custom Hooks plugin 
- * Version:     1.2
+ * Version:     1.3
  * Author:      etruel
  * Author URI:  https://www.netmdp.com
  * Text Domain: wpematico-custom-hooks
@@ -31,7 +32,12 @@ if (!defined('ABSPATH'))
 
 // Plugin version
 if (!defined('WPEMATICOHK_VER')) {
-	define('WPEMATICOHK_VER', '1.2');
+	define('WPEMATICOHK_VER', '1.3');
+}
+
+// Minimum required WPeMatico version
+if (!defined('WPEMATICOHK_REQ_WPEMATICO')) {
+	define('WPEMATICOHK_REQ_WPEMATICO', '2.7.7');
 }
 
 if (!class_exists('wpematicohk')) {
@@ -61,7 +67,9 @@ if (!class_exists('wpematicohk')) {
 				self::$instance = new self();
 				self::$instance->setup_constants();
 				self::$instance->includes();
-				self::$instance->load_textdomain();
+				// WP 6.7 warns when a text domain is loaded before init, and this class boots
+				// on plugins_loaded 999. See load_textdomain().
+				add_action('init', array(__CLASS__, 'load_textdomain'));
 			}
 
 			return self::$instance;
@@ -103,9 +111,9 @@ if (!class_exists('wpematicohk')) {
 		 * @return      void
 		 */
 		public static function includes() {
-			// Include scripts
-			require_once WPEMATICOHK_DIR . 'includes/wpematicohk_settings.php';
+			// plugin_functions.php first: it declares the core-version helpers the rest uses.
 			require_once WPEMATICOHK_DIR . 'includes/plugin_functions.php';
+			require_once WPEMATICOHK_DIR . 'includes/wpematicohk_settings.php';
 			require_once WPEMATICOHK_DIR . 'includes/wpematicohk_sintax.php';
 			require_once WPEMATICOHK_DIR . 'includes/wpematicohk_execute_action_filter.php';
 		}
@@ -202,9 +210,35 @@ function wpematicohk_load() {
 		$activation = new WPeMatico_Extension_Activation(plugin_dir_path(__FILE__), basename(__FILE__));
 		$activation = $activation->run();
 		deactivate_plugins(plugin_basename(__FILE__));
-	} else {
-		return wpematicohk::instance();
+		return;
 	}
+
+	// Core is present but too old for this addon. Warn and stay out of the way: the hooks screen
+	// and the eval engine both assume APIs that older cores do not have.
+	if (defined('WPEMATICO_VERSION') && version_compare(WPEMATICO_VERSION, WPEMATICOHK_REQ_WPEMATICO, '<')) {
+		add_action('admin_notices', 'wpematicohk_outdated_core_notice');
+		return;
+	}
+
+	return wpematicohk::instance();
+}
+
+/**
+ * Notice shown when the installed WPeMatico core is older than this addon requires.
+ */
+function wpematicohk_outdated_core_notice() {
+	if (!current_user_can('activate_plugins')) {
+		return;
+	}
+	printf(
+			'<div class="notice notice-error"><p>%s</p></div>',
+			sprintf(
+					/* translators: 1: required WPeMatico version, 2: installed WPeMatico version */
+					esc_html__('WPeMatico Custom Hooks needs WPeMatico %1$s or newer to run. You have %2$s installed, so the Hooks screen is disabled until you update.', 'wpematico-custom-hooks'),
+					esc_html(WPEMATICOHK_REQ_WPEMATICO),
+					esc_html(WPEMATICO_VERSION)
+			)
+	);
 }
 
 add_action('plugins_loaded', 'wpematicohk_load', 999);

@@ -3,30 +3,43 @@ Contributors: etruel,sniuk,manuelge
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=B8V39NWK3NFQU
 Tags: wpematico, WPeMatico Custom Hooks, autoblog, rss, feed, read, matic
 Requires at least: 4.1
-Tested up to: 5.7.1
+Requires PHP: 7.0
+Tested up to: 7.1
 Stable tag: trunk
 
-Addon for WPeMatico. Allows you to execute PHP actions and filters right from your WordPress admin panel in order to create custom behaviors in your campaigns.
+Customize how WPeMatico builds your posts. Write PHP for any of its hooks from the WordPress admin, with a real editor and instant validation.
 
 == Description ==
 
-WPeMatico Custom Hooks is an addon of the main WPeMatico plugin that allows you to execute actions and filters provided by WPeMatico in order to create custom behavior in the execution of your campaigns, right from your WordPress admin panel. It's very interesting because it will let you see the functionalities of this powerful autoblogging plugin in greater depth, as well as its extensions on the development level. 
+WPeMatico Custom Hooks puts WPeMatico's developer API on a screen you can actually work in, and it is completely free.
+
+Sooner or later every autoblog needs a rule that no settings page covers: strip a particular block out of the source content, rename images before they are downloaded, skip items that mention a certain word, decide a category from the feed itself, rewrite a title before it is published. WPeMatico fires dozens of hooks for exactly that purpose. This addon lists every one of them for you, each with a description of what it does, the parameters it receives, and a ready made function template.
+
+No FTP. No child theme. No snippet buried in a functions.php that the next theme update will wipe. You write the function in a proper code editor, the plugin validates it before it is ever stored, and it runs on your next campaign.
 
 = How it works =
 
-This addon allows you to add the actions and filters that WPeMatico possesses in order to make personalized changes in the campaigns you execute or actions that require a specific change in behavior.
+1. **Pick a hook.** Each entry tells you what it does, whether it is an action or a filter, and which parameters it receives.
+2. **Let the template be written for you.** One click drops a correctly formed function into the editor, already carrying the right name, signature and return value for that hook.
+3. **Write your code.** On save it is parsed on the spot, and if anything is wrong you get the exact line and reason before a single character is stored.
+4. **Done.** It runs from your next campaign onwards.
 
-== FEATURES ==
+The catalogue is not limited to the core. The addon detects which WPeMatico extensions you have active and adds their hooks to the list too, so Professional, Full Content, Polyglot and the rest are covered as well.
 
-* Hooks updates from WPeMatico Core.
-* Integration of Hooks through the installed WPeMatico extension.
-* Help templates with the function for each filter or action.
-* Elegant code editor with code highlighter for programmers.
-* Syntax error check before saving the code for the functions.
+== Features ==
+
+* **Over 90 hooks catalogued**, from WPeMatico core and its extensions, each explained in plain language.
+* **Function templates generated for you**, with the correct name, parameters and return value already in place.
+* **A real code editor**, with PHP syntax highlighting and selectable colour schemes.
+* **Validated before saving.** Your code is parsed in place and is never stored with a syntax error.
+* **Conflict detection**, so two hooks can never end up declaring the same function name.
+* **Clear reporting.** If something cannot run, you are told which hook and why, with a link straight to it.
+* **Extension aware.** Hooks appear automatically when their extension is active, and the code you wrote for an extension is preserved while it is not.
+* **Administrators only.** Reaching or saving anything here requires permission to edit plugins or themes.
 
 = Requirements =
-This WPeMatico addon requires the WPeMatico base plugin to be installed and activated.  
-PHP 5.3 or higher
+This WPeMatico addon requires the WPeMatico base plugin to be installed and activated.
+PHP 7.0 or higher.
 
 == Installation ==
 
@@ -54,6 +67,18 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 1. Settings page.  Fields to fill.
 
 == Changelog ==
+= 1.3 Aug 22, 2026 =
+A major release. The plugin has been reviewed from top to bottom, modernized and made considerably more robust, so that writing your own PHP against WPeMatico is safe and predictable on any hosting.
+
+* **Instant, local syntax checking.** Your code is now parsed in place the moment you save, and any mistake is reported with its exact line and reason. The check no longer needs your server to be able to reach itself over HTTP, so it works reliably on every host, including managed and firewalled ones.
+* **Conflict detection while you write.** If two hooks would declare a function with the same name, or the name is already taken elsewhere in WordPress, you are told immediately and pointed at the hook that already uses it.
+* **Fault tolerant execution.** Should any snippet be unable to run, the plugin now reports it in the admin with a clear explanation and a direct link to edit it, while the rest of your hooks keep working normally.
+* **Your code stays where you put it.** Snippets are now bound to their hook by name, so installing, activating or deactivating WPeMatico extensions never shuffles them. Code written for an extension that is currently inactive is preserved instead of being lost.
+* **Smarter function detection.** The functions attached to each hook are read from your code itself, so indented, multiple and by-reference declarations are always recognized.
+* **Lighter on every page load.** Editor assets are now loaded only on the Hooks screen, and the work done on regular requests has been cut down substantially.
+* **Reviewed hooks catalogue,** verified against the current WPeMatico core and its extensions, including hook names and parameter signatures, so every hook offered behaves exactly as described.
+* **Modernized and hardened codebase** for current PHP and WordPress versions: stricter capability and input handling on the editor, cleaner translation loading, and no temporary PHP files written to disk.
+
 = 1.2 Apr 29, 2021 =
 * Added new filters of WPeMatico and many of its extensions.
 * Fixes codemirror for rich text code.
@@ -99,4 +124,4 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 * initial release
 
 == Upgrade Notice ==
-1.2 * Recommended upgrade.
+1.3 * Recommended upgrade.

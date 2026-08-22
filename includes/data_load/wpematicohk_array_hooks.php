@@ -92,11 +92,13 @@ if ( !defined('ABSPATH')) {
 
 		),
 		array(
-			'name'=>'wpem dont strip tags',
-			'value'=>'wpem_dont_strip_tags',
-			'parameters'=>0,
+			'name'=>'wpematico dont strip tags',
+			// Was 'wpem_dont_strip_tags', which no core ever fired, with a parameter count of 0.
+			'value'=>'wpematico_dont_strip_tags',
+			'parameters'=>2,
+			'template_parameter'=>'$allowed_tags, $campaign',
 			'type'=>'filter',
-			'description'=>__('Strip all HTML tags from content','wpematico-custom-hooks'),
+			'description'=>__('List of HTML tags kept when "Strip all HTML tags" is enabled.','wpematico-custom-hooks'),
 			'group' => 'Tag'
 			
 		),
@@ -175,10 +177,12 @@ if ( !defined('ABSPATH')) {
 			'group' =>'Image'
 		),
 		array( 
-			'name'=>'wpematico end fetching', 
-			'value'=>'wpematico_end_fetching', 
-			'parameters'=>2, 
-			'template_parameter'=>'$campaign,$fetched_posts ', 
+			'name'=>'Wpematico end fetching',
+			// Core fires this one with a capital W. Hook names are case sensitive, so the old
+			// all-lowercase value never matched anything.
+			'value'=>'Wpematico_end_fetching',
+			'parameters'=>2,
+			'template_parameter'=>'$campaign, $fetched_posts',
 			'type'=>'filter', 
 			'description'=>__('After finishing the fetch','wpematico-custom-hooks'),
 			'group' =>'Fetch'
@@ -537,17 +541,8 @@ if ( !defined('ABSPATH')) {
 			'description'=>__('Get the id image','wpematico-custom-hooks'),
 			'group' =>'Image'
 		),
-		array( 
-			'name'=>'Wpematico end fetching', 
-			'value'=>'Wpematico_end_fetching', 
-			'parameters'=>2, 
-			'template_parameter'=>'$campaign, $fetched_posts', 
-			'type'=>'filter', 
-			'description'=>'',
-			'group' =>'Fetch'
-		),
-		array( 
-			'name'=>'wpematico categories after filters', 
+		array(
+			'name'=>'wpematico categories after filters',
 			'value'=>'wpematico_categories_after_filters', 
 			'parameters'=>3, 
 			'template_parameter'=>'$categories, $item, $cfg', 
@@ -693,9 +688,11 @@ if ( !defined('ABSPATH')) {
 		//WPEMATICO ADD ONS FULL CONTENT
 		array_push($wpematicohk_data_filter_action,
 			array( 
-			'name'=>'Wpemfullcontent websites video', 
-			'value'=>'wpemfullcontent_websites_video', 
-			'parameters'=>1, 
+			'name'=>'websites video',
+			// Full Content fires this without the wpemfullcontent_ prefix
+			// (inc/campaign_fetch.php: apply_filters('websites_video', $website_videos)).
+			'value'=>'websites_video',
+			'parameters'=>1,
 			'template_parameter'=>'$website_videos', 
 			'type'=>'filter', 
 			'description'=>'',

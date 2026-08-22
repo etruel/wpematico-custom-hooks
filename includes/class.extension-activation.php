@@ -46,7 +46,7 @@ class WPeMatico_Extension_Activation {
 		if (isset($plugins[$this->plugin_path . '/' . $this->plugin_file]['Name'])) {
 			$this->plugin_name = str_replace('WPeMatico - ', '', $plugins[$this->plugin_path . '/' . $this->plugin_file]['Name']);
 		} else {
-			$this->plugin_name = __('This plugin', 'wpematico');
+			$this->plugin_name = __('This plugin', 'wpematico-custom-hooks');
 		}
 
 		// Is WPeMatico installed?
@@ -81,13 +81,13 @@ class WPeMatico_Extension_Activation {
 	public function missing_wpematico_notice() {
 		if ($this->has_wpematico) {
 			$url = esc_url(wp_nonce_url(admin_url('plugins.php?action=activate&plugin=' . $this->wpematico_base), 'activate-plugin_' . $this->wpematico_base));
-			$link = '<a href="' . $url . '">' . __('activate it', 'wpematico-extension-activation') . '</a>';
+			$link = '<a href="' . $url . '">' . __('activate it', 'wpematico-custom-hooks') . '</a>';
 		} else {
 			$url = esc_url(wp_nonce_url(self_admin_url('update.php?action=install-plugin&plugin=wpematico'), 'install-plugin_wpematico'));
-			$link = '<a href="' . $url . '">' . __('install it', 'wpematico-extension-activation') . '</a>';
+			$link = '<a href="' . $url . '">' . __('install it', 'wpematico-custom-hooks') . '</a>';
 		}
 
-		echo '<div class="error"><p>' . $this->plugin_name . sprintf(__(' requires WPeMatico! Please %s to continue!', 'wpematico-extension-activation'), $link) . '</p></div>';
+		echo '<div class="error"><p>' . $this->plugin_name . sprintf(__(' requires WPeMatico! Please %s to continue!', 'wpematico-custom-hooks'), $link) . '</p></div>';
 	}
 
 }

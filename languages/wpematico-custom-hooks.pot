@@ -1,0 +1,445 @@
+# Copyright (C) 2026 etruel
+# This file is distributed under the GPL-2.0-or-later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: WPeMatico Custom Hooks 1.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpematico-custom-hooks/\n"
+"POT-Creation-Date: 2026-08-22 12:59-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: wpematico-custom-hooks\n"
+
+#: includes/class.extension-activation.php:49
+msgid "This plugin"
+msgstr ""
+
+#: includes/class.extension-activation.php:84
+msgid "activate it"
+msgstr ""
+
+#: includes/class.extension-activation.php:87
+msgid "install it"
+msgstr ""
+
+#: includes/class.extension-activation.php:90
+#, php-format
+msgid " requires WPeMatico! Please %s to continue!"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:22
+msgid "This filter convert a string to UTF-8 if its has a different encoding."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:32
+msgid "Rename the image"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:42
+msgid "Parse title the video"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:52
+msgid "Parse thumbnails the video"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:62
+msgid "Parse description the video"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:72
+msgid "Get post content from feed"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:81
+msgid "Filter to skip item or not"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:90
+msgid "Parses items content"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:101
+msgid "List of HTML tags kept when \"Strip all HTML tags\" is enabled."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:111
+msgid "This filter is executed after parsing the content."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:120
+msgid "Add template variables"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:129
+msgid "Filter before creating and inserting tags"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:139
+msgid "Filter after creating and inserting tags"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:148
+msgid "The item permalink"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:157
+msgid "Get the url img"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:166
+msgid "Image source"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:176
+msgid "Allow images extensions"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:187
+msgid "After finishing the fetch"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:196
+msgid "Filter for SimplePie Library when accessing the feed"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:205
+msgid "This filter is executed during the fetching process"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:214
+msgid "Get the items author"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:223
+msgid "Get the post content"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:232
+msgid "Parse and upload images"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:241
+msgid "Set image the featured img"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:250
+msgid "Get image the featured img"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:268
+msgid "Filters the array of categories obtained by simplepie to be parsed before inserted into the database"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:277
+msgid "Filter the array of meta fields to be parsed before attached to the post."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:286
+msgid "Parse the post title"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:295
+msgid "Parse the post content"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:304
+msgid "Post slug"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:313
+msgid "Content filtered"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:322
+msgid "Post status"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:331
+msgid "Post Type"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:340
+msgid "Author ID"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:385
+msgid "Fetch the duplicate post"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:403
+msgid "Add description category"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:412
+msgid "Get the images item."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:433
+msgid "This filter is used to change the memory limit. default is \"256M\""
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:442
+msgid "Fetch params feed"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:460
+msgid "Get the feed date"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:469
+msgid "Get the excerpt post"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:487
+msgid "Parse and upload audio"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:496
+msgid "Parse and upload video"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:505
+msgid "Get the media item "
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:541
+msgid "Get the id image"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:550
+msgid "Filter the array of categories to be parsed before inserted into the database."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:559
+msgid "Filters images, upload and replace on text item content"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:568
+msgid "Returns all images of the content"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:577
+msgid "Get Metafields"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:595
+msgid "Filters audios, upload and replace on text item content"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:604
+msgid "Strip all white space on audios URLs."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:613
+msgid "Strip all white space on audios original source."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:622
+msgid "Strip all white space on audios store."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:631
+msgid "Filters videos, upload and replace on text item content"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:640
+msgid "Strip all white space on videos URLs."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:658
+msgid "Strip all white space on videos store ."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:681
+msgid "Allows change a namespace"
+msgstr ""
+
+#: includes/plugin_functions.php:49
+msgid "WPeMatico Custom Hooks DEACTIVATED."
+msgstr ""
+
+#: includes/plugin_functions.php:74
+msgid "Go to WPeMatico Custom Hooks Settings Page"
+msgstr ""
+
+#: includes/plugin_functions.php:74 includes/wpematicohk_settings.php:202
+msgid "Settings"
+msgstr ""
+
+#: includes/plugin_functions.php:93
+msgid "etruel Store"
+msgstr ""
+
+#: includes/plugin_functions.php:94
+msgid "Support"
+msgstr ""
+
+#: includes/plugin_functions.php:95
+msgid "Rate Plugin"
+msgstr ""
+
+#: includes/settings/wpematicohk_settings_legacy.php:26
+msgid "WPeMatico Custom Hooks"
+msgstr ""
+
+#. translators: 1: hook name, 2: comma separated function names
+#: includes/wpematicohk_execute_action_filter.php:200
+#, php-format
+msgid "WPeMatico Custom Hooks skipped the code for %1$s: the function %2$s is already declared somewhere else. Rename it, or remove it from one of the two hooks."
+msgstr ""
+
+#. translators: 1: function name, 2: hook name
+#: includes/wpematicohk_execute_action_filter.php:209
+#, php-format
+msgid "WPeMatico Custom Hooks could not attach %1$s to %2$s: the code saved for that hook does not declare it."
+msgstr ""
+
+#. translators: 1: hook name, 2: PHP error message
+#: includes/wpematicohk_execute_action_filter.php:218
+#, php-format
+msgid "WPeMatico Custom Hooks could not run the code saved for %1$s: %2$s"
+msgstr ""
+
+#: includes/wpematicohk_execute_action_filter.php:228
+msgid "Edit hooks"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:94
+msgid "Checking syntax errors..."
+msgstr ""
+
+#: includes/wpematicohk_settings.php:95 includes/wpematicohk_sintax.php:97
+msgid "No syntax errors found"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:96
+msgid "The syntax check could not be completed. Please try again."
+msgstr ""
+
+#: includes/wpematicohk_settings.php:97
+msgid "In hook:"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:175 includes/wpematicohk_settings.php:369
+#: includes/wpematicohk_sintax.php:44
+msgid "Security check."
+msgstr ""
+
+#: includes/wpematicohk_settings.php:187
+msgid "Hooks"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:204
+msgid "Select the editor theme and the filter you want to hook with a function."
+msgstr ""
+
+#: includes/wpematicohk_settings.php:206
+msgid "Select theme for the editor"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:208
+msgid "Colors Scheme"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:214
+msgid "Select the hooks"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:216
+msgid "All Hooks"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:223
+msgid "Add Functions"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:224
+msgid "Save Data"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:240 includes/wpematicohk_settings.php:271
+msgid "Click to toggle"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:243
+msgid "About WPeMatico Custom Hooks"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:245
+msgid "Go to the plugin page on WordPress.org"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:249
+msgid "Thanks for test, use and enjoy this plugin."
+msgstr ""
+
+#: includes/wpematicohk_settings.php:250
+msgid "If you like it and want to thank, you can write a 5 star review on Wordpress."
+msgstr ""
+
+#: includes/wpematicohk_settings.php:254
+msgid "Click here to rate the plugin on Wordpress"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:254
+msgid "Rate"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:274
+msgid "Enjoy it"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:276
+msgid "If you enjoy it please donate few dollars"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:277
+msgid "Click to Donate"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:280
+msgid "WPeMatico Perfect Package"
+msgstr ""
+
+#. translators: 1: function name, 2: the other hook's name
+#: includes/wpematicohk_sintax.php:74
+#, php-format
+msgid "The function %1$s is already declared in the code for %2$s. Two hooks cannot declare the same function name — rename one of them."
+msgstr ""
+
+#. translators: %s: function name
+#: includes/wpematicohk_sintax.php:86
+#, php-format
+msgid "The function %s already exists in WordPress or in another plugin. Declaring it again would be a fatal error — pick a different name."
+msgstr ""
+
+#. translators: 1: parser message, 2: line number
+#: includes/wpematicohk_sintax.php:121
+#, php-format
+msgid "Parse error: %1$s on line %2$d"
+msgstr ""
+
+#. translators: %s: error message
+#: includes/wpematicohk_sintax.php:128
+#, php-format
+msgid "The code could not be checked: %s"
+msgstr ""
+
+#: wpematico_custom-hooks.php:179
+msgid "Plugin Name Settings"
+msgstr ""
+
+#: wpematico_custom-hooks.php:180
+msgid "Configure Plugin Name Settings"
+msgstr ""
+
+#. translators: 1: required WPeMatico version, 2: installed WPeMatico version
+#: wpematico_custom-hooks.php:237
+#, php-format
+msgid "WPeMatico Custom Hooks needs WPeMatico %1$s or newer to run. You have %2$s installed, so the Hooks screen is disabled until you update."
+msgstr ""

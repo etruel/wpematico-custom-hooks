@@ -22,7 +22,26 @@ jQuery(document).ready(function ($) {
 		wpematicohk_codemirror_line_function(idtemp);
 		$("textarea#" + idtemp).text(wpematicohkget_codemirror(idtemp));
 	});
+	// On core 2.9 the tab lives inside core's own form, so there is no form of ours to submit and
+	// core's "Save settings" button submits this tab too. Everything therefore hangs off the
+	// form's submit event rather than off our button, so neither button can skip the syntax check.
+	var wpematicohk_form = (typeof wpematicohk_object !== 'undefined' && wpematicohk_object.form_selector) ? wpematicohk_object.form_selector : '#wpematicohk_form';
+	var wpematicohk_checked = false;
+
 	$(document).on('click', '#wpematicohk_save_settings', function () {
+		$(wpematicohk_form).trigger('submit');
+	});
+
+	$(document).on('submit', wpematicohk_form, function (e) {
+		if (wpematicohk_checked) {
+			return; // already validated, let it through
+		}
+		if ($('.wpematico-textarea-codemirror').length === 0) {
+			return; // not the Hooks tab, this is core's own settings form
+		}
+
+		e.preventDefault();
+
 		$(".wpematico-textarea-codemirror").each(function () {
 			idtemp = $(this).attr("id");
 			wpematicohk_codemirror_line_function(idtemp);
@@ -32,7 +51,6 @@ jQuery(document).ready(function ($) {
 		$("#wpematicohk_sintax_error").text(wpematicohk_object.text_checking_syntax);
 		$("#wpematicohk_sintax_error").fadeIn(300);
 		wpematicohk_run_sintax();
-
 	});
 
 	var idArray = [];
@@ -126,23 +144,30 @@ jQuery(document).ready(function ($) {
 
 		};
 
-		String.prototype.replaceAll = function (search, replacement) {
-			var target = this;
-			return target.split(search).join(replacement);
-		};
 		// since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
-		jQuery.post(ajaxurl, data, function (response) {
-			if (response.indexOf('no-error-hook') == (-1)) {
-				$("#wpematicohk_sintax_error").css({'border-left': "4px solid #C00000"});
-				response = response.replaceAll('&lt;br /&gt;', '<br />');
-				response = response.replaceAll('&lt;b&gt;', '<b>');
-				response = response.replaceAll('&lt;/b&gt;', '</b>');
-				$("#wpematicohk_sintax_error").html(response);
-			} else {
-				$("#wpematicohk_sintax_error").text(wpematicohk_object.text_no_error_syntax);
-				$("#wpematicohk_sintax_error").css({'border-left': "4px solid #446320"});
-				$("#wpematicohk_form").submit();
+		// The endpoint answers with wp_send_json_success/_error, so the message is plain text and
+		// goes in with .text(): no HTML, and no need to undo entity escaping by hand.
+		jQuery.post(ajaxurl, data, null, 'json').done(function (response) {
+			var box = $("#wpematicohk_sintax_error");
+
+			if (response && response.success) {
+				box.text(wpematicohk_object.text_no_error_syntax);
+				box.css({'border-left': "4px solid #446320"});
+				wpematicohk_checked = true;
+				$(wpematicohk_form).trigger('submit');
+				return;
 			}
+
+			var payload = (response && response.data) ? response.data : {};
+			box.css({'border-left': "4px solid #C00000"});
+			box.text(payload.message || wpematicohk_object.text_generic_error);
+			if (payload.hook) {
+				box.append($('<strong/>').text(' ' + wpematicohk_object.text_in_hook + ' ' + payload.hook));
+			}
+		}).fail(function () {
+			$("#wpematicohk_sintax_error")
+					.css({'border-left': "4px solid #C00000"})
+					.text(wpematicohk_object.text_generic_error);
 		});
 	}
 

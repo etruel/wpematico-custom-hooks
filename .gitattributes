@@ -1,0 +1,16 @@
+# Keep LF in the repository for every text file. Without this, an editor that
+# writes CRLF turns a 7-line change into a 500-line diff (it already happened).
+* text=auto eol=lf
+
+*.php   text eol=lf
+*.js    text eol=lf
+*.css   text eol=lf
+*.txt   text eol=lf
+*.md    text eol=lf
+*.pot   text eol=lf
+*.po    text eol=lf
+
+*.mo    binary
+*.png   binary
+*.jpg   binary
+*.gif   binary
