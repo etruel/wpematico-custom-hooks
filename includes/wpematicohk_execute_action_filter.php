@@ -119,15 +119,26 @@ if (!class_exists('wpehk_filter_and_actions')) :
 		 * @return bool
 		 */
 		protected static function is_executable() {
-			if (isset($_REQUEST['action']) && is_string($_REQUEST['action'])) {
-				if ('wpematicohk_sintax' === $_REQUEST['action'] || 'wpematicohk_options' === $_REQUEST['action']) {
-					return false;
-				}
+			// Nothing is ever skipped outside the admin. The presence of a "tab" in the query
+			// string used to be enough on its own, and that is not a screen: any visitor could
+			// append ?tab=1 to any front end URL and every saved hook stopped running for that
+			// request, whatever the administrator had written it to do.
+			if (!is_admin()) {
+				return true;
 			}
-			if (isset($_REQUEST['tab'])) {
+
+			$action = (isset($_REQUEST['action']) && is_string($_REQUEST['action'])) ? $_REQUEST['action'] : '';
+			if ('wpematicohk_sintax' === $action || 'wpematicohk_options' === $action) {
 				return false;
 			}
-			return true;
+
+			// This plugin's own screen, so saved code that misbehaves cannot lock the
+			// administrator out of the only place where it can be fixed. Both core lines put the
+			// screen at the same page and tab, only the file they hang off differs.
+			$page = (isset($_REQUEST['page']) && is_string($_REQUEST['page'])) ? $_REQUEST['page'] : '';
+			$tab  = (isset($_REQUEST['tab']) && is_string($_REQUEST['tab'])) ? $_REQUEST['tab'] : '';
+
+			return !('wpematico_settings' === $page && 'wpematico_hooks' === $tab);
 		}
 
 		/**
