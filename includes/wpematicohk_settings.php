@@ -23,6 +23,7 @@ if (!class_exists('wpematico_hooks_settings')) :
 			add_action('admin_enqueue_scripts', array(__CLASS__, 'enqueue_scripts'), 999);
 			add_action('admin_post_wpematicohk_options', array(__CLASS__, 'options_callback'));
 			add_filter('wpematico_settings_tabs', array(__CLASS__, 'tabs'), 10, 1);
+			add_filter('wpematico_settings_icons', array(__CLASS__, 'settings_icon'));
 			add_action('wpematico_settings_tab_wpematico_hooks', array(__CLASS__, 'page'));
 		}
 
@@ -56,7 +57,7 @@ if (!class_exists('wpematico_hooks_settings')) :
 			global $wp_version;
 
 			//Style
-			wp_enqueue_style('wpematicohk-settings-styles', WPEMATICOHK_URL . 'assets/css/wpehk_settings.css');
+			wp_enqueue_style('wpematicohk-settings-styles', WPEMATICOHK_URL . 'assets/css/wpehk_settings.css', array(), WPEMATICOHK_VER);
 			if ($wp_version < 4.9) {
 				wp_enqueue_style('wpematicohk-codemirror_style', WPEMATICOHK_URL . 'assets/codemirror/css/codemirror.css');
 			}
@@ -182,6 +183,17 @@ if (!class_exists('wpematico_hooks_settings')) :
 		 * @return void
 		 * @since 1.0.1
 		 */
+		/**
+		 * A tab with no icon of its own falls back to the generic settings one.
+		 *
+		 * @param array $icons
+		 * @return array
+		 */
+		public static function settings_icon($icons) {
+			$icons['wpematico_hooks'] = '<span class="dashicons dashicons-editor-code"></span>';
+			return $icons;
+		}
+
 		public static function tabs($tabs) {
 			if (current_user_can('edit_plugins') || current_user_can('edit_themes')) {
 				$tabs['wpematico_hooks'] = __('Hooks', 'wpematico-custom-hooks');

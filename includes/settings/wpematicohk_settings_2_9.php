@@ -34,11 +34,12 @@ if (!defined('ABSPATH')) {
 
 <div class="meta-box-sortables ui-sortable">
 	<?php
-	// Single column: the 2.9 settings screen provides the navigation sidebar itself, so the
-	// $printmb placement dance of the legacy layout does not apply here.
+	// ★ Single column, and the About / Enjoy-it boxes are not here. They are this
+	// add-on's own sidebar from the legacy layout: printed in 2.9's content column they
+	// stretch it past the page -- the rating button alone is 317px wide in a 280px
+	// column. On 2.9 they belong in core's sidebar, registered through the widget
+	// registry (see settings/wpematicohk_widgets.php).
 	wpematico_hooks_settings::selects_metabox();
 	wpematico_hooks_settings::hook_boxes($wpematicohk_options_admin);
-	wpematico_hooks_settings::about_box();
-	wpematico_hooks_settings::donate_box();
 	?>
 </div>
