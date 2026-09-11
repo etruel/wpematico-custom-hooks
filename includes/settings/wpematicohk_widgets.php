@@ -94,6 +94,13 @@ if (!class_exists('wpematico_hooks_widgets')) :
 							</a>
 						</li>
 					</ul>
+					<p class="wpemhk-about-req">
+						<?php printf(
+								/* translators: %s: minimum WPeMatico version. */
+								esc_html__('Needs WPeMatico %s or newer.', 'wpematico-custom-hooks'),
+								esc_html(WPEMATICOHK_REQ_WPEMATICO)
+						); ?>
+					</p>
 				</div>
 			</div>
 			<?php
