@@ -45,6 +45,15 @@
 	color: #fff;
 }
 
+/* The add-on's own mark, which no dashicon draws. */
+.wpemhk-about-mark {
+	flex: 0 0 auto;
+	font-family: Menlo, Consolas, monospace;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1;
+}
+
 .wpemhk-about-header .dashicons {
 	flex: 0 0 auto;
 	width: 26px;

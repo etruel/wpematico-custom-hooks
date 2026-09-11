@@ -32,7 +32,27 @@ if (!defined('ABSPATH')) {
 <input type="hidden" name="action" value="wpematicohk_options" />
 <?php wp_nonce_field('wpematicohk_admin_nonce'); ?>
 
-<div class="meta-box-sortables ui-sortable">
+<div class="meta-box-sortables ui-sortable wpe-hk-settings">
+
+	<div id="wpematicohk-header" class="postbox">
+		<button type="button" class="handlediv button-link" aria-expanded="true">
+			<span class="screen-reader-text"><?php esc_html_e('Click to toggle', 'wpematico-custom-hooks'); ?></span>
+			<span class="toggle-indicator" aria-hidden="true"></span>
+		</button>
+
+		<h3 class="hndle">
+			<span class="wpemhk-mark" aria-hidden="true">?&gt;</span>
+			<?php esc_html_e('Custom Hooks', 'wpematico-custom-hooks'); ?>
+		</h3>
+
+		<div class="inside">
+			<p class="wpe-hk-intro">
+				<?php esc_html_e('Runs your own PHP on any of the hooks WPeMatico fires while a campaign works — to change a title, filter an item, add a custom field. What you write is checked before it is saved, so a mistake is reported instead of taking the site down.', 'wpematico-custom-hooks'); ?>
+				<span class="wpe-hk-intro-help"><?php esc_html_e('Details in the Help tab, top right.', 'wpematico-custom-hooks'); ?></span>
+			</p>
+		</div>
+	</div>
+
 	<?php
 	// ★ Single column, and the About / Enjoy-it boxes are not here. They are this
 	// add-on's own sidebar from the legacy layout: printed in 2.9's content column they

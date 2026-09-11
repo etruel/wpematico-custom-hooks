@@ -24,6 +24,7 @@ if (!class_exists('wpematico_hooks_settings')) :
 			add_action('admin_post_wpematicohk_options', array(__CLASS__, 'options_callback'));
 			add_filter('wpematico_settings_tabs', array(__CLASS__, 'tabs'), 10, 1);
 			add_filter('wpematico_settings_icons', array(__CLASS__, 'settings_icon'));
+			add_action('current_screen', array(__CLASS__, 'help_tabs'));
 			add_action('wpematico_settings_tab_wpematico_hooks', array(__CLASS__, 'page'));
 		}
 
@@ -56,14 +57,18 @@ if (!class_exists('wpematico_hooks_settings')) :
 
 			global $wp_version;
 
+			// WordPress convention: the readable file while SCRIPT_DEBUG is on, the
+			// minified one otherwise. Keep both in step when either changes.
+			$min = (defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) ? '' : '.min';
+
 			//Style
-			wp_enqueue_style('wpematicohk-settings-styles', WPEMATICOHK_URL . 'assets/css/wpehk_settings.css', array(), WPEMATICOHK_VER);
+			wp_enqueue_style('wpematicohk-settings-styles', WPEMATICOHK_URL . 'assets/css/wpehk_settings' . $min . '.css', array(), WPEMATICOHK_VER);
 			if ($wp_version < 4.9) {
-				wp_enqueue_style('wpematicohk-codemirror_style', WPEMATICOHK_URL . 'assets/codemirror/css/codemirror.css');
+				wp_enqueue_style('wpematicohk-codemirror_style', WPEMATICOHK_URL . 'assets/codemirror/css/codemirror' . $min . '.css', array(), WPEMATICOHK_VER);
 			}
-			wp_enqueue_style('wpematicohk-monokai', WPEMATICOHK_URL . 'assets/codemirror/css/monokai.css');
-			wp_enqueue_style('wpematicohk-colbat', WPEMATICOHK_URL . 'assets/codemirror/css/colbat.css');
-			wp_enqueue_style('wpematicohk-blackboard', WPEMATICOHK_URL . 'assets/codemirror/css/blackboard.css');
+			wp_enqueue_style('wpematicohk-monokai', WPEMATICOHK_URL . 'assets/codemirror/css/monokai' . $min . '.css', array(), WPEMATICOHK_VER);
+			wp_enqueue_style('wpematicohk-colbat', WPEMATICOHK_URL . 'assets/codemirror/css/colbat' . $min . '.css', array(), WPEMATICOHK_VER);
+			wp_enqueue_style('wpematicohk-blackboard', WPEMATICOHK_URL . 'assets/codemirror/css/blackboard' . $min . '.css', array(), WPEMATICOHK_VER);
 			//Scripts
 			if ($wp_version < 4.9) {
 				wp_enqueue_script('wpematicohk-mirrorcode', WPEMATICOHK_URL . 'assets/codemirror/js/codemirror.js', array('jquery'), WPEMATICOHK_VER, true);
@@ -184,13 +189,79 @@ if (!class_exists('wpematico_hooks_settings')) :
 		 * @since 1.0.1
 		 */
 		/**
+		 * The Help tabs of this screen.
+		 *
+		 * On current_screen, against the screen being rendered -- never a WP_Screen::get()
+		 * of a hardcoded id, and without asking for a post_type the 2.9 menu no longer puts
+		 * in the URL.
+		 *
+		 * @param WP_Screen $screen
+		 * @return void
+		 */
+		public static function help_tabs($screen = null) {
+			if (!is_object($screen) || !method_exists($screen, 'add_help_tab')) {
+				return;
+			}
+			if (!isset($_GET['page']) || 'wpematico_settings' !== $_GET['page']) {
+				return;
+			}
+			if (!isset($_GET['tab']) || 'wpematico_hooks' !== $_GET['tab']) {
+				return;
+			}
+
+			$screen->add_help_tab(array(
+				'id'	  => 'wpematicohk_overview',
+				'title'	  => __('Overview', 'wpematico-custom-hooks'),
+				'content' =>
+					'<h3>' . __('What this does', 'wpematico-custom-hooks') . '</h3>'
+					. '<p>' . __('WPeMatico announces every step of its work through hooks: it is about to read an item, it has built a title, it is ready to insert a post. This plugin lets you write PHP that runs at those moments, without a child theme and without an FTP client.', 'wpematico-custom-hooks') . '</p>'
+					. '<p>' . __('Pick a hook, press <strong>Add Functions</strong>, and an editor opens with the function signature already written. Fill in the body and save.', 'wpematico-custom-hooks') . '</p>'
+					. '<p><em>' . __('Only users who may edit plugins or themes can reach this screen: the code written here runs with the rights of the site itself.', 'wpematico-custom-hooks') . '</em></p>',
+			));
+
+			$screen->add_help_tab(array(
+				'id'	  => 'wpematicohk_writing',
+				'title'	  => __('Writing the code', 'wpematico-custom-hooks'),
+				'content' =>
+					'<h3>' . __('What goes in the editor', 'wpematico-custom-hooks') . '</h3>'
+					. '<p>' . __('The function body, and the function itself &mdash; the signature the editor writes for you already carries the parameters that hook receives, in the right order. Do not rename it: that name is what gets attached to the hook.', 'wpematico-custom-hooks') . '</p>'
+					. '<p><b>' . __('Filters must return something', 'wpematico-custom-hooks') . '</b> &mdash; '
+					. __('a filter is asked for a value and whatever it answers replaces the original. A filter that returns nothing empties the thing it was filtering. Actions return nothing and are just told that something happened.', 'wpematico-custom-hooks') . '</p>'
+					. '<p><b>' . __('The badge next to each hook says which it is', 'wpematico-custom-hooks') . '</b> &mdash; '
+					. __('<em>filter</em> or <em>action</em>, so you can tell at a glance whether a return is expected.', 'wpematico-custom-hooks') . '</p>'
+					. '<p><b>' . __('The code is checked before it is saved', 'wpematico-custom-hooks') . '</b> &mdash; '
+					. __('a syntax error is reported with its line and reason and nothing is stored, so a typo cannot leave the site unable to load. The check runs in place and needs no connection back to your own server, which is what makes it work on managed and firewalled hosting.', 'wpematico-custom-hooks') . '</p>'
+					. '<p><b>' . __('One function per hook', 'wpematico-custom-hooks') . '</b> &mdash; '
+					. __('each entry declares its own function, so two entries must not declare functions of the same name. PHP cannot recover from that.', 'wpematico-custom-hooks') . '</p>',
+			));
+
+			$screen->add_help_tab(array(
+				'id'	  => 'wpematicohk_editor',
+				'title'	  => __('The editor', 'wpematico-custom-hooks'),
+				'content' =>
+					'<h3>' . __('Working in the editor', 'wpematico-custom-hooks') . '</h3>'
+					. '<p>' . __('It is the same code editor WordPress uses for its own file editors, with PHP highlighting, bracket matching and line numbers.', 'wpematico-custom-hooks') . '</p>'
+					. '<p><b>' . __('Colour scheme', 'wpematico-custom-hooks') . '</b> &mdash; '
+					. __('Monokai, Blackboard or Cobalt. It changes nothing but how the editor looks, and it is remembered for you alone.', 'wpematico-custom-hooks') . '</p>'
+					. '<p><b>' . __('The hook filter above the list', 'wpematico-custom-hooks') . '</b> &mdash; '
+					. __('narrows the long list to one hook while you work, so you are not scrolling past the ones you are not using. It does not delete or disable anything.', 'wpematico-custom-hooks') . '</p>'
+					. '<p><b>' . __('Saving', 'wpematico-custom-hooks') . '</b> &mdash; '
+					. __('either button on this screen saves the whole tab, and both run the check first.', 'wpematico-custom-hooks') . '</p>',
+			));
+		}
+
+		/**
 		 * A tab with no icon of its own falls back to the generic settings one.
 		 *
 		 * @param array $icons
 		 * @return array
 		 */
 		public static function settings_icon($icons) {
-			$icons['wpematico_hooks'] = '<span class="dashicons dashicons-editor-code"></span>';
+			// The add-on's own mark, which no dashicon draws. Never write that mark in a
+			// // comment: PHP leaves php mode there and the rest of the class is lost.
+			$icons['wpematico_hooks'] = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">'
+				. '<text x="12" y="17" text-anchor="middle" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="700">?&gt;</text>'
+				. '</svg>';
 			return $icons;
 		}
 
@@ -211,9 +282,9 @@ if (!class_exists('wpematico_hooks_settings')) :
 			global $wpematicohk_theme_editor, $wpematicohk_data_filter_action;
 			?>
 			<div class="postbox inside">
-				<h3 class="handle"><?php _e('Settings', 'wpematico-custom-hooks'); ?></h3>
+				<h3 class="handle"><?php _e('Add a hook', 'wpematico-custom-hooks'); ?></h3>
 				<div class="inside">
-					<p><?php _e('Select the editor theme and the filter you want to hook with a function.', 'wpematico-custom-hooks'); ?></p>
+					<p class="description"><?php _e('Pick the hook you want to run code on and press Add Functions: an editor opens below with the signature already written for you. The theme only changes how that editor looks.', 'wpematico-custom-hooks'); ?></p>
 
 					<p><strong><?php _e('Select theme for the editor', 'wpematico-custom-hooks'); ?></strong></p>
 					<select id="wpematicohk_themes_selection_editor" name="wpematicohk_theme_editor">

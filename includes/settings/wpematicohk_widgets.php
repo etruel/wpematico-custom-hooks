@@ -63,7 +63,7 @@ if (!class_exists('wpematico_hooks_widgets')) :
 			?>
 			<div id="wpemhk-about" class="postbox wpemhk-about">
 				<div class="wpemhk-about-header">
-					<span class="dashicons dashicons-editor-code" aria-hidden="true"></span>
+					<span class="wpemhk-about-mark" aria-hidden="true">?&gt;</span>
 					<div class="wpemhk-about-name">
 						<strong>WPeMatico</strong>
 						<span><?php esc_html_e('Custom Hooks', 'wpematico-custom-hooks'); ?></span>
