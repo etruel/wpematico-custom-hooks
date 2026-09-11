@@ -355,7 +355,7 @@ msgid "All Hooks"
 msgstr ""
 
 #: includes/wpematicohk_settings.php:223
-msgid "Add Functions"
+msgid "Add Function"
 msgstr ""
 
 #: includes/wpematicohk_settings.php:224

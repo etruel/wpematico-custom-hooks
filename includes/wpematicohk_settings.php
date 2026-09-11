@@ -215,7 +215,7 @@ if (!class_exists('wpematico_hooks_settings')) :
 				'content' =>
 					'<h3>' . __('What this does', 'wpematico-custom-hooks') . '</h3>'
 					. '<p>' . __('WPeMatico announces every step of its work through hooks: it is about to read an item, it has built a title, it is ready to insert a post. This plugin lets you write PHP that runs at those moments, without a child theme and without an FTP client.', 'wpematico-custom-hooks') . '</p>'
-					. '<p>' . __('Pick a hook, press <strong>Add Functions</strong>, and an editor opens with the function signature already written. Fill in the body and save.', 'wpematico-custom-hooks') . '</p>'
+					. '<p>' . __('Pick a hook, press <strong>Add Function</strong>, and an editor opens with the function signature already written. Fill in the body and save.', 'wpematico-custom-hooks') . '</p>'
 					. '<p><em>' . __('Only users who may edit plugins or themes can reach this screen: the code written here runs with the rights of the site itself.', 'wpematico-custom-hooks') . '</em></p>',
 			));
 
@@ -320,7 +320,7 @@ if (!class_exists('wpematico_hooks_settings')) :
 			<div class="postbox inside">
 				<h3 class="handle"><?php _e('Add a hook', 'wpematico-custom-hooks'); ?></h3>
 				<div class="inside">
-					<p class="description"><?php _e('Pick the hook you want to run code on and press Add Functions: an editor opens below with the signature already written for you. The theme only changes how that editor looks.', 'wpematico-custom-hooks'); ?></p>
+					<p class="description"><?php _e('Pick the hook you want to run code on and press Add Function: an editor opens below with the signature already written for you. The theme only changes how that editor looks.', 'wpematico-custom-hooks'); ?></p>
 
 					<p><strong><?php _e('Select theme for the editor', 'wpematico-custom-hooks'); ?></strong></p>
 					<select id="wpematicohk_themes_selection_editor" name="wpematicohk_theme_editor">
@@ -353,7 +353,7 @@ if (!class_exists('wpematico_hooks_settings')) :
 						<?php } ?>
 					</select>
 					<p class="wpematicohk-actions">
-						<input type="button"  class="button button-primary wpematicohk_button_addfunctions" value="<?php _e('Add Functions', 'wpematico-custom-hooks'); ?>">
+						<input type="button"  class="button button-primary wpematicohk_button_addfunctions" value="<?php _e('Add Function', 'wpematico-custom-hooks'); ?>">
 						<?php if (!wpematicohk_core_is_29()) { ?>
 							<input type="button" class="button button-primary" id="wpematicohk_save_settings" value="<?php _e('Save Data', 'wpematico-custom-hooks'); ?>">
 						<?php } ?>
@@ -453,7 +453,7 @@ if (!class_exists('wpematico_hooks_settings')) :
 				<div id="wpematicohk-empty-state" class="postbox wpematicohk-empty-state">
 					<div class="inside">
 						<p><strong><?php _e('No hook is running code yet.', 'wpematico-custom-hooks'); ?></strong></p>
-						<p class="description"><?php _e('Pick a hook in the box above and press Add Functions. Its editor opens here, with the function signature already written for you.', 'wpematico-custom-hooks'); ?></p>
+						<p class="description"><?php _e('Pick a hook in the box above and press Add Function. Its editor opens here, with the function signature already written for you.', 'wpematico-custom-hooks'); ?></p>
 					</div>
 				</div>
 			<?php } ?>
