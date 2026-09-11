@@ -1,11 +1,12 @@
 === WPeMatico Custom Hooks ===
 Contributors: etruel,sniuk,manuelge
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=B8V39NWK3NFQU
-Tags: wpematico, WPeMatico Custom Hooks, autoblog, rss, feed, read, matic
+Tags: autoblog, rss, feed, code, matic
 Requires at least: 4.1
 Requires PHP: 7.0
 Tested up to: 7.1
 Stable tag: trunk
+License: GPLv2 or later.
 
 Customize how WPeMatico builds your posts. Write PHP for any of its hooks from the WordPress admin, with a real editor and instant validation.
 
@@ -67,6 +68,11 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 1. Settings page.  Fields to fill.
 
 == Changelog ==
+
+= 1.4 =
+* **The settings screen fits the page again on WPeMatico 2.9.** Its About and Enjoy-it boxes come from the layout this plugin used before 2.9, where they were a sidebar of their own; printed in 2.9's content column they pushed the page 47 pixels wider than the window, so the right-hand column was cut off and the whole screen scrolled sideways. On 2.9 they move into WPeMatico's own sidebar, as a panel in the plugin's colours, and the tab gets its own icon in the menu.
+* The stylesheet is versioned with the plugin, so an update is not served from the browser's cache.
+
 = 1.3 Aug 22, 2026 =
 A major release. The plugin has been reviewed from top to bottom, modernized and made considerably more robust, so that writing your own PHP against WPeMatico is safe and predictable on any hosting.
 
