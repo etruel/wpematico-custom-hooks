@@ -193,3 +193,9 @@
 .wpemhk-about-links a:hover .dashicons {
 	color: #d1780f;
 }
+
+.wpemhk-about-req {
+	margin: 12px 0 0;
+	color: #8c8f94;
+	font-size: 12px;
+}

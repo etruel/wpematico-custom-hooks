@@ -1,16 +1,17 @@
-# Copyright (C) 2026 etruel
-# This file is distributed under the GPL-2.0-or-later license.
+# Copyright (C) 2026
+# This file is distributed under the same license as the WPeMatico Custom Hooks plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPeMatico Custom Hooks 1.3\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpematico-custom-hooks/\n"
-"POT-Creation-Date: 2026-08-22 12:59-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Project-Id-Version: WPeMatico Custom Hooks 1.4\n"
+"Report-Msgid-Bugs-To: https://etruel.com/my-account/support/\n"
+"POT-Creation-Date: 2026-09-11 20:04+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: wpematico-custom-hooks\n"
 
@@ -27,40 +28,7 @@ msgid "install it"
 msgstr ""
 
 #: includes/class.extension-activation.php:90
-#, php-format
 msgid " requires WPeMatico! Please %s to continue!"
-msgstr ""
-
-#: includes/data_load/wpematicohk_array_hooks.php:22
-msgid "This filter convert a string to UTF-8 if its has a different encoding."
-msgstr ""
-
-#: includes/data_load/wpematicohk_array_hooks.php:32
-msgid "Rename the image"
-msgstr ""
-
-#: includes/data_load/wpematicohk_array_hooks.php:42
-msgid "Parse title the video"
-msgstr ""
-
-#: includes/data_load/wpematicohk_array_hooks.php:52
-msgid "Parse thumbnails the video"
-msgstr ""
-
-#: includes/data_load/wpematicohk_array_hooks.php:62
-msgid "Parse description the video"
-msgstr ""
-
-#: includes/data_load/wpematicohk_array_hooks.php:72
-msgid "Get post content from feed"
-msgstr ""
-
-#: includes/data_load/wpematicohk_array_hooks.php:81
-msgid "Filter to skip item or not"
-msgstr ""
-
-#: includes/data_load/wpematicohk_array_hooks.php:90
-msgid "Parses items content"
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:101
@@ -115,6 +83,10 @@ msgstr ""
 msgid "Get the items author"
 msgstr ""
 
+#: includes/data_load/wpematicohk_array_hooks.php:22
+msgid "This filter convert a string to UTF-8 if its has a different encoding."
+msgstr ""
+
 #: includes/data_load/wpematicohk_array_hooks.php:223
 msgid "Get the post content"
 msgstr ""
@@ -155,6 +127,10 @@ msgstr ""
 msgid "Content filtered"
 msgstr ""
 
+#: includes/data_load/wpematicohk_array_hooks.php:32
+msgid "Rename the image"
+msgstr ""
+
 #: includes/data_load/wpematicohk_array_hooks.php:322
 msgid "Post status"
 msgstr ""
@@ -177,6 +153,10 @@ msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:412
 msgid "Get the images item."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:42
+msgid "Parse title the video"
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:433
@@ -205,6 +185,10 @@ msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:505
 msgid "Get the media item "
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:52
+msgid "Parse thumbnails the video"
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:541
@@ -239,6 +223,10 @@ msgstr ""
 msgid "Strip all white space on audios original source."
 msgstr ""
 
+#: includes/data_load/wpematicohk_array_hooks.php:62
+msgid "Parse description the video"
+msgstr ""
+
 #: includes/data_load/wpematicohk_array_hooks.php:622
 msgid "Strip all white space on audios store."
 msgstr ""
@@ -259,6 +247,18 @@ msgstr ""
 msgid "Allows change a namespace"
 msgstr ""
 
+#: includes/data_load/wpematicohk_array_hooks.php:72
+msgid "Get post content from feed"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:81
+msgid "Filter to skip item or not"
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:90
+msgid "Parses items content"
+msgstr ""
+
 #: includes/plugin_functions.php:49
 msgid "WPeMatico Custom Hooks DEACTIVATED."
 msgstr ""
@@ -267,179 +267,315 @@ msgstr ""
 msgid "Go to WPeMatico Custom Hooks Settings Page"
 msgstr ""
 
-#: includes/plugin_functions.php:74 includes/wpematicohk_settings.php:202
+#: includes/plugin_functions.php:74
 msgid "Settings"
 msgstr ""
 
-#: includes/plugin_functions.php:93
-msgid "etruel Store"
+#: includes/settings/wpematicohk_settings_2_9.php:45 includes/settings/wpematicohk_widgets.php:69
+msgid "Custom Hooks"
 msgstr ""
 
-#: includes/plugin_functions.php:94
-msgid "Support"
+#: includes/settings/wpematicohk_settings_2_9.php:50
+msgid "Runs your own PHP on any of the hooks WPeMatico fires while a campaign works — to change a title, filter an item, add a custom field. What you write is checked before it is saved, so a mistake is reported instead of taking the site down."
 msgstr ""
 
-#: includes/plugin_functions.php:95
-msgid "Rate Plugin"
+#: includes/settings/wpematicohk_settings_2_9.php:51
+msgid "Details in the Help tab, top right."
 msgstr ""
 
 #: includes/settings/wpematicohk_settings_legacy.php:26
 msgid "WPeMatico Custom Hooks"
 msgstr ""
 
+#. translators: %s: minimum WPeMatico version.
+#: includes/settings/wpematicohk_widgets.php:100
+msgid "Needs WPeMatico %s or newer."
+msgstr ""
+
+#: includes/settings/wpematicohk_widgets.php:75
+msgid "Write PHP for any of the hooks WPeMatico fires, straight from here. The code is checked before it is saved, so a typo cannot take the site down."
+msgstr ""
+
+#: includes/settings/wpematicohk_widgets.php:81
+msgid "Plugin page on WordPress.org"
+msgstr ""
+
+#: includes/settings/wpematicohk_widgets.php:87
+msgid "Support"
+msgstr ""
+
+#: includes/settings/wpematicohk_widgets.php:93
+msgid "Write a 5 star review"
+msgstr ""
+
 #. translators: 1: hook name, 2: comma separated function names
-#: includes/wpematicohk_execute_action_filter.php:200
-#, php-format
+#: includes/wpematicohk_execute_action_filter.php:211
 msgid "WPeMatico Custom Hooks skipped the code for %1$s: the function %2$s is already declared somewhere else. Rename it, or remove it from one of the two hooks."
 msgstr ""
 
 #. translators: 1: function name, 2: hook name
-#: includes/wpematicohk_execute_action_filter.php:209
-#, php-format
+#: includes/wpematicohk_execute_action_filter.php:220
 msgid "WPeMatico Custom Hooks could not attach %1$s to %2$s: the code saved for that hook does not declare it."
 msgstr ""
 
 #. translators: 1: hook name, 2: PHP error message
-#: includes/wpematicohk_execute_action_filter.php:218
-#, php-format
+#: includes/wpematicohk_execute_action_filter.php:229
 msgid "WPeMatico Custom Hooks could not run the code saved for %1$s: %2$s"
 msgstr ""
 
-#: includes/wpematicohk_execute_action_filter.php:228
+#: includes/wpematicohk_execute_action_filter.php:239
 msgid "Edit hooks"
 msgstr ""
 
-#: includes/wpematicohk_settings.php:94
+#: includes/wpematicohk_settings.php:100
 msgid "Checking syntax errors..."
 msgstr ""
 
-#: includes/wpematicohk_settings.php:95 includes/wpematicohk_sintax.php:97
+#: includes/wpematicohk_settings.php:101 includes/wpematicohk_sintax.php:97
 msgid "No syntax errors found"
 msgstr ""
 
-#: includes/wpematicohk_settings.php:96
+#: includes/wpematicohk_settings.php:102
 msgid "The syntax check could not be completed. Please try again."
 msgstr ""
 
-#: includes/wpematicohk_settings.php:97
+#: includes/wpematicohk_settings.php:103
 msgid "In hook:"
 msgstr ""
 
-#: includes/wpematicohk_settings.php:175 includes/wpematicohk_settings.php:369
-#: includes/wpematicohk_sintax.php:44
+#: includes/wpematicohk_settings.php:181 includes/wpematicohk_settings.php:516 includes/wpematicohk_sintax.php:44
 msgid "Security check."
 msgstr ""
 
-#: includes/wpematicohk_settings.php:187
-msgid "Hooks"
-msgstr ""
-
-#: includes/wpematicohk_settings.php:204
-msgid "Select the editor theme and the filter you want to hook with a function."
-msgstr ""
-
-#: includes/wpematicohk_settings.php:206
-msgid "Select theme for the editor"
-msgstr ""
-
-#: includes/wpematicohk_settings.php:208
-msgid "Colors Scheme"
-msgstr ""
-
 #: includes/wpematicohk_settings.php:214
-msgid "Select the hooks"
+msgid "Overview"
 msgstr ""
 
 #: includes/wpematicohk_settings.php:216
-msgid "All Hooks"
+msgid "What this does"
 msgstr ""
 
-#: includes/wpematicohk_settings.php:223
-msgid "Add Function"
+#: includes/wpematicohk_settings.php:217
+msgid "WPeMatico announces every step of its work through hooks: it is about to read an item, it has built a title, it is ready to insert a post. This plugin lets you write PHP that runs at those moments, without a child theme and without an FTP client."
+msgstr ""
+
+#: includes/wpematicohk_settings.php:218
+msgid "Pick a hook, press <strong>Add Function</strong>, and an editor opens with the function signature already written. Fill in the body and save."
+msgstr ""
+
+#: includes/wpematicohk_settings.php:219
+msgid "Only users who may edit plugins or themes can reach this screen: the code written here runs with the rights of the site itself."
 msgstr ""
 
 #: includes/wpematicohk_settings.php:224
-msgid "Save Data"
+msgid "Writing the code"
 msgstr ""
 
-#: includes/wpematicohk_settings.php:240 includes/wpematicohk_settings.php:271
-msgid "Click to toggle"
+#: includes/wpematicohk_settings.php:226
+msgid "What goes in the editor"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:227
+msgid "The function body, and the function itself &mdash; the signature the editor writes for you already carries the parameters that hook receives, in the right order. Do not rename it: that name is what gets attached to the hook."
+msgstr ""
+
+#: includes/wpematicohk_settings.php:228
+msgid "Filters must return something"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:229
+msgid "a filter is asked for a value and whatever it answers replaces the original. A filter that returns nothing empties the thing it was filtering. Actions return nothing and are just told that something happened."
+msgstr ""
+
+#: includes/wpematicohk_settings.php:230
+msgid "The badge next to each hook says which it is"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:231
+msgid "<em>filter</em> or <em>action</em>, so you can tell at a glance whether a return is expected."
+msgstr ""
+
+#: includes/wpematicohk_settings.php:232
+msgid "The code is checked before it is saved"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:233
+msgid "a syntax error is reported with its line and reason and nothing is stored, so a typo cannot leave the site unable to load. The check runs in place and needs no connection back to your own server, which is what makes it work on managed and firewalled hosting."
+msgstr ""
+
+#: includes/wpematicohk_settings.php:234
+msgid "One function per hook"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:235
+msgid "each entry declares its own function, so two entries must not declare functions of the same name. PHP cannot recover from that."
+msgstr ""
+
+#: includes/wpematicohk_settings.php:240
+msgid "The editor"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:242
+msgid "Working in the editor"
 msgstr ""
 
 #: includes/wpematicohk_settings.php:243
-msgid "About WPeMatico Custom Hooks"
+msgid "It is the same code editor WordPress uses for its own file editors, with PHP highlighting, bracket matching and line numbers."
+msgstr ""
+
+#: includes/wpematicohk_settings.php:244
+msgid "Colour scheme"
 msgstr ""
 
 #: includes/wpematicohk_settings.php:245
-msgid "Go to the plugin page on WordPress.org"
+msgid "Monokai, Blackboard or Cobalt. It changes nothing but how the editor looks, and it is remembered for you alone."
+msgstr ""
+
+#: includes/wpematicohk_settings.php:246
+msgid "The hook filter above the list"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:247
+msgid "narrows the long list to one hook while you work, so you are not scrolling past the ones you are not using. It does not delete or disable anything."
+msgstr ""
+
+#: includes/wpematicohk_settings.php:248
+msgid "Saving"
 msgstr ""
 
 #: includes/wpematicohk_settings.php:249
+msgid "either button on this screen saves the whole tab, and both run the check first."
+msgstr ""
+
+#: includes/wpematicohk_settings.php:270
+msgid "Hooks"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:321
+msgid "Add a hook"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:323
+msgid "Pick the hook you want to run code on and press Add Function: an editor opens below with the signature already written for you. The theme only changes how that editor looks."
+msgstr ""
+
+#: includes/wpematicohk_settings.php:325
+msgid "Select theme for the editor"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:327
+msgid "Colors Scheme"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:333
+msgid "Select the hooks"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:335
+msgid "&mdash; Hooks in use &mdash;"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:340
+msgid "In use (%d)"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:341
+msgid "Available (%d)"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:356
+msgid "Add Function"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:358
+msgid "Save Data"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:376 includes/wpematicohk_settings.php:407 includes/settings/wpematicohk_settings_2_9.php:39
+msgid "Click to toggle"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:379
+msgid "About WPeMatico Custom Hooks"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:381
+msgid "Go to the plugin page on WordPress.org"
+msgstr ""
+
+#: includes/wpematicohk_settings.php:385
 msgid "Thanks for test, use and enjoy this plugin."
 msgstr ""
 
-#: includes/wpematicohk_settings.php:250
+#: includes/wpematicohk_settings.php:386
 msgid "If you like it and want to thank, you can write a 5 star review on Wordpress."
 msgstr ""
 
-#: includes/wpematicohk_settings.php:254
+#: includes/wpematicohk_settings.php:390
 msgid "Click here to rate the plugin on Wordpress"
 msgstr ""
 
-#: includes/wpematicohk_settings.php:254
+#: includes/wpematicohk_settings.php:390
 msgid "Rate"
 msgstr ""
 
-#: includes/wpematicohk_settings.php:274
+#: includes/wpematicohk_settings.php:410
 msgid "Enjoy it"
 msgstr ""
 
-#: includes/wpematicohk_settings.php:276
+#: includes/wpematicohk_settings.php:412
 msgid "If you enjoy it please donate few dollars"
 msgstr ""
 
-#: includes/wpematicohk_settings.php:277
+#: includes/wpematicohk_settings.php:413
 msgid "Click to Donate"
 msgstr ""
 
-#: includes/wpematicohk_settings.php:280
+#: includes/wpematicohk_settings.php:416
 msgid "WPeMatico Perfect Package"
 msgstr ""
 
-#. translators: 1: function name, 2: the other hook's name
-#: includes/wpematicohk_sintax.php:74
-#, php-format
-msgid "The function %1$s is already declared in the code for %2$s. Two hooks cannot declare the same function name — rename one of them."
+#: includes/wpematicohk_settings.php:455
+msgid "No hook is running code yet."
 msgstr ""
 
-#. translators: %s: function name
-#: includes/wpematicohk_sintax.php:86
-#, php-format
-msgid "The function %s already exists in WordPress or in another plugin. Declaring it again would be a fatal error — pick a different name."
+#: includes/wpematicohk_settings.php:456
+msgid "Pick a hook in the box above and press Add Function. Its editor opens here, with the function signature already written for you."
+msgstr ""
+
+#: includes/wpematicohk_settings.php:465
+msgid "in use"
 msgstr ""
 
 #. translators: 1: parser message, 2: line number
 #: includes/wpematicohk_sintax.php:121
-#, php-format
 msgid "Parse error: %1$s on line %2$d"
 msgstr ""
 
 #. translators: %s: error message
 #: includes/wpematicohk_sintax.php:128
-#, php-format
 msgid "The code could not be checked: %s"
 msgstr ""
 
-#: wpematico_custom-hooks.php:179
-msgid "Plugin Name Settings"
+#. translators: 1: function name, 2: the other hook's name
+#: includes/wpematicohk_sintax.php:74
+msgid "The function %1$s is already declared in the code for %2$s. Two hooks cannot declare the same function name — rename one of them."
+msgstr ""
+
+#. translators: %s: function name
+#: includes/wpematicohk_sintax.php:86
+msgid "The function %s already exists in WordPress or in another plugin. Declaring it again would be a fatal error — pick a different name."
 msgstr ""
 
 #: wpematico_custom-hooks.php:180
+msgid "Plugin Name Settings"
+msgstr ""
+
+#: wpematico_custom-hooks.php:181
 msgid "Configure Plugin Name Settings"
 msgstr ""
 
 #. translators: 1: required WPeMatico version, 2: installed WPeMatico version
-#: wpematico_custom-hooks.php:237
-#, php-format
+#: wpematico_custom-hooks.php:238
 msgid "WPeMatico Custom Hooks needs WPeMatico %1$s or newer to run. You have %2$s installed, so the Hooks screen is disabled until you update."
 msgstr ""
