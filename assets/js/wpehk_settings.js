@@ -3,8 +3,15 @@ jQuery(document).ready(function ($) {
 
 	//create template function
 	$(document).on('click', '.wpematicohk_button_addfunctions', function () {
-		wpematicohk_select_text = $('.wpematicohk_select_actions_filters').val() + "_callback";
-		idtemp = 'wpematicohk_codemirror_' + $('.wpematicohk_select_actions_filters').val();
+		var hook = $('.wpematicohk_select_actions_filters').val();
+		if (!hook) {
+			return; // nothing picked: the placeholder is the "hooks in use" view, not a hook
+		}
+		wpematicohk_select_text = hook + "_callback";
+		idtemp = 'wpematicohk_codemirror_' + hook;
+		// The box may be hidden and its editor not built yet, so reveal first: CodeMirror sizes
+		// itself on creation and comes out 0px tall inside a display:none parent.
+		wpematicohk_reveal(hook);
 		tagtypehook = $('.wpematicohk_select_actions_filters option:selected').attr('tagtypehook');
 		template_parameter = $('.wpematicohk_select_actions_filters option:selected').attr('tagtemplateparameter');
 		template_function = '\nfunction ' + wpematicohk_select_text + '(' + template_parameter + '){';
@@ -21,6 +28,7 @@ jQuery(document).ready(function ($) {
 		addCodemirrorFunction(idtemp, template_function);
 		wpematicohk_codemirror_line_function(idtemp);
 		$("textarea#" + idtemp).text(wpematicohkget_codemirror(idtemp));
+		$('#' + hook).addClass('wpematicohk-has-code');
 	});
 	// On core 2.9 the tab lives inside core's own form, so there is no form of ours to submit and
 	// core's "Save settings" button submits this tab too. Everything therefore hangs off the
@@ -44,6 +52,9 @@ jQuery(document).ready(function ($) {
 
 		$(".wpematico-textarea-codemirror").each(function () {
 			idtemp = $(this).attr("id");
+			if (!codemirror_editor[idtemp]) {
+				return; // never opened, so its textarea still holds what was stored
+			}
 			wpematicohk_codemirror_line_function(idtemp);
 			$("textarea#" + idtemp).text(wpematicohkget_codemirror(idtemp));
 		});
@@ -53,25 +64,32 @@ jQuery(document).ready(function ($) {
 		wpematicohk_run_sintax();
 	});
 
-	var idArray = [];
-	var count = 0;
-	$('.wpematicohk_dinamic_metabox').each(function () {
-		idArray.push(this.id);
-		if ($('#wpematicohk_codemirror_' + idArray[count]).val() != '') {
-			$('#' + idArray[count]).show();
-		} else {
-			$('#' + idArray[count]).hide();
-		}
-		count++;
-	});
+	// The catalogue prints a box per hook — 90-odd of them — so the list shows the hooks that
+	// carry code and the picker reveals any other one on demand. The empty option is that same
+	// view, not "show all": dumping ninety empty editors was never what anyone wanted to read.
+	function wpematicohk_show_used() {
+		$(".wpematicohk_dinamic_chaplain").not('.wpematicohk-has-code').hide(0);
+		$(".wpematicohk_dinamic_chaplain.wpematicohk-has-code").show(0).each(function () {
+			wpematicohk_ensure_editor('wpematicohk_codemirror_' + this.id);
+		});
+	}
+
+	function wpematicohk_reveal(hook) {
+		$(".wpematicohk_dinamic_chaplain").hide(0);
+		$("#wpematicohk-empty-state").hide();
+		$("#" + hook).show(0);
+		wpematicohk_ensure_editor('wpematicohk_codemirror_' + hook);
+	}
+
+	wpematicohk_show_used();
 
 	$(document).on('change', '.wpematicohk_select_actions_filters', function () {
-		wpematicohk_select_text = $('.wpematicohk_select_actions_filters').val();
-		if (wpematicohk_select_text != '') {
-			$(".wpematicohk_dinamic_chaplain").hide(0);
-			$("." + wpematicohk_select_text).show(0);
+		var hook = $(this).val();
+		if (hook) {
+			wpematicohk_reveal(hook);
 		} else {
-			$(".wpematicohk_dinamic_chaplain").show(0);
+			$("#wpematicohk-empty-state").show();
+			wpematicohk_show_used();
 		}
 	});
 	//select theme editor
@@ -79,7 +97,9 @@ jQuery(document).ready(function ($) {
 		mytheme = $(this).val();
 		$(".wpematico-textarea-codemirror").each(function () {
 			idtemp = $(this).attr("id");
-			wpematicohk_selectTheme(mytheme, idtemp);
+			if (codemirror_editor[idtemp]) {
+				wpematicohk_selectTheme(mytheme, idtemp);
+			}
 		});
 	});
 
@@ -106,13 +126,18 @@ jQuery(document).ready(function ($) {
 		$("." + idtemp).val(function_lines_code);
 	}
 
-	//create Multiple Editors in codemirror javascript each
-	function multiple_codemirror() {
-		$(".wpematico-textarea-codemirror").each(function () {
-			idtemp = $(this).attr("id");
+	// One CodeMirror per catalogue entry meant ~90 editors built on every page load to edit one.
+	// They are built the first time their box is shown instead, and refreshed after, because an
+	// editor created while hidden measures itself as empty.
+	function wpematicohk_ensure_editor(idtemp) {
+		if (!document.getElementById(idtemp)) {
+			return null;
+		}
+		if (!codemirror_editor[idtemp]) {
 			codemirror_editor[idtemp] = editor(idtemp);
-			codemirror_editor[idtemp].refresh();
-		});
+		}
+		codemirror_editor[idtemp].refresh();
+		return codemirror_editor[idtemp];
 	}
 	//creating ajax function sintax ejecute
 	function wpematicohk_run_sintax() {
@@ -172,7 +197,6 @@ jQuery(document).ready(function ($) {
 	}
 
 
-	multiple_codemirror();
 });
 
 //Create Multiple Editors in CodeMirror

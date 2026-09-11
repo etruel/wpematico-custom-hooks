@@ -59,7 +59,7 @@ if (!defined('ABSPATH')) {
 	// stretch it past the page -- the rating button alone is 317px wide in a 280px
 	// column. On 2.9 they belong in core's sidebar, registered through the widget
 	// registry (see settings/wpematicohk_widgets.php).
-	wpematico_hooks_settings::selects_metabox();
+	wpematico_hooks_settings::selects_metabox($wpematicohk_options_admin);
 	wpematico_hooks_settings::hook_boxes($wpematicohk_options_admin);
 	?>
 </div>
