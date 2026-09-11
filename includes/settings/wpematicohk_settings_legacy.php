@@ -33,7 +33,7 @@ if (!defined('ABSPATH')) {
 					// With code already saved the selector goes to the sidebar; on an empty screen
 					// it sits in the middle, where it is the only thing to interact with.
 					if (true === $printmb) {
-						wpematico_hooks_settings::selects_metabox();
+						wpematico_hooks_settings::selects_metabox($wpematicohk_options_admin);
 					}
 					wpematico_hooks_settings::donate_box();
 					?>
@@ -44,7 +44,7 @@ if (!defined('ABSPATH')) {
 				<div id="post-body-content">
 					<?php
 					if (false === $printmb) {
-						wpematico_hooks_settings::selects_metabox();
+						wpematico_hooks_settings::selects_metabox($wpematicohk_options_admin);
 					}
 					wpematico_hooks_settings::hook_boxes($wpematicohk_options_admin);
 					?>

@@ -10,23 +10,88 @@
 .CodeMirror {
 	width: 100% !important;
 }
-.hook-name {
-	font-size:20px;
+
+/* Core 2.9 pads its boxes 0 30px, with nothing at the bottom, so the buttons ended flush
+ * against whatever came next. */
+.wpematicohk-actions {
+	margin: 16px 0 20px;
 }
-.hook-description {
-	padding-left:10px;
+
+/* ---------------------------------------------------------------------------
+ * One box per hook. Two classes on every selector: core styles the same
+ * elements through .postbox .hndle, which a single class would lose to.
+ * ------------------------------------------------------------------------- */
+/* Three classes because core 2.9 zeroes the border of every postbox inside its settings
+ * container, and a two-class rule loses to it on source order. */
+.postbox.wpematicohk_dinamic_metabox.wpematicohk_dinamic_chaplain {
+	margin-bottom: 14px;
+	border-left: 4px solid #dcdcde;
 }
-.hook-type {
-	float:right; 
-	background-color:#0073AA; 
-	color:white; 
-	padding:5px; 
-	font-size:14px !important;
-	margin-top: -5px;
+
+/* The hooks already running code, so the list reads at a glance. */
+.postbox.wpematicohk_dinamic_metabox.wpematicohk-has-code {
+	border-left-color: #d1780f;
 }
+
+.wpematicohk_dinamic_metabox .hook-name {
+	gap: 8px;
+	font-family: Menlo, Consolas, monospace;
+}
+
+.wpematicohk_dinamic_metabox .hook-name > span:first-child {
+	flex: 1 1 auto;
+	word-break: break-all;
+}
+
+.wpematicohk_dinamic_metabox .hook-type,
+.wpematicohk_dinamic_metabox .hook-state {
+	flex: 0 0 auto;
+	padding: 2px 9px;
+	border-radius: 10px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 1.7;
+	text-transform: uppercase;
+	letter-spacing: .02em;
+}
+
+.wpematicohk_dinamic_metabox .hook-type {
+	background-color: #f0f0f1;
+	color: #50575e;
+}
+
+.wpematicohk_dinamic_metabox .hook-state {
+	background-color: #d1780f;
+	color: #fff;
+}
+
+.wpematicohk_dinamic_metabox .hook-description {
+	margin: 12px 0;
+	color: #50575e;
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+/* WordPress fixes its code editor at 300px, a lot of empty room under the four lines a
+ * callback usually is. Still a fixed height, just a shorter one: CodeMirror measures itself
+ * once at creation, so height:auto leaves the gutter and the wrapper disagreeing. */
+.wpematicohk_dinamic_metabox .CodeMirror {
+	height: 220px;
+	margin-bottom: 12px;
+}
+
 .wpematico-textarea-codemirror {
 	width:100%; 
 	height:100px;
+}
+
+.wpematicohk-empty-state .inside p {
+	margin: 0 0 8px;
+}
+
+.wpematicohk-empty-state .inside p:last-child {
+	margin-bottom: 0;
 }
 /* ---------------------------------------------------------------------------
  * About box in core's sidebar (2.9+).

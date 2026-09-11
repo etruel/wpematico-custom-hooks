@@ -273,13 +273,49 @@ if (!class_exists('wpematico_hooks_settings')) :
 		}
 
 		/**
+		 * Hook names that currently carry code, keyed by name.
+		 *
+		 * @access public
+		 * @param  array $options_admin Normalised stored option.
+		 * @return array
+		 */
+		public static function used_hooks($options_admin) {
+			$used = array();
+			if (empty($options_admin['wpematicohk_options_action_filters']) || !is_array($options_admin['wpematicohk_options_action_filters'])) {
+				return $used;
+			}
+			foreach ($options_admin['wpematicohk_options_action_filters'] as $idx => $hook) {
+				if (!is_string($hook) || '' === $hook) {
+					continue;
+				}
+				$code = isset($options_admin['wpematicohk_options_functions'][$idx]) ? $options_admin['wpematicohk_options_functions'][$idx] : '';
+				if ('' !== trim((string) $code)) {
+					$used[$hook] = true;
+				}
+			}
+			return $used;
+		}
+
+		/**
 		 * Static function
 		 * @access public
+		 * @param  array $options_admin Normalised stored option, to tell the hooks in use apart.
 		 * @return void
 		 * @since 1.0.1
 		 */
-		public static function selects_metabox() {
+		public static function selects_metabox($options_admin = array()) {
 			global $wpematicohk_theme_editor, $wpematicohk_data_filter_action;
+
+			$used	 = self::used_hooks($options_admin);
+			$in_use   = array();
+			$available = array();
+			foreach ($wpematicohk_data_filter_action as $key_hooks) {
+				if (isset($used[$key_hooks['value']])) {
+					$in_use[] = $key_hooks;
+				} else {
+					$available[] = $key_hooks;
+				}
+			}
 			?>
 			<div class="postbox inside">
 				<h3 class="handle"><?php _e('Add a hook', 'wpematico-custom-hooks'); ?></h3>
@@ -296,15 +332,32 @@ if (!class_exists('wpematico_hooks_settings')) :
 					<br>
 					<p><strong><?php _e('Select the hooks', 'wpematico-custom-hooks'); ?></strong></p>
 					<select class="wpematicohk_select_actions_filters">
-						<option value=""><?php _e('All Hooks', 'wpematico-custom-hooks'); ?></option>
-						<?php foreach ($wpematicohk_data_filter_action as $key_hooks) { ?>
-							<option tagtypehook='<?php echo esc_attr(strtolower($key_hooks['type'])); ?>' tagtemplateparameter='<?php echo esc_attr(isset($key_hooks["template_parameter"]) ? $key_hooks["template_parameter"] : ""); ?>' tagparameters='<?php echo esc_attr($key_hooks['parameters']); ?>' value="<?php echo esc_attr($key_hooks['value']); ?>"><?php echo esc_html($key_hooks['name']); ?></option>
+						<option value=""><?php _e('&mdash; Hooks in use &mdash;', 'wpematico-custom-hooks'); ?></option>
+						<?php
+						// Two groups so the list itself answers "which hooks am I already running
+						// code on": picking one below reveals its editor, and only that one.
+						$groups = array(
+							array('label' => sprintf(__('In use (%d)', 'wpematico-custom-hooks'), count($in_use)), 'hooks' => $in_use),
+							array('label' => sprintf(__('Available (%d)', 'wpematico-custom-hooks'), count($available)), 'hooks' => $available),
+						);
+						foreach ($groups as $group) {
+							if (empty($group['hooks'])) {
+								continue;
+							}
+							?>
+							<optgroup label="<?php echo esc_attr($group['label']); ?>">
+								<?php foreach ($group['hooks'] as $key_hooks) { ?>
+									<option tagtypehook='<?php echo esc_attr(strtolower($key_hooks['type'])); ?>' tagtemplateparameter='<?php echo esc_attr(isset($key_hooks["template_parameter"]) ? $key_hooks["template_parameter"] : ""); ?>' tagparameters='<?php echo esc_attr($key_hooks['parameters']); ?>' value="<?php echo esc_attr($key_hooks['value']); ?>"><?php echo esc_html($key_hooks['value']); ?></option>
+								<?php } ?>
+							</optgroup>
 						<?php } ?>
 					</select>
-					<br>
-					<br>
-					<input type="button"  class="button button-primary wpematicohk_button_addfunctions" value="<?php _e('Add Functions', 'wpematico-custom-hooks'); ?>">
-					<input type="button" class="button button-primary" id="wpematicohk_save_settings" value="<?php _e('Save Data', 'wpematico-custom-hooks'); ?>">
+					<p class="wpematicohk-actions">
+						<input type="button"  class="button button-primary wpematicohk_button_addfunctions" value="<?php _e('Add Functions', 'wpematico-custom-hooks'); ?>">
+						<?php if (!wpematicohk_core_is_29()) { ?>
+							<input type="button" class="button button-primary" id="wpematicohk_save_settings" value="<?php _e('Save Data', 'wpematico-custom-hooks'); ?>">
+						<?php } ?>
+					</p>
 				</div>
 			</div>
 			<?php
@@ -394,13 +447,24 @@ if (!class_exists('wpematico_hooks_settings')) :
 					'type'	   => isset($options_admin['wpematicohk_type_hook'][$idx]) ? $options_admin['wpematicohk_type_hook'][$idx] : '',
 				);
 			}
+			$used = self::used_hooks($options_admin);
 			?>
+			<?php if (empty($used)) { ?>
+				<div id="wpematicohk-empty-state" class="postbox wpematicohk-empty-state">
+					<div class="inside">
+						<p><strong><?php _e('No hook is running code yet.', 'wpematico-custom-hooks'); ?></strong></p>
+						<p class="description"><?php _e('Pick a hook in the box above and press Add Functions. Its editor opens here, with the function signature already written for you.', 'wpematico-custom-hooks'); ?></p>
+					</div>
+				</div>
+			<?php } ?>
 			<div id="normal-sortables" class="meta-box-sortables ui-sortable">
-				<?php foreach ($wpematicohk_data_filter_action as $key_hooks) { ?>
-					<div id="<?php echo esc_attr($key_hooks['value']); ?>" class="postbox wpematicohk_dinamic_metabox wpematicohk_dinamic_chaplain <?php echo esc_attr($key_hooks['value']); ?>">
-						<h3 class="hndle hook-name"><span><?php echo esc_html($key_hooks["name"]); ?></span> <span class="hook-type"><?php echo esc_html(strtolower($key_hooks['type'])); ?></span></h3>
-						<p class="hook-description"><?php echo esc_html($key_hooks["description"]); ?></p>
+				<?php foreach ($wpematicohk_data_filter_action as $key_hooks) {
+					$has_code = isset($used[$key_hooks['value']]);
+					?>
+					<div id="<?php echo esc_attr($key_hooks['value']); ?>" class="postbox wpematicohk_dinamic_metabox wpematicohk_dinamic_chaplain<?php echo $has_code ? ' wpematicohk-has-code' : ''; ?> <?php echo esc_attr($key_hooks['value']); ?>">
+						<h3 class="hndle hook-name"><span><?php echo esc_html($key_hooks["value"]); ?></span> <span class="hook-type"><?php echo esc_html(strtolower($key_hooks['type'])); ?></span><?php if ($has_code) { ?> <span class="hook-state"><?php _e('in use', 'wpematico-custom-hooks'); ?></span><?php } ?></h3>
 						<div class="inside">
+							<p class="hook-description"><?php echo esc_html($key_hooks["description"]); ?></p>
 							<?php
 							$row				   = isset($stored[$key_hooks['value']]) ? $stored[$key_hooks['value']] : array('code' => '', 'callbacks' => '');
 							$content_action_filter = $row['callbacks'];

@@ -72,6 +72,8 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 = 1.4 =
 * **The settings screen fits the page again on WPeMatico 2.9.** Its About and Enjoy-it boxes come from the layout this plugin used before 2.9, where they were a sidebar of their own; printed in 2.9's content column they pushed the page 47 pixels wider than the window, so the right-hand column was cut off and the whole screen scrolled sideways. On 2.9 they move into WPeMatico's own sidebar, as a panel in the plugin's colours, and the tab gets its own icon in the menu.
 * **The screen now opens like the rest of WPeMatico's.** A header carrying the plugin's name and mark, a line saying what the screen is for, its own icon in the menu, and a Help tab with three pages: what hooks are and how to use one, what goes in the editor (filters must return, actions need not, one function per hook), and how the editor itself works.
+* **The screen tells you which hooks you are running code on.** The picker splits into *In use* and *Available*, so the hooks that already carry code are named up front, and each box is marked with the hook's own name and an *in use* badge. Picking any hook from the list opens its editor on the spot.
+* **The screen opens faster.** The editor for a hook is built when you open that hook, instead of building one for every hook in the catalogue on every visit.
 * The stylesheets follow the WordPress convention: the readable file while debugging, the minified one otherwise. Both are versioned with the plugin, so an update is not served from the browser's cache.
 
 = 1.3 Aug 22, 2026 =
