@@ -197,12 +197,12 @@ if ( !defined('ABSPATH')) {
 			'group' =>'Settings'
 		), 
 		array( 
-			'name'=>'Wpematico process fetching', 
-			'value'=>'Wpematico_process_fetching', 
+			'name'=>'wpematico custom simplepie', 
+			'value'=>'wpematico_custom_simplepie', 
 			'parameters'=>4, 
-			'template_parameter'=>'$campaign, $feed, $feed_key, $campaign', 
+			'template_parameter'=>'$simplepie, $fetch_obj, $feed, $feed_key', 
 			'type'=>'filter', 
-			'description' => __('Deprecated since 2.7 and due to be removed in 3.0. Replaces the whole feed fetch; use wpematico custom simplepie instead.', 'wpematico-custom-hooks'),
+			'description' => __('Replace or change the SimplePie object of a campaign whose type is not fetched as a plain feed. A feed, YouTube or bbPress campaign returns before this point and never reaches it.', 'wpematico-custom-hooks'),
 			'group' =>'Fetch'
 		), 
 		array( 
@@ -464,7 +464,7 @@ if ( !defined('ABSPATH')) {
 			'name'=>'wpematico get post excerpt feed', 
 			'value'=>'wpematico_get_post_excerpt_feed', 
 			'parameters'=>4, 
-			'template_parameter'=>'$item, $campaign, $feed, $item', 
+			'template_parameter'=>'$excerpt, $campaign, $feed, $item', 
 			'type'=>'filter', 
 			'description' => __('The raw description as the feed served it, before any parser touches it.', 'wpematico-custom-hooks'),
 			'group' =>'Content'

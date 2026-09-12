@@ -66,6 +66,18 @@ if (!class_exists('wpematicohk_sintax')) :
 					));
 				}
 
+				$repeated = self::repeated_parameter($codes[$i]);
+				if ('' !== $repeated) {
+					wp_send_json_error(array(
+						'message' => sprintf(
+								/* translators: %s: parameter name */
+								__('The parameter %s is named twice in the same function. PHP refuses to compile that, and the error cannot be caught, so it would take the whole site down.', 'wpematico-custom-hooks'),
+								$repeated
+						),
+						'hook'	  => sanitize_text_field($hook),
+					));
+				}
+
 				foreach (self::declared_functions($codes[$i]) as $name) {
 					if (isset($declared[$name])) {
 						wp_send_json_error(array(
@@ -131,6 +143,109 @@ if (!class_exists('wpematicohk_sintax')) :
 			}
 
 			return true;
+		}
+
+		/**
+		 * First parameter name a function of the snippet declares twice, or '' when there is none.
+		 *
+		 * token_get_all() cannot see this: the code parses, and PHP only rejects it when it
+		 * compiles -- as an E_COMPILE_ERROR that try/catch around the eval() does NOT catch, so
+		 * the site dies on every request, front end included. Same failure as "Cannot redeclare"
+		 * (issue #8), and it has to be refused here for the same reason.
+		 *
+		 * @access public
+		 * @param  string $mycode Code typed by the administrator.
+		 * @return string         The repeated parameter, or '' when the snippet is fine.
+		 * @since 1.4
+		 */
+		public static function repeated_parameter($mycode) {
+			if (!is_string($mycode) || '' === trim($mycode)) {
+				return '';
+			}
+
+			try {
+				$tokens = token_get_all('<?php ' . $mycode);
+			} catch (\Throwable $e) {
+				return '';
+			}
+
+			$count = count($tokens);
+
+			for ($i = 0; $i < $count; $i++) {
+				if (!is_array($tokens[$i]) || T_FUNCTION !== $tokens[$i][0]) {
+					continue;
+				}
+
+				// Walk to the opening parenthesis of the parameter list, then collect the
+				// variables it declares. A type hint is a T_STRING and a default value holds no
+				// variable, so every T_VARIABLE in there is a parameter.
+				$j = $i + 1;
+				while ($j < $count && '(' !== $tokens[$j]) {
+					$j++;
+				}
+
+				$depth = 0;
+				$seen  = array();
+
+				for (; $j < $count; $j++) {
+					$token = $tokens[$j];
+
+					if (!is_array($token)) {
+						if ('(' === $token) {
+							$depth++;
+						} elseif (')' === $token) {
+							$depth--;
+							if (0 === $depth) {
+								break;
+							}
+						}
+						continue;
+					}
+
+					if (T_VARIABLE === $token[0] && 1 === $depth) {
+						if (isset($seen[$token[1]])) {
+							return $token[1];
+						}
+						$seen[$token[1]] = true;
+					}
+				}
+
+				// A closure that imports a variable it already takes as a parameter is the same
+				// uncatchable compile error, worded differently ("Cannot use lexical variable
+				// $x as a parameter name").
+				for ($k = $j + 1; $k < $count; $k++) {
+					$after = $tokens[$k];
+					if (is_array($after) && in_array($after[0], array(T_WHITESPACE, T_COMMENT, T_DOC_COMMENT), true)) {
+						continue;
+					}
+					if (is_array($after) && T_USE === $after[0]) {
+						$depth = 0;
+						for ($k++; $k < $count; $k++) {
+							$token = $tokens[$k];
+							if (!is_array($token)) {
+								if ('(' === $token) {
+									$depth++;
+								} elseif (')' === $token) {
+									$depth--;
+									if (0 === $depth) {
+										break;
+									}
+								}
+								continue;
+							}
+							if (T_VARIABLE === $token[0] && 1 === $depth && isset($seen[$token[1]])) {
+								return $token[1];
+							}
+						}
+						$j = $k;
+					}
+					break;
+				}
+
+				$i = $j;
+			}
+
+			return '';
 		}
 
 		/**
