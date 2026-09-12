@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPeMatico Custom Hooks 1.4\n"
 "Report-Msgid-Bugs-To: https://etruel.com/my-account/support/\n"
-"POT-Creation-Date: 2026-09-11 20:04+0000\n"
+"POT-Creation-Date: 2026-09-12 01:07+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -32,231 +32,363 @@ msgid " requires WPeMatico! Please %s to continue!"
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:101
-msgid "List of HTML tags kept when \"Strip all HTML tags\" is enabled."
+msgid "HTML tags kept when Strip all HTML tags is on."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:111
-msgid "This filter is executed after parsing the content."
+msgid "Runs once every content parser has finished with the item."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:120
-msgid "Add template variables"
+msgid "Extra variables available to the post template of the campaign."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:129
-msgid "Filter before creating and inserting tags"
+msgid "Runs before the tags of the item are built."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:139
-msgid "Filter after creating and inserting tags"
+msgid "The item once its tags were built. Read and change campaign_tags."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:148
-msgid "The item permalink"
+msgid "The address of the original item, as read from the feed."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:157
-msgid "Get the url img"
+msgid "The final image address that will be downloaded."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:166
-msgid "Image source"
+msgid "The image address before the parts the campaign is set to strip are removed."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:176
-msgid "Allow images extensions"
+msgid "File extensions accepted when downloading images. Anything else is left where it is."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:187
-msgid "After finishing the fetch"
+msgid "Runs when the campaign has finished. Returns the campaign data, so it can still be changed before it is saved."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:196
-msgid "Filter for SimplePie Library when accessing the feed"
+msgid "The feed address, right before it is fetched. Point a campaign at a different address from here."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:205
-msgid "This filter is executed during the fetching process"
+msgid "Deprecated since 2.7 and due to be removed in 3.0. Replaces the whole feed fetch; use wpematico custom simplepie instead."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:214
-msgid "Get the items author"
+msgid "The item once its author was resolved. Set author to a WordPress user id."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:22
-msgid "This filter convert a string to UTF-8 if its has a different encoding."
+msgid "Converts a string to UTF-8 when it arrives in another encoding."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:223
-msgid "Get the post content"
+msgid "The item once its content and excerpt have been assigned."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:232
-msgid "Parse and upload images"
+msgid "Runs before the images of the item are processed."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:241
-msgid "Set image the featured img"
+msgid "Return an image address to force the featured image instead of letting the campaign pick one."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:250
-msgid "Get image the featured img"
+msgid "The featured image address the campaign settled on."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:259
+msgid "Runs once the images of the item have been processed and replaced in the content."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:268
-msgid "Filters the array of categories obtained by simplepie to be parsed before inserted into the database"
+msgid "The categories read from the feed, before they are created or assigned."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:277
-msgid "Filter the array of meta fields to be parsed before attached to the post."
+msgid "The custom fields about to be written with the post."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:286
-msgid "Parse the post title"
+msgid "Title of the post being created, immediately before it is saved."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:295
-msgid "Parse the post content"
+msgid "Content of the post being created, immediately before it is saved."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:304
-msgid "Post slug"
+msgid "Slug of the post being created."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:313
-msgid "Content filtered"
+msgid "The content_filtered column of the post being created."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:32
-msgid "Rename the image"
+msgid "Filename the downloaded image is stored under. A source whose addresses carry no file extension needs this, or its images are dropped."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:322
-msgid "Post status"
+msgid "Status the post being created is saved with."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:331
-msgid "Post Type"
+msgid "Post type the item is saved as."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:340
-msgid "Author ID"
+msgid "Author id the post being created is saved with."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:349
+msgid "Publication date of the post being created."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:358
+msgid "Whether comments are open on the post being created."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:367
+msgid "The whole argument list about to reach wp_insert_post. The last chance to change what is saved."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:376
+msgid "Return false to stop this item from being inserted, with everything already prepared."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:385
-msgid "Fetch the duplicate post"
+msgid "Return true to treat this item as a duplicate, so it is not imported."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:394
+msgid "Fires once the post exists. The place to add your own meta, taxonomies or related records."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:403
-msgid "Add description category"
+msgid "Description given to a category that is created automatically."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:412
-msgid "Get the images item."
+msgid "The item once its images were downloaded and replaced in the content."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:42
-msgid "Parse title the video"
+msgid "Title used for the YouTube image of the item."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:424
+msgid "The global settings, normalised. Where an add-on registers the defaults of its own options."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:433
-msgid "This filter is used to change the memory limit. default is \"256M\""
+msgid "Memory limit a campaign run is allowed to use. Default 256M."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:442
-msgid "Fetch params feed"
+msgid "Arguments handed to SimplePie for this feed: timeouts, ordering, how many items."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:451
+msgid "How many recent items are remembered per feed to recognise duplicates. Default 20."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:460
-msgid "Get the feed date"
+msgid "The date read from the feed item."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:469
-msgid "Get the excerpt post"
+msgid "The raw description as the feed served it, before any parser touches it."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:478
+msgid "Runs before any media of the item is processed."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:487
-msgid "Parse and upload audio"
+msgid "Runs before the audio of the item is processed."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:496
-msgid "Parse and upload video"
+msgid "Runs before the video of the item is processed."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:505
-msgid "Get the media item "
+msgid "Runs once every image, audio and video of the item has been processed."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:514
+msgid "The last pass over the item, after every parser and every media filter has run."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:52
-msgid "Parse thumbnails the video"
+msgid "Thumbnail address of the YouTube video."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:523
+msgid "Excerpt of the post being created."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:532
+msgid "Parent post of the post being created."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:541
-msgid "Get the id image"
+msgid "The attachment id set as the featured image, once the post has been inserted."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:550
-msgid "Filter the array of categories to be parsed before inserted into the database."
+msgid "The final list of categories the post is filed under."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:559
-msgid "Filters images, upload and replace on text item content"
+msgid "Which image parser handles this item. Return your own id and answer wpematico images parser {id}."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:568
-msgid "Returns all images of the content"
+msgid "The regular expression that finds the images in the content."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:577
-msgid "Get Metafields"
+msgid "Meta written for the Featured Image From URL plugin."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:586
+msgid "The YouTube player embed built for the item."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:595
-msgid "Filters audios, upload and replace on text item content"
+msgid "The item once its audio was downloaded and replaced in the content."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:604
-msgid "Strip all white space on audios URLs."
+msgid "The audio address found in the item, before it is downloaded."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:613
-msgid "Strip all white space on audios original source."
+msgid "File extensions accepted when downloading audio. Anything else is left where it is."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:62
-msgid "Parse description the video"
+msgid "Description of the YouTube video."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:622
-msgid "Strip all white space on audios store."
+msgid "Filename the downloaded audio is stored under."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:631
-msgid "Filters videos, upload and replace on text item content"
+msgid "The item once its video was downloaded and replaced in the content."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:640
-msgid "Strip all white space on videos URLs."
+msgid "The video address found in the item, before it is downloaded."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:649
+msgid "File extensions accepted when downloading video. Anything else is left where it is."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:658
-msgid "Strip all white space on videos store ."
+msgid "Filename the downloaded video is stored under."
 msgstr ""
 
-#: includes/data_load/wpematicohk_array_hooks.php:681
-msgid "Allows change a namespace"
+#: includes/data_load/wpematicohk_array_hooks.php:668
+msgid "Return false so a category read from the feed is only assigned when it already exists, never created."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:677
+msgid "The post the item is filed under as a child. 0 means no parent."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:686
+msgid "Campaign types fetched as a plain feed. A type listed here takes the standard route, with its timeouts, ordering and paging."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:695
+msgid "The Processed Posts line of the run result. A campaign that imports nothing by design can report a count that means something."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:710
+msgid "The Vimeo player embed built for the item."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:719
+msgid "Thumbnail address of the Vimeo video, before it is downloaded."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:72
-msgid "Get post content from feed"
+msgid "The raw content as the feed served it, before any parser touches it."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:735
+msgid "The author name read from the feed, before the user is looked up or created."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:743
+msgid "The XML namespace the item date is read from."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:760
+msgid "The sites Full Content recognises as video pages."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:769
+msgid "Folder Full Content reads its per site extraction rules from."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:778
+msgid "Returns the whole article for an address. Answer it to replace the way Full Content downloads the page."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:787
+msgid "The whole article HTML that Full Content read from the source page."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:796
+msgid "Fires once Full Content has the whole article of the item."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:81
-msgid "Filter to skip item or not"
+msgid "Return true to skip this item, before anything else is done with it."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:810
+msgid "Whether the given translation service is configured and may be used."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:819
+msgid "The translation services offered on the campaign, as label to id."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:828
+msgid "The languages offered for translation."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:837
+msgid "Which clean-up runs on the content before it is translated. The name answers the polyglot process filter for that type."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:846
+msgid "Cleans the post arguments before they are translated. This is what polyglot process type selects, strip_tags by default."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:860
+msgid "The Better Excerpts options, normalised with their defaults."
+msgstr ""
+
+#: includes/data_load/wpematicohk_array_hooks.php:869
+msgid "Fires at the end of the Better Excerpts fields, to add your own."
 msgstr ""
 
 #: includes/data_load/wpematicohk_array_hooks.php:90
-msgid "Parses items content"
+msgid "The main content parser, and where most add-ons change the title, content and excerpt of an item."
 msgstr ""
 
 #: includes/plugin_functions.php:49
