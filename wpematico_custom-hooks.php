@@ -37,7 +37,7 @@ if (!defined('WPEMATICOHK_VER')) {
 
 // Minimum required WPeMatico version
 if (!defined('WPEMATICOHK_REQ_WPEMATICO')) {
-	define('WPEMATICOHK_REQ_WPEMATICO', '2.7.7');
+	define('WPEMATICOHK_REQ_WPEMATICO', '2.9');
 }
 
 if (!class_exists('wpematicohk')) {
