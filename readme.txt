@@ -81,6 +81,7 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 * **Your code runs whenever WPeMatico works.** Saved hooks are no longer skipped on requests that had nothing to do with this screen.
 * **Help on the screen itself.** Three help pages: what hooks are and how to choose one, what belongs in the editor, and how the editor works. Every entry in the list carries its own explanation and the (?) marks are there when you need them.
 * Stylesheets follow the WordPress convention — the readable file while debugging, the compact one otherwise — and both are versioned with the plugin, so an update is never served from the browser's cache.
+* **Needs WPeMatico 2.9 or newer.** This version and WPeMatico 2.9 are released together and built for each other.
 
 = 1.3 Aug 22, 2026 =
 A major release. The plugin has been reviewed from top to bottom, modernized and made considerably more robust, so that writing your own PHP against WPeMatico is safe and predictable on any hosting.
