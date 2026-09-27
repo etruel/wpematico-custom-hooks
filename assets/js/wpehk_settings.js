@@ -189,6 +189,11 @@ jQuery(document).ready(function ($) {
 			if (payload.hook) {
 				box.append($('<strong/>').text(' ' + wpematicohk_object.text_in_hook + ' ' + payload.hook));
 			}
+			// The save was cancelled and the page did not move, so the reason has to come
+			// to the reader instead of waiting to be scrolled to.
+			if (box.get(0) && box.get(0).scrollIntoView) {
+				box.get(0).scrollIntoView({block: 'center', behavior: 'smooth'});
+			}
 		}).fail(function () {
 			$("#wpematicohk_sintax_error")
 					.css({'border-left': "4px solid #C00000"})

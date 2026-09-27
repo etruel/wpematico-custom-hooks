@@ -1,7 +1,7 @@
 #wpematicohk_sintax_error {
 	display:none;
-	text-aling:center; 
-	padding:15px 15px; 
+	padding:15px 15px;
+	margin:0 0 14px;
 	color:#44494F; 
 	background-color:white; 
 	border:1px solid #F0F0F0;
@@ -24,6 +24,9 @@
 /* Three classes because core 2.9 zeroes the border of every postbox inside its settings
  * container, and a two-class rule loses to it on source order. */
 .postbox.wpematicohk_dinamic_metabox.wpematicohk_dinamic_chaplain {
+	/* margin-top as well: the first editor opens right under the Add Function button and
+	   was sitting against it. */
+	margin-top: 14px;
 	margin-bottom: 14px;
 	border-left: 4px solid #dcdcde;
 }

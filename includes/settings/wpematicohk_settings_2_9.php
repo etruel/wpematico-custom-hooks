@@ -27,8 +27,6 @@ if (!defined('ABSPATH')) {
 	exit();
 }
 ?>
-<div id="wpematicohk_sintax_error"></div>
-
 <input type="hidden" name="action" value="wpematicohk_options" />
 <?php wp_nonce_field('wpematicohk_admin_nonce'); ?>
 
@@ -52,6 +50,10 @@ if (!defined('ABSPATH')) {
 			</p>
 		</div>
 	</div>
+
+	<?php // The syntax check answers here: below the box that introduces the screen and
+	// above the editors it is about. ?>
+	<div id="wpematicohk_sintax_error"></div>
 
 	<?php
 	// ★ Single column, and the About / Enjoy-it boxes are not here. They are this
