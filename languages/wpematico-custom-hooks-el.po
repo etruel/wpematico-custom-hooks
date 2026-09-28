@@ -1,0 +1,725 @@
+# Copyright (C) 2026 etruel Developments
+# This file is distributed under the same license as the WPeMatico Custom Hooks plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WPeMatico Custom Hooks 1.4\n"
+"Report-Msgid-Bugs-To: https://etruel.com/my-account/support/\n"
+"POT-Creation-Date: 2026-09-28 00:59+0000\n"
+"PO-Revision-Date: 2026-09-27 00:00+0000\n"
+"Last-Translator: Etruel Developments <translations@etruel.com>\n"
+"Language-Team: Etruel Developments <translations@etruel.com>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: lang\n"
+"X-Poedit-SearchPathExcluded-1: tools\n"
+"X-Domain: wpematico-custom-hooks\n"
+
+#: includes/class.extension-activation.php:49
+msgid "This plugin"
+msgstr "Αυτό το πρόσθετο"
+
+#: includes/class.extension-activation.php:84
+msgid "activate it"
+msgstr "ενεργοποίησέ το"
+
+#: includes/class.extension-activation.php:87
+msgid "install it"
+msgstr "εγκατέστησέ το"
+
+#: includes/class.extension-activation.php:90
+msgid " requires WPeMatico! Please %s to continue!"
+msgstr " χρειάζεται το WPeMatico! %s για να συνεχίσεις!"
+
+#: includes/data_load/wpematicohk_array_hooks.php:101
+msgid "HTML tags kept when Strip all HTML tags is on."
+msgstr "Ετικέτες HTML που διατηρούνται όταν είναι ενεργό το \"Αφαίρεση όλων των ετικετών HTML\"."
+
+#: includes/data_load/wpematicohk_array_hooks.php:111
+msgid "Runs once every content parser has finished with the item."
+msgstr "Εκτελείται μόλις κάθε parser περιεχομένου τελειώσει με το στοιχείο."
+
+#: includes/data_load/wpematicohk_array_hooks.php:120
+msgid "Extra variables available to the post template of the campaign."
+msgstr "Επιπλέον μεταβλητές διαθέσιμες στο πρότυπο άρθρου της καμπάνιας."
+
+#: includes/data_load/wpematicohk_array_hooks.php:129
+msgid "Runs before the tags of the item are built."
+msgstr "Εκτελείται πριν χτιστούν οι ετικέτες του στοιχείου."
+
+#: includes/data_load/wpematicohk_array_hooks.php:139
+msgid "The item once its tags were built. Read and change campaign_tags."
+msgstr "Το στοιχείο μόλις χτιστούν οι ετικέτες του. Διάβασε και άλλαξε το campaign_tags."
+
+#: includes/data_load/wpematicohk_array_hooks.php:148
+msgid "The address of the original item, as read from the feed."
+msgstr "Η διεύθυνση του αρχικού στοιχείου, όπως διαβάστηκε από τη ροή."
+
+#: includes/data_load/wpematicohk_array_hooks.php:157
+msgid "The final image address that will be downloaded."
+msgstr "Η τελική διεύθυνση της εικόνας που θα κατέβει."
+
+#: includes/data_load/wpematicohk_array_hooks.php:166
+msgid "The image address before the parts the campaign is set to strip are removed."
+msgstr "Η διεύθυνση της εικόνας πριν αφαιρεθούν τα μέρη που η καμπάνια είναι ρυθμισμένη να κόβει."
+
+#: includes/data_load/wpematicohk_array_hooks.php:176
+msgid "File extensions accepted when downloading images. Anything else is left where it is."
+msgstr "Επεκτάσεις αρχείων που δέχεται η λήψη εικόνων. Οτιδήποτε άλλο μένει εκεί που είναι."
+
+#: includes/data_load/wpematicohk_array_hooks.php:187
+msgid "Runs when the campaign has finished. Returns the campaign data, so it can still be changed before it is saved."
+msgstr "Εκτελείται όταν η καμπάνια τελειώσει. Επιστρέφει τα δεδομένα της καμπάνιας, ώστε να μπορούν ακόμη να αλλάξουν πριν αποθηκευτούν."
+
+#: includes/data_load/wpematicohk_array_hooks.php:196
+msgid "The feed address, right before it is fetched. Point a campaign at a different address from here."
+msgstr "Η διεύθυνση της ροής, λίγο πριν κατέβει. Από εδώ στρέφεις μια καμπάνια σε άλλη διεύθυνση."
+
+#: includes/data_load/wpematicohk_array_hooks.php:205
+msgid "Replace or change the SimplePie object of a campaign whose type is not fetched as a plain feed. A feed, YouTube or bbPress campaign returns before this point and never reaches it."
+msgstr "Αντικατέστησε ή τροποποίησε το αντικείμενο SimplePie μιας καμπάνιας που ο τύπος της δεν κατεβαίνει ως απλή ροή. Μια καμπάνια τύπου ροής, YouTube ή bbPress επιστρέφει πριν από αυτό το σημείο και δεν φτάνει ποτέ εδώ."
+
+#: includes/data_load/wpematicohk_array_hooks.php:214
+msgid "The item once its author was resolved. Set author to a WordPress user id."
+msgstr "Το στοιχείο μόλις οριστεί ο συντάκτης του. Βάλε στο author ένα id χρήστη του WordPress."
+
+#: includes/data_load/wpematicohk_array_hooks.php:22
+msgid "Converts a string to UTF-8 when it arrives in another encoding."
+msgstr "Μετατρέπει μια συμβολοσειρά σε UTF-8 όταν φτάνει σε άλλη κωδικοποίηση."
+
+#: includes/data_load/wpematicohk_array_hooks.php:223
+msgid "The item once its content and excerpt have been assigned."
+msgstr "Το στοιχείο μόλις αποδοθούν το περιεχόμενο και η περίληψή του."
+
+#: includes/data_load/wpematicohk_array_hooks.php:232
+msgid "Runs before the images of the item are processed."
+msgstr "Εκτελείται πριν επεξεργαστούν οι εικόνες του στοιχείου."
+
+#: includes/data_load/wpematicohk_array_hooks.php:241
+msgid "Return an image address to force the featured image instead of letting the campaign pick one."
+msgstr "Επίστρεψε μια διεύθυνση εικόνας για να επιβάλεις την επιλεγμένη εικόνα, αντί να την διαλέξει η καμπάνια."
+
+#: includes/data_load/wpematicohk_array_hooks.php:250
+msgid "The featured image address the campaign settled on."
+msgstr "Η διεύθυνση της επιλεγμένης εικόνας που κατέληξε η καμπάνια."
+
+#: includes/data_load/wpematicohk_array_hooks.php:259
+msgid "Runs once the images of the item have been processed and replaced in the content."
+msgstr "Εκτελείται μόλις οι εικόνες του στοιχείου επεξεργαστούν και αντικατασταθούν στο περιεχόμενο."
+
+#: includes/data_load/wpematicohk_array_hooks.php:268
+msgid "The categories read from the feed, before they are created or assigned."
+msgstr "Οι κατηγορίες που διαβάστηκαν από τη ροή, πριν δημιουργηθούν ή αποδοθούν."
+
+#: includes/data_load/wpematicohk_array_hooks.php:277
+msgid "The custom fields about to be written with the post."
+msgstr "Τα προσαρμοσμένα πεδία που θα γραφτούν μαζί με το άρθρο."
+
+#: includes/data_load/wpematicohk_array_hooks.php:286
+msgid "Title of the post being created, immediately before it is saved."
+msgstr "Ο τίτλος του άρθρου που δημιουργείται, αμέσως πριν αποθηκευτεί."
+
+#: includes/data_load/wpematicohk_array_hooks.php:295
+msgid "Content of the post being created, immediately before it is saved."
+msgstr "Το περιεχόμενο του άρθρου που δημιουργείται, αμέσως πριν αποθηκευτεί."
+
+#: includes/data_load/wpematicohk_array_hooks.php:304
+msgid "Slug of the post being created."
+msgstr "Το σύντομο όνομα του άρθρου που δημιουργείται."
+
+#: includes/data_load/wpematicohk_array_hooks.php:313
+msgid "The content_filtered column of the post being created."
+msgstr "Η στήλη content_filtered του άρθρου που δημιουργείται."
+
+#: includes/data_load/wpematicohk_array_hooks.php:32
+msgid "Filename the downloaded image is stored under. A source whose addresses carry no file extension needs this, or its images are dropped."
+msgstr "Το όνομα αρχείου με το οποίο αποθηκεύεται η εικόνα που κατέβηκε. Μια πηγή που οι διευθύνσεις της δεν έχουν επέκταση αρχείου το χρειάζεται, αλλιώς οι εικόνες της πετιούνται."
+
+#: includes/data_load/wpematicohk_array_hooks.php:322
+msgid "Status the post being created is saved with."
+msgstr "Η κατάσταση με την οποία αποθηκεύεται το άρθρο που δημιουργείται."
+
+#: includes/data_load/wpematicohk_array_hooks.php:331
+msgid "Post type the item is saved as."
+msgstr "Ο τύπος περιεχομένου με τον οποίο αποθηκεύεται το στοιχείο."
+
+#: includes/data_load/wpematicohk_array_hooks.php:340
+msgid "Author id the post being created is saved with."
+msgstr "Το id συντάκτη με το οποίο αποθηκεύεται το άρθρο που δημιουργείται."
+
+#: includes/data_load/wpematicohk_array_hooks.php:349
+msgid "Publication date of the post being created."
+msgstr "Η ημερομηνία δημοσίευσης του άρθρου που δημιουργείται."
+
+#: includes/data_load/wpematicohk_array_hooks.php:358
+msgid "Whether comments are open on the post being created."
+msgstr "Αν τα σχόλια είναι ανοιχτά στο άρθρο που δημιουργείται."
+
+#: includes/data_load/wpematicohk_array_hooks.php:367
+msgid "The whole argument list about to reach wp_insert_post. The last chance to change what is saved."
+msgstr "Όλη η λίστα ορισμάτων που πρόκειται να φτάσει στο wp_insert_post. Η τελευταία ευκαιρία να αλλάξεις αυτό που αποθηκεύεται."
+
+#: includes/data_load/wpematicohk_array_hooks.php:376
+msgid "Return false to stop this item from being inserted, with everything already prepared."
+msgstr "Επίστρεψε false για να μην εισαχθεί αυτό το στοιχείο, με όλα ήδη έτοιμα."
+
+#: includes/data_load/wpematicohk_array_hooks.php:385
+msgid "Return true to treat this item as a duplicate, so it is not imported."
+msgstr "Επίστρεψε true για να θεωρηθεί αυτό το στοιχείο διπλότυπο, ώστε να μην εισαχθεί."
+
+#: includes/data_load/wpematicohk_array_hooks.php:394
+msgid "Fires once the post exists. The place to add your own meta, taxonomies or related records."
+msgstr "Ενεργοποιείται μόλις το άρθρο υπάρχει. Το σημείο για να προσθέσεις τα δικά σου μεταδεδομένα, ταξινομίες ή σχετικές εγγραφές."
+
+#: includes/data_load/wpematicohk_array_hooks.php:403
+msgid "Description given to a category that is created automatically."
+msgstr "Η περιγραφή που δίνεται σε μια κατηγορία που δημιουργείται αυτόματα."
+
+#: includes/data_load/wpematicohk_array_hooks.php:412
+msgid "The item once its images were downloaded and replaced in the content."
+msgstr "Το στοιχείο μόλις κατέβουν οι εικόνες του και αντικατασταθούν στο περιεχόμενο."
+
+#: includes/data_load/wpematicohk_array_hooks.php:42
+msgid "Title used for the YouTube image of the item."
+msgstr "Ο τίτλος που χρησιμοποιείται για την εικόνα YouTube του στοιχείου."
+
+#: includes/data_load/wpematicohk_array_hooks.php:424
+msgid "The global settings, normalised. Where an add-on registers the defaults of its own options."
+msgstr "Οι γενικές ρυθμίσεις, κανονικοποιημένες. Εδώ δηλώνει μια επέκταση τις προεπιλογές των δικών της επιλογών."
+
+#: includes/data_load/wpematicohk_array_hooks.php:433
+msgid "Memory limit a campaign run is allowed to use. Default 256M."
+msgstr "Το όριο μνήμης που επιτρέπεται σε μια εκτέλεση καμπάνιας. Προεπιλογή 256M."
+
+#: includes/data_load/wpematicohk_array_hooks.php:442
+msgid "Arguments handed to SimplePie for this feed: timeouts, ordering, how many items."
+msgstr "Τα ορίσματα που δίνονται στο SimplePie για αυτή τη ροή: χρόνοι αναμονής, σειρά, πόσα στοιχεία."
+
+#: includes/data_load/wpematicohk_array_hooks.php:451
+msgid "How many recent items are remembered per feed to recognise duplicates. Default 20."
+msgstr "Πόσα πρόσφατα στοιχεία θυμάται ανά ροή για να αναγνωρίζει διπλότυπα. Προεπιλογή 20."
+
+#: includes/data_load/wpematicohk_array_hooks.php:460
+msgid "The date read from the feed item."
+msgstr "Η ημερομηνία που διαβάστηκε από το στοιχείο της ροής."
+
+#: includes/data_load/wpematicohk_array_hooks.php:469
+msgid "The raw description as the feed served it, before any parser touches it."
+msgstr "Η ωμή περιγραφή όπως τη σέρβιρε η ροή, πριν την αγγίξει κανένας parser."
+
+#: includes/data_load/wpematicohk_array_hooks.php:478
+msgid "Runs before any media of the item is processed."
+msgstr "Εκτελείται πριν επεξεργαστεί οποιοδήποτε πολυμέσο του στοιχείου."
+
+#: includes/data_load/wpematicohk_array_hooks.php:487
+msgid "Runs before the audio of the item is processed."
+msgstr "Εκτελείται πριν επεξεργαστεί ο ήχος του στοιχείου."
+
+#: includes/data_load/wpematicohk_array_hooks.php:496
+msgid "Runs before the video of the item is processed."
+msgstr "Εκτελείται πριν επεξεργαστεί το βίντεο του στοιχείου."
+
+#: includes/data_load/wpematicohk_array_hooks.php:505
+msgid "Runs once every image, audio and video of the item has been processed."
+msgstr "Εκτελείται μόλις επεξεργαστούν όλες οι εικόνες, οι ήχοι και τα βίντεο του στοιχείου."
+
+#: includes/data_load/wpematicohk_array_hooks.php:514
+msgid "The last pass over the item, after every parser and every media filter has run."
+msgstr "Το τελευταίο πέρασμα από το στοιχείο, μετά από κάθε parser και κάθε φίλτρο πολυμέσων."
+
+#: includes/data_load/wpematicohk_array_hooks.php:52
+msgid "Thumbnail address of the YouTube video."
+msgstr "Η διεύθυνση της μικρογραφίας του βίντεο YouTube."
+
+#: includes/data_load/wpematicohk_array_hooks.php:523
+msgid "Excerpt of the post being created."
+msgstr "Η περίληψη του άρθρου που δημιουργείται."
+
+#: includes/data_load/wpematicohk_array_hooks.php:532
+msgid "Parent post of the post being created."
+msgstr "Το γονικό άρθρο του άρθρου που δημιουργείται."
+
+#: includes/data_load/wpematicohk_array_hooks.php:541
+msgid "The attachment id set as the featured image, once the post has been inserted."
+msgstr "Το id του συνημμένου που ορίστηκε ως επιλεγμένη εικόνα, μόλις εισαχθεί το άρθρο."
+
+#: includes/data_load/wpematicohk_array_hooks.php:550
+msgid "The final list of categories the post is filed under."
+msgstr "Η τελική λίστα κατηγοριών στις οποίες κατατάσσεται το άρθρο."
+
+#: includes/data_load/wpematicohk_array_hooks.php:559
+msgid "Which image parser handles this item. Return your own id and answer wpematico images parser {id}."
+msgstr "Ποιος parser εικόνων αναλαμβάνει αυτό το στοιχείο. Επίστρεψε το δικό σου id και απάντησε στο wpematico images parser {id}."
+
+#: includes/data_load/wpematicohk_array_hooks.php:568
+msgid "The regular expression that finds the images in the content."
+msgstr "Η κανονική έκφραση που βρίσκει τις εικόνες στο περιεχόμενο."
+
+#: includes/data_load/wpematicohk_array_hooks.php:577
+msgid "Meta written for the Featured Image From URL plugin."
+msgstr "Τα μεταδεδομένα που γράφονται για το πρόσθετο Featured Image From URL."
+
+#: includes/data_load/wpematicohk_array_hooks.php:586
+msgid "The YouTube player embed built for the item."
+msgstr "Ο ενσωματωμένος player YouTube που χτίστηκε για το στοιχείο."
+
+#: includes/data_load/wpematicohk_array_hooks.php:595
+msgid "The item once its audio was downloaded and replaced in the content."
+msgstr "Το στοιχείο μόλις κατέβει ο ήχος του και αντικατασταθεί στο περιεχόμενο."
+
+#: includes/data_load/wpematicohk_array_hooks.php:604
+msgid "The audio address found in the item, before it is downloaded."
+msgstr "Η διεύθυνση του ήχου που βρέθηκε στο στοιχείο, πριν κατέβει."
+
+#: includes/data_load/wpematicohk_array_hooks.php:613
+msgid "File extensions accepted when downloading audio. Anything else is left where it is."
+msgstr "Επεκτάσεις αρχείων που δέχεται η λήψη ήχου. Οτιδήποτε άλλο μένει εκεί που είναι."
+
+#: includes/data_load/wpematicohk_array_hooks.php:62
+msgid "Description of the YouTube video."
+msgstr "Η περιγραφή του βίντεο YouTube."
+
+#: includes/data_load/wpematicohk_array_hooks.php:622
+msgid "Filename the downloaded audio is stored under."
+msgstr "Το όνομα αρχείου με το οποίο αποθηκεύεται ο ήχος που κατέβηκε."
+
+#: includes/data_load/wpematicohk_array_hooks.php:631
+msgid "The item once its video was downloaded and replaced in the content."
+msgstr "Το στοιχείο μόλις κατέβει το βίντεό του και αντικατασταθεί στο περιεχόμενο."
+
+#: includes/data_load/wpematicohk_array_hooks.php:640
+msgid "The video address found in the item, before it is downloaded."
+msgstr "Η διεύθυνση του βίντεο που βρέθηκε στο στοιχείο, πριν κατέβει."
+
+#: includes/data_load/wpematicohk_array_hooks.php:649
+msgid "File extensions accepted when downloading video. Anything else is left where it is."
+msgstr "Επεκτάσεις αρχείων που δέχεται η λήψη βίντεο. Οτιδήποτε άλλο μένει εκεί που είναι."
+
+#: includes/data_load/wpematicohk_array_hooks.php:658
+msgid "Filename the downloaded video is stored under."
+msgstr "Το όνομα αρχείου με το οποίο αποθηκεύεται το βίντεο που κατέβηκε."
+
+#: includes/data_load/wpematicohk_array_hooks.php:668
+msgid "Return false so a category read from the feed is only assigned when it already exists, never created."
+msgstr "Επίστρεψε false ώστε μια κατηγορία που διαβάστηκε από τη ροή να αποδίδεται μόνο όταν υπάρχει ήδη, και να μη δημιουργείται ποτέ."
+
+#: includes/data_load/wpematicohk_array_hooks.php:677
+msgid "The post the item is filed under as a child. 0 means no parent."
+msgstr "Το άρθρο κάτω από το οποίο κατατάσσεται το στοιχείο ως παιδί. Το 0 σημαίνει χωρίς γονικό."
+
+#: includes/data_load/wpematicohk_array_hooks.php:686
+msgid "Campaign types fetched as a plain feed. A type listed here takes the standard route, with its timeouts, ordering and paging."
+msgstr "Τύποι καμπάνιας που κατεβαίνουν ως απλή ροή. Ένας τύπος που αναφέρεται εδώ ακολουθεί τον τυπικό δρόμο, με τους χρόνους αναμονής, τη σειρά και τη σελιδοποίησή του."
+
+#: includes/data_load/wpematicohk_array_hooks.php:695
+msgid "The Processed Posts line of the run result. A campaign that imports nothing by design can report a count that means something."
+msgstr "Η γραμμή «Επεξεργασμένα άρθρα» του αποτελέσματος της εκτέλεσης. Μια καμπάνια που εξ ορισμού δεν εισάγει τίποτα μπορεί έτσι να αναφέρει έναν αριθμό που σημαίνει κάτι."
+
+#: includes/data_load/wpematicohk_array_hooks.php:710
+msgid "The Vimeo player embed built for the item."
+msgstr "Ο ενσωματωμένος player Vimeo που χτίστηκε για το στοιχείο."
+
+#: includes/data_load/wpematicohk_array_hooks.php:719
+msgid "Thumbnail address of the Vimeo video, before it is downloaded."
+msgstr "Η διεύθυνση της μικρογραφίας του βίντεο Vimeo, πριν κατέβει."
+
+#: includes/data_load/wpematicohk_array_hooks.php:72
+msgid "The raw content as the feed served it, before any parser touches it."
+msgstr "Το ωμό περιεχόμενο όπως το σέρβιρε η ροή, πριν το αγγίξει κανένας parser."
+
+#: includes/data_load/wpematicohk_array_hooks.php:735
+msgid "The author name read from the feed, before the user is looked up or created."
+msgstr "Το όνομα του συντάκτη που διαβάστηκε από τη ροή, πριν αναζητηθεί ή δημιουργηθεί ο χρήστης."
+
+#: includes/data_load/wpematicohk_array_hooks.php:743
+msgid "The XML namespace the item date is read from."
+msgstr "Ο χώρος ονομάτων XML από τον οποίο διαβάζεται η ημερομηνία του στοιχείου."
+
+#: includes/data_load/wpematicohk_array_hooks.php:760
+msgid "The sites Full Content recognises as video pages."
+msgstr "Οι ιστότοποι που το Full Content αναγνωρίζει ως σελίδες βίντεο."
+
+#: includes/data_load/wpematicohk_array_hooks.php:769
+msgid "Folder Full Content reads its per site extraction rules from."
+msgstr "Ο φάκελος από τον οποίο το Full Content διαβάζει τους κανόνες εξαγωγής του ανά ιστότοπο."
+
+#: includes/data_load/wpematicohk_array_hooks.php:778
+msgid "Returns the whole article for an address. Answer it to replace the way Full Content downloads the page."
+msgstr "Επιστρέφει όλο το άρθρο για μια διεύθυνση. Απάντησέ το για να αντικαταστήσεις τον τρόπο που το Full Content κατεβάζει τη σελίδα."
+
+#: includes/data_load/wpematicohk_array_hooks.php:787
+msgid "The whole article HTML that Full Content read from the source page."
+msgstr "Όλο το HTML του άρθρου που διάβασε το Full Content από τη σελίδα πηγής."
+
+#: includes/data_load/wpematicohk_array_hooks.php:796
+msgid "Fires once Full Content has the whole article of the item."
+msgstr "Ενεργοποιείται μόλις το Full Content έχει όλο το άρθρο του στοιχείου."
+
+#: includes/data_load/wpematicohk_array_hooks.php:81
+msgid "Return true to skip this item, before anything else is done with it."
+msgstr "Επίστρεψε true για να παραλειφθεί αυτό το στοιχείο, πριν γίνει οτιδήποτε άλλο μ' αυτό."
+
+#: includes/data_load/wpematicohk_array_hooks.php:810
+msgid "Whether the given translation service is configured and may be used."
+msgstr "Αν η δεδομένη υπηρεσία μετάφρασης είναι ρυθμισμένη και μπορεί να χρησιμοποιηθεί."
+
+#: includes/data_load/wpematicohk_array_hooks.php:819
+msgid "The translation services offered on the campaign, as label to id."
+msgstr "Οι υπηρεσίες μετάφρασης που προσφέρονται στην καμπάνια, ως ετικέτα προς id."
+
+#: includes/data_load/wpematicohk_array_hooks.php:828
+msgid "The languages offered for translation."
+msgstr "Οι γλώσσες που προσφέρονται για μετάφραση."
+
+#: includes/data_load/wpematicohk_array_hooks.php:837
+msgid "Which clean-up runs on the content before it is translated. The name answers the polyglot process filter for that type."
+msgstr "Ποιο καθάρισμα γίνεται στο περιεχόμενο πριν μεταφραστεί. Το όνομα απαντά στο φίλτρο polyglot process αυτού του τύπου."
+
+#: includes/data_load/wpematicohk_array_hooks.php:846
+msgid "Cleans the post arguments before they are translated. This is what polyglot process type selects, strip_tags by default."
+msgstr "Καθαρίζει τα ορίσματα του άρθρου πριν μεταφραστούν. Αυτό είναι που επιλέγει το polyglot process type, με προεπιλογή strip_tags."
+
+#: includes/data_load/wpematicohk_array_hooks.php:860
+msgid "The Better Excerpts options, normalised with their defaults."
+msgstr "Οι επιλογές του Better Excerpts, κανονικοποιημένες με τις προεπιλογές τους."
+
+#: includes/data_load/wpematicohk_array_hooks.php:869
+msgid "Fires at the end of the Better Excerpts fields, to add your own."
+msgstr "Ενεργοποιείται στο τέλος των πεδίων του Better Excerpts, για να προσθέσεις τα δικά σου."
+
+#: includes/data_load/wpematicohk_array_hooks.php:90
+msgid "The main content parser, and where most add-ons change the title, content and excerpt of an item."
+msgstr "Ο κύριος parser περιεχομένου, και το σημείο όπου οι περισσότερες επεκτάσεις αλλάζουν τον τίτλο, το περιεχόμενο και την περίληψη ενός στοιχείου."
+
+#: includes/plugin_functions.php:49
+msgid "WPeMatico Custom Hooks DEACTIVATED."
+msgstr "Το WPeMatico Custom Hooks ΑΠΕΝΕΡΓΟΠΟΙΗΘΗΚΕ."
+
+#: includes/plugin_functions.php:74
+msgid "Go to WPeMatico Custom Hooks Settings Page"
+msgstr "Μετάβαση στη σελίδα ρυθμίσεων του WPeMatico Custom Hooks"
+
+#: includes/plugin_functions.php:74
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#: includes/settings/wpematicohk_settings_2_9.php:43 includes/settings/wpematicohk_widgets.php:69
+msgid "Custom Hooks"
+msgstr "Custom Hooks"
+
+#: includes/settings/wpematicohk_settings_2_9.php:48
+msgid "Runs your own PHP on any of the hooks WPeMatico fires while a campaign works — to change a title, filter an item, add a custom field. What you write is checked before it is saved, so a mistake is reported instead of taking the site down."
+msgstr "Εκτελεί τον δικό σου κώδικα PHP σε οποιοδήποτε από τα hooks που ενεργοποιεί το WPeMatico όσο δουλεύει μια καμπάνια — για να αλλάξεις έναν τίτλο, να φιλτράρεις ένα στοιχείο, να προσθέσεις ένα προσαρμοσμένο πεδίο. Ό,τι γράφεις ελέγχεται πριν αποθηκευτεί, ώστε ένα λάθος να αναφέρεται αντί να ρίχνει τον ιστότοπο."
+
+#: includes/settings/wpematicohk_settings_2_9.php:49
+msgid "Details in the Help tab, top right."
+msgstr "Οι λεπτομέρειες βρίσκονται στην καρτέλα Βοήθεια, πάνω δεξιά."
+
+#: includes/settings/wpematicohk_settings_legacy.php:26
+msgid "WPeMatico Custom Hooks"
+msgstr "WPeMatico Custom Hooks"
+
+#. translators: %s: minimum WPeMatico version.
+#: includes/settings/wpematicohk_widgets.php:100
+msgid "Needs WPeMatico %s or newer."
+msgstr "Χρειάζεται WPeMatico %s ή νεότερο."
+
+#: includes/settings/wpematicohk_widgets.php:75
+msgid "Write PHP for any of the hooks WPeMatico fires, straight from here. The code is checked before it is saved, so a typo cannot take the site down."
+msgstr "Γράψε PHP για οποιοδήποτε από τα hooks που ενεργοποιεί το WPeMatico, κατευθείαν από εδώ. Ο κώδικας ελέγχεται πριν αποθηκευτεί, ώστε ένα τυπογραφικό λάθος να μην μπορεί να ρίξει τον ιστότοπο."
+
+#: includes/settings/wpematicohk_widgets.php:81
+msgid "Plugin page on WordPress.org"
+msgstr "Σελίδα του πρόσθετου στο WordPress.org"
+
+#: includes/settings/wpematicohk_widgets.php:87
+msgid "Support"
+msgstr "Υποστήριξη"
+
+#: includes/settings/wpematicohk_widgets.php:93
+msgid "Write a 5 star review"
+msgstr "Γράψε μια κριτική 5 αστέρων"
+
+#. translators: 1: hook name, 2: comma separated function names
+#: includes/wpematicohk_execute_action_filter.php:211
+msgid "WPeMatico Custom Hooks skipped the code for %1$s: the function %2$s is already declared somewhere else. Rename it, or remove it from one of the two hooks."
+msgstr "Το WPeMatico Custom Hooks παρέλειψε τον κώδικα του %1$s: η συνάρτηση %2$s είναι ήδη δηλωμένη κάπου αλλού. Μετονόμασέ την, ή βγάλ' την από ένα από τα δύο hooks."
+
+#. translators: 1: function name, 2: hook name
+#: includes/wpematicohk_execute_action_filter.php:220
+msgid "WPeMatico Custom Hooks could not attach %1$s to %2$s: the code saved for that hook does not declare it."
+msgstr "Το WPeMatico Custom Hooks δεν μπόρεσε να συνδέσει το %1$s με το %2$s: ο κώδικας που είναι αποθηκευμένος για αυτό το hook δεν τη δηλώνει."
+
+#. translators: 1: hook name, 2: PHP error message
+#: includes/wpematicohk_execute_action_filter.php:229
+msgid "WPeMatico Custom Hooks could not run the code saved for %1$s: %2$s"
+msgstr "Το WPeMatico Custom Hooks δεν μπόρεσε να εκτελέσει τον κώδικα που είναι αποθηκευμένος για το %1$s: %2$s"
+
+#: includes/wpematicohk_execute_action_filter.php:239
+msgid "Edit hooks"
+msgstr "Επεξεργασία hooks"
+
+#: includes/wpematicohk_settings.php:100
+msgid "Checking syntax errors..."
+msgstr "Έλεγχος για συντακτικά λάθη..."
+
+#: includes/wpematicohk_settings.php:101 includes/wpematicohk_sintax.php:109
+msgid "No syntax errors found"
+msgstr "Δεν βρέθηκαν συντακτικά λάθη"
+
+#: includes/wpematicohk_settings.php:102
+msgid "The syntax check could not be completed. Please try again."
+msgstr "Ο έλεγχος σύνταξης δεν ολοκληρώθηκε. Δοκίμασε ξανά."
+
+#: includes/wpematicohk_settings.php:103
+msgid "In hook:"
+msgstr "Στο hook:"
+
+#: includes/wpematicohk_settings.php:181 includes/wpematicohk_settings.php:516 includes/wpematicohk_sintax.php:44
+msgid "Security check."
+msgstr "Έλεγχος ασφαλείας."
+
+#: includes/wpematicohk_settings.php:214
+msgid "Overview"
+msgstr "Επισκόπηση"
+
+#: includes/wpematicohk_settings.php:216
+msgid "What this does"
+msgstr "Τι κάνει αυτό"
+
+#: includes/wpematicohk_settings.php:217
+msgid "WPeMatico announces every step of its work through hooks: it is about to read an item, it has built a title, it is ready to insert a post. This plugin lets you write PHP that runs at those moments, without a child theme and without an FTP client."
+msgstr "Το WPeMatico ανακοινώνει κάθε βήμα της δουλειάς του μέσω hooks: πρόκειται να διαβάσει ένα στοιχείο, έχτισε έναν τίτλο, είναι έτοιμο να εισάγει ένα άρθρο. Αυτό το πρόσθετο σου επιτρέπει να γράψεις PHP που εκτελείται σε αυτές τις στιγμές, χωρίς θυγατρικό θέμα και χωρίς πρόγραμμα FTP."
+
+#: includes/wpematicohk_settings.php:218
+msgid "Pick a hook, press <strong>Add Function</strong>, and an editor opens with the function signature already written. Fill in the body and save."
+msgstr "Διάλεξε ένα hook, πάτησε <strong>Προσθήκη συνάρτησης</strong> και ανοίγει ένας επεξεργαστής με την υπογραφή της συνάρτησης ήδη γραμμένη. Συμπλήρωσε το σώμα και αποθήκευσε."
+
+#: includes/wpematicohk_settings.php:219
+msgid "Only users who may edit plugins or themes can reach this screen: the code written here runs with the rights of the site itself."
+msgstr "Μόνο οι χρήστες που μπορούν να επεξεργαστούν πρόσθετα ή θέματα φτάνουν σε αυτή την οθόνη: ο κώδικας που γράφεται εδώ εκτελείται με τα δικαιώματα του ιστότοπου."
+
+#: includes/wpematicohk_settings.php:224
+msgid "Writing the code"
+msgstr "Γράφοντας τον κώδικα"
+
+#: includes/wpematicohk_settings.php:226
+msgid "What goes in the editor"
+msgstr "Τι μπαίνει στον επεξεργαστή"
+
+#: includes/wpematicohk_settings.php:227
+msgid "The function body, and the function itself &mdash; the signature the editor writes for you already carries the parameters that hook receives, in the right order. Do not rename it: that name is what gets attached to the hook."
+msgstr "Το σώμα της συνάρτησης, και η συνάρτηση η ίδια &mdash; η υπογραφή που γράφει για σένα ο επεξεργαστής φέρνει ήδη τις παραμέτρους που δέχεται αυτό το hook, με τη σωστή σειρά. Μη τη μετονομάσεις: αυτό το όνομα είναι ό,τι συνδέεται στο hook."
+
+#: includes/wpematicohk_settings.php:228
+msgid "Filters must return something"
+msgstr "Τα filters πρέπει να επιστρέφουν κάτι"
+
+#: includes/wpematicohk_settings.php:229
+msgid "a filter is asked for a value and whatever it answers replaces the original. A filter that returns nothing empties the thing it was filtering. Actions return nothing and are just told that something happened."
+msgstr "σε ένα filter ζητείται μια τιμή και ό,τι απαντήσει αντικαθιστά το αρχικό. Ένα filter που δεν επιστρέφει τίποτα αδειάζει αυτό που φιλτράριζε. Τα actions δεν επιστρέφουν τίποτα: απλώς τους λέγεται ότι κάτι συνέβη."
+
+#: includes/wpematicohk_settings.php:230
+msgid "The badge next to each hook says which it is"
+msgstr "Η σήμανση δίπλα σε κάθε hook λέει ποιο είναι"
+
+#: includes/wpematicohk_settings.php:231
+msgid "<em>filter</em> or <em>action</em>, so you can tell at a glance whether a return is expected."
+msgstr "<em>filter</em> ή <em>action</em>, ώστε να φαίνεται με μια ματιά αν περιμένεται return."
+
+#: includes/wpematicohk_settings.php:232
+msgid "The code is checked before it is saved"
+msgstr "Ο κώδικας ελέγχεται πριν αποθηκευτεί"
+
+#: includes/wpematicohk_settings.php:233
+msgid "a syntax error is reported with its line and reason and nothing is stored, so a typo cannot leave the site unable to load. The check runs in place and needs no connection back to your own server, which is what makes it work on managed and firewalled hosting."
+msgstr "ένα συντακτικό λάθος αναφέρεται με τη γραμμή και την αιτία του και δεν αποθηκεύεται τίποτα, ώστε ένα τυπογραφικό λάθος να μην μπορεί να αφήσει τον ιστότοπο να μη φορτώνει. Ο έλεγχος γίνεται επί τόπου και δεν χρειάζεται καμιά σύνδεση πίσω στον δικό σου διακομιστή, που είναι αυτό που τον κάνει να δουλεύει σε διαχειριζόμενη φιλοξενία και πίσω από firewall."
+
+#: includes/wpematicohk_settings.php:234
+msgid "One function per hook"
+msgstr "Μια συνάρτηση ανά hook"
+
+#: includes/wpematicohk_settings.php:235
+msgid "each entry declares its own function, so two entries must not declare functions of the same name. PHP cannot recover from that."
+msgstr "κάθε καταχώρηση δηλώνει τη δική της συνάρτηση, άρα δύο καταχωρήσεις δεν πρέπει να δηλώνουν συναρτήσεις με το ίδιο όνομα. Η PHP δεν μπορεί να συνέλθει από αυτό."
+
+#: includes/wpematicohk_settings.php:240
+msgid "The editor"
+msgstr "Ο επεξεργαστής"
+
+#: includes/wpematicohk_settings.php:242
+msgid "Working in the editor"
+msgstr "Δουλεύοντας στον επεξεργαστή"
+
+#: includes/wpematicohk_settings.php:243
+msgid "It is the same code editor WordPress uses for its own file editors, with PHP highlighting, bracket matching and line numbers."
+msgstr "Είναι ο ίδιος επεξεργαστής κώδικα που χρησιμοποιεί το WordPress στους δικούς του επεξεργαστές αρχείων, με χρωματισμό PHP, αντιστοίχιση παρενθέσεων και αρίθμηση γραμμών."
+
+#: includes/wpematicohk_settings.php:244
+msgid "Colour scheme"
+msgstr "Χρωματικό σχήμα"
+
+#: includes/wpematicohk_settings.php:245
+msgid "Monokai, Blackboard or Cobalt. It changes nothing but how the editor looks, and it is remembered for you alone."
+msgstr "Monokai, Blackboard ή Cobalt. Δεν αλλάζει τίποτα πέρα από την εμφάνιση του επεξεργαστή, και θυμάται την επιλογή μόνο για σένα."
+
+#: includes/wpematicohk_settings.php:246
+msgid "The hook filter above the list"
+msgstr "Το φίλτρο hooks πάνω από τη λίστα"
+
+#: includes/wpematicohk_settings.php:247
+msgid "narrows the long list to one hook while you work, so you are not scrolling past the ones you are not using. It does not delete or disable anything."
+msgstr "περιορίζει τη μεγάλη λίστα σε ένα hook όσο δουλεύεις, ώστε να μην προσπερνάς εκείνα που δεν χρησιμοποιείς. Δεν σβήνει και δεν απενεργοποιεί τίποτα."
+
+#: includes/wpematicohk_settings.php:248
+msgid "Saving"
+msgstr "Αποθήκευση"
+
+#: includes/wpematicohk_settings.php:249
+msgid "either button on this screen saves the whole tab, and both run the check first."
+msgstr "και τα δύο κουμπιά αυτής της οθόνης αποθηκεύουν όλη την καρτέλα, και τα δύο κάνουν πρώτα τον έλεγχο."
+
+#: includes/wpematicohk_settings.php:270
+msgid "Hooks"
+msgstr "Hooks"
+
+#: includes/wpematicohk_settings.php:321
+msgid "Add a hook"
+msgstr "Προσθήκη hook"
+
+#: includes/wpematicohk_settings.php:323
+msgid "Pick the hook you want to run code on and press Add Function: an editor opens below with the signature already written for you. The theme only changes how that editor looks."
+msgstr "Διάλεξε το hook στο οποίο θέλεις να εκτελεστεί κώδικας και πάτησε Προσθήκη συνάρτησης: από κάτω ανοίγει ένας επεξεργαστής με την υπογραφή ήδη γραμμένη για σένα. Το θέμα αλλάζει μόνο την εμφάνιση αυτού του επεξεργαστή."
+
+#: includes/wpematicohk_settings.php:325
+msgid "Select theme for the editor"
+msgstr "Διάλεξε θέμα για τον επεξεργαστή"
+
+#: includes/wpematicohk_settings.php:327
+msgid "Colors Scheme"
+msgstr "Χρωματικό σχήμα"
+
+#: includes/wpematicohk_settings.php:333
+msgid "Select the hooks"
+msgstr "Διάλεξε τα hooks"
+
+#: includes/wpematicohk_settings.php:335
+msgid "&mdash; Hooks in use &mdash;"
+msgstr "&mdash; Hooks σε χρήση &mdash;"
+
+#: includes/wpematicohk_settings.php:340
+msgid "In use (%d)"
+msgstr "Σε χρήση (%d)"
+
+#: includes/wpematicohk_settings.php:341
+msgid "Available (%d)"
+msgstr "Διαθέσιμα (%d)"
+
+#: includes/wpematicohk_settings.php:356
+msgid "Add Function"
+msgstr "Προσθήκη συνάρτησης"
+
+#: includes/wpematicohk_settings.php:358
+msgid "Save Data"
+msgstr "Αποθήκευση δεδομένων"
+
+#: includes/wpematicohk_settings.php:376 includes/wpematicohk_settings.php:407 includes/settings/wpematicohk_settings_2_9.php:37
+msgid "Click to toggle"
+msgstr "Πάτησε για ανάπτυξη"
+
+#: includes/wpematicohk_settings.php:379
+msgid "About WPeMatico Custom Hooks"
+msgstr "Σχετικά με το WPeMatico Custom Hooks"
+
+#: includes/wpematicohk_settings.php:381
+msgid "Go to the plugin page on WordPress.org"
+msgstr "Μετάβαση στη σελίδα του πρόσθετου στο WordPress.org"
+
+#: includes/wpematicohk_settings.php:385
+msgid "Thanks for test, use and enjoy this plugin."
+msgstr "Ευχαριστούμε που δοκιμάζεις, χρησιμοποιείς και απολαμβάνεις αυτό το πρόσθετο."
+
+#: includes/wpematicohk_settings.php:386
+msgid "If you like it and want to thank, you can write a 5 star review on Wordpress."
+msgstr "Αν σου αρέσει και θέλεις να μας ευχαριστήσεις, μπορείς να γράψεις μια κριτική 5 αστέρων στο WordPress."
+
+#: includes/wpematicohk_settings.php:390
+msgid "Click here to rate the plugin on Wordpress"
+msgstr "Πάτησε εδώ για να βαθμολογήσεις το πρόσθετο στο WordPress"
+
+#: includes/wpematicohk_settings.php:390
+msgid "Rate"
+msgstr "Βαθμολόγησε"
+
+#: includes/wpematicohk_settings.php:410
+msgid "Enjoy it"
+msgstr "Απόλαυσέ το"
+
+#: includes/wpematicohk_settings.php:412
+msgid "If you enjoy it please donate few dollars"
+msgstr "Αν το απολαμβάνεις, δώρισε λίγα δολάρια"
+
+#: includes/wpematicohk_settings.php:413
+msgid "Click to Donate"
+msgstr "Πάτησε για δωρεά"
+
+#: includes/wpematicohk_settings.php:416
+msgid "WPeMatico Perfect Package"
+msgstr "WPeMatico Perfect Package"
+
+#: includes/wpematicohk_settings.php:455
+msgid "No hook is running code yet."
+msgstr "Κανένα hook δεν εκτελεί κώδικα ακόμη."
+
+#: includes/wpematicohk_settings.php:456
+msgid "Pick a hook in the box above and press Add Function. Its editor opens here, with the function signature already written for you."
+msgstr "Διάλεξε ένα hook στο πλαίσιο παραπάνω και πάτησε Προσθήκη συνάρτησης. Ο επεξεργαστής του ανοίγει εδώ, με την υπογραφή της συνάρτησης ήδη γραμμένη για σένα."
+
+#: includes/wpematicohk_settings.php:465
+msgid "in use"
+msgstr "σε χρήση"
+
+#. translators: 1: parser message, 2: line number
+#: includes/wpematicohk_sintax.php:133
+msgid "Parse error: %1$s on line %2$d"
+msgstr "Συντακτικό λάθος: %1$s στη γραμμή %2$d"
+
+#. translators: %s: error message
+#: includes/wpematicohk_sintax.php:140
+msgid "The code could not be checked: %s"
+msgstr "Ο κώδικας δεν μπόρεσε να ελεγχθεί: %s"
+
+#. translators: %s: parameter name
+#: includes/wpematicohk_sintax.php:74
+msgid "The parameter %s is named twice in the same function. PHP refuses to compile that, and the error cannot be caught, so it would take the whole site down."
+msgstr "Η παράμετρος %s ονομάζεται δύο φορές στην ίδια συνάρτηση. Η PHP αρνείται να το μεταγλωττίσει, και το λάθος δεν μπορεί να πιαστεί, άρα θα έριχνε όλο τον ιστότοπο."
+
+#. translators: 1: function name, 2: the other hook's name
+#: includes/wpematicohk_sintax.php:86
+msgid "The function %1$s is already declared in the code for %2$s. Two hooks cannot declare the same function name — rename one of them."
+msgstr "Η συνάρτηση %1$s είναι ήδη δηλωμένη στον κώδικα του %2$s. Δύο hooks δεν μπορούν να δηλώνουν το ίδιο όνομα συνάρτησης — μετονόμασε το ένα από τα δύο."
+
+#. translators: %s: function name
+#: includes/wpematicohk_sintax.php:98
+msgid "The function %s already exists in WordPress or in another plugin. Declaring it again would be a fatal error — pick a different name."
+msgstr "Η συνάρτηση %s υπάρχει ήδη στο WordPress ή σε άλλο πρόσθετο. Το να δηλωθεί ξανά θα ήταν μοιραίο λάθος — διάλεξε άλλο όνομα."
+
+#: wpematico_custom-hooks.php:180
+msgid "Plugin Name Settings"
+msgstr "Ρυθμίσεις του Plugin Name"
+
+#: wpematico_custom-hooks.php:181
+msgid "Configure Plugin Name Settings"
+msgstr "Ρύθμιση των ρυθμίσεων του Plugin Name"
+
+#. translators: 1: required WPeMatico version, 2: installed WPeMatico version
+#: wpematico_custom-hooks.php:238
+msgid "WPeMatico Custom Hooks needs WPeMatico %1$s or newer to run. You have %2$s installed, so the Hooks screen is disabled until you update."
+msgstr "Το WPeMatico Custom Hooks χρειάζεται WPeMatico %1$s ή νεότερο για να δουλέψει. Έχεις εγκατεστημένο το %2$s, οπότε η οθόνη Hooks μένει απενεργοποιημένη ώσπου να ενημερώσεις."
