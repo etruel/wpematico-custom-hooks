@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPeMatico Custom Hooks 1.4\n"
 "Report-Msgid-Bugs-To: https://etruel.com/my-account/support/\n"
-"POT-Creation-Date: 2026-09-28 00:59+0000\n"
+"POT-Creation-Date: 2026-09-28 01:34+0000\n"
 "PO-Revision-Date: 2026-09-27 00:00+0000\n"
 "Last-Translator: Etruel Developments <translations@etruel.com>\n"
 "Language-Team: Etruel Developments <translations@etruel.com>\n"
@@ -14,7 +14,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c\n"
 "X-Poedit-Basepath: ..\n"
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -40,7 +41,8 @@ msgstr " potrebuje WPeMatico! Prosím, %s, aby si mohol pokračovať!"
 
 #: includes/data_load/wpematicohk_array_hooks.php:101
 msgid "HTML tags kept when Strip all HTML tags is on."
-msgstr "HTML značky, ktoré zostanú, keď je zapnuté \"Odstrániť všetky HTML značky\"."
+msgstr ""
+"HTML značky, ktoré zostanú, keď je zapnuté \"Odstrániť všetky HTML značky\"."
 
 #: includes/data_load/wpematicohk_array_hooks.php:111
 msgid "Runs once every content parser has finished with the item."
@@ -56,7 +58,8 @@ msgstr "Beží predtým, než sa poskládajú značky položky."
 
 #: includes/data_load/wpematicohk_array_hooks.php:139
 msgid "The item once its tags were built. Read and change campaign_tags."
-msgstr "Položka, len čo sa poskládajú jej značky. Prečítaj a zmeň campaign_tags."
+msgstr ""
+"Položka, len čo sa poskládajú jej značky. Prečítaj a zmeň campaign_tags."
 
 #: includes/data_load/wpematicohk_array_hooks.php:148
 msgid "The address of the original item, as read from the feed."
@@ -67,28 +70,49 @@ msgid "The final image address that will be downloaded."
 msgstr "Konečná adresa obrázka, ktorý sa stiahne."
 
 #: includes/data_load/wpematicohk_array_hooks.php:166
-msgid "The image address before the parts the campaign is set to strip are removed."
+msgid ""
+"The image address before the parts the campaign is set to strip are removed."
 msgstr "Adresa obrázka pred odstránením častí, ktoré má kampaň odrezať."
 
 #: includes/data_load/wpematicohk_array_hooks.php:176
-msgid "File extensions accepted when downloading images. Anything else is left where it is."
-msgstr "Prípony súborov prijímané pri sťahovaní obrázkov. Všetko ostatné zostáva tam, kde je."
+msgid ""
+"File extensions accepted when downloading images. Anything else is left "
+"where it is."
+msgstr ""
+"Prípony súborov prijímané pri sťahovaní obrázkov. Všetko ostatné zostáva "
+"tam, kde je."
 
 #: includes/data_load/wpematicohk_array_hooks.php:187
-msgid "Runs when the campaign has finished. Returns the campaign data, so it can still be changed before it is saved."
-msgstr "Beží, keď kampaň skončí. Vracia údaje kampane, takže sa ešte dajú zmeniť pred uložením."
+msgid ""
+"Runs when the campaign has finished. Returns the campaign data, so it can "
+"still be changed before it is saved."
+msgstr ""
+"Beží, keď kampaň skončí. Vracia údaje kampane, takže sa ešte dajú zmeniť "
+"pred uložením."
 
 #: includes/data_load/wpematicohk_array_hooks.php:196
-msgid "The feed address, right before it is fetched. Point a campaign at a different address from here."
-msgstr "Adresa kanála, tesne pred jeho načítaním. Odtiaľ sa kampaň nasmeruje na inú adresu."
+msgid ""
+"The feed address, right before it is fetched. Point a campaign at a "
+"different address from here."
+msgstr ""
+"Adresa kanála, tesne pred jeho načítaním. Odtiaľ sa kampaň nasmeruje na inú "
+"adresu."
 
 #: includes/data_load/wpematicohk_array_hooks.php:205
-msgid "Replace or change the SimplePie object of a campaign whose type is not fetched as a plain feed. A feed, YouTube or bbPress campaign returns before this point and never reaches it."
-msgstr "Nahraď alebo zmeň objekt SimplePie kampane, ktorej typ sa nenačítava ako obyčajný kanál. Kampaň typu kanál, YouTube alebo bbPress sa vracia pred týmto bodom a nikdy sem nedôjde."
+msgid ""
+"Replace or change the SimplePie object of a campaign whose type is not "
+"fetched as a plain feed. A feed, YouTube or bbPress campaign returns before "
+"this point and never reaches it."
+msgstr ""
+"Nahraď alebo zmeň objekt SimplePie kampane, ktorej typ sa nenačítava ako "
+"obyčajný kanál. Kampaň typu kanál, YouTube alebo bbPress sa vracia pred "
+"týmto bodom a nikdy sem nedôjde."
 
 #: includes/data_load/wpematicohk_array_hooks.php:214
-msgid "The item once its author was resolved. Set author to a WordPress user id."
-msgstr "Položka, len čo sa určí jej autor. Do author daj ID používateľa WordPressu."
+msgid ""
+"The item once its author was resolved. Set author to a WordPress user id."
+msgstr ""
+"Položka, len čo sa určí jej autor. Do author daj ID používateľa WordPressu."
 
 #: includes/data_load/wpematicohk_array_hooks.php:22
 msgid "Converts a string to UTF-8 when it arrives in another encoding."
@@ -103,15 +127,21 @@ msgid "Runs before the images of the item are processed."
 msgstr "Beží predtým, než sa spracujú obrázky položky."
 
 #: includes/data_load/wpematicohk_array_hooks.php:241
-msgid "Return an image address to force the featured image instead of letting the campaign pick one."
-msgstr "Vráť adresu obrázka, aby si vynútil hlavný obrázok namiesto toho, ktorý by vybrala kampaň."
+msgid ""
+"Return an image address to force the featured image instead of letting the "
+"campaign pick one."
+msgstr ""
+"Vráť adresu obrázka, aby si vynútil hlavný obrázok namiesto toho, ktorý by "
+"vybrala kampaň."
 
 #: includes/data_load/wpematicohk_array_hooks.php:250
 msgid "The featured image address the campaign settled on."
 msgstr "Adresa hlavného obrázka, na ktorom sa kampaň zastavila."
 
 #: includes/data_load/wpematicohk_array_hooks.php:259
-msgid "Runs once the images of the item have been processed and replaced in the content."
+msgid ""
+"Runs once the images of the item have been processed and replaced in the "
+"content."
 msgstr "Beží, len čo sa obrázky položky spracujú a vymenia v obsahu."
 
 #: includes/data_load/wpematicohk_array_hooks.php:268
@@ -139,8 +169,12 @@ msgid "The content_filtered column of the post being created."
 msgstr "Stĺpec content_filtered článku, ktorý sa vytvára."
 
 #: includes/data_load/wpematicohk_array_hooks.php:32
-msgid "Filename the downloaded image is stored under. A source whose addresses carry no file extension needs this, or its images are dropped."
-msgstr "Názov súboru, pod ktorým sa uloží stiahnutý obrázok. Zdroj, ktorého adresy nemajú prípony, to potrebuje, inak sa jeho obrázky zahodia."
+msgid ""
+"Filename the downloaded image is stored under. A source whose addresses "
+"carry no file extension needs this, or its images are dropped."
+msgstr ""
+"Názov súboru, pod ktorým sa uloží stiahnutý obrázok. Zdroj, ktorého adresy "
+"nemajú prípony, to potrebuje, inak sa jeho obrázky zahodia."
 
 #: includes/data_load/wpematicohk_array_hooks.php:322
 msgid "Status the post being created is saved with."
@@ -163,20 +197,32 @@ msgid "Whether comments are open on the post being created."
 msgstr "Či sú pri článku, ktorý sa vytvára, otvorené komentáre."
 
 #: includes/data_load/wpematicohk_array_hooks.php:367
-msgid "The whole argument list about to reach wp_insert_post. The last chance to change what is saved."
-msgstr "Celý zoznam argumentov, ktorý sa chystá dôjsť do wp_insert_post. Posledná príležitosť zmeniť to, čo sa uloží."
+msgid ""
+"The whole argument list about to reach wp_insert_post. The last chance to "
+"change what is saved."
+msgstr ""
+"Celý zoznam argumentov, ktorý sa chystá dôjsť do wp_insert_post. Posledná "
+"príležitosť zmeniť to, čo sa uloží."
 
 #: includes/data_load/wpematicohk_array_hooks.php:376
-msgid "Return false to stop this item from being inserted, with everything already prepared."
-msgstr "Vráť false, aby sa táto položka nevložila, keď je už všetko pripravené."
+msgid ""
+"Return false to stop this item from being inserted, with everything already "
+"prepared."
+msgstr ""
+"Vráť false, aby sa táto položka nevložila, keď je už všetko pripravené."
 
 #: includes/data_load/wpematicohk_array_hooks.php:385
 msgid "Return true to treat this item as a duplicate, so it is not imported."
-msgstr "Vráť true, aby sa táto položka považovala za duplikát a neimportovala sa."
+msgstr ""
+"Vráť true, aby sa táto položka považovala za duplikát a neimportovala sa."
 
 #: includes/data_load/wpematicohk_array_hooks.php:394
-msgid "Fires once the post exists. The place to add your own meta, taxonomies or related records."
-msgstr "Spustí sa, len čo článok existuje. Miesto na pridanie vlastných meta údajov, taxonómií alebo súvisiacich záznamov."
+msgid ""
+"Fires once the post exists. The place to add your own meta, taxonomies or "
+"related records."
+msgstr ""
+"Spustí sa, len čo článok existuje. Miesto na pridanie vlastných meta údajov, "
+"taxonómií alebo súvisiacich záznamov."
 
 #: includes/data_load/wpematicohk_array_hooks.php:403
 msgid "Description given to a category that is created automatically."
@@ -191,28 +237,42 @@ msgid "Title used for the YouTube image of the item."
 msgstr "Názov použitý pre YouTube obrázok položky."
 
 #: includes/data_load/wpematicohk_array_hooks.php:424
-msgid "The global settings, normalised. Where an add-on registers the defaults of its own options."
-msgstr "Globálne nastavenia, znormalizované. Tu si rozšírenie zapíše predvolené hodnoty svojich vlastných možností."
+msgid ""
+"The global settings, normalised. Where an add-on registers the defaults of "
+"its own options."
+msgstr ""
+"Globálne nastavenia, znormalizované. Tu si rozšírenie zapíše predvolené "
+"hodnoty svojich vlastných možností."
 
 #: includes/data_load/wpematicohk_array_hooks.php:433
 msgid "Memory limit a campaign run is allowed to use. Default 256M."
 msgstr "Pamäťový limit, ktorý smie spustenie kampane využiť. Predvolene 256M."
 
 #: includes/data_load/wpematicohk_array_hooks.php:442
-msgid "Arguments handed to SimplePie for this feed: timeouts, ordering, how many items."
-msgstr "Argumenty odovzdané SimplePie pre tento kanál: časové limity, poradie, koľko položiek."
+msgid ""
+"Arguments handed to SimplePie for this feed: timeouts, ordering, how many "
+"items."
+msgstr ""
+"Argumenty odovzdané SimplePie pre tento kanál: časové limity, poradie, koľko "
+"položiek."
 
 #: includes/data_load/wpematicohk_array_hooks.php:451
-msgid "How many recent items are remembered per feed to recognise duplicates. Default 20."
-msgstr "Koľko nedávnych položiek si na kanál pamätá, aby rozpoznal duplikáty. Predvolene 20."
+msgid ""
+"How many recent items are remembered per feed to recognise duplicates. "
+"Default 20."
+msgstr ""
+"Koľko nedávnych položiek si na kanál pamätá, aby rozpoznal duplikáty. "
+"Predvolene 20."
 
 #: includes/data_load/wpematicohk_array_hooks.php:460
 msgid "The date read from the feed item."
 msgstr "Dátum prečítaný z položky kanála."
 
 #: includes/data_load/wpematicohk_array_hooks.php:469
-msgid "The raw description as the feed served it, before any parser touches it."
-msgstr "Surový popis, ako ho kanál poslal, skôr než sa ho dotkne akýkoľvek parser."
+msgid ""
+"The raw description as the feed served it, before any parser touches it."
+msgstr ""
+"Surový popis, ako ho kanál poslal, skôr než sa ho dotkne akýkoľvek parser."
 
 #: includes/data_load/wpematicohk_array_hooks.php:478
 msgid "Runs before any media of the item is processed."
@@ -231,8 +291,11 @@ msgid "Runs once every image, audio and video of the item has been processed."
 msgstr "Beží, len čo sa spracuje každý obrázok, zvuk a video položky."
 
 #: includes/data_load/wpematicohk_array_hooks.php:514
-msgid "The last pass over the item, after every parser and every media filter has run."
-msgstr "Posledný prechod položkou, po všetkých parseroch a všetkých filtroch médií."
+msgid ""
+"The last pass over the item, after every parser and every media filter has "
+"run."
+msgstr ""
+"Posledný prechod položkou, po všetkých parseroch a všetkých filtroch médií."
 
 #: includes/data_load/wpematicohk_array_hooks.php:52
 msgid "Thumbnail address of the YouTube video."
@@ -247,7 +310,8 @@ msgid "Parent post of the post being created."
 msgstr "Nadradený článok článku, ktorý sa vytvára."
 
 #: includes/data_load/wpematicohk_array_hooks.php:541
-msgid "The attachment id set as the featured image, once the post has been inserted."
+msgid ""
+"The attachment id set as the featured image, once the post has been inserted."
 msgstr "ID prílohy nastavenej ako hlavný obrázok, už po vložení článku."
 
 #: includes/data_load/wpematicohk_array_hooks.php:550
@@ -255,8 +319,12 @@ msgid "The final list of categories the post is filed under."
 msgstr "Konečný zoznam kategórií, do ktorých je článok zaradený."
 
 #: includes/data_load/wpematicohk_array_hooks.php:559
-msgid "Which image parser handles this item. Return your own id and answer wpematico images parser {id}."
-msgstr "Ktorý parser obrázkov sa venuje tejto položke. Vráť vlastné ID a odpovedaj na wpematico images parser {id}."
+msgid ""
+"Which image parser handles this item. Return your own id and answer "
+"wpematico images parser {id}."
+msgstr ""
+"Ktorý parser obrázkov sa venuje tejto položke. Vráť vlastné ID a odpovedaj "
+"na wpematico images parser {id}."
 
 #: includes/data_load/wpematicohk_array_hooks.php:568
 msgid "The regular expression that finds the images in the content."
@@ -279,8 +347,12 @@ msgid "The audio address found in the item, before it is downloaded."
 msgstr "Adresa zvuku nájdeného v položke, pred stiahnutím."
 
 #: includes/data_load/wpematicohk_array_hooks.php:613
-msgid "File extensions accepted when downloading audio. Anything else is left where it is."
-msgstr "Prípony súborov prijímané pri sťahovaní zvuku. Všetko ostatné zostáva tam, kde je."
+msgid ""
+"File extensions accepted when downloading audio. Anything else is left where "
+"it is."
+msgstr ""
+"Prípony súborov prijímané pri sťahovaní zvuku. Všetko ostatné zostáva tam, "
+"kde je."
 
 #: includes/data_load/wpematicohk_array_hooks.php:62
 msgid "Description of the YouTube video."
@@ -299,28 +371,45 @@ msgid "The video address found in the item, before it is downloaded."
 msgstr "Adresa videa nájdeného v položke, pred stiahnutím."
 
 #: includes/data_load/wpematicohk_array_hooks.php:649
-msgid "File extensions accepted when downloading video. Anything else is left where it is."
-msgstr "Prípony súborov prijímané pri sťahovaní videa. Všetko ostatné zostáva tam, kde je."
+msgid ""
+"File extensions accepted when downloading video. Anything else is left where "
+"it is."
+msgstr ""
+"Prípony súborov prijímané pri sťahovaní videa. Všetko ostatné zostáva tam, "
+"kde je."
 
 #: includes/data_load/wpematicohk_array_hooks.php:658
 msgid "Filename the downloaded video is stored under."
 msgstr "Názov súboru, pod ktorým sa uloží stiahnuté video."
 
 #: includes/data_load/wpematicohk_array_hooks.php:668
-msgid "Return false so a category read from the feed is only assigned when it already exists, never created."
-msgstr "Vráť false, aby sa kategória prečítaná z kanála priradila len vtedy, keď už existuje, a nikdy sa nevytvárala."
+msgid ""
+"Return false so a category read from the feed is only assigned when it "
+"already exists, never created."
+msgstr ""
+"Vráť false, aby sa kategória prečítaná z kanála priradila len vtedy, keď už "
+"existuje, a nikdy sa nevytvárala."
 
 #: includes/data_load/wpematicohk_array_hooks.php:677
 msgid "The post the item is filed under as a child. 0 means no parent."
-msgstr "Článok, pod ktorý je položka zaradená ako potomok. 0 znamená bez nadradeného."
+msgstr ""
+"Článok, pod ktorý je položka zaradená ako potomok. 0 znamená bez nadradeného."
 
 #: includes/data_load/wpematicohk_array_hooks.php:686
-msgid "Campaign types fetched as a plain feed. A type listed here takes the standard route, with its timeouts, ordering and paging."
-msgstr "Typy kampaní, ktoré sa načítavajú ako obyčajný kanál. Typ uvedený tu ide štandardnou cestou, so svojimi časovými limitmi, poradím a stránkovaním."
+msgid ""
+"Campaign types fetched as a plain feed. A type listed here takes the "
+"standard route, with its timeouts, ordering and paging."
+msgstr ""
+"Typy kampaní, ktoré sa načítavajú ako obyčajný kanál. Typ uvedený tu ide "
+"štandardnou cestou, so svojimi časovými limitmi, poradím a stránkovaním."
 
 #: includes/data_load/wpematicohk_array_hooks.php:695
-msgid "The Processed Posts line of the run result. A campaign that imports nothing by design can report a count that means something."
-msgstr "Riadok \"Spracované články\" vo výsledku spustenia. Kampaň, ktorá zámerne nič neimportuje, tak môže hlásiť číslo, ktoré niečo znamená."
+msgid ""
+"The Processed Posts line of the run result. A campaign that imports nothing "
+"by design can report a count that means something."
+msgstr ""
+"Riadok \"Spracované články\" vo výsledku spustenia. Kampaň, ktorá zámerne "
+"nič neimportuje, tak môže hlásiť číslo, ktoré niečo znamená."
 
 #: includes/data_load/wpematicohk_array_hooks.php:710
 msgid "The Vimeo player embed built for the item."
@@ -332,11 +421,14 @@ msgstr "Adresa miniatúry Vimeo videa, pred stiahnutím."
 
 #: includes/data_load/wpematicohk_array_hooks.php:72
 msgid "The raw content as the feed served it, before any parser touches it."
-msgstr "Surový obsah, ako ho kanál poslal, skôr než sa ho dotkne akýkoľvek parser."
+msgstr ""
+"Surový obsah, ako ho kanál poslal, skôr než sa ho dotkne akýkoľvek parser."
 
 #: includes/data_load/wpematicohk_array_hooks.php:735
-msgid "The author name read from the feed, before the user is looked up or created."
-msgstr "Meno autora prečítané z kanála, skôr než sa používateľ vyhľadá alebo vytvorí."
+msgid ""
+"The author name read from the feed, before the user is looked up or created."
+msgstr ""
+"Meno autora prečítané z kanála, skôr než sa používateľ vyhľadá alebo vytvorí."
 
 #: includes/data_load/wpematicohk_array_hooks.php:743
 msgid "The XML namespace the item date is read from."
@@ -348,11 +440,17 @@ msgstr "Stránky, ktoré Full Content rozpoznáva ako video stránky."
 
 #: includes/data_load/wpematicohk_array_hooks.php:769
 msgid "Folder Full Content reads its per site extraction rules from."
-msgstr "Priečinok, z ktorého Full Content číta svoje pravidlá extrakcie pre jednotlivé stránky."
+msgstr ""
+"Priečinok, z ktorého Full Content číta svoje pravidlá extrakcie pre "
+"jednotlivé stránky."
 
 #: includes/data_load/wpematicohk_array_hooks.php:778
-msgid "Returns the whole article for an address. Answer it to replace the way Full Content downloads the page."
-msgstr "Vracia celý článok pre danú adresu. Odpovedaj naň, ak chceš nahradiť spôsob, akým Full Content sťahuje stránku."
+msgid ""
+"Returns the whole article for an address. Answer it to replace the way Full "
+"Content downloads the page."
+msgstr ""
+"Vracia celý článok pre danú adresu. Odpovedaj naň, ak chceš nahradiť spôsob, "
+"akým Full Content sťahuje stránku."
 
 #: includes/data_load/wpematicohk_array_hooks.php:787
 msgid "The whole article HTML that Full Content read from the source page."
@@ -364,7 +462,9 @@ msgstr "Spustí sa, len čo Full Content má celý článok položky."
 
 #: includes/data_load/wpematicohk_array_hooks.php:81
 msgid "Return true to skip this item, before anything else is done with it."
-msgstr "Vráť true, aby sa táto položka preskočila, skôr než sa s ňou urobí čokoľvek iné."
+msgstr ""
+"Vráť true, aby sa táto položka preskočila, skôr než sa s ňou urobí čokoľvek "
+"iné."
 
 #: includes/data_load/wpematicohk_array_hooks.php:810
 msgid "Whether the given translation service is configured and may be used."
@@ -379,24 +479,37 @@ msgid "The languages offered for translation."
 msgstr "Jazyky ponúkané na preklad."
 
 #: includes/data_load/wpematicohk_array_hooks.php:837
-msgid "Which clean-up runs on the content before it is translated. The name answers the polyglot process filter for that type."
-msgstr "Aké čistenie obsahu sa vykoná pred prekladom. Ten názov odpovedá filtru polyglot process daného typu."
+msgid ""
+"Which clean-up runs on the content before it is translated. The name answers "
+"the polyglot process filter for that type."
+msgstr ""
+"Aké čistenie obsahu sa vykoná pred prekladom. Ten názov odpovedá filtru "
+"polyglot process daného typu."
 
 #: includes/data_load/wpematicohk_array_hooks.php:846
-msgid "Cleans the post arguments before they are translated. This is what polyglot process type selects, strip_tags by default."
-msgstr "Vyčistí argumenty článku pred ich preložením. Práve to vyberá polyglot process type, predvolene strip_tags."
+msgid ""
+"Cleans the post arguments before they are translated. This is what polyglot "
+"process type selects, strip_tags by default."
+msgstr ""
+"Vyčistí argumenty článku pred ich preložením. Práve to vyberá polyglot "
+"process type, predvolene strip_tags."
 
 #: includes/data_load/wpematicohk_array_hooks.php:860
 msgid "The Better Excerpts options, normalised with their defaults."
-msgstr "Možnosti Better Excerpts, znormalizované so svojimi predvolenými hodnotami."
+msgstr ""
+"Možnosti Better Excerpts, znormalizované so svojimi predvolenými hodnotami."
 
 #: includes/data_load/wpematicohk_array_hooks.php:869
 msgid "Fires at the end of the Better Excerpts fields, to add your own."
 msgstr "Spustí sa na konci polí Better Excerpts, aby si pridal vlastné."
 
 #: includes/data_load/wpematicohk_array_hooks.php:90
-msgid "The main content parser, and where most add-ons change the title, content and excerpt of an item."
-msgstr "Hlavný parser obsahu a miesto, kde väčšina rozšírení mení názov, obsah a úryvok položky."
+msgid ""
+"The main content parser, and where most add-ons change the title, content "
+"and excerpt of an item."
+msgstr ""
+"Hlavný parser obsahu a miesto, kde väčšina rozšírení mení názov, obsah a "
+"úryvok položky."
 
 #: includes/plugin_functions.php:49
 msgid "WPeMatico Custom Hooks DEACTIVATED."
@@ -410,13 +523,22 @@ msgstr "Prejsť na stránku nastavení WPeMatico Custom Hooks"
 msgid "Settings"
 msgstr "Nastavenia"
 
-#: includes/settings/wpematicohk_settings_2_9.php:43 includes/settings/wpematicohk_widgets.php:69
+#: includes/settings/wpematicohk_settings_2_9.php:43
+#: includes/settings/wpematicohk_widgets.php:69
 msgid "Custom Hooks"
 msgstr "Custom Hooks"
 
 #: includes/settings/wpematicohk_settings_2_9.php:48
-msgid "Runs your own PHP on any of the hooks WPeMatico fires while a campaign works — to change a title, filter an item, add a custom field. What you write is checked before it is saved, so a mistake is reported instead of taking the site down."
-msgstr "Spúšťa tvoj vlastný PHP kód na ktoromkoľvek z hookov, ktoré WPeMatico vyvolá počas práce kampane — aby si zmenil názov, prefiltroval položku, pridal vlastné pole. To, čo napíšeš, sa pred uložením skontroluje, takže sa chyba ohlási namiesto toho, aby zhodila web."
+msgid ""
+"Runs your own PHP on any of the hooks WPeMatico fires while a campaign works "
+"— to change a title, filter an item, add a custom field. What you write is "
+"checked before it is saved, so a mistake is reported instead of taking the "
+"site down."
+msgstr ""
+"Spúšťa tvoj vlastný PHP kód na ktoromkoľvek z hookov, ktoré WPeMatico vyvolá "
+"počas práce kampane — aby si zmenil názov, prefiltroval položku, pridal "
+"vlastné pole. To, čo napíšeš, sa pred uložením skontroluje, takže sa chyba "
+"ohlási namiesto toho, aby zhodila web."
 
 #: includes/settings/wpematicohk_settings_2_9.php:49
 msgid "Details in the Help tab, top right."
@@ -432,8 +554,12 @@ msgid "Needs WPeMatico %s or newer."
 msgstr "Potrebuje WPeMatico %s alebo novší."
 
 #: includes/settings/wpematicohk_widgets.php:75
-msgid "Write PHP for any of the hooks WPeMatico fires, straight from here. The code is checked before it is saved, so a typo cannot take the site down."
-msgstr "Píš PHP pre ktorýkoľvek z hookov, ktoré WPeMatico vyvolá, priamo odtiaľto. Kód sa pred uložením skontroluje, takže preklep nemôže zhodiť web."
+msgid ""
+"Write PHP for any of the hooks WPeMatico fires, straight from here. The code "
+"is checked before it is saved, so a typo cannot take the site down."
+msgstr ""
+"Píš PHP pre ktorýkoľvek z hookov, ktoré WPeMatico vyvolá, priamo odtiaľto. "
+"Kód sa pred uložením skontroluje, takže preklep nemôže zhodiť web."
 
 #: includes/settings/wpematicohk_widgets.php:81
 msgid "Plugin page on WordPress.org"
@@ -449,13 +575,23 @@ msgstr "Napísať 5-hviezdičkovú recenziu"
 
 #. translators: 1: hook name, 2: comma separated function names
 #: includes/wpematicohk_execute_action_filter.php:211
-msgid "WPeMatico Custom Hooks skipped the code for %1$s: the function %2$s is already declared somewhere else. Rename it, or remove it from one of the two hooks."
-msgstr "WPeMatico Custom Hooks preskočil kód pre %1$s: funkcia %2$s je už deklarovaná niekde inde. Premenuj ju, alebo ju odstráň z jedného z tých dvoch hookov."
+msgid ""
+"WPeMatico Custom Hooks skipped the code for %1$s: the function %2$s is "
+"already declared somewhere else. Rename it, or remove it from one of the two "
+"hooks."
+msgstr ""
+"WPeMatico Custom Hooks preskočil kód pre %1$s: funkcia %2$s je už "
+"deklarovaná niekde inde. Premenuj ju, alebo ju odstráň z jedného z tých "
+"dvoch hookov."
 
 #. translators: 1: function name, 2: hook name
 #: includes/wpematicohk_execute_action_filter.php:220
-msgid "WPeMatico Custom Hooks could not attach %1$s to %2$s: the code saved for that hook does not declare it."
-msgstr "WPeMatico Custom Hooks nemohol pripojiť %1$s k %2$s: kód uložený pre ten hook ju nedeklaruje."
+msgid ""
+"WPeMatico Custom Hooks could not attach %1$s to %2$s: the code saved for "
+"that hook does not declare it."
+msgstr ""
+"WPeMatico Custom Hooks nemohol pripojiť %1$s k %2$s: kód uložený pre ten "
+"hook ju nedeklaruje."
 
 #. translators: 1: hook name, 2: PHP error message
 #: includes/wpematicohk_execute_action_filter.php:229
@@ -482,7 +618,8 @@ msgstr "Kontrolu syntaxe sa nepodarilo dokončiť. Skús to znova."
 msgid "In hook:"
 msgstr "V hooku:"
 
-#: includes/wpematicohk_settings.php:181 includes/wpematicohk_settings.php:516 includes/wpematicohk_sintax.php:44
+#: includes/wpematicohk_settings.php:181 includes/wpematicohk_settings.php:516
+#: includes/wpematicohk_sintax.php:44
 msgid "Security check."
 msgstr "Kontrola zabezpečenia."
 
@@ -495,16 +632,32 @@ msgid "What this does"
 msgstr "Čo toto robí"
 
 #: includes/wpematicohk_settings.php:217
-msgid "WPeMatico announces every step of its work through hooks: it is about to read an item, it has built a title, it is ready to insert a post. This plugin lets you write PHP that runs at those moments, without a child theme and without an FTP client."
-msgstr "WPeMatico ohlasuje každý krok svojej práce hookmi: práve ide čítať položku, poskládal názov, je pripravený vložiť článok. Tento plugin ti umožňuje napísať PHP, ktoré sa v tých okamihoch spustí, bez detskej šablóny a bez FTP klienta."
+msgid ""
+"WPeMatico announces every step of its work through hooks: it is about to "
+"read an item, it has built a title, it is ready to insert a post. This "
+"plugin lets you write PHP that runs at those moments, without a child theme "
+"and without an FTP client."
+msgstr ""
+"WPeMatico ohlasuje každý krok svojej práce hookmi: práve ide čítať položku, "
+"poskládal názov, je pripravený vložiť článok. Tento plugin ti umožňuje "
+"napísať PHP, ktoré sa v tých okamihoch spustí, bez detskej šablóny a bez FTP "
+"klienta."
 
 #: includes/wpematicohk_settings.php:218
-msgid "Pick a hook, press <strong>Add Function</strong>, and an editor opens with the function signature already written. Fill in the body and save."
-msgstr "Vyber hook, stlač <strong>Pridať funkciu</strong> a otvorí sa editor, v ktorom je hlavička funkcie už napísaná. Doplň telo a ulož."
+msgid ""
+"Pick a hook, press <strong>Add Function</strong>, and an editor opens with "
+"the function signature already written. Fill in the body and save."
+msgstr ""
+"Vyber hook, stlač <strong>Pridať funkciu</strong> a otvorí sa editor, v "
+"ktorom je hlavička funkcie už napísaná. Doplň telo a ulož."
 
 #: includes/wpematicohk_settings.php:219
-msgid "Only users who may edit plugins or themes can reach this screen: the code written here runs with the rights of the site itself."
-msgstr "Na túto obrazovku sa dostanú len používatelia, ktorí smú upravovať pluginy alebo šablóny: kód napísaný tu beží s právami samotného webu."
+msgid ""
+"Only users who may edit plugins or themes can reach this screen: the code "
+"written here runs with the rights of the site itself."
+msgstr ""
+"Na túto obrazovku sa dostanú len používatelia, ktorí smú upravovať pluginy "
+"alebo šablóny: kód napísaný tu beží s právami samotného webu."
 
 #: includes/wpematicohk_settings.php:224
 msgid "Writing the code"
@@ -515,40 +668,68 @@ msgid "What goes in the editor"
 msgstr "Čo patrí do editora"
 
 #: includes/wpematicohk_settings.php:227
-msgid "The function body, and the function itself &mdash; the signature the editor writes for you already carries the parameters that hook receives, in the right order. Do not rename it: that name is what gets attached to the hook."
-msgstr "Telo funkcie a samotná funkcia &mdash; hlavička, ktorú editor napíše za teba, už nesie parametre, ktoré ten hook posiela, v správnom poradí. Nepremenúvaj ju: práve ten názov sa pripája na hook."
+msgid ""
+"The function body, and the function itself &mdash; the signature the editor "
+"writes for you already carries the parameters that hook receives, in the "
+"right order. Do not rename it: that name is what gets attached to the hook."
+msgstr ""
+"Telo funkcie a samotná funkcia &mdash; hlavička, ktorú editor napíše za "
+"teba, už nesie parametre, ktoré ten hook posiela, v správnom poradí. "
+"Nepremenúvaj ju: práve ten názov sa pripája na hook."
 
 #: includes/wpematicohk_settings.php:228
 msgid "Filters must return something"
 msgstr "Filtre musia niečo vrátiť"
 
 #: includes/wpematicohk_settings.php:229
-msgid "a filter is asked for a value and whatever it answers replaces the original. A filter that returns nothing empties the thing it was filtering. Actions return nothing and are just told that something happened."
-msgstr "filtra sa pýtajú na hodnotu a to, čo odpovie, nahradí pôvodné. Filter, ktorý nevráti nič, vyprázdni to, čo filtroval. Akcie nevracajú nič: len sa im oznámi, že sa niečo stalo."
+msgid ""
+"a filter is asked for a value and whatever it answers replaces the original. "
+"A filter that returns nothing empties the thing it was filtering. Actions "
+"return nothing and are just told that something happened."
+msgstr ""
+"filtra sa pýtajú na hodnotu a to, čo odpovie, nahradí pôvodné. Filter, ktorý "
+"nevráti nič, vyprázdni to, čo filtroval. Akcie nevracajú nič: len sa im "
+"oznámi, že sa niečo stalo."
 
 #: includes/wpematicohk_settings.php:230
 msgid "The badge next to each hook says which it is"
 msgstr "Odznak pri každom hooku hovorí, ktorý to je"
 
 #: includes/wpematicohk_settings.php:231
-msgid "<em>filter</em> or <em>action</em>, so you can tell at a glance whether a return is expected."
-msgstr "<em>filter</em> alebo <em>action</em>, aby bolo na prvý pohľad jasné, či sa čaká návratová hodnota."
+msgid ""
+"<em>filter</em> or <em>action</em>, so you can tell at a glance whether a "
+"return is expected."
+msgstr ""
+"<em>filter</em> alebo <em>action</em>, aby bolo na prvý pohľad jasné, či sa "
+"čaká návratová hodnota."
 
 #: includes/wpematicohk_settings.php:232
 msgid "The code is checked before it is saved"
 msgstr "Kód sa pred uložením skontroluje"
 
 #: includes/wpematicohk_settings.php:233
-msgid "a syntax error is reported with its line and reason and nothing is stored, so a typo cannot leave the site unable to load. The check runs in place and needs no connection back to your own server, which is what makes it work on managed and firewalled hosting."
-msgstr "syntaktická chyba sa ohlási s riadkom a dôvodom a nič sa neuloží, takže preklep nemôže spôsobiť, že sa web nenačíta. Kontrola beží na mieste a nepotrebuje žiadne spojenie späť na tvoj vlastný server, čo je to, čo ju nechá fungovať na spravovanom hostingu a za firewallom."
+msgid ""
+"a syntax error is reported with its line and reason and nothing is stored, "
+"so a typo cannot leave the site unable to load. The check runs in place and "
+"needs no connection back to your own server, which is what makes it work on "
+"managed and firewalled hosting."
+msgstr ""
+"syntaktická chyba sa ohlási s riadkom a dôvodom a nič sa neuloží, takže "
+"preklep nemôže spôsobiť, že sa web nenačíta. Kontrola beží na mieste a "
+"nepotrebuje žiadne spojenie späť na tvoj vlastný server, čo je to, čo ju "
+"nechá fungovať na spravovanom hostingu a za firewallom."
 
 #: includes/wpematicohk_settings.php:234
 msgid "One function per hook"
 msgstr "Jedna funkcia na hook"
 
 #: includes/wpematicohk_settings.php:235
-msgid "each entry declares its own function, so two entries must not declare functions of the same name. PHP cannot recover from that."
-msgstr "každý záznam deklaruje svoju vlastnú funkciu, takže dva záznamy nesmú deklarovať funkcie s rovnakým názvom. Z toho sa PHP nedokáže zotaviť."
+msgid ""
+"each entry declares its own function, so two entries must not declare "
+"functions of the same name. PHP cannot recover from that."
+msgstr ""
+"každý záznam deklaruje svoju vlastnú funkciu, takže dva záznamy nesmú "
+"deklarovať funkcie s rovnakým názvom. Z toho sa PHP nedokáže zotaviť."
 
 #: includes/wpematicohk_settings.php:240
 msgid "The editor"
@@ -559,32 +740,48 @@ msgid "Working in the editor"
 msgstr "Práca v editore"
 
 #: includes/wpematicohk_settings.php:243
-msgid "It is the same code editor WordPress uses for its own file editors, with PHP highlighting, bracket matching and line numbers."
-msgstr "Je to ten istý editor kódu, ktorý WordPress používa vo svojich editoroch súborov, s vyznačovaním PHP, párovaním zátvoriek a číslovaním riadkov."
+msgid ""
+"It is the same code editor WordPress uses for its own file editors, with PHP "
+"highlighting, bracket matching and line numbers."
+msgstr ""
+"Je to ten istý editor kódu, ktorý WordPress používa vo svojich editoroch "
+"súborov, s vyznačovaním PHP, párovaním zátvoriek a číslovaním riadkov."
 
 #: includes/wpematicohk_settings.php:244
 msgid "Colour scheme"
 msgstr "Farebná schéma"
 
 #: includes/wpematicohk_settings.php:245
-msgid "Monokai, Blackboard or Cobalt. It changes nothing but how the editor looks, and it is remembered for you alone."
-msgstr "Monokai, Blackboard alebo Cobalt. Nemení nič okrem toho, ako editor vyzerá, a pamätá sa len pre teba."
+msgid ""
+"Monokai, Blackboard or Cobalt. It changes nothing but how the editor looks, "
+"and it is remembered for you alone."
+msgstr ""
+"Monokai, Blackboard alebo Cobalt. Nemení nič okrem toho, ako editor vyzerá, "
+"a pamätá sa len pre teba."
 
 #: includes/wpematicohk_settings.php:246
 msgid "The hook filter above the list"
 msgstr "Filter hookov nad zoznamom"
 
 #: includes/wpematicohk_settings.php:247
-msgid "narrows the long list to one hook while you work, so you are not scrolling past the ones you are not using. It does not delete or disable anything."
-msgstr "zúži dlhý zoznam na jediný hook, kým pracuješ, aby si nemusel prechádzať tie, ktoré nepoužívaš. Nič nemaže ani nevypína."
+msgid ""
+"narrows the long list to one hook while you work, so you are not scrolling "
+"past the ones you are not using. It does not delete or disable anything."
+msgstr ""
+"zúži dlhý zoznam na jediný hook, kým pracuješ, aby si nemusel prechádzať "
+"tie, ktoré nepoužívaš. Nič nemaže ani nevypína."
 
 #: includes/wpematicohk_settings.php:248
 msgid "Saving"
 msgstr "Ukladanie"
 
 #: includes/wpematicohk_settings.php:249
-msgid "either button on this screen saves the whole tab, and both run the check first."
-msgstr "ktorékoľvek z tlačidiel na tejto obrazovke uloží celú kartu a obe najprv spustia kontrolu."
+msgid ""
+"either button on this screen saves the whole tab, and both run the check "
+"first."
+msgstr ""
+"ktorékoľvek z tlačidiel na tejto obrazovke uloží celú kartu a obe najprv "
+"spustia kontrolu."
 
 #: includes/wpematicohk_settings.php:270
 msgid "Hooks"
@@ -595,8 +792,14 @@ msgid "Add a hook"
 msgstr "Pridať hook"
 
 #: includes/wpematicohk_settings.php:323
-msgid "Pick the hook you want to run code on and press Add Function: an editor opens below with the signature already written for you. The theme only changes how that editor looks."
-msgstr "Vyber hook, na ktorom chceš spúšťať kód, a stlač Pridať funkciu: nižšie sa otvorí editor s hlavičkou už napísanou za teba. Šablóna mení len to, ako ten editor vyzerá."
+msgid ""
+"Pick the hook you want to run code on and press Add Function: an editor "
+"opens below with the signature already written for you. The theme only "
+"changes how that editor looks."
+msgstr ""
+"Vyber hook, na ktorom chceš spúšťať kód, a stlač Pridať funkciu: nižšie sa "
+"otvorí editor s hlavičkou už napísanou za teba. Šablóna mení len to, ako ten "
+"editor vyzerá."
 
 #: includes/wpematicohk_settings.php:325
 msgid "Select theme for the editor"
@@ -630,7 +833,8 @@ msgstr "Pridať funkciu"
 msgid "Save Data"
 msgstr "Uložiť údaje"
 
-#: includes/wpematicohk_settings.php:376 includes/wpematicohk_settings.php:407 includes/settings/wpematicohk_settings_2_9.php:37
+#: includes/wpematicohk_settings.php:376 includes/wpematicohk_settings.php:407
+#: includes/settings/wpematicohk_settings_2_9.php:37
 msgid "Click to toggle"
 msgstr "Klikni na rozbalenie"
 
@@ -647,8 +851,11 @@ msgid "Thanks for test, use and enjoy this plugin."
 msgstr "Ďakujeme, že tento plugin skúšaš a používaš."
 
 #: includes/wpematicohk_settings.php:386
-msgid "If you like it and want to thank, you can write a 5 star review on Wordpress."
-msgstr "Ak sa ti pozdáva a chceš sa odvďačiť, môžeš napísať 5-hviezdičkovú recenziu na WordPresse."
+msgid ""
+"If you like it and want to thank, you can write a 5 star review on Wordpress."
+msgstr ""
+"Ak sa ti pozdáva a chceš sa odvďačiť, môžeš napísať 5-hviezdičkovú recenziu "
+"na WordPresse."
 
 #: includes/wpematicohk_settings.php:390
 msgid "Click here to rate the plugin on Wordpress"
@@ -679,8 +886,12 @@ msgid "No hook is running code yet."
 msgstr "Zatiaľ žiadny hook nespúšťa kód."
 
 #: includes/wpematicohk_settings.php:456
-msgid "Pick a hook in the box above and press Add Function. Its editor opens here, with the function signature already written for you."
-msgstr "Vyber hook v políčku vyššie a stlač Pridať funkciu. Jeho editor sa otvorí tu, s hlavičkou funkcie už napísanou za teba."
+msgid ""
+"Pick a hook in the box above and press Add Function. Its editor opens here, "
+"with the function signature already written for you."
+msgstr ""
+"Vyber hook v políčku vyššie a stlač Pridať funkciu. Jeho editor sa otvorí "
+"tu, s hlavičkou funkcie už napísanou za teba."
 
 #: includes/wpematicohk_settings.php:465
 msgid "in use"
@@ -698,28 +909,37 @@ msgstr "Kód sa nedal skontrolovať: %s"
 
 #. translators: %s: parameter name
 #: includes/wpematicohk_sintax.php:74
-msgid "The parameter %s is named twice in the same function. PHP refuses to compile that, and the error cannot be caught, so it would take the whole site down."
-msgstr "Parameter %s je v tej istej funkcii pomenovaný dvakrát. PHP to odmieta preložiť a takú chybu nemožno zachytiť, takže by zhodila celý web."
+msgid ""
+"The parameter %s is named twice in the same function. PHP refuses to compile "
+"that, and the error cannot be caught, so it would take the whole site down."
+msgstr ""
+"Parameter %s je v tej istej funkcii pomenovaný dvakrát. PHP to odmieta "
+"preložiť a takú chybu nemožno zachytiť, takže by zhodila celý web."
 
 #. translators: 1: function name, 2: the other hook's name
 #: includes/wpematicohk_sintax.php:86
-msgid "The function %1$s is already declared in the code for %2$s. Two hooks cannot declare the same function name — rename one of them."
-msgstr "Funkcia %1$s je už deklarovaná v kóde pre %2$s. Dva hooky nemôžu deklarovať rovnaký názov funkcie — jeden z nich premenuj."
+msgid ""
+"The function %1$s is already declared in the code for %2$s. Two hooks cannot "
+"declare the same function name — rename one of them."
+msgstr ""
+"Funkcia %1$s je už deklarovaná v kóde pre %2$s. Dva hooky nemôžu deklarovať "
+"rovnaký názov funkcie — jeden z nich premenuj."
 
 #. translators: %s: function name
 #: includes/wpematicohk_sintax.php:98
-msgid "The function %s already exists in WordPress or in another plugin. Declaring it again would be a fatal error — pick a different name."
-msgstr "Funkcia %s už existuje vo WordPresse alebo v inom plugine. Deklarovať ju znovu by bola fatálna chyba — vyber iný názov."
-
-#: wpematico_custom-hooks.php:180
-msgid "Plugin Name Settings"
-msgstr "Nastavenia Plugin Name"
-
-#: wpematico_custom-hooks.php:181
-msgid "Configure Plugin Name Settings"
-msgstr "Nastaviť možnosti Plugin Name"
+msgid ""
+"The function %s already exists in WordPress or in another plugin. Declaring "
+"it again would be a fatal error — pick a different name."
+msgstr ""
+"Funkcia %s už existuje vo WordPresse alebo v inom plugine. Deklarovať ju "
+"znovu by bola fatálna chyba — vyber iný názov."
 
 #. translators: 1: required WPeMatico version, 2: installed WPeMatico version
-#: wpematico_custom-hooks.php:238
-msgid "WPeMatico Custom Hooks needs WPeMatico %1$s or newer to run. You have %2$s installed, so the Hooks screen is disabled until you update."
-msgstr "WPeMatico Custom Hooks potrebuje na svoju prácu WPeMatico %1$s alebo novší. Máš nainštalovaný %2$s, takže obrazovka Hooks zostáva vypnutá, kým neaktualizuješ."
+#: wpematico_custom-hooks.php:217
+msgid ""
+"WPeMatico Custom Hooks needs WPeMatico %1$s or newer to run. You have %2$s "
+"installed, so the Hooks screen is disabled until you update."
+msgstr ""
+"WPeMatico Custom Hooks potrebuje na svoju prácu WPeMatico %1$s alebo novší. "
+"Máš nainštalovaný %2$s, takže obrazovka Hooks zostáva vypnutá, kým "
+"neaktualizuješ."

@@ -165,27 +165,6 @@ if (!class_exists('wpematicohk')) {
 			}
 		}
 
-		/**
-		 * Add settings
-		 *
-		 * @access      public
-		 * @since       1.0.0
-		 * @param       array $settings The existing EDD settings array
-		 * @return      array The modified EDD settings array
-		 */
-		public static function settings($settings) {
-			$new_settings = array(
-				array(
-					'id' => 'wpematicohk_settings',
-					'name' => '<strong>' . __('Plugin Name Settings', 'wpematico-custom-hooks') . '</strong>',
-					'desc' => __('Configure Plugin Name Settings', 'wpematico-custom-hooks'),
-					'type' => 'header',
-				)
-			);
-
-			return array_merge($settings, $new_settings);
-		}
-
 	}
 
 } // End if class_exists check

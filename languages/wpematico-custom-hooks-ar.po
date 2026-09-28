@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPeMatico Custom Hooks 1.4\n"
 "Report-Msgid-Bugs-To: https://etruel.com/my-account/support/\n"
-"POT-Creation-Date: 2026-09-28 00:59+0000\n"
+"POT-Creation-Date: 2026-09-28 01:34+0000\n"
 "PO-Revision-Date: 2026-09-27 00:00+0000\n"
 "Last-Translator: Etruel Developments <translations@etruel.com>\n"
 "Language-Team: Etruel Developments <translations@etruel.com>\n"
@@ -12,9 +12,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c\n"
 "X-Poedit-Basepath: ..\n"
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -67,27 +69,40 @@ msgid "The final image address that will be downloaded."
 msgstr "العنوان النهائي للصورة التي ستُنزَّل."
 
 #: includes/data_load/wpematicohk_array_hooks.php:166
-msgid "The image address before the parts the campaign is set to strip are removed."
+msgid ""
+"The image address before the parts the campaign is set to strip are removed."
 msgstr "عنوان الصورة قبل إزالة الأجزاء التي ضُبطت الحملة على حذفها."
 
 #: includes/data_load/wpematicohk_array_hooks.php:176
-msgid "File extensions accepted when downloading images. Anything else is left where it is."
+msgid ""
+"File extensions accepted when downloading images. Anything else is left "
+"where it is."
 msgstr "امتدادات الملفات المقبولة عند تنزيل الصور. وما عداها يُترك في مكانه."
 
 #: includes/data_load/wpematicohk_array_hooks.php:187
-msgid "Runs when the campaign has finished. Returns the campaign data, so it can still be changed before it is saved."
+msgid ""
+"Runs when the campaign has finished. Returns the campaign data, so it can "
+"still be changed before it is saved."
 msgstr "يعمل عندما تنتهي الحملة. يُرجع بيانات الحملة، فيمكن تغييرها قبل حفظها."
 
 #: includes/data_load/wpematicohk_array_hooks.php:196
-msgid "The feed address, right before it is fetched. Point a campaign at a different address from here."
+msgid ""
+"The feed address, right before it is fetched. Point a campaign at a "
+"different address from here."
 msgstr "عنوان التغذية، قبل جلبها تمامًا. من هنا تُوجَّه حملة إلى عنوان آخر."
 
 #: includes/data_load/wpematicohk_array_hooks.php:205
-msgid "Replace or change the SimplePie object of a campaign whose type is not fetched as a plain feed. A feed, YouTube or bbPress campaign returns before this point and never reaches it."
-msgstr "استبدل أو عدّل كائن SimplePie لحملة لا يُجلب نوعها كتغذية عادية. حملة من نوع تغذية أو YouTube أو bbPress ترجع قبل هذه النقطة ولا تصل إلى هنا أبدًا."
+msgid ""
+"Replace or change the SimplePie object of a campaign whose type is not "
+"fetched as a plain feed. A feed, YouTube or bbPress campaign returns before "
+"this point and never reaches it."
+msgstr ""
+"استبدل أو عدّل كائن SimplePie لحملة لا يُجلب نوعها كتغذية عادية. حملة من نوع "
+"تغذية أو YouTube أو bbPress ترجع قبل هذه النقطة ولا تصل إلى هنا أبدًا."
 
 #: includes/data_load/wpematicohk_array_hooks.php:214
-msgid "The item once its author was resolved. Set author to a WordPress user id."
+msgid ""
+"The item once its author was resolved. Set author to a WordPress user id."
 msgstr "العنصر بعد تحديد كاتبه. ضع في author معرّف مستخدم ووردبريس."
 
 #: includes/data_load/wpematicohk_array_hooks.php:22
@@ -103,7 +118,9 @@ msgid "Runs before the images of the item are processed."
 msgstr "يعمل قبل معالجة صور العنصر."
 
 #: includes/data_load/wpematicohk_array_hooks.php:241
-msgid "Return an image address to force the featured image instead of letting the campaign pick one."
+msgid ""
+"Return an image address to force the featured image instead of letting the "
+"campaign pick one."
 msgstr "أرجِع عنوان صورة لفرض الصورة البارزة بدلًا من ترك الحملة تختار واحدة."
 
 #: includes/data_load/wpematicohk_array_hooks.php:250
@@ -111,7 +128,9 @@ msgid "The featured image address the campaign settled on."
 msgstr "عنوان الصورة البارزة التي انتهت إليها الحملة."
 
 #: includes/data_load/wpematicohk_array_hooks.php:259
-msgid "Runs once the images of the item have been processed and replaced in the content."
+msgid ""
+"Runs once the images of the item have been processed and replaced in the "
+"content."
 msgstr "يعمل بعد معالجة صور العنصر واستبدالها في المحتوى."
 
 #: includes/data_load/wpematicohk_array_hooks.php:268
@@ -139,8 +158,12 @@ msgid "The content_filtered column of the post being created."
 msgstr "عمود content_filtered للمقالة التي تُنشأ."
 
 #: includes/data_load/wpematicohk_array_hooks.php:32
-msgid "Filename the downloaded image is stored under. A source whose addresses carry no file extension needs this, or its images are dropped."
-msgstr "اسم الملف الذي تُحفظ به الصورة المنزّلة. المصدر الذي لا تحمل عناوينه امتدادًا يحتاج هذا، وإلا أُسقطت صوره."
+msgid ""
+"Filename the downloaded image is stored under. A source whose addresses "
+"carry no file extension needs this, or its images are dropped."
+msgstr ""
+"اسم الملف الذي تُحفظ به الصورة المنزّلة. المصدر الذي لا تحمل عناوينه امتدادًا "
+"يحتاج هذا، وإلا أُسقطت صوره."
 
 #: includes/data_load/wpematicohk_array_hooks.php:322
 msgid "Status the post being created is saved with."
@@ -163,11 +186,16 @@ msgid "Whether comments are open on the post being created."
 msgstr "ما إذا كانت التعليقات مفتوحة على المقالة التي تُنشأ."
 
 #: includes/data_load/wpematicohk_array_hooks.php:367
-msgid "The whole argument list about to reach wp_insert_post. The last chance to change what is saved."
-msgstr "قائمة الوسائط كاملة التي ستصل إلى wp_insert_post. آخر فرصة لتغيير ما يُحفظ."
+msgid ""
+"The whole argument list about to reach wp_insert_post. The last chance to "
+"change what is saved."
+msgstr ""
+"قائمة الوسائط كاملة التي ستصل إلى wp_insert_post. آخر فرصة لتغيير ما يُحفظ."
 
 #: includes/data_load/wpematicohk_array_hooks.php:376
-msgid "Return false to stop this item from being inserted, with everything already prepared."
+msgid ""
+"Return false to stop this item from being inserted, with everything already "
+"prepared."
 msgstr "أرجِع false لمنع إدراج هذا العنصر، وكل شيء مُعَدّ من قبل."
 
 #: includes/data_load/wpematicohk_array_hooks.php:385
@@ -175,8 +203,12 @@ msgid "Return true to treat this item as a duplicate, so it is not imported."
 msgstr "أرجِع true لمعاملة هذا العنصر كمكرّر، فلا يُستورد."
 
 #: includes/data_load/wpematicohk_array_hooks.php:394
-msgid "Fires once the post exists. The place to add your own meta, taxonomies or related records."
-msgstr "يُطلق بعد أن توجد المقالة. المكان لإضافة بياناتك الوصفية أو تصنيفاتك أو سجلاتك المرتبطة."
+msgid ""
+"Fires once the post exists. The place to add your own meta, taxonomies or "
+"related records."
+msgstr ""
+"يُطلق بعد أن توجد المقالة. المكان لإضافة بياناتك الوصفية أو تصنيفاتك أو "
+"سجلاتك المرتبطة."
 
 #: includes/data_load/wpematicohk_array_hooks.php:403
 msgid "Description given to a category that is created automatically."
@@ -191,7 +223,9 @@ msgid "Title used for the YouTube image of the item."
 msgstr "العنوان المستخدم لصورة YouTube للعنصر."
 
 #: includes/data_load/wpematicohk_array_hooks.php:424
-msgid "The global settings, normalised. Where an add-on registers the defaults of its own options."
+msgid ""
+"The global settings, normalised. Where an add-on registers the defaults of "
+"its own options."
 msgstr "الإعدادات العامة، مُسوّاة. هنا تُسجّل إضافة القيم الافتراضية لخياراتها."
 
 #: includes/data_load/wpematicohk_array_hooks.php:433
@@ -199,11 +233,15 @@ msgid "Memory limit a campaign run is allowed to use. Default 256M."
 msgstr "حدّ الذاكرة المسموح لتشغيل حملة. الافتراضي 256M."
 
 #: includes/data_load/wpematicohk_array_hooks.php:442
-msgid "Arguments handed to SimplePie for this feed: timeouts, ordering, how many items."
+msgid ""
+"Arguments handed to SimplePie for this feed: timeouts, ordering, how many "
+"items."
 msgstr "الوسائط المُعطاة لـ SimplePie لهذه التغذية: المهل، الترتيب، كم عنصرًا."
 
 #: includes/data_load/wpematicohk_array_hooks.php:451
-msgid "How many recent items are remembered per feed to recognise duplicates. Default 20."
+msgid ""
+"How many recent items are remembered per feed to recognise duplicates. "
+"Default 20."
 msgstr "كم عنصرًا حديثًا يُتذكَّر لكل تغذية للتعرّف على المكرّرات. الافتراضي 20."
 
 #: includes/data_load/wpematicohk_array_hooks.php:460
@@ -211,7 +249,8 @@ msgid "The date read from the feed item."
 msgstr "التاريخ المقروء من عنصر التغذية."
 
 #: includes/data_load/wpematicohk_array_hooks.php:469
-msgid "The raw description as the feed served it, before any parser touches it."
+msgid ""
+"The raw description as the feed served it, before any parser touches it."
 msgstr "الوصف الخام كما قدّمته التغذية، قبل أن يمسّه أي محلّل."
 
 #: includes/data_load/wpematicohk_array_hooks.php:478
@@ -231,7 +270,9 @@ msgid "Runs once every image, audio and video of the item has been processed."
 msgstr "يعمل بعد معالجة كل صورة وصوت وفيديو للعنصر."
 
 #: includes/data_load/wpematicohk_array_hooks.php:514
-msgid "The last pass over the item, after every parser and every media filter has run."
+msgid ""
+"The last pass over the item, after every parser and every media filter has "
+"run."
 msgstr "المرور الأخير على العنصر، بعد كل محلّل وكل مرشّح وسائط."
 
 #: includes/data_load/wpematicohk_array_hooks.php:52
@@ -247,7 +288,8 @@ msgid "Parent post of the post being created."
 msgstr "المقالة الأصل للمقالة التي تُنشأ."
 
 #: includes/data_load/wpematicohk_array_hooks.php:541
-msgid "The attachment id set as the featured image, once the post has been inserted."
+msgid ""
+"The attachment id set as the featured image, once the post has been inserted."
 msgstr "معرّف المرفق المضبوط كصورة بارزة، بعد إدراج المقالة."
 
 #: includes/data_load/wpematicohk_array_hooks.php:550
@@ -255,8 +297,12 @@ msgid "The final list of categories the post is filed under."
 msgstr "القائمة النهائية للتصنيفات التي تُدرج المقالة تحتها."
 
 #: includes/data_load/wpematicohk_array_hooks.php:559
-msgid "Which image parser handles this item. Return your own id and answer wpematico images parser {id}."
-msgstr "أي محلّل صور يتولّى هذا العنصر. أرجِع معرّفك الخاص وأجب على wpematico images parser {id}."
+msgid ""
+"Which image parser handles this item. Return your own id and answer "
+"wpematico images parser {id}."
+msgstr ""
+"أي محلّل صور يتولّى هذا العنصر. أرجِع معرّفك الخاص وأجب على wpematico images "
+"parser {id}."
 
 #: includes/data_load/wpematicohk_array_hooks.php:568
 msgid "The regular expression that finds the images in the content."
@@ -279,7 +325,9 @@ msgid "The audio address found in the item, before it is downloaded."
 msgstr "عنوان الصوت الموجود في العنصر، قبل تنزيله."
 
 #: includes/data_load/wpematicohk_array_hooks.php:613
-msgid "File extensions accepted when downloading audio. Anything else is left where it is."
+msgid ""
+"File extensions accepted when downloading audio. Anything else is left where "
+"it is."
 msgstr "امتدادات الملفات المقبولة عند تنزيل الصوت. وما عداها يُترك في مكانه."
 
 #: includes/data_load/wpematicohk_array_hooks.php:62
@@ -299,7 +347,9 @@ msgid "The video address found in the item, before it is downloaded."
 msgstr "عنوان الفيديو الموجود في العنصر، قبل تنزيله."
 
 #: includes/data_load/wpematicohk_array_hooks.php:649
-msgid "File extensions accepted when downloading video. Anything else is left where it is."
+msgid ""
+"File extensions accepted when downloading video. Anything else is left where "
+"it is."
 msgstr "امتدادات الملفات المقبولة عند تنزيل الفيديو. وما عداها يُترك في مكانه."
 
 #: includes/data_load/wpematicohk_array_hooks.php:658
@@ -307,20 +357,32 @@ msgid "Filename the downloaded video is stored under."
 msgstr "اسم الملف الذي يُحفظ به الفيديو المنزّل."
 
 #: includes/data_load/wpematicohk_array_hooks.php:668
-msgid "Return false so a category read from the feed is only assigned when it already exists, never created."
-msgstr "أرجِع false حتى لا يُسنَد تصنيف مقروء من التغذية إلا إذا كان موجودًا، ولا يُنشأ أبدًا."
+msgid ""
+"Return false so a category read from the feed is only assigned when it "
+"already exists, never created."
+msgstr ""
+"أرجِع false حتى لا يُسنَد تصنيف مقروء من التغذية إلا إذا كان موجودًا، ولا يُنشأ "
+"أبدًا."
 
 #: includes/data_load/wpematicohk_array_hooks.php:677
 msgid "The post the item is filed under as a child. 0 means no parent."
 msgstr "المقالة التي يُدرج العنصر تحتها كابن. القيمة 0 تعني بلا أصل."
 
 #: includes/data_load/wpematicohk_array_hooks.php:686
-msgid "Campaign types fetched as a plain feed. A type listed here takes the standard route, with its timeouts, ordering and paging."
-msgstr "أنواع الحملات التي تُجلب كتغذية عادية. النوع المذكور هنا يسلك الطريق القياسي، بمهله وترتيبه وتصفّحه."
+msgid ""
+"Campaign types fetched as a plain feed. A type listed here takes the "
+"standard route, with its timeouts, ordering and paging."
+msgstr ""
+"أنواع الحملات التي تُجلب كتغذية عادية. النوع المذكور هنا يسلك الطريق القياسي، "
+"بمهله وترتيبه وتصفّحه."
 
 #: includes/data_load/wpematicohk_array_hooks.php:695
-msgid "The Processed Posts line of the run result. A campaign that imports nothing by design can report a count that means something."
-msgstr "سطر «المقالات المعالجة» في نتيجة التشغيل. الحملة التي لا تستورد شيئًا بحكم تصميمها تستطيع بهذا أن تُبلّغ رقمًا له معنى."
+msgid ""
+"The Processed Posts line of the run result. A campaign that imports nothing "
+"by design can report a count that means something."
+msgstr ""
+"سطر «المقالات المعالجة» في نتيجة التشغيل. الحملة التي لا تستورد شيئًا بحكم "
+"تصميمها تستطيع بهذا أن تُبلّغ رقمًا له معنى."
 
 #: includes/data_load/wpematicohk_array_hooks.php:710
 msgid "The Vimeo player embed built for the item."
@@ -335,7 +397,8 @@ msgid "The raw content as the feed served it, before any parser touches it."
 msgstr "المحتوى الخام كما قدّمته التغذية، قبل أن يمسّه أي محلّل."
 
 #: includes/data_load/wpematicohk_array_hooks.php:735
-msgid "The author name read from the feed, before the user is looked up or created."
+msgid ""
+"The author name read from the feed, before the user is looked up or created."
 msgstr "اسم الكاتب المقروء من التغذية، قبل البحث عن المستخدم أو إنشائه."
 
 #: includes/data_load/wpematicohk_array_hooks.php:743
@@ -351,8 +414,12 @@ msgid "Folder Full Content reads its per site extraction rules from."
 msgstr "المجلد الذي يقرأ منه Full Content قواعد الاستخراج لكل موقع."
 
 #: includes/data_load/wpematicohk_array_hooks.php:778
-msgid "Returns the whole article for an address. Answer it to replace the way Full Content downloads the page."
-msgstr "يُرجع المقالة كاملة لعنوان ما. أجب عليه لتستبدل طريقة تنزيل Full Content للصفحة."
+msgid ""
+"Returns the whole article for an address. Answer it to replace the way Full "
+"Content downloads the page."
+msgstr ""
+"يُرجع المقالة كاملة لعنوان ما. أجب عليه لتستبدل طريقة تنزيل Full Content "
+"للصفحة."
 
 #: includes/data_load/wpematicohk_array_hooks.php:787
 msgid "The whole article HTML that Full Content read from the source page."
@@ -379,12 +446,20 @@ msgid "The languages offered for translation."
 msgstr "اللغات المعروضة للترجمة."
 
 #: includes/data_load/wpematicohk_array_hooks.php:837
-msgid "Which clean-up runs on the content before it is translated. The name answers the polyglot process filter for that type."
-msgstr "أي تنظيف يُجرى على المحتوى قبل ترجمته. الاسم يجيب مرشّح polyglot process لذلك النوع."
+msgid ""
+"Which clean-up runs on the content before it is translated. The name answers "
+"the polyglot process filter for that type."
+msgstr ""
+"أي تنظيف يُجرى على المحتوى قبل ترجمته. الاسم يجيب مرشّح polyglot process لذلك "
+"النوع."
 
 #: includes/data_load/wpematicohk_array_hooks.php:846
-msgid "Cleans the post arguments before they are translated. This is what polyglot process type selects, strip_tags by default."
-msgstr "ينظّف وسائط المقالة قبل ترجمتها. هذا ما يختاره polyglot process type، وافتراضه strip_tags."
+msgid ""
+"Cleans the post arguments before they are translated. This is what polyglot "
+"process type selects, strip_tags by default."
+msgstr ""
+"ينظّف وسائط المقالة قبل ترجمتها. هذا ما يختاره polyglot process type، "
+"وافتراضه strip_tags."
 
 #: includes/data_load/wpematicohk_array_hooks.php:860
 msgid "The Better Excerpts options, normalised with their defaults."
@@ -395,8 +470,12 @@ msgid "Fires at the end of the Better Excerpts fields, to add your own."
 msgstr "يُطلق في نهاية حقول Better Excerpts، لإضافة حقولك."
 
 #: includes/data_load/wpematicohk_array_hooks.php:90
-msgid "The main content parser, and where most add-ons change the title, content and excerpt of an item."
-msgstr "محلّل المحتوى الرئيسي، والمكان الذي تغيّر فيه معظم الإضافات عنوان العنصر ومحتواه ومقتطفه."
+msgid ""
+"The main content parser, and where most add-ons change the title, content "
+"and excerpt of an item."
+msgstr ""
+"محلّل المحتوى الرئيسي، والمكان الذي تغيّر فيه معظم الإضافات عنوان العنصر "
+"ومحتواه ومقتطفه."
 
 #: includes/plugin_functions.php:49
 msgid "WPeMatico Custom Hooks DEACTIVATED."
@@ -410,13 +489,21 @@ msgstr "الانتقال إلى صفحة إعدادات WPeMatico Custom Hooks"
 msgid "Settings"
 msgstr "الإعدادات"
 
-#: includes/settings/wpematicohk_settings_2_9.php:43 includes/settings/wpematicohk_widgets.php:69
+#: includes/settings/wpematicohk_settings_2_9.php:43
+#: includes/settings/wpematicohk_widgets.php:69
 msgid "Custom Hooks"
 msgstr "Custom Hooks"
 
 #: includes/settings/wpematicohk_settings_2_9.php:48
-msgid "Runs your own PHP on any of the hooks WPeMatico fires while a campaign works — to change a title, filter an item, add a custom field. What you write is checked before it is saved, so a mistake is reported instead of taking the site down."
-msgstr "يشغّل كود PHP الخاص بك على أي من الخطّافات التي يطلقها WPeMatico أثناء عمل حملة — لتغيير عنوان، أو ترشيح عنصر، أو إضافة حقل مخصص. ما تكتبه يُفحص قبل حفظه، فيُبلَّغ عن الخطأ بدلًا من إسقاط الموقع."
+msgid ""
+"Runs your own PHP on any of the hooks WPeMatico fires while a campaign works "
+"— to change a title, filter an item, add a custom field. What you write is "
+"checked before it is saved, so a mistake is reported instead of taking the "
+"site down."
+msgstr ""
+"يشغّل كود PHP الخاص بك على أي من الخطّافات التي يطلقها WPeMatico أثناء عمل "
+"حملة — لتغيير عنوان، أو ترشيح عنصر، أو إضافة حقل مخصص. ما تكتبه يُفحص قبل "
+"حفظه، فيُبلَّغ عن الخطأ بدلًا من إسقاط الموقع."
 
 #: includes/settings/wpematicohk_settings_2_9.php:49
 msgid "Details in the Help tab, top right."
@@ -432,8 +519,12 @@ msgid "Needs WPeMatico %s or newer."
 msgstr "يحتاج إلى WPeMatico %s أو أحدث."
 
 #: includes/settings/wpematicohk_widgets.php:75
-msgid "Write PHP for any of the hooks WPeMatico fires, straight from here. The code is checked before it is saved, so a typo cannot take the site down."
-msgstr "اكتب PHP لأي من الخطّافات التي يطلقها WPeMatico، من هنا مباشرة. يُفحص الكود قبل حفظه، فلا يستطيع خطأ مطبعي إسقاط الموقع."
+msgid ""
+"Write PHP for any of the hooks WPeMatico fires, straight from here. The code "
+"is checked before it is saved, so a typo cannot take the site down."
+msgstr ""
+"اكتب PHP لأي من الخطّافات التي يطلقها WPeMatico، من هنا مباشرة. يُفحص الكود "
+"قبل حفظه، فلا يستطيع خطأ مطبعي إسقاط الموقع."
 
 #: includes/settings/wpematicohk_widgets.php:81
 msgid "Plugin page on WordPress.org"
@@ -449,13 +540,22 @@ msgstr "اكتب تقييمًا بخمس نجوم"
 
 #. translators: 1: hook name, 2: comma separated function names
 #: includes/wpematicohk_execute_action_filter.php:211
-msgid "WPeMatico Custom Hooks skipped the code for %1$s: the function %2$s is already declared somewhere else. Rename it, or remove it from one of the two hooks."
-msgstr "تجاوز WPeMatico Custom Hooks كود %1$s: الدالة %2$s معلَنة بالفعل في مكان آخر. أعد تسميتها، أو أزلها من أحد الخطّافين."
+msgid ""
+"WPeMatico Custom Hooks skipped the code for %1$s: the function %2$s is "
+"already declared somewhere else. Rename it, or remove it from one of the two "
+"hooks."
+msgstr ""
+"تجاوز WPeMatico Custom Hooks كود %1$s: الدالة %2$s معلَنة بالفعل في مكان آخر. "
+"أعد تسميتها، أو أزلها من أحد الخطّافين."
 
 #. translators: 1: function name, 2: hook name
 #: includes/wpematicohk_execute_action_filter.php:220
-msgid "WPeMatico Custom Hooks could not attach %1$s to %2$s: the code saved for that hook does not declare it."
-msgstr "لم يستطع WPeMatico Custom Hooks ربط %1$s بـ %2$s: الكود المحفوظ لذلك الخطّاف لا يعلنها."
+msgid ""
+"WPeMatico Custom Hooks could not attach %1$s to %2$s: the code saved for "
+"that hook does not declare it."
+msgstr ""
+"لم يستطع WPeMatico Custom Hooks ربط %1$s بـ %2$s: الكود المحفوظ لذلك الخطّاف "
+"لا يعلنها."
 
 #. translators: 1: hook name, 2: PHP error message
 #: includes/wpematicohk_execute_action_filter.php:229
@@ -482,7 +582,8 @@ msgstr "لم يكتمل فحص النحو. حاول مرة أخرى."
 msgid "In hook:"
 msgstr "في الخطّاف:"
 
-#: includes/wpematicohk_settings.php:181 includes/wpematicohk_settings.php:516 includes/wpematicohk_sintax.php:44
+#: includes/wpematicohk_settings.php:181 includes/wpematicohk_settings.php:516
+#: includes/wpematicohk_sintax.php:44
 msgid "Security check."
 msgstr "تحقّق أمني."
 
@@ -495,16 +596,31 @@ msgid "What this does"
 msgstr "ما الذي يفعله هذا"
 
 #: includes/wpematicohk_settings.php:217
-msgid "WPeMatico announces every step of its work through hooks: it is about to read an item, it has built a title, it is ready to insert a post. This plugin lets you write PHP that runs at those moments, without a child theme and without an FTP client."
-msgstr "يعلن WPeMatico كل خطوة من عمله عبر خطّافات: إنه على وشك قراءة عنصر، لقد بنى عنوانًا، إنه مستعد لإدراج مقالة. تتيح لك هذه الإضافة أن تكتب PHP يعمل في تلك اللحظات، بلا قالب ابن وبلا برنامج FTP."
+msgid ""
+"WPeMatico announces every step of its work through hooks: it is about to "
+"read an item, it has built a title, it is ready to insert a post. This "
+"plugin lets you write PHP that runs at those moments, without a child theme "
+"and without an FTP client."
+msgstr ""
+"يعلن WPeMatico كل خطوة من عمله عبر خطّافات: إنه على وشك قراءة عنصر، لقد بنى "
+"عنوانًا، إنه مستعد لإدراج مقالة. تتيح لك هذه الإضافة أن تكتب PHP يعمل في تلك "
+"اللحظات، بلا قالب ابن وبلا برنامج FTP."
 
 #: includes/wpematicohk_settings.php:218
-msgid "Pick a hook, press <strong>Add Function</strong>, and an editor opens with the function signature already written. Fill in the body and save."
-msgstr "اختر خطّافًا، واضغط <strong>إضافة دالة</strong>، فيُفتح محرّر وتوقيع الدالة مكتوب فيه بالفعل. املأ الجسم واحفظ."
+msgid ""
+"Pick a hook, press <strong>Add Function</strong>, and an editor opens with "
+"the function signature already written. Fill in the body and save."
+msgstr ""
+"اختر خطّافًا، واضغط <strong>إضافة دالة</strong>، فيُفتح محرّر وتوقيع الدالة "
+"مكتوب فيه بالفعل. املأ الجسم واحفظ."
 
 #: includes/wpematicohk_settings.php:219
-msgid "Only users who may edit plugins or themes can reach this screen: the code written here runs with the rights of the site itself."
-msgstr "لا يصل إلى هذه الشاشة إلا المستخدمون الذين يجوز لهم تحرير الإضافات أو القوالب: الكود المكتوب هنا يعمل بصلاحيات الموقع نفسه."
+msgid ""
+"Only users who may edit plugins or themes can reach this screen: the code "
+"written here runs with the rights of the site itself."
+msgstr ""
+"لا يصل إلى هذه الشاشة إلا المستخدمون الذين يجوز لهم تحرير الإضافات أو "
+"القوالب: الكود المكتوب هنا يعمل بصلاحيات الموقع نفسه."
 
 #: includes/wpematicohk_settings.php:224
 msgid "Writing the code"
@@ -515,23 +631,36 @@ msgid "What goes in the editor"
 msgstr "ما يوضع في المحرّر"
 
 #: includes/wpematicohk_settings.php:227
-msgid "The function body, and the function itself &mdash; the signature the editor writes for you already carries the parameters that hook receives, in the right order. Do not rename it: that name is what gets attached to the hook."
-msgstr "جسم الدالة، والدالة نفسها &mdash; التوقيع الذي يكتبه المحرّر عنك يحمل أصلًا الوسائط التي يمرّرها ذلك الخطّاف، بالترتيب الصحيح. لا تعد تسميته: هذا الاسم هو ما يُربط بالخطّاف."
+msgid ""
+"The function body, and the function itself &mdash; the signature the editor "
+"writes for you already carries the parameters that hook receives, in the "
+"right order. Do not rename it: that name is what gets attached to the hook."
+msgstr ""
+"جسم الدالة، والدالة نفسها &mdash; التوقيع الذي يكتبه المحرّر عنك يحمل أصلًا "
+"الوسائط التي يمرّرها ذلك الخطّاف، بالترتيب الصحيح. لا تعد تسميته: هذا الاسم هو "
+"ما يُربط بالخطّاف."
 
 #: includes/wpematicohk_settings.php:228
 msgid "Filters must return something"
 msgstr "المرشّحات يجب أن تُرجع شيئًا"
 
 #: includes/wpematicohk_settings.php:229
-msgid "a filter is asked for a value and whatever it answers replaces the original. A filter that returns nothing empties the thing it was filtering. Actions return nothing and are just told that something happened."
-msgstr "يُطلب من المرشّح قيمة، وما يجيب به يحلّ محل الأصل. المرشّح الذي لا يُرجع شيئًا يُفرّغ ما كان يرشّحه. أما الأفعال فلا تُرجع شيئًا: يُقال لها فقط إن شيئًا قد حدث."
+msgid ""
+"a filter is asked for a value and whatever it answers replaces the original. "
+"A filter that returns nothing empties the thing it was filtering. Actions "
+"return nothing and are just told that something happened."
+msgstr ""
+"يُطلب من المرشّح قيمة، وما يجيب به يحلّ محل الأصل. المرشّح الذي لا يُرجع شيئًا "
+"يُفرّغ ما كان يرشّحه. أما الأفعال فلا تُرجع شيئًا: يُقال لها فقط إن شيئًا قد حدث."
 
 #: includes/wpematicohk_settings.php:230
 msgid "The badge next to each hook says which it is"
 msgstr "الشارة بجوار كل خطّاف تقول أيّهما هو"
 
 #: includes/wpematicohk_settings.php:231
-msgid "<em>filter</em> or <em>action</em>, so you can tell at a glance whether a return is expected."
+msgid ""
+"<em>filter</em> or <em>action</em>, so you can tell at a glance whether a "
+"return is expected."
 msgstr "<em>filter</em> أو <em>action</em>، فتعرف بنظرة إن كان الإرجاع متوقّعًا."
 
 #: includes/wpematicohk_settings.php:232
@@ -539,16 +668,27 @@ msgid "The code is checked before it is saved"
 msgstr "يُفحص الكود قبل حفظه"
 
 #: includes/wpematicohk_settings.php:233
-msgid "a syntax error is reported with its line and reason and nothing is stored, so a typo cannot leave the site unable to load. The check runs in place and needs no connection back to your own server, which is what makes it work on managed and firewalled hosting."
-msgstr "يُبلَّغ عن الخطأ النحوي بسطره وسببه ولا يُحفظ شيء، فلا يستطيع خطأ مطبعي أن يترك الموقع بلا تحميل. يجري الفحص في محلّه ولا يحتاج أي اتصال عودة إلى خادومك، وهذا ما يجعله يعمل على الاستضافة المُدارة وخلف جدار حماية."
+msgid ""
+"a syntax error is reported with its line and reason and nothing is stored, "
+"so a typo cannot leave the site unable to load. The check runs in place and "
+"needs no connection back to your own server, which is what makes it work on "
+"managed and firewalled hosting."
+msgstr ""
+"يُبلَّغ عن الخطأ النحوي بسطره وسببه ولا يُحفظ شيء، فلا يستطيع خطأ مطبعي أن يترك "
+"الموقع بلا تحميل. يجري الفحص في محلّه ولا يحتاج أي اتصال عودة إلى خادومك، "
+"وهذا ما يجعله يعمل على الاستضافة المُدارة وخلف جدار حماية."
 
 #: includes/wpematicohk_settings.php:234
 msgid "One function per hook"
 msgstr "دالة واحدة لكل خطّاف"
 
 #: includes/wpematicohk_settings.php:235
-msgid "each entry declares its own function, so two entries must not declare functions of the same name. PHP cannot recover from that."
-msgstr "كل مدخلة تعلن دالتها الخاصة، فلا يجوز أن تعلن مدخلتان دالتين بالاسم نفسه. لا تستطيع PHP أن تتجاوز ذلك."
+msgid ""
+"each entry declares its own function, so two entries must not declare "
+"functions of the same name. PHP cannot recover from that."
+msgstr ""
+"كل مدخلة تعلن دالتها الخاصة، فلا يجوز أن تعلن مدخلتان دالتين بالاسم نفسه. لا "
+"تستطيع PHP أن تتجاوز ذلك."
 
 #: includes/wpematicohk_settings.php:240
 msgid "The editor"
@@ -559,31 +699,44 @@ msgid "Working in the editor"
 msgstr "العمل في المحرّر"
 
 #: includes/wpematicohk_settings.php:243
-msgid "It is the same code editor WordPress uses for its own file editors, with PHP highlighting, bracket matching and line numbers."
-msgstr "هو محرّر الكود نفسه الذي يستخدمه ووردبريس في محرّرات ملفاته، مع تلوين PHP ومطابقة الأقواس وأرقام الأسطر."
+msgid ""
+"It is the same code editor WordPress uses for its own file editors, with PHP "
+"highlighting, bracket matching and line numbers."
+msgstr ""
+"هو محرّر الكود نفسه الذي يستخدمه ووردبريس في محرّرات ملفاته، مع تلوين PHP "
+"ومطابقة الأقواس وأرقام الأسطر."
 
 #: includes/wpematicohk_settings.php:244
 msgid "Colour scheme"
 msgstr "نظام الألوان"
 
 #: includes/wpematicohk_settings.php:245
-msgid "Monokai, Blackboard or Cobalt. It changes nothing but how the editor looks, and it is remembered for you alone."
-msgstr "Monokai أو Blackboard أو Cobalt. لا يغيّر شيئًا سوى شكل المحرّر، ويُتذكَّر لك وحدك."
+msgid ""
+"Monokai, Blackboard or Cobalt. It changes nothing but how the editor looks, "
+"and it is remembered for you alone."
+msgstr ""
+"Monokai أو Blackboard أو Cobalt. لا يغيّر شيئًا سوى شكل المحرّر، ويُتذكَّر لك وحدك."
 
 #: includes/wpematicohk_settings.php:246
 msgid "The hook filter above the list"
 msgstr "مرشّح الخطّافات فوق القائمة"
 
 #: includes/wpematicohk_settings.php:247
-msgid "narrows the long list to one hook while you work, so you are not scrolling past the ones you are not using. It does not delete or disable anything."
-msgstr "يضيّق القائمة الطويلة إلى خطّاف واحد أثناء عملك، فلا تمرّ على ما لا تستخدمه. لا يحذف شيئًا ولا يعطّله."
+msgid ""
+"narrows the long list to one hook while you work, so you are not scrolling "
+"past the ones you are not using. It does not delete or disable anything."
+msgstr ""
+"يضيّق القائمة الطويلة إلى خطّاف واحد أثناء عملك، فلا تمرّ على ما لا تستخدمه. لا "
+"يحذف شيئًا ولا يعطّله."
 
 #: includes/wpematicohk_settings.php:248
 msgid "Saving"
 msgstr "الحفظ"
 
 #: includes/wpematicohk_settings.php:249
-msgid "either button on this screen saves the whole tab, and both run the check first."
+msgid ""
+"either button on this screen saves the whole tab, and both run the check "
+"first."
 msgstr "أي من الزرّين في هذه الشاشة يحفظ اللسان كله، وكلاهما يُجري الفحص أولًا."
 
 #: includes/wpematicohk_settings.php:270
@@ -595,8 +748,13 @@ msgid "Add a hook"
 msgstr "إضافة خطّاف"
 
 #: includes/wpematicohk_settings.php:323
-msgid "Pick the hook you want to run code on and press Add Function: an editor opens below with the signature already written for you. The theme only changes how that editor looks."
-msgstr "اختر الخطّاف الذي تريد تشغيل كود عليه واضغط «إضافة دالة»: يُفتح أدناه محرّر والتوقيع مكتوب لك بالفعل. القالب لا يغيّر سوى شكل ذلك المحرّر."
+msgid ""
+"Pick the hook you want to run code on and press Add Function: an editor "
+"opens below with the signature already written for you. The theme only "
+"changes how that editor looks."
+msgstr ""
+"اختر الخطّاف الذي تريد تشغيل كود عليه واضغط «إضافة دالة»: يُفتح أدناه محرّر "
+"والتوقيع مكتوب لك بالفعل. القالب لا يغيّر سوى شكل ذلك المحرّر."
 
 #: includes/wpematicohk_settings.php:325
 msgid "Select theme for the editor"
@@ -630,7 +788,8 @@ msgstr "إضافة دالة"
 msgid "Save Data"
 msgstr "حفظ البيانات"
 
-#: includes/wpematicohk_settings.php:376 includes/wpematicohk_settings.php:407 includes/settings/wpematicohk_settings_2_9.php:37
+#: includes/wpematicohk_settings.php:376 includes/wpematicohk_settings.php:407
+#: includes/settings/wpematicohk_settings_2_9.php:37
 msgid "Click to toggle"
 msgstr "اضغط للتوسيع"
 
@@ -647,7 +806,8 @@ msgid "Thanks for test, use and enjoy this plugin."
 msgstr "شكرًا لتجربتك هذه الإضافة واستخدامها والاستمتاع بها."
 
 #: includes/wpematicohk_settings.php:386
-msgid "If you like it and want to thank, you can write a 5 star review on Wordpress."
+msgid ""
+"If you like it and want to thank, you can write a 5 star review on Wordpress."
 msgstr "إن أعجبتك وأردت أن تشكرنا، يمكنك كتابة تقييم بخمس نجوم على ووردبريس."
 
 #: includes/wpematicohk_settings.php:390
@@ -679,8 +839,12 @@ msgid "No hook is running code yet."
 msgstr "لا يوجد بعد أي خطّاف يشغّل كودًا."
 
 #: includes/wpematicohk_settings.php:456
-msgid "Pick a hook in the box above and press Add Function. Its editor opens here, with the function signature already written for you."
-msgstr "اختر خطّافًا في الصندوق أعلاه واضغط «إضافة دالة». يُفتح محرّره هنا، وتوقيع الدالة مكتوب لك بالفعل."
+msgid ""
+"Pick a hook in the box above and press Add Function. Its editor opens here, "
+"with the function signature already written for you."
+msgstr ""
+"اختر خطّافًا في الصندوق أعلاه واضغط «إضافة دالة». يُفتح محرّره هنا، وتوقيع "
+"الدالة مكتوب لك بالفعل."
 
 #: includes/wpematicohk_settings.php:465
 msgid "in use"
@@ -698,28 +862,36 @@ msgstr "لم يتيسّر فحص الكود: %s"
 
 #. translators: %s: parameter name
 #: includes/wpematicohk_sintax.php:74
-msgid "The parameter %s is named twice in the same function. PHP refuses to compile that, and the error cannot be caught, so it would take the whole site down."
-msgstr "الوسيط %s مسمّى مرتين في الدالة نفسها. ترفض PHP ترجمة ذلك، ولا يمكن التقاط الخطأ، فسيُسقط الموقع كله."
+msgid ""
+"The parameter %s is named twice in the same function. PHP refuses to compile "
+"that, and the error cannot be caught, so it would take the whole site down."
+msgstr ""
+"الوسيط %s مسمّى مرتين في الدالة نفسها. ترفض PHP ترجمة ذلك، ولا يمكن التقاط "
+"الخطأ، فسيُسقط الموقع كله."
 
 #. translators: 1: function name, 2: the other hook's name
 #: includes/wpematicohk_sintax.php:86
-msgid "The function %1$s is already declared in the code for %2$s. Two hooks cannot declare the same function name — rename one of them."
-msgstr "الدالة %1$s معلَنة بالفعل في كود %2$s. لا يمكن لخطّافين أن يعلنا اسم الدالة نفسه — أعد تسمية أحدهما."
+msgid ""
+"The function %1$s is already declared in the code for %2$s. Two hooks cannot "
+"declare the same function name — rename one of them."
+msgstr ""
+"الدالة %1$s معلَنة بالفعل في كود %2$s. لا يمكن لخطّافين أن يعلنا اسم الدالة "
+"نفسه — أعد تسمية أحدهما."
 
 #. translators: %s: function name
 #: includes/wpematicohk_sintax.php:98
-msgid "The function %s already exists in WordPress or in another plugin. Declaring it again would be a fatal error — pick a different name."
-msgstr "الدالة %s موجودة بالفعل في ووردبريس أو في إضافة أخرى. إعلانها مرة أخرى سيكون خطأً قاتلًا — اختر اسمًا آخر."
-
-#: wpematico_custom-hooks.php:180
-msgid "Plugin Name Settings"
-msgstr "إعدادات Plugin Name"
-
-#: wpematico_custom-hooks.php:181
-msgid "Configure Plugin Name Settings"
-msgstr "ضبط إعدادات Plugin Name"
+msgid ""
+"The function %s already exists in WordPress or in another plugin. Declaring "
+"it again would be a fatal error — pick a different name."
+msgstr ""
+"الدالة %s موجودة بالفعل في ووردبريس أو في إضافة أخرى. إعلانها مرة أخرى سيكون "
+"خطأً قاتلًا — اختر اسمًا آخر."
 
 #. translators: 1: required WPeMatico version, 2: installed WPeMatico version
-#: wpematico_custom-hooks.php:238
-msgid "WPeMatico Custom Hooks needs WPeMatico %1$s or newer to run. You have %2$s installed, so the Hooks screen is disabled until you update."
-msgstr "يحتاج WPeMatico Custom Hooks إلى WPeMatico %1$s أو أحدث ليعمل. المثبَّت عندك %2$s، فتبقى شاشة الخطّافات معطّلة حتى تحدّث."
+#: wpematico_custom-hooks.php:217
+msgid ""
+"WPeMatico Custom Hooks needs WPeMatico %1$s or newer to run. You have %2$s "
+"installed, so the Hooks screen is disabled until you update."
+msgstr ""
+"يحتاج WPeMatico Custom Hooks إلى WPeMatico %1$s أو أحدث ليعمل. المثبَّت عندك "
+"%2$s، فتبقى شاشة الخطّافات معطّلة حتى تحدّث."
