@@ -90,9 +90,9 @@ function wpematicohk_init_row_meta($data, $page) {
 	return array_merge(
 			$data,
 			array(
-				'<a href="https://etruel.com/" target="_blank">' . __('etruel Store') . '</a>',
-				'<a href="https://etruel.com/my-account/support/" target="_blank">' . __('Support') . '</a>',
-				'<a href="https://wordpress.org/support/view/plugin-reviews/wpematico?filter=5&rate=5#postform" target="_Blank" title="Rate 5 stars on Wordpress.org">' . __('Rate Plugin') . '</a>'
+				'<a href="https://etruel.com/" target="_blank">' . __('etruel Store', 'wpematico-custom-hooks') . '</a>',
+				'<a href="https://etruel.com/my-account/support/" target="_blank">' . __('Support', 'wpematico-custom-hooks') . '</a>',
+				'<a href="https://wordpress.org/support/plugin/wpematico-custom-hooks/reviews?filter=5&rate=5#new-post" target="_blank" title="' . esc_attr__('Click here to rate the plugin on WordPress.org', 'wpematico-custom-hooks') . '">' . __('Rate Plugin', 'wpematico-custom-hooks') . '</a>'
 			)
 	);
 }

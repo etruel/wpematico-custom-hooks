@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPeMatico Custom Hooks 1.4\n"
 "Report-Msgid-Bugs-To: https://etruel.com/my-account/support/\n"
-"POT-Creation-Date: 2026-09-28 01:34+0000\n"
+"POT-Creation-Date: 2026-09-28 01:47+0000\n"
 "PO-Revision-Date: 2026-09-27 00:00+0000\n"
 "Last-Translator: Etruel Developments <translations@etruel.com>\n"
 "Language-Team: Etruel Developments <translations@etruel.com>\n"
@@ -14,8 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c\n"
 "X-Poedit-Basepath: ..\n"
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -41,20 +40,15 @@ msgstr " nécessite WPeMatico ! Veuillez %s pour continuer !"
 
 #: includes/data_load/wpematicohk_array_hooks.php:101
 msgid "HTML tags kept when Strip all HTML tags is on."
-msgstr ""
-"Balises HTML conservées lorsque « Supprimer toutes les balises HTML » est "
-"activé."
+msgstr "Balises HTML conservées lorsque « Supprimer toutes les balises HTML » est activé."
 
 #: includes/data_load/wpematicohk_array_hooks.php:111
 msgid "Runs once every content parser has finished with the item."
-msgstr ""
-"S'exécute une fois que tous les parseurs de contenu ont fini avec l'élément."
+msgstr "S'exécute une fois que tous les parseurs de contenu ont fini avec l'élément."
 
 #: includes/data_load/wpematicohk_array_hooks.php:120
 msgid "Extra variables available to the post template of the campaign."
-msgstr ""
-"Variables supplémentaires disponibles pour le modèle d'article de la "
-"campagne."
+msgstr "Variables supplémentaires disponibles pour le modèle d'article de la campagne."
 
 #: includes/data_load/wpematicohk_array_hooks.php:129
 msgid "Runs before the tags of the item are built."
@@ -62,8 +56,7 @@ msgstr "S'exécute avant la construction des mots-clés de l'élément."
 
 #: includes/data_load/wpematicohk_array_hooks.php:139
 msgid "The item once its tags were built. Read and change campaign_tags."
-msgstr ""
-"L'élément une fois ses mots-clés construits. Lisez et modifiez campaign_tags."
+msgstr "L'élément une fois ses mots-clés construits. Lisez et modifiez campaign_tags."
 
 #: includes/data_load/wpematicohk_array_hooks.php:148
 msgid "The address of the original item, as read from the feed."
@@ -74,57 +67,32 @@ msgid "The final image address that will be downloaded."
 msgstr "L'adresse finale de l'image qui sera téléchargée."
 
 #: includes/data_load/wpematicohk_array_hooks.php:166
-msgid ""
-"The image address before the parts the campaign is set to strip are removed."
-msgstr ""
-"L'adresse de l'image avant que les parties que la campagne doit retirer ne "
-"soient supprimées."
+msgid "The image address before the parts the campaign is set to strip are removed."
+msgstr "L'adresse de l'image avant que les parties que la campagne doit retirer ne soient supprimées."
 
 #: includes/data_load/wpematicohk_array_hooks.php:176
-msgid ""
-"File extensions accepted when downloading images. Anything else is left "
-"where it is."
-msgstr ""
-"Extensions de fichier acceptées au téléchargement des images. Tout le reste "
-"est laissé en place."
+msgid "File extensions accepted when downloading images. Anything else is left where it is."
+msgstr "Extensions de fichier acceptées au téléchargement des images. Tout le reste est laissé en place."
 
 #: includes/data_load/wpematicohk_array_hooks.php:187
-msgid ""
-"Runs when the campaign has finished. Returns the campaign data, so it can "
-"still be changed before it is saved."
-msgstr ""
-"S'exécute quand la campagne est terminée. Renvoie les données de la "
-"campagne, qui peuvent donc encore être modifiées avant l'enregistrement."
+msgid "Runs when the campaign has finished. Returns the campaign data, so it can still be changed before it is saved."
+msgstr "S'exécute quand la campagne est terminée. Renvoie les données de la campagne, qui peuvent donc encore être modifiées avant l'enregistrement."
 
 #: includes/data_load/wpematicohk_array_hooks.php:196
-msgid ""
-"The feed address, right before it is fetched. Point a campaign at a "
-"different address from here."
-msgstr ""
-"L'adresse du flux, juste avant sa récupération. C'est d'ici qu'on dirige une "
-"campagne vers une autre adresse."
+msgid "The feed address, right before it is fetched. Point a campaign at a different address from here."
+msgstr "L'adresse du flux, juste avant sa récupération. C'est d'ici qu'on dirige une campagne vers une autre adresse."
 
 #: includes/data_load/wpematicohk_array_hooks.php:205
-msgid ""
-"Replace or change the SimplePie object of a campaign whose type is not "
-"fetched as a plain feed. A feed, YouTube or bbPress campaign returns before "
-"this point and never reaches it."
-msgstr ""
-"Remplacez ou modifiez l'objet SimplePie d'une campagne dont le type n'est "
-"pas récupéré comme un simple flux. Une campagne de type flux, YouTube ou "
-"bbPress s'arrête avant ce point et n'y parvient jamais."
+msgid "Replace or change the SimplePie object of a campaign whose type is not fetched as a plain feed. A feed, YouTube or bbPress campaign returns before this point and never reaches it."
+msgstr "Remplacez ou modifiez l'objet SimplePie d'une campagne dont le type n'est pas récupéré comme un simple flux. Une campagne de type flux, YouTube ou bbPress s'arrête avant ce point et n'y parvient jamais."
 
 #: includes/data_load/wpematicohk_array_hooks.php:214
-msgid ""
-"The item once its author was resolved. Set author to a WordPress user id."
-msgstr ""
-"L'élément une fois son auteur résolu. Mettez dans author un identifiant "
-"d'utilisateur WordPress."
+msgid "The item once its author was resolved. Set author to a WordPress user id."
+msgstr "L'élément une fois son auteur résolu. Mettez dans author un identifiant d'utilisateur WordPress."
 
 #: includes/data_load/wpematicohk_array_hooks.php:22
 msgid "Converts a string to UTF-8 when it arrives in another encoding."
-msgstr ""
-"Convertit une chaîne en UTF-8 lorsqu'elle arrive dans un autre encodage."
+msgstr "Convertit une chaîne en UTF-8 lorsqu'elle arrive dans un autre encodage."
 
 #: includes/data_load/wpematicohk_array_hooks.php:223
 msgid "The item once its content and excerpt have been assigned."
@@ -135,29 +103,20 @@ msgid "Runs before the images of the item are processed."
 msgstr "S'exécute avant le traitement des images de l'élément."
 
 #: includes/data_load/wpematicohk_array_hooks.php:241
-msgid ""
-"Return an image address to force the featured image instead of letting the "
-"campaign pick one."
-msgstr ""
-"Renvoyez une adresse d'image pour imposer l'image mise en avant au lieu de "
-"laisser la campagne en choisir une."
+msgid "Return an image address to force the featured image instead of letting the campaign pick one."
+msgstr "Renvoyez une adresse d'image pour imposer l'image mise en avant au lieu de laisser la campagne en choisir une."
 
 #: includes/data_load/wpematicohk_array_hooks.php:250
 msgid "The featured image address the campaign settled on."
 msgstr "L'adresse de l'image mise en avant retenue par la campagne."
 
 #: includes/data_load/wpematicohk_array_hooks.php:259
-msgid ""
-"Runs once the images of the item have been processed and replaced in the "
-"content."
-msgstr ""
-"S'exécute une fois les images de l'élément traitées et remplacées dans le "
-"contenu."
+msgid "Runs once the images of the item have been processed and replaced in the content."
+msgstr "S'exécute une fois les images de l'élément traitées et remplacées dans le contenu."
 
 #: includes/data_load/wpematicohk_array_hooks.php:268
 msgid "The categories read from the feed, before they are created or assigned."
-msgstr ""
-"Les catégories lues dans le flux, avant leur création ou leur attribution."
+msgstr "Les catégories lues dans le flux, avant leur création ou leur attribution."
 
 #: includes/data_load/wpematicohk_array_hooks.php:277
 msgid "The custom fields about to be written with the post."
@@ -165,13 +124,11 @@ msgstr "Les champs personnalisés qui vont être enregistrés avec l'article."
 
 #: includes/data_load/wpematicohk_array_hooks.php:286
 msgid "Title of the post being created, immediately before it is saved."
-msgstr ""
-"Titre de l'article en cours de création, juste avant son enregistrement."
+msgstr "Titre de l'article en cours de création, juste avant son enregistrement."
 
 #: includes/data_load/wpematicohk_array_hooks.php:295
 msgid "Content of the post being created, immediately before it is saved."
-msgstr ""
-"Contenu de l'article en cours de création, juste avant son enregistrement."
+msgstr "Contenu de l'article en cours de création, juste avant son enregistrement."
 
 #: includes/data_load/wpematicohk_array_hooks.php:304
 msgid "Slug of the post being created."
@@ -182,13 +139,8 @@ msgid "The content_filtered column of the post being created."
 msgstr "La colonne content_filtered de l'article en cours de création."
 
 #: includes/data_load/wpematicohk_array_hooks.php:32
-msgid ""
-"Filename the downloaded image is stored under. A source whose addresses "
-"carry no file extension needs this, or its images are dropped."
-msgstr ""
-"Nom de fichier sous lequel l'image téléchargée est enregistrée. Une source "
-"dont les adresses ne portent pas d'extension a besoin de ceci, sinon ses "
-"images sont abandonnées."
+msgid "Filename the downloaded image is stored under. A source whose addresses carry no file extension needs this, or its images are dropped."
+msgstr "Nom de fichier sous lequel l'image téléchargée est enregistrée. Une source dont les adresses ne portent pas d'extension a besoin de ceci, sinon ses images sont abandonnées."
 
 #: includes/data_load/wpematicohk_array_hooks.php:322
 msgid "Status the post being created is saved with."
@@ -200,9 +152,7 @@ msgstr "Type de contenu sous lequel l'élément est enregistré."
 
 #: includes/data_load/wpematicohk_array_hooks.php:340
 msgid "Author id the post being created is saved with."
-msgstr ""
-"Identifiant d'auteur sous lequel l'article en cours de création est "
-"enregistré."
+msgstr "Identifiant d'auteur sous lequel l'article en cours de création est enregistré."
 
 #: includes/data_load/wpematicohk_array_hooks.php:349
 msgid "Publication date of the post being created."
@@ -213,34 +163,20 @@ msgid "Whether comments are open on the post being created."
 msgstr "Si les commentaires sont ouverts sur l'article en cours de création."
 
 #: includes/data_load/wpematicohk_array_hooks.php:367
-msgid ""
-"The whole argument list about to reach wp_insert_post. The last chance to "
-"change what is saved."
-msgstr ""
-"Toute la liste d'arguments qui va parvenir à wp_insert_post. La dernière "
-"occasion de changer ce qui est enregistré."
+msgid "The whole argument list about to reach wp_insert_post. The last chance to change what is saved."
+msgstr "Toute la liste d'arguments qui va parvenir à wp_insert_post. La dernière occasion de changer ce qui est enregistré."
 
 #: includes/data_load/wpematicohk_array_hooks.php:376
-msgid ""
-"Return false to stop this item from being inserted, with everything already "
-"prepared."
-msgstr ""
-"Renvoyez false pour empêcher l'insertion de cet élément, tout étant déjà "
-"préparé."
+msgid "Return false to stop this item from being inserted, with everything already prepared."
+msgstr "Renvoyez false pour empêcher l'insertion de cet élément, tout étant déjà préparé."
 
 #: includes/data_load/wpematicohk_array_hooks.php:385
 msgid "Return true to treat this item as a duplicate, so it is not imported."
-msgstr ""
-"Renvoyez true pour traiter cet élément comme un doublon, afin qu'il ne soit "
-"pas importé."
+msgstr "Renvoyez true pour traiter cet élément comme un doublon, afin qu'il ne soit pas importé."
 
 #: includes/data_load/wpematicohk_array_hooks.php:394
-msgid ""
-"Fires once the post exists. The place to add your own meta, taxonomies or "
-"related records."
-msgstr ""
-"Se déclenche une fois l'article créé. L'endroit pour ajouter vos propres "
-"métadonnées, taxonomies ou enregistrements liés."
+msgid "Fires once the post exists. The place to add your own meta, taxonomies or related records."
+msgstr "Se déclenche une fois l'article créé. L'endroit pour ajouter vos propres métadonnées, taxonomies ou enregistrements liés."
 
 #: includes/data_load/wpematicohk_array_hooks.php:403
 msgid "Description given to a category that is created automatically."
@@ -248,48 +184,34 @@ msgstr "Description donnée à une catégorie créée automatiquement."
 
 #: includes/data_load/wpematicohk_array_hooks.php:412
 msgid "The item once its images were downloaded and replaced in the content."
-msgstr ""
-"L'élément une fois ses images téléchargées et remplacées dans le contenu."
+msgstr "L'élément une fois ses images téléchargées et remplacées dans le contenu."
 
 #: includes/data_load/wpematicohk_array_hooks.php:42
 msgid "Title used for the YouTube image of the item."
 msgstr "Titre utilisé pour l'image YouTube de l'élément."
 
 #: includes/data_load/wpematicohk_array_hooks.php:424
-msgid ""
-"The global settings, normalised. Where an add-on registers the defaults of "
-"its own options."
-msgstr ""
-"Les réglages globaux, normalisés. Là où une extension déclare les valeurs "
-"par défaut de ses propres options."
+msgid "The global settings, normalised. Where an add-on registers the defaults of its own options."
+msgstr "Les réglages globaux, normalisés. Là où une extension déclare les valeurs par défaut de ses propres options."
 
 #: includes/data_load/wpematicohk_array_hooks.php:433
 msgid "Memory limit a campaign run is allowed to use. Default 256M."
-msgstr ""
-"Limite de mémoire accordée à l'exécution d'une campagne. 256M par défaut."
+msgstr "Limite de mémoire accordée à l'exécution d'une campagne. 256M par défaut."
 
 #: includes/data_load/wpematicohk_array_hooks.php:442
-msgid ""
-"Arguments handed to SimplePie for this feed: timeouts, ordering, how many "
-"items."
-msgstr ""
-"Arguments passés à SimplePie pour ce flux : délais, ordre, nombre d'éléments."
+msgid "Arguments handed to SimplePie for this feed: timeouts, ordering, how many items."
+msgstr "Arguments passés à SimplePie pour ce flux : délais, ordre, nombre d'éléments."
 
 #: includes/data_load/wpematicohk_array_hooks.php:451
-msgid ""
-"How many recent items are remembered per feed to recognise duplicates. "
-"Default 20."
-msgstr ""
-"Combien d'éléments récents sont retenus par flux pour reconnaître les "
-"doublons. 20 par défaut."
+msgid "How many recent items are remembered per feed to recognise duplicates. Default 20."
+msgstr "Combien d'éléments récents sont retenus par flux pour reconnaître les doublons. 20 par défaut."
 
 #: includes/data_load/wpematicohk_array_hooks.php:460
 msgid "The date read from the feed item."
 msgstr "La date lue dans l'élément du flux."
 
 #: includes/data_load/wpematicohk_array_hooks.php:469
-msgid ""
-"The raw description as the feed served it, before any parser touches it."
+msgid "The raw description as the feed served it, before any parser touches it."
 msgstr "La description brute telle que le flux l'a servie, avant tout parseur."
 
 #: includes/data_load/wpematicohk_array_hooks.php:478
@@ -309,12 +231,8 @@ msgid "Runs once every image, audio and video of the item has been processed."
 msgstr "S'exécute une fois chaque image, audio et vidéo de l'élément traité."
 
 #: includes/data_load/wpematicohk_array_hooks.php:514
-msgid ""
-"The last pass over the item, after every parser and every media filter has "
-"run."
-msgstr ""
-"Le dernier passage sur l'élément, après tous les parseurs et tous les "
-"filtres de médias."
+msgid "The last pass over the item, after every parser and every media filter has run."
+msgstr "Le dernier passage sur l'élément, après tous les parseurs et tous les filtres de médias."
 
 #: includes/data_load/wpematicohk_array_hooks.php:52
 msgid "Thumbnail address of the YouTube video."
@@ -329,23 +247,16 @@ msgid "Parent post of the post being created."
 msgstr "Article parent de l'article en cours de création."
 
 #: includes/data_load/wpematicohk_array_hooks.php:541
-msgid ""
-"The attachment id set as the featured image, once the post has been inserted."
-msgstr ""
-"L'identifiant du fichier joint défini comme image mise en avant, une fois "
-"l'article inséré."
+msgid "The attachment id set as the featured image, once the post has been inserted."
+msgstr "L'identifiant du fichier joint défini comme image mise en avant, une fois l'article inséré."
 
 #: includes/data_load/wpematicohk_array_hooks.php:550
 msgid "The final list of categories the post is filed under."
 msgstr "La liste finale des catégories sous lesquelles l'article est classé."
 
 #: includes/data_load/wpematicohk_array_hooks.php:559
-msgid ""
-"Which image parser handles this item. Return your own id and answer "
-"wpematico images parser {id}."
-msgstr ""
-"Quel parseur d'images traite cet élément. Renvoyez votre propre identifiant "
-"et répondez à wpematico images parser {id}."
+msgid "Which image parser handles this item. Return your own id and answer wpematico images parser {id}."
+msgstr "Quel parseur d'images traite cet élément. Renvoyez votre propre identifiant et répondez à wpematico images parser {id}."
 
 #: includes/data_load/wpematicohk_array_hooks.php:568
 msgid "The regular expression that finds the images in the content."
@@ -368,12 +279,8 @@ msgid "The audio address found in the item, before it is downloaded."
 msgstr "L'adresse de l'audio trouvé dans l'élément, avant son téléchargement."
 
 #: includes/data_load/wpematicohk_array_hooks.php:613
-msgid ""
-"File extensions accepted when downloading audio. Anything else is left where "
-"it is."
-msgstr ""
-"Extensions de fichier acceptées au téléchargement de l'audio. Tout le reste "
-"est laissé en place."
+msgid "File extensions accepted when downloading audio. Anything else is left where it is."
+msgstr "Extensions de fichier acceptées au téléchargement de l'audio. Tout le reste est laissé en place."
 
 #: includes/data_load/wpematicohk_array_hooks.php:62
 msgid "Description of the YouTube video."
@@ -389,50 +296,31 @@ msgstr "L'élément une fois sa vidéo téléchargée et remplacée dans le cont
 
 #: includes/data_load/wpematicohk_array_hooks.php:640
 msgid "The video address found in the item, before it is downloaded."
-msgstr ""
-"L'adresse de la vidéo trouvée dans l'élément, avant son téléchargement."
+msgstr "L'adresse de la vidéo trouvée dans l'élément, avant son téléchargement."
 
 #: includes/data_load/wpematicohk_array_hooks.php:649
-msgid ""
-"File extensions accepted when downloading video. Anything else is left where "
-"it is."
-msgstr ""
-"Extensions de fichier acceptées au téléchargement de la vidéo. Tout le reste "
-"est laissé en place."
+msgid "File extensions accepted when downloading video. Anything else is left where it is."
+msgstr "Extensions de fichier acceptées au téléchargement de la vidéo. Tout le reste est laissé en place."
 
 #: includes/data_load/wpematicohk_array_hooks.php:658
 msgid "Filename the downloaded video is stored under."
 msgstr "Nom de fichier sous lequel la vidéo téléchargée est enregistrée."
 
 #: includes/data_load/wpematicohk_array_hooks.php:668
-msgid ""
-"Return false so a category read from the feed is only assigned when it "
-"already exists, never created."
-msgstr ""
-"Renvoyez false pour qu'une catégorie lue dans le flux soit seulement "
-"attribuée lorsqu'elle existe déjà, et jamais créée."
+msgid "Return false so a category read from the feed is only assigned when it already exists, never created."
+msgstr "Renvoyez false pour qu'une catégorie lue dans le flux soit seulement attribuée lorsqu'elle existe déjà, et jamais créée."
 
 #: includes/data_load/wpematicohk_array_hooks.php:677
 msgid "The post the item is filed under as a child. 0 means no parent."
-msgstr ""
-"L'article sous lequel l'élément est classé comme enfant. 0 signifie sans "
-"parent."
+msgstr "L'article sous lequel l'élément est classé comme enfant. 0 signifie sans parent."
 
 #: includes/data_load/wpematicohk_array_hooks.php:686
-msgid ""
-"Campaign types fetched as a plain feed. A type listed here takes the "
-"standard route, with its timeouts, ordering and paging."
-msgstr ""
-"Types de campagne récupérés comme un simple flux. Un type listé ici prend la "
-"voie standard, avec ses délais, son ordre et sa pagination."
+msgid "Campaign types fetched as a plain feed. A type listed here takes the standard route, with its timeouts, ordering and paging."
+msgstr "Types de campagne récupérés comme un simple flux. Un type listé ici prend la voie standard, avec ses délais, son ordre et sa pagination."
 
 #: includes/data_load/wpematicohk_array_hooks.php:695
-msgid ""
-"The Processed Posts line of the run result. A campaign that imports nothing "
-"by design can report a count that means something."
-msgstr ""
-"La ligne « Articles traités » du résultat de l'exécution. Une campagne qui, "
-"par conception, n'importe rien peut ainsi annoncer un décompte qui a du sens."
+msgid "The Processed Posts line of the run result. A campaign that imports nothing by design can report a count that means something."
+msgstr "La ligne « Articles traités » du résultat de l'exécution. Une campagne qui, par conception, n'importe rien peut ainsi annoncer un décompte qui a du sens."
 
 #: includes/data_load/wpematicohk_array_hooks.php:710
 msgid "The Vimeo player embed built for the item."
@@ -447,11 +335,8 @@ msgid "The raw content as the feed served it, before any parser touches it."
 msgstr "Le contenu brut tel que le flux l'a servi, avant tout parseur."
 
 #: includes/data_load/wpematicohk_array_hooks.php:735
-msgid ""
-"The author name read from the feed, before the user is looked up or created."
-msgstr ""
-"Le nom de l'auteur lu dans le flux, avant que l'utilisateur soit recherché "
-"ou créé."
+msgid "The author name read from the feed, before the user is looked up or created."
+msgstr "Le nom de l'auteur lu dans le flux, avant que l'utilisateur soit recherché ou créé."
 
 #: includes/data_load/wpematicohk_array_hooks.php:743
 msgid "The XML namespace the item date is read from."
@@ -466,12 +351,8 @@ msgid "Folder Full Content reads its per site extraction rules from."
 msgstr "Dossier dans lequel Full Content lit ses règles d'extraction par site."
 
 #: includes/data_load/wpematicohk_array_hooks.php:778
-msgid ""
-"Returns the whole article for an address. Answer it to replace the way Full "
-"Content downloads the page."
-msgstr ""
-"Renvoie l'article entier pour une adresse. Répondez-y pour remplacer la "
-"façon dont Full Content télécharge la page."
+msgid "Returns the whole article for an address. Answer it to replace the way Full Content downloads the page."
+msgstr "Renvoie l'article entier pour une adresse. Répondez-y pour remplacer la façon dont Full Content télécharge la page."
 
 #: includes/data_load/wpematicohk_array_hooks.php:787
 msgid "The whole article HTML that Full Content read from the source page."
@@ -483,57 +364,39 @@ msgstr "Se déclenche dès que Full Content a l'article entier de l'élément."
 
 #: includes/data_load/wpematicohk_array_hooks.php:81
 msgid "Return true to skip this item, before anything else is done with it."
-msgstr ""
-"Renvoyez true pour ignorer cet élément, avant toute autre opération sur lui."
+msgstr "Renvoyez true pour ignorer cet élément, avant toute autre opération sur lui."
 
 #: includes/data_load/wpematicohk_array_hooks.php:810
 msgid "Whether the given translation service is configured and may be used."
-msgstr ""
-"Si le service de traduction indiqué est configuré et peut être utilisé."
+msgstr "Si le service de traduction indiqué est configuré et peut être utilisé."
 
 #: includes/data_load/wpematicohk_array_hooks.php:819
 msgid "The translation services offered on the campaign, as label to id."
-msgstr ""
-"Les services de traduction proposés sur la campagne, sous la forme libellé "
-"vers identifiant."
+msgstr "Les services de traduction proposés sur la campagne, sous la forme libellé vers identifiant."
 
 #: includes/data_load/wpematicohk_array_hooks.php:828
 msgid "The languages offered for translation."
 msgstr "Les langues proposées à la traduction."
 
 #: includes/data_load/wpematicohk_array_hooks.php:837
-msgid ""
-"Which clean-up runs on the content before it is translated. The name answers "
-"the polyglot process filter for that type."
-msgstr ""
-"Quel nettoyage est appliqué au contenu avant sa traduction. Le nom répond au "
-"filtre polyglot process de ce type."
+msgid "Which clean-up runs on the content before it is translated. The name answers the polyglot process filter for that type."
+msgstr "Quel nettoyage est appliqué au contenu avant sa traduction. Le nom répond au filtre polyglot process de ce type."
 
 #: includes/data_load/wpematicohk_array_hooks.php:846
-msgid ""
-"Cleans the post arguments before they are translated. This is what polyglot "
-"process type selects, strip_tags by default."
-msgstr ""
-"Nettoie les arguments de l'article avant leur traduction. C'est ce que "
-"polyglot process type sélectionne, strip_tags par défaut."
+msgid "Cleans the post arguments before they are translated. This is what polyglot process type selects, strip_tags by default."
+msgstr "Nettoie les arguments de l'article avant leur traduction. C'est ce que polyglot process type sélectionne, strip_tags par défaut."
 
 #: includes/data_load/wpematicohk_array_hooks.php:860
 msgid "The Better Excerpts options, normalised with their defaults."
-msgstr ""
-"Les options de Better Excerpts, normalisées avec leurs valeurs par défaut."
+msgstr "Les options de Better Excerpts, normalisées avec leurs valeurs par défaut."
 
 #: includes/data_load/wpematicohk_array_hooks.php:869
 msgid "Fires at the end of the Better Excerpts fields, to add your own."
-msgstr ""
-"Se déclenche à la fin des champs de Better Excerpts, pour ajouter les vôtres."
+msgstr "Se déclenche à la fin des champs de Better Excerpts, pour ajouter les vôtres."
 
 #: includes/data_load/wpematicohk_array_hooks.php:90
-msgid ""
-"The main content parser, and where most add-ons change the title, content "
-"and excerpt of an item."
-msgstr ""
-"Le parseur de contenu principal, et l'endroit où la plupart des extensions "
-"changent le titre, le contenu et l'extrait d'un élément."
+msgid "The main content parser, and where most add-ons change the title, content and excerpt of an item."
+msgstr "Le parseur de contenu principal, et l'endroit où la plupart des extensions changent le titre, le contenu et l'extrait d'un élément."
 
 #: includes/plugin_functions.php:49
 msgid "WPeMatico Custom Hooks DEACTIVATED."
@@ -547,23 +410,31 @@ msgstr "Aller à la page de réglages de WPeMatico Custom Hooks"
 msgid "Settings"
 msgstr "Réglages"
 
+#: includes/plugin_functions.php:93
+msgid "etruel Store"
+msgstr "Boutique etruel"
+
+#: includes/plugin_functions.php:94
+#: includes/settings/wpematicohk_widgets.php:87
+msgid "Support"
+msgstr "Assistance"
+
+#: includes/plugin_functions.php:95 includes/wpematicohk_settings.php:390
+msgid "Click here to rate the plugin on WordPress.org"
+msgstr "Cliquez ici pour noter le plugin sur WordPress"
+
+#: includes/plugin_functions.php:95
+msgid "Rate Plugin"
+msgstr "Noter le plugin"
+
 #: includes/settings/wpematicohk_settings_2_9.php:43
 #: includes/settings/wpematicohk_widgets.php:69
 msgid "Custom Hooks"
 msgstr "Custom Hooks"
 
 #: includes/settings/wpematicohk_settings_2_9.php:48
-msgid ""
-"Runs your own PHP on any of the hooks WPeMatico fires while a campaign works "
-"— to change a title, filter an item, add a custom field. What you write is "
-"checked before it is saved, so a mistake is reported instead of taking the "
-"site down."
-msgstr ""
-"Exécute votre propre PHP sur n'importe lequel des hooks que WPeMatico "
-"déclenche pendant qu'une campagne travaille — pour changer un titre, filtrer "
-"un élément, ajouter un champ personnalisé. Ce que vous écrivez est vérifié "
-"avant d'être enregistré, de sorte qu'une erreur est signalée au lieu de "
-"mettre le site à terre."
+msgid "Runs your own PHP on any of the hooks WPeMatico fires while a campaign works — to change a title, filter an item, add a custom field. What you write is checked before it is saved, so a mistake is reported instead of taking the site down."
+msgstr "Exécute votre propre PHP sur n'importe lequel des hooks que WPeMatico déclenche pendant qu'une campagne travaille — pour changer un titre, filtrer un élément, ajouter un champ personnalisé. Ce que vous écrivez est vérifié avant d'être enregistré, de sorte qu'une erreur est signalée au lieu de mettre le site à terre."
 
 #: includes/settings/wpematicohk_settings_2_9.php:49
 msgid "Details in the Help tab, top right."
@@ -579,21 +450,12 @@ msgid "Needs WPeMatico %s or newer."
 msgstr "Nécessite WPeMatico %s ou plus récent."
 
 #: includes/settings/wpematicohk_widgets.php:75
-msgid ""
-"Write PHP for any of the hooks WPeMatico fires, straight from here. The code "
-"is checked before it is saved, so a typo cannot take the site down."
-msgstr ""
-"Écrivez du PHP pour n'importe lequel des hooks que WPeMatico déclenche, "
-"directement d'ici. Le code est vérifié avant d'être enregistré, de sorte "
-"qu'une coquille ne peut pas mettre le site à terre."
+msgid "Write PHP for any of the hooks WPeMatico fires, straight from here. The code is checked before it is saved, so a typo cannot take the site down."
+msgstr "Écrivez du PHP pour n'importe lequel des hooks que WPeMatico déclenche, directement d'ici. Le code est vérifié avant d'être enregistré, de sorte qu'une coquille ne peut pas mettre le site à terre."
 
 #: includes/settings/wpematicohk_widgets.php:81
 msgid "Plugin page on WordPress.org"
 msgstr "Page du plugin sur WordPress.org"
-
-#: includes/settings/wpematicohk_widgets.php:87
-msgid "Support"
-msgstr "Assistance"
 
 #: includes/settings/wpematicohk_widgets.php:93
 msgid "Write a 5 star review"
@@ -601,29 +463,18 @@ msgstr "Écrire un avis 5 étoiles"
 
 #. translators: 1: hook name, 2: comma separated function names
 #: includes/wpematicohk_execute_action_filter.php:211
-msgid ""
-"WPeMatico Custom Hooks skipped the code for %1$s: the function %2$s is "
-"already declared somewhere else. Rename it, or remove it from one of the two "
-"hooks."
-msgstr ""
-"WPeMatico Custom Hooks a ignoré le code de %1$s : la fonction %2$s est déjà "
-"déclarée ailleurs. Renommez-la, ou retirez-la de l'un des deux hooks."
+msgid "WPeMatico Custom Hooks skipped the code for %1$s: the function %2$s is already declared somewhere else. Rename it, or remove it from one of the two hooks."
+msgstr "WPeMatico Custom Hooks a ignoré le code de %1$s : la fonction %2$s est déjà déclarée ailleurs. Renommez-la, ou retirez-la de l'un des deux hooks."
 
 #. translators: 1: function name, 2: hook name
 #: includes/wpematicohk_execute_action_filter.php:220
-msgid ""
-"WPeMatico Custom Hooks could not attach %1$s to %2$s: the code saved for "
-"that hook does not declare it."
-msgstr ""
-"WPeMatico Custom Hooks n'a pas pu rattacher %1$s à %2$s : le code enregistré "
-"pour ce hook ne la déclare pas."
+msgid "WPeMatico Custom Hooks could not attach %1$s to %2$s: the code saved for that hook does not declare it."
+msgstr "WPeMatico Custom Hooks n'a pas pu rattacher %1$s à %2$s : le code enregistré pour ce hook ne la déclare pas."
 
 #. translators: 1: hook name, 2: PHP error message
 #: includes/wpematicohk_execute_action_filter.php:229
 msgid "WPeMatico Custom Hooks could not run the code saved for %1$s: %2$s"
-msgstr ""
-"WPeMatico Custom Hooks n'a pas pu exécuter le code enregistré pour %1$s : "
-"%2$s"
+msgstr "WPeMatico Custom Hooks n'a pas pu exécuter le code enregistré pour %1$s : %2$s"
 
 #: includes/wpematicohk_execute_action_filter.php:239
 msgid "Edit hooks"
@@ -659,34 +510,16 @@ msgid "What this does"
 msgstr "Ce que cela fait"
 
 #: includes/wpematicohk_settings.php:217
-msgid ""
-"WPeMatico announces every step of its work through hooks: it is about to "
-"read an item, it has built a title, it is ready to insert a post. This "
-"plugin lets you write PHP that runs at those moments, without a child theme "
-"and without an FTP client."
-msgstr ""
-"WPeMatico annonce chaque étape de son travail par des hooks : il va lire un "
-"élément, il a construit un titre, il est prêt à insérer un article. Ce "
-"plugin vous permet d'écrire du PHP qui s'exécute à ces moments-là, sans "
-"thème enfant et sans client FTP."
+msgid "WPeMatico announces every step of its work through hooks: it is about to read an item, it has built a title, it is ready to insert a post. This plugin lets you write PHP that runs at those moments, without a child theme and without an FTP client."
+msgstr "WPeMatico annonce chaque étape de son travail par des hooks : il va lire un élément, il a construit un titre, il est prêt à insérer un article. Ce plugin vous permet d'écrire du PHP qui s'exécute à ces moments-là, sans thème enfant et sans client FTP."
 
 #: includes/wpematicohk_settings.php:218
-msgid ""
-"Pick a hook, press <strong>Add Function</strong>, and an editor opens with "
-"the function signature already written. Fill in the body and save."
-msgstr ""
-"Choisissez un hook, appuyez sur <strong>Ajouter une fonction</strong> et un "
-"éditeur s'ouvre avec la signature de la fonction déjà écrite. Remplissez le "
-"corps et enregistrez."
+msgid "Pick a hook, press <strong>Add Function</strong>, and an editor opens with the function signature already written. Fill in the body and save."
+msgstr "Choisissez un hook, appuyez sur <strong>Ajouter une fonction</strong> et un éditeur s'ouvre avec la signature de la fonction déjà écrite. Remplissez le corps et enregistrez."
 
 #: includes/wpematicohk_settings.php:219
-msgid ""
-"Only users who may edit plugins or themes can reach this screen: the code "
-"written here runs with the rights of the site itself."
-msgstr ""
-"Seuls les utilisateurs autorisés à modifier les plugins ou les thèmes "
-"accèdent à cet écran : le code écrit ici s'exécute avec les droits du site "
-"lui-même."
+msgid "Only users who may edit plugins or themes can reach this screen: the code written here runs with the rights of the site itself."
+msgstr "Seuls les utilisateurs autorisés à modifier les plugins ou les thèmes accèdent à cet écran : le code écrit ici s'exécute avec les droits du site lui-même."
 
 #: includes/wpematicohk_settings.php:224
 msgid "Writing the code"
@@ -697,69 +530,40 @@ msgid "What goes in the editor"
 msgstr "Ce qui va dans l'éditeur"
 
 #: includes/wpematicohk_settings.php:227
-msgid ""
-"The function body, and the function itself &mdash; the signature the editor "
-"writes for you already carries the parameters that hook receives, in the "
-"right order. Do not rename it: that name is what gets attached to the hook."
-msgstr ""
-"Le corps de la fonction, et la fonction elle-même &mdash; la signature que "
-"l'éditeur écrit pour vous porte déjà les paramètres que ce hook reçoit, dans "
-"le bon ordre. Ne la renommez pas : c'est ce nom qui est rattaché au hook."
+msgid "The function body, and the function itself &mdash; the signature the editor writes for you already carries the parameters that hook receives, in the right order. Do not rename it: that name is what gets attached to the hook."
+msgstr "Le corps de la fonction, et la fonction elle-même &mdash; la signature que l'éditeur écrit pour vous porte déjà les paramètres que ce hook reçoit, dans le bon ordre. Ne la renommez pas : c'est ce nom qui est rattaché au hook."
 
 #: includes/wpematicohk_settings.php:228
 msgid "Filters must return something"
 msgstr "Les filtres doivent renvoyer quelque chose"
 
 #: includes/wpematicohk_settings.php:229
-msgid ""
-"a filter is asked for a value and whatever it answers replaces the original. "
-"A filter that returns nothing empties the thing it was filtering. Actions "
-"return nothing and are just told that something happened."
-msgstr ""
-"on demande une valeur à un filtre et ce qu'il répond remplace l'original. Un "
-"filtre qui ne renvoie rien vide ce qu'il filtrait. Les actions ne renvoient "
-"rien : on leur signale seulement que quelque chose est arrivé."
+msgid "a filter is asked for a value and whatever it answers replaces the original. A filter that returns nothing empties the thing it was filtering. Actions return nothing and are just told that something happened."
+msgstr "on demande une valeur à un filtre et ce qu'il répond remplace l'original. Un filtre qui ne renvoie rien vide ce qu'il filtrait. Les actions ne renvoient rien : on leur signale seulement que quelque chose est arrivé."
 
 #: includes/wpematicohk_settings.php:230
 msgid "The badge next to each hook says which it is"
 msgstr "Le badge à côté de chaque hook dit lequel c'est"
 
 #: includes/wpematicohk_settings.php:231
-msgid ""
-"<em>filter</em> or <em>action</em>, so you can tell at a glance whether a "
-"return is expected."
-msgstr ""
-"<em>filter</em> ou <em>action</em>, pour voir d'un coup d'œil si un retour "
-"est attendu."
+msgid "<em>filter</em> or <em>action</em>, so you can tell at a glance whether a return is expected."
+msgstr "<em>filter</em> ou <em>action</em>, pour voir d'un coup d'œil si un retour est attendu."
 
 #: includes/wpematicohk_settings.php:232
 msgid "The code is checked before it is saved"
 msgstr "Le code est vérifié avant d'être enregistré"
 
 #: includes/wpematicohk_settings.php:233
-msgid ""
-"a syntax error is reported with its line and reason and nothing is stored, "
-"so a typo cannot leave the site unable to load. The check runs in place and "
-"needs no connection back to your own server, which is what makes it work on "
-"managed and firewalled hosting."
-msgstr ""
-"une erreur de syntaxe est signalée avec sa ligne et sa raison et rien n'est "
-"enregistré, de sorte qu'une coquille ne peut pas empêcher le site de se "
-"charger. La vérification se fait sur place et ne demande aucune connexion "
-"retour vers votre propre serveur, ce qui la rend fonctionnelle sur les "
-"hébergements gérés et derrière un pare-feu."
+msgid "a syntax error is reported with its line and reason and nothing is stored, so a typo cannot leave the site unable to load. The check runs in place and needs no connection back to your own server, which is what makes it work on managed and firewalled hosting."
+msgstr "une erreur de syntaxe est signalée avec sa ligne et sa raison et rien n'est enregistré, de sorte qu'une coquille ne peut pas empêcher le site de se charger. La vérification se fait sur place et ne demande aucune connexion retour vers votre propre serveur, ce qui la rend fonctionnelle sur les hébergements gérés et derrière un pare-feu."
 
 #: includes/wpematicohk_settings.php:234
 msgid "One function per hook"
 msgstr "Une fonction par hook"
 
 #: includes/wpematicohk_settings.php:235
-msgid ""
-"each entry declares its own function, so two entries must not declare "
-"functions of the same name. PHP cannot recover from that."
-msgstr ""
-"chaque entrée déclare sa propre fonction, donc deux entrées ne doivent pas "
-"déclarer des fonctions de même nom. PHP ne peut pas s'en remettre."
+msgid "each entry declares its own function, so two entries must not declare functions of the same name. PHP cannot recover from that."
+msgstr "chaque entrée déclare sa propre fonction, donc deux entrées ne doivent pas déclarer des fonctions de même nom. PHP ne peut pas s'en remettre."
 
 #: includes/wpematicohk_settings.php:240
 msgid "The editor"
@@ -770,50 +574,32 @@ msgid "Working in the editor"
 msgstr "Travailler dans l'éditeur"
 
 #: includes/wpematicohk_settings.php:243
-msgid ""
-"It is the same code editor WordPress uses for its own file editors, with PHP "
-"highlighting, bracket matching and line numbers."
-msgstr ""
-"C'est le même éditeur de code que WordPress utilise pour ses propres "
-"éditeurs de fichiers, avec la coloration PHP, l'appariement des parenthèses "
-"et les numéros de ligne."
+msgid "It is the same code editor WordPress uses for its own file editors, with PHP highlighting, bracket matching and line numbers."
+msgstr "C'est le même éditeur de code que WordPress utilise pour ses propres éditeurs de fichiers, avec la coloration PHP, l'appariement des parenthèses et les numéros de ligne."
 
 #: includes/wpematicohk_settings.php:244
 msgid "Colour scheme"
 msgstr "Jeu de couleurs"
 
 #: includes/wpematicohk_settings.php:245
-msgid ""
-"Monokai, Blackboard or Cobalt. It changes nothing but how the editor looks, "
-"and it is remembered for you alone."
-msgstr ""
-"Monokai, Blackboard ou Cobalt. Cela ne change rien d'autre que l'apparence "
-"de l'éditeur, et c'est retenu pour vous seul."
+msgid "Monokai, Blackboard or Cobalt. It changes nothing but how the editor looks, and it is remembered for you alone."
+msgstr "Monokai, Blackboard ou Cobalt. Cela ne change rien d'autre que l'apparence de l'éditeur, et c'est retenu pour vous seul."
 
 #: includes/wpematicohk_settings.php:246
 msgid "The hook filter above the list"
 msgstr "Le filtre de hooks au-dessus de la liste"
 
 #: includes/wpematicohk_settings.php:247
-msgid ""
-"narrows the long list to one hook while you work, so you are not scrolling "
-"past the ones you are not using. It does not delete or disable anything."
-msgstr ""
-"restreint la longue liste à un seul hook pendant que vous travaillez, pour "
-"ne pas défiler devant ceux que vous n'utilisez pas. Il ne supprime ni ne "
-"désactive rien."
+msgid "narrows the long list to one hook while you work, so you are not scrolling past the ones you are not using. It does not delete or disable anything."
+msgstr "restreint la longue liste à un seul hook pendant que vous travaillez, pour ne pas défiler devant ceux que vous n'utilisez pas. Il ne supprime ni ne désactive rien."
 
 #: includes/wpematicohk_settings.php:248
 msgid "Saving"
 msgstr "Enregistrement"
 
 #: includes/wpematicohk_settings.php:249
-msgid ""
-"either button on this screen saves the whole tab, and both run the check "
-"first."
-msgstr ""
-"l'un ou l'autre bouton de cet écran enregistre tout l'onglet, et les deux "
-"lancent la vérification d'abord."
+msgid "either button on this screen saves the whole tab, and both run the check first."
+msgstr "l'un ou l'autre bouton de cet écran enregistre tout l'onglet, et les deux lancent la vérification d'abord."
 
 #: includes/wpematicohk_settings.php:270
 msgid "Hooks"
@@ -824,14 +610,8 @@ msgid "Add a hook"
 msgstr "Ajouter un hook"
 
 #: includes/wpematicohk_settings.php:323
-msgid ""
-"Pick the hook you want to run code on and press Add Function: an editor "
-"opens below with the signature already written for you. The theme only "
-"changes how that editor looks."
-msgstr ""
-"Choisissez le hook sur lequel vous voulez exécuter du code et appuyez sur "
-"Ajouter une fonction : un éditeur s'ouvre en dessous avec la signature déjà "
-"écrite pour vous. Le thème ne change que l'apparence de cet éditeur."
+msgid "Pick the hook you want to run code on and press Add Function: an editor opens below with the signature already written for you. The theme only changes how that editor looks."
+msgstr "Choisissez le hook sur lequel vous voulez exécuter du code et appuyez sur Ajouter une fonction : un éditeur s'ouvre en dessous avec la signature déjà écrite pour vous. Le thème ne change que l'apparence de cet éditeur."
 
 #: includes/wpematicohk_settings.php:325
 msgid "Select theme for the editor"
@@ -879,19 +659,12 @@ msgid "Go to the plugin page on WordPress.org"
 msgstr "Aller à la page du plugin sur WordPress.org"
 
 #: includes/wpematicohk_settings.php:385
-msgid "Thanks for test, use and enjoy this plugin."
+msgid "Thanks for testing, using and enjoying this plugin."
 msgstr "Merci de tester, d'utiliser et d'apprécier ce plugin."
 
 #: includes/wpematicohk_settings.php:386
-msgid ""
-"If you like it and want to thank, you can write a 5 star review on Wordpress."
-msgstr ""
-"Si vous l'aimez et souhaitez nous remercier, vous pouvez écrire un avis 5 "
-"étoiles sur WordPress."
-
-#: includes/wpematicohk_settings.php:390
-msgid "Click here to rate the plugin on Wordpress"
-msgstr "Cliquez ici pour noter le plugin sur WordPress"
+msgid "If you like it and want to say thanks, you can write a 5 star review on WordPress.org."
+msgstr "Si vous l'aimez et souhaitez nous remercier, vous pouvez écrire un avis 5 étoiles sur WordPress."
 
 #: includes/wpematicohk_settings.php:390
 msgid "Rate"
@@ -902,7 +675,7 @@ msgid "Enjoy it"
 msgstr "Profitez-en"
 
 #: includes/wpematicohk_settings.php:412
-msgid "If you enjoy it please donate few dollars"
+msgid "If you enjoy it, please donate a few dollars"
 msgstr "Si vous en profitez, faites un don de quelques dollars"
 
 #: includes/wpematicohk_settings.php:413
@@ -918,13 +691,8 @@ msgid "No hook is running code yet."
 msgstr "Aucun hook n'exécute encore de code."
 
 #: includes/wpematicohk_settings.php:456
-msgid ""
-"Pick a hook in the box above and press Add Function. Its editor opens here, "
-"with the function signature already written for you."
-msgstr ""
-"Choisissez un hook dans la boîte ci-dessus et appuyez sur Ajouter une "
-"fonction. Son éditeur s'ouvre ici, avec la signature de la fonction déjà "
-"écrite pour vous."
+msgid "Pick a hook in the box above and press Add Function. Its editor opens here, with the function signature already written for you."
+msgstr "Choisissez un hook dans la boîte ci-dessus et appuyez sur Ajouter une fonction. Son éditeur s'ouvre ici, avec la signature de la fonction déjà écrite pour vous."
 
 #: includes/wpematicohk_settings.php:465
 msgid "in use"
@@ -942,38 +710,20 @@ msgstr "Le code n'a pas pu être vérifié : %s"
 
 #. translators: %s: parameter name
 #: includes/wpematicohk_sintax.php:74
-msgid ""
-"The parameter %s is named twice in the same function. PHP refuses to compile "
-"that, and the error cannot be caught, so it would take the whole site down."
-msgstr ""
-"Le paramètre %s est nommé deux fois dans la même fonction. PHP refuse de "
-"compiler cela, et l'erreur ne peut pas être interceptée, ce qui mettrait "
-"tout le site à terre."
+msgid "The parameter %s is named twice in the same function. PHP refuses to compile that, and the error cannot be caught, so it would take the whole site down."
+msgstr "Le paramètre %s est nommé deux fois dans la même fonction. PHP refuse de compiler cela, et l'erreur ne peut pas être interceptée, ce qui mettrait tout le site à terre."
 
 #. translators: 1: function name, 2: the other hook's name
 #: includes/wpematicohk_sintax.php:86
-msgid ""
-"The function %1$s is already declared in the code for %2$s. Two hooks cannot "
-"declare the same function name — rename one of them."
-msgstr ""
-"La fonction %1$s est déjà déclarée dans le code de %2$s. Deux hooks ne "
-"peuvent pas déclarer le même nom de fonction — renommez l'un des deux."
+msgid "The function %1$s is already declared in the code for %2$s. Two hooks cannot declare the same function name — rename one of them."
+msgstr "La fonction %1$s est déjà déclarée dans le code de %2$s. Deux hooks ne peuvent pas déclarer le même nom de fonction — renommez l'un des deux."
 
 #. translators: %s: function name
 #: includes/wpematicohk_sintax.php:98
-msgid ""
-"The function %s already exists in WordPress or in another plugin. Declaring "
-"it again would be a fatal error — pick a different name."
-msgstr ""
-"La fonction %s existe déjà dans WordPress ou dans un autre plugin. La "
-"déclarer à nouveau serait une erreur fatale — choisissez un autre nom."
+msgid "The function %s already exists in WordPress or in another plugin. Declaring it again would be a fatal error — pick a different name."
+msgstr "La fonction %s existe déjà dans WordPress ou dans un autre plugin. La déclarer à nouveau serait une erreur fatale — choisissez un autre nom."
 
 #. translators: 1: required WPeMatico version, 2: installed WPeMatico version
 #: wpematico_custom-hooks.php:217
-msgid ""
-"WPeMatico Custom Hooks needs WPeMatico %1$s or newer to run. You have %2$s "
-"installed, so the Hooks screen is disabled until you update."
-msgstr ""
-"WPeMatico Custom Hooks a besoin de WPeMatico %1$s ou plus récent pour "
-"fonctionner. Vous avez %2$s installé, donc l'écran Hooks est désactivé "
-"jusqu'à la mise à jour."
+msgid "WPeMatico Custom Hooks needs WPeMatico %1$s or newer to run. You have %2$s installed, so the Hooks screen is disabled until you update."
+msgstr "WPeMatico Custom Hooks a besoin de WPeMatico %1$s ou plus récent pour fonctionner. Vous avez %2$s installé, donc l'écran Hooks est désactivé jusqu'à la mise à jour."

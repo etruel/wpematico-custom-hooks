@@ -382,12 +382,12 @@ if (!class_exists('wpematico_hooks_settings')) :
 						<img style="width: 100%;" src="<?php echo esc_url(WPEMATICOHK_URL . 'assets/img/wpematico-custom-hooks-256x128.jpg'); ?>" alt="WPeMatico Custom Hooks" />
 					</a><br />
 					<p><b>WPeMatico Custom Hooks <?php echo esc_html(WPEMATICOHK_VER); ?></b></p>
-					<p><?php _e('Thanks for test, use and enjoy this plugin.', 'wpematico-custom-hooks'); ?></p>
-					<p><?php _e('If you like it and want to thank, you can write a 5 star review on Wordpress.', 'wpematico-custom-hooks'); ?></p>
+					<p><?php _e('Thanks for testing, using and enjoying this plugin.', 'wpematico-custom-hooks'); ?></p>
+					<p><?php _e('If you like it and want to say thanks, you can write a 5 star review on WordPress.org.', 'wpematico-custom-hooks'); ?></p>
 					<style type="text/css">#linkrate:before { content: "\2605\2605\2605\2605\2605";font-size: 18px;}
 						#linkrate { font-size: 18px;}</style>
 					<p style="text-align: center;">
-						<a href="https://wordpress.org/support/plugin/wpematico-custom-hooks/reviews?filter=5&rate=5#new-post" id="linkrate" class="button" target="_blank" title="<?php esc_attr_e('Click here to rate the plugin on Wordpress', 'wpematico-custom-hooks'); ?>"><?php esc_html_e('Rate', 'wpematico-custom-hooks'); ?></a>
+						<a href="https://wordpress.org/support/plugin/wpematico-custom-hooks/reviews?filter=5&rate=5#new-post" id="linkrate" class="button" target="_blank" title="<?php esc_attr_e('Click here to rate the plugin on WordPress.org', 'wpematico-custom-hooks'); ?>"><?php esc_html_e('Rate', 'wpematico-custom-hooks'); ?></a>
 					</p>
 				</div>
 			</div>
@@ -409,7 +409,7 @@ if (!class_exists('wpematico_hooks_settings')) :
 				</button>
 				<h3 class="handle"><?php _e('Enjoy it', 'wpematico-custom-hooks'); ?></h3>
 				<div class="inside">
-					<p style="text-align: center;"><?php _e('If you enjoy it please donate few dollars', 'wpematico-custom-hooks'); ?>
+					<p style="text-align: center;"><?php _e('If you enjoy it, please donate a few dollars', 'wpematico-custom-hooks'); ?>
 						<input type="button" class="button-secondary" name="donate" value="<?php esc_attr_e('Click to Donate', 'wpematico-custom-hooks'); ?>" onclick="javascript:window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=B8V39NWK3NFQU');return false;"/>
 					</p>
 					<p style="text-align: center;">
