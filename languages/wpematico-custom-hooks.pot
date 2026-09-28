@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPeMatico Custom Hooks 1.4\n"
 "Report-Msgid-Bugs-To: https://etruel.com/my-account/support/\n"
-"POT-Creation-Date: 2026-09-28 00:59+0000\n"
+"POT-Creation-Date: 2026-09-28 01:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Etruel Developments <translations@etruel.com>\n"
@@ -712,15 +712,7 @@ msgstr ""
 msgid "The function %s already exists in WordPress or in another plugin. Declaring it again would be a fatal error — pick a different name."
 msgstr ""
 
-#: wpematico_custom-hooks.php:180
-msgid "Plugin Name Settings"
-msgstr ""
-
-#: wpematico_custom-hooks.php:181
-msgid "Configure Plugin Name Settings"
-msgstr ""
-
 #. translators: 1: required WPeMatico version, 2: installed WPeMatico version
-#: wpematico_custom-hooks.php:238
+#: wpematico_custom-hooks.php:217
 msgid "WPeMatico Custom Hooks needs WPeMatico %1$s or newer to run. You have %2$s installed, so the Hooks screen is disabled until you update."
 msgstr ""

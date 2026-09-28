@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPeMatico Custom Hooks 1.4\n"
 "Report-Msgid-Bugs-To: https://etruel.com/my-account/support/\n"
-"POT-Creation-Date: 2026-09-28 00:59+0000\n"
+"POT-Creation-Date: 2026-09-28 01:34+0000\n"
 "PO-Revision-Date: 2026-09-27 00:00+0000\n"
 "Last-Translator: Etruel Developments <translations@etruel.com>\n"
 "Language-Team: Etruel Developments <translations@etruel.com>\n"
@@ -12,9 +12,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c\n"
 "X-Poedit-Basepath: ..\n"
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -40,15 +42,18 @@ msgstr " necesită WPeMatico! Te rugăm să %s pentru a continua!"
 
 #: includes/data_load/wpematicohk_array_hooks.php:101
 msgid "HTML tags kept when Strip all HTML tags is on."
-msgstr "Etichete HTML păstrate când este activat \"Elimină toate etichetele HTML\"."
+msgstr ""
+"Etichete HTML păstrate când este activat \"Elimină toate etichetele HTML\"."
 
 #: includes/data_load/wpematicohk_array_hooks.php:111
 msgid "Runs once every content parser has finished with the item."
-msgstr "Rulează după ce toate analizoarele de conținut au terminat cu elementul."
+msgstr ""
+"Rulează după ce toate analizoarele de conținut au terminat cu elementul."
 
 #: includes/data_load/wpematicohk_array_hooks.php:120
 msgid "Extra variables available to the post template of the campaign."
-msgstr "Variabile suplimentare disponibile pentru șablonul de articol al campaniei."
+msgstr ""
+"Variabile suplimentare disponibile pentru șablonul de articol al campaniei."
 
 #: includes/data_load/wpematicohk_array_hooks.php:129
 msgid "Runs before the tags of the item are built."
@@ -56,7 +61,9 @@ msgstr "Rulează înainte de construirea etichetelor elementului."
 
 #: includes/data_load/wpematicohk_array_hooks.php:139
 msgid "The item once its tags were built. Read and change campaign_tags."
-msgstr "Elementul după ce etichetele lui au fost construite. Citește și schimbă campaign_tags."
+msgstr ""
+"Elementul după ce etichetele lui au fost construite. Citește și schimbă "
+"campaign_tags."
 
 #: includes/data_load/wpematicohk_array_hooks.php:148
 msgid "The address of the original item, as read from the feed."
@@ -67,28 +74,52 @@ msgid "The final image address that will be downloaded."
 msgstr "Adresa finală a imaginii care va fi descărcată."
 
 #: includes/data_load/wpematicohk_array_hooks.php:166
-msgid "The image address before the parts the campaign is set to strip are removed."
-msgstr "Adresa imaginii înainte de eliminarea părților pe care campania trebuie să le taie."
+msgid ""
+"The image address before the parts the campaign is set to strip are removed."
+msgstr ""
+"Adresa imaginii înainte de eliminarea părților pe care campania trebuie să "
+"le taie."
 
 #: includes/data_load/wpematicohk_array_hooks.php:176
-msgid "File extensions accepted when downloading images. Anything else is left where it is."
-msgstr "Extensiile de fișier acceptate la descărcarea imaginilor. Orice altceva rămâne unde este."
+msgid ""
+"File extensions accepted when downloading images. Anything else is left "
+"where it is."
+msgstr ""
+"Extensiile de fișier acceptate la descărcarea imaginilor. Orice altceva "
+"rămâne unde este."
 
 #: includes/data_load/wpematicohk_array_hooks.php:187
-msgid "Runs when the campaign has finished. Returns the campaign data, so it can still be changed before it is saved."
-msgstr "Rulează când campania s-a încheiat. Returnează datele campaniei, deci ele pot fi încă schimbate înainte de salvare."
+msgid ""
+"Runs when the campaign has finished. Returns the campaign data, so it can "
+"still be changed before it is saved."
+msgstr ""
+"Rulează când campania s-a încheiat. Returnează datele campaniei, deci ele "
+"pot fi încă schimbate înainte de salvare."
 
 #: includes/data_load/wpematicohk_array_hooks.php:196
-msgid "The feed address, right before it is fetched. Point a campaign at a different address from here."
-msgstr "Adresa fluxului, chiar înainte de a fi preluat. De aici se îndreaptă o campanie spre altă adresă."
+msgid ""
+"The feed address, right before it is fetched. Point a campaign at a "
+"different address from here."
+msgstr ""
+"Adresa fluxului, chiar înainte de a fi preluat. De aici se îndreaptă o "
+"campanie spre altă adresă."
 
 #: includes/data_load/wpematicohk_array_hooks.php:205
-msgid "Replace or change the SimplePie object of a campaign whose type is not fetched as a plain feed. A feed, YouTube or bbPress campaign returns before this point and never reaches it."
-msgstr "Înlocuiește sau modifică obiectul SimplePie al unei campanii al cărei tip nu este preluat ca flux simplu. O campanie de tip flux, YouTube sau bbPress se întoarce înainte de acest punct și nu ajunge niciodată aici."
+msgid ""
+"Replace or change the SimplePie object of a campaign whose type is not "
+"fetched as a plain feed. A feed, YouTube or bbPress campaign returns before "
+"this point and never reaches it."
+msgstr ""
+"Înlocuiește sau modifică obiectul SimplePie al unei campanii al cărei tip nu "
+"este preluat ca flux simplu. O campanie de tip flux, YouTube sau bbPress se "
+"întoarce înainte de acest punct și nu ajunge niciodată aici."
 
 #: includes/data_load/wpematicohk_array_hooks.php:214
-msgid "The item once its author was resolved. Set author to a WordPress user id."
-msgstr "Elementul după ce autorul lui a fost stabilit. Pune în author un id de utilizator WordPress."
+msgid ""
+"The item once its author was resolved. Set author to a WordPress user id."
+msgstr ""
+"Elementul după ce autorul lui a fost stabilit. Pune în author un id de "
+"utilizator WordPress."
 
 #: includes/data_load/wpematicohk_array_hooks.php:22
 msgid "Converts a string to UTF-8 when it arrives in another encoding."
@@ -103,16 +134,24 @@ msgid "Runs before the images of the item are processed."
 msgstr "Rulează înainte de procesarea imaginilor elementului."
 
 #: includes/data_load/wpematicohk_array_hooks.php:241
-msgid "Return an image address to force the featured image instead of letting the campaign pick one."
-msgstr "Returnează o adresă de imagine pentru a impune imaginea reprezentativă, în loc să lași campania să aleagă una."
+msgid ""
+"Return an image address to force the featured image instead of letting the "
+"campaign pick one."
+msgstr ""
+"Returnează o adresă de imagine pentru a impune imaginea reprezentativă, în "
+"loc să lași campania să aleagă una."
 
 #: includes/data_load/wpematicohk_array_hooks.php:250
 msgid "The featured image address the campaign settled on."
 msgstr "Adresa imaginii reprezentative pe care a stabilit-o campania."
 
 #: includes/data_load/wpematicohk_array_hooks.php:259
-msgid "Runs once the images of the item have been processed and replaced in the content."
-msgstr "Rulează după ce imaginile elementului au fost procesate și înlocuite în conținut."
+msgid ""
+"Runs once the images of the item have been processed and replaced in the "
+"content."
+msgstr ""
+"Rulează după ce imaginile elementului au fost procesate și înlocuite în "
+"conținut."
 
 #: includes/data_load/wpematicohk_array_hooks.php:268
 msgid "The categories read from the feed, before they are created or assigned."
@@ -139,8 +178,13 @@ msgid "The content_filtered column of the post being created."
 msgstr "Coloana content_filtered a articolului care se creează."
 
 #: includes/data_load/wpematicohk_array_hooks.php:32
-msgid "Filename the downloaded image is stored under. A source whose addresses carry no file extension needs this, or its images are dropped."
-msgstr "Numele de fișier sub care se salvează imaginea descărcată. O sursă ale cărei adrese nu au extensie are nevoie de asta, altfel imaginile ei sunt abandonate."
+msgid ""
+"Filename the downloaded image is stored under. A source whose addresses "
+"carry no file extension needs this, or its images are dropped."
+msgstr ""
+"Numele de fișier sub care se salvează imaginea descărcată. O sursă ale cărei "
+"adrese nu au extensie are nevoie de asta, altfel imaginile ei sunt "
+"abandonate."
 
 #: includes/data_load/wpematicohk_array_hooks.php:322
 msgid "Status the post being created is saved with."
@@ -163,20 +207,34 @@ msgid "Whether comments are open on the post being created."
 msgstr "Dacă sunt deschise comentariile la articolul care se creează."
 
 #: includes/data_load/wpematicohk_array_hooks.php:367
-msgid "The whole argument list about to reach wp_insert_post. The last chance to change what is saved."
-msgstr "Toată lista de argumente care va ajunge la wp_insert_post. Ultima ocazie de a schimba ce se salvează."
+msgid ""
+"The whole argument list about to reach wp_insert_post. The last chance to "
+"change what is saved."
+msgstr ""
+"Toată lista de argumente care va ajunge la wp_insert_post. Ultima ocazie de "
+"a schimba ce se salvează."
 
 #: includes/data_load/wpematicohk_array_hooks.php:376
-msgid "Return false to stop this item from being inserted, with everything already prepared."
-msgstr "Returnează false pentru a opri inserarea acestui element, cu totul deja pregătit."
+msgid ""
+"Return false to stop this item from being inserted, with everything already "
+"prepared."
+msgstr ""
+"Returnează false pentru a opri inserarea acestui element, cu totul deja "
+"pregătit."
 
 #: includes/data_load/wpematicohk_array_hooks.php:385
 msgid "Return true to treat this item as a duplicate, so it is not imported."
-msgstr "Returnează true pentru a trata acest element ca duplicat, ca să nu fie importat."
+msgstr ""
+"Returnează true pentru a trata acest element ca duplicat, ca să nu fie "
+"importat."
 
 #: includes/data_load/wpematicohk_array_hooks.php:394
-msgid "Fires once the post exists. The place to add your own meta, taxonomies or related records."
-msgstr "Se declanșează imediat ce articolul există. Locul pentru a adăuga propriile meta, taxonomii sau înregistrări asociate."
+msgid ""
+"Fires once the post exists. The place to add your own meta, taxonomies or "
+"related records."
+msgstr ""
+"Se declanșează imediat ce articolul există. Locul pentru a adăuga propriile "
+"meta, taxonomii sau înregistrări asociate."
 
 #: includes/data_load/wpematicohk_array_hooks.php:403
 msgid "Description given to a category that is created automatically."
@@ -184,35 +242,53 @@ msgstr "Descrierea dată unei categorii create automat."
 
 #: includes/data_load/wpematicohk_array_hooks.php:412
 msgid "The item once its images were downloaded and replaced in the content."
-msgstr "Elementul după ce imaginile lui au fost descărcate și înlocuite în conținut."
+msgstr ""
+"Elementul după ce imaginile lui au fost descărcate și înlocuite în conținut."
 
 #: includes/data_load/wpematicohk_array_hooks.php:42
 msgid "Title used for the YouTube image of the item."
 msgstr "Titlul folosit pentru imaginea YouTube a elementului."
 
 #: includes/data_load/wpematicohk_array_hooks.php:424
-msgid "The global settings, normalised. Where an add-on registers the defaults of its own options."
-msgstr "Setările globale, normalizate. Aici își declară o extensie valorile implicite ale propriilor opțiuni."
+msgid ""
+"The global settings, normalised. Where an add-on registers the defaults of "
+"its own options."
+msgstr ""
+"Setările globale, normalizate. Aici își declară o extensie valorile "
+"implicite ale propriilor opțiuni."
 
 #: includes/data_load/wpematicohk_array_hooks.php:433
 msgid "Memory limit a campaign run is allowed to use. Default 256M."
-msgstr "Limita de memorie pe care o poate folosi rularea unei campanii. Implicit 256M."
+msgstr ""
+"Limita de memorie pe care o poate folosi rularea unei campanii. Implicit "
+"256M."
 
 #: includes/data_load/wpematicohk_array_hooks.php:442
-msgid "Arguments handed to SimplePie for this feed: timeouts, ordering, how many items."
-msgstr "Argumentele date lui SimplePie pentru acest flux: timpi de așteptare, ordonare, câte elemente."
+msgid ""
+"Arguments handed to SimplePie for this feed: timeouts, ordering, how many "
+"items."
+msgstr ""
+"Argumentele date lui SimplePie pentru acest flux: timpi de așteptare, "
+"ordonare, câte elemente."
 
 #: includes/data_load/wpematicohk_array_hooks.php:451
-msgid "How many recent items are remembered per feed to recognise duplicates. Default 20."
-msgstr "Câte elemente recente sunt ținute minte pe flux pentru a recunoaște duplicatele. Implicit 20."
+msgid ""
+"How many recent items are remembered per feed to recognise duplicates. "
+"Default 20."
+msgstr ""
+"Câte elemente recente sunt ținute minte pe flux pentru a recunoaște "
+"duplicatele. Implicit 20."
 
 #: includes/data_load/wpematicohk_array_hooks.php:460
 msgid "The date read from the feed item."
 msgstr "Data citită din elementul fluxului."
 
 #: includes/data_load/wpematicohk_array_hooks.php:469
-msgid "The raw description as the feed served it, before any parser touches it."
-msgstr "Descrierea brută, așa cum a servit-o fluxul, înainte să o atingă vreun analizor."
+msgid ""
+"The raw description as the feed served it, before any parser touches it."
+msgstr ""
+"Descrierea brută, așa cum a servit-o fluxul, înainte să o atingă vreun "
+"analizor."
 
 #: includes/data_load/wpematicohk_array_hooks.php:478
 msgid "Runs before any media of the item is processed."
@@ -228,11 +304,17 @@ msgstr "Rulează înainte de procesarea video-ului elementului."
 
 #: includes/data_load/wpematicohk_array_hooks.php:505
 msgid "Runs once every image, audio and video of the item has been processed."
-msgstr "Rulează după ce fiecare imagine, sunet și video al elementului a fost procesat."
+msgstr ""
+"Rulează după ce fiecare imagine, sunet și video al elementului a fost "
+"procesat."
 
 #: includes/data_load/wpematicohk_array_hooks.php:514
-msgid "The last pass over the item, after every parser and every media filter has run."
-msgstr "Ultima trecere peste element, după toate analizoarele și toate filtrele de media."
+msgid ""
+"The last pass over the item, after every parser and every media filter has "
+"run."
+msgstr ""
+"Ultima trecere peste element, după toate analizoarele și toate filtrele de "
+"media."
 
 #: includes/data_load/wpematicohk_array_hooks.php:52
 msgid "Thumbnail address of the YouTube video."
@@ -247,16 +329,23 @@ msgid "Parent post of the post being created."
 msgstr "Articolul părinte al articolului care se creează."
 
 #: includes/data_load/wpematicohk_array_hooks.php:541
-msgid "The attachment id set as the featured image, once the post has been inserted."
-msgstr "Id-ul atașamentului pus ca imagine reprezentativă, după ce articolul a fost inserat."
+msgid ""
+"The attachment id set as the featured image, once the post has been inserted."
+msgstr ""
+"Id-ul atașamentului pus ca imagine reprezentativă, după ce articolul a fost "
+"inserat."
 
 #: includes/data_load/wpematicohk_array_hooks.php:550
 msgid "The final list of categories the post is filed under."
 msgstr "Lista finală de categorii în care este încadrat articolul."
 
 #: includes/data_load/wpematicohk_array_hooks.php:559
-msgid "Which image parser handles this item. Return your own id and answer wpematico images parser {id}."
-msgstr "Care analizor de imagini se ocupă de acest element. Returnează propriul id și răspunde la wpematico images parser {id}."
+msgid ""
+"Which image parser handles this item. Return your own id and answer "
+"wpematico images parser {id}."
+msgstr ""
+"Care analizor de imagini se ocupă de acest element. Returnează propriul id "
+"și răspunde la wpematico images parser {id}."
 
 #: includes/data_load/wpematicohk_array_hooks.php:568
 msgid "The regular expression that finds the images in the content."
@@ -272,15 +361,20 @@ msgstr "Playerul YouTube încorporat construit pentru element."
 
 #: includes/data_load/wpematicohk_array_hooks.php:595
 msgid "The item once its audio was downloaded and replaced in the content."
-msgstr "Elementul după ce sunetul lui a fost descărcat și înlocuit în conținut."
+msgstr ""
+"Elementul după ce sunetul lui a fost descărcat și înlocuit în conținut."
 
 #: includes/data_load/wpematicohk_array_hooks.php:604
 msgid "The audio address found in the item, before it is downloaded."
 msgstr "Adresa sunetului găsit în element, înainte de descărcare."
 
 #: includes/data_load/wpematicohk_array_hooks.php:613
-msgid "File extensions accepted when downloading audio. Anything else is left where it is."
-msgstr "Extensiile de fișier acceptate la descărcarea sunetului. Orice altceva rămâne unde este."
+msgid ""
+"File extensions accepted when downloading audio. Anything else is left where "
+"it is."
+msgstr ""
+"Extensiile de fișier acceptate la descărcarea sunetului. Orice altceva "
+"rămâne unde este."
 
 #: includes/data_load/wpematicohk_array_hooks.php:62
 msgid "Description of the YouTube video."
@@ -292,35 +386,53 @@ msgstr "Numele de fișier sub care se salvează sunetul descărcat."
 
 #: includes/data_load/wpematicohk_array_hooks.php:631
 msgid "The item once its video was downloaded and replaced in the content."
-msgstr "Elementul după ce video-ul lui a fost descărcat și înlocuit în conținut."
+msgstr ""
+"Elementul după ce video-ul lui a fost descărcat și înlocuit în conținut."
 
 #: includes/data_load/wpematicohk_array_hooks.php:640
 msgid "The video address found in the item, before it is downloaded."
 msgstr "Adresa video-ului găsit în element, înainte de descărcare."
 
 #: includes/data_load/wpematicohk_array_hooks.php:649
-msgid "File extensions accepted when downloading video. Anything else is left where it is."
-msgstr "Extensiile de fișier acceptate la descărcarea video-ului. Orice altceva rămâne unde este."
+msgid ""
+"File extensions accepted when downloading video. Anything else is left where "
+"it is."
+msgstr ""
+"Extensiile de fișier acceptate la descărcarea video-ului. Orice altceva "
+"rămâne unde este."
 
 #: includes/data_load/wpematicohk_array_hooks.php:658
 msgid "Filename the downloaded video is stored under."
 msgstr "Numele de fișier sub care se salvează video-ul descărcat."
 
 #: includes/data_load/wpematicohk_array_hooks.php:668
-msgid "Return false so a category read from the feed is only assigned when it already exists, never created."
-msgstr "Returnează false ca o categorie citită din flux să fie atribuită doar când există deja, niciodată creată."
+msgid ""
+"Return false so a category read from the feed is only assigned when it "
+"already exists, never created."
+msgstr ""
+"Returnează false ca o categorie citită din flux să fie atribuită doar când "
+"există deja, niciodată creată."
 
 #: includes/data_load/wpematicohk_array_hooks.php:677
 msgid "The post the item is filed under as a child. 0 means no parent."
-msgstr "Articolul sub care elementul este încadrat ca fiu. 0 înseamnă fără părinte."
+msgstr ""
+"Articolul sub care elementul este încadrat ca fiu. 0 înseamnă fără părinte."
 
 #: includes/data_load/wpematicohk_array_hooks.php:686
-msgid "Campaign types fetched as a plain feed. A type listed here takes the standard route, with its timeouts, ordering and paging."
-msgstr "Tipurile de campanie preluate ca flux simplu. Un tip trecut aici merge pe calea standard, cu timpii lui de așteptare, ordonarea și paginarea lui."
+msgid ""
+"Campaign types fetched as a plain feed. A type listed here takes the "
+"standard route, with its timeouts, ordering and paging."
+msgstr ""
+"Tipurile de campanie preluate ca flux simplu. Un tip trecut aici merge pe "
+"calea standard, cu timpii lui de așteptare, ordonarea și paginarea lui."
 
 #: includes/data_load/wpematicohk_array_hooks.php:695
-msgid "The Processed Posts line of the run result. A campaign that imports nothing by design can report a count that means something."
-msgstr "Linia \"Articole procesate\" din rezultatul rulării. O campanie care, prin felul ei, nu importă nimic poate raporta astfel un număr care înseamnă ceva."
+msgid ""
+"The Processed Posts line of the run result. A campaign that imports nothing "
+"by design can report a count that means something."
+msgstr ""
+"Linia \"Articole procesate\" din rezultatul rulării. O campanie care, prin "
+"felul ei, nu importă nimic poate raporta astfel un număr care înseamnă ceva."
 
 #: includes/data_load/wpematicohk_array_hooks.php:710
 msgid "The Vimeo player embed built for the item."
@@ -332,11 +444,16 @@ msgstr "Adresa miniaturii video-ului Vimeo, înainte de descărcare."
 
 #: includes/data_load/wpematicohk_array_hooks.php:72
 msgid "The raw content as the feed served it, before any parser touches it."
-msgstr "Conținutul brut, așa cum l-a servit fluxul, înainte să îl atingă vreun analizor."
+msgstr ""
+"Conținutul brut, așa cum l-a servit fluxul, înainte să îl atingă vreun "
+"analizor."
 
 #: includes/data_load/wpematicohk_array_hooks.php:735
-msgid "The author name read from the feed, before the user is looked up or created."
-msgstr "Numele autorului citit din flux, înainte ca utilizatorul să fie căutat sau creat."
+msgid ""
+"The author name read from the feed, before the user is looked up or created."
+msgstr ""
+"Numele autorului citit din flux, înainte ca utilizatorul să fie căutat sau "
+"creat."
 
 #: includes/data_load/wpematicohk_array_hooks.php:743
 msgid "The XML namespace the item date is read from."
@@ -348,15 +465,22 @@ msgstr "Site-urile pe care Full Content le recunoaște drept pagini video."
 
 #: includes/data_load/wpematicohk_array_hooks.php:769
 msgid "Folder Full Content reads its per site extraction rules from."
-msgstr "Dosarul din care Full Content citește regulile lui de extragere pentru fiecare site."
+msgstr ""
+"Dosarul din care Full Content citește regulile lui de extragere pentru "
+"fiecare site."
 
 #: includes/data_load/wpematicohk_array_hooks.php:778
-msgid "Returns the whole article for an address. Answer it to replace the way Full Content downloads the page."
-msgstr "Returnează tot articolul pentru o adresă. Răspunde-i pentru a înlocui felul în care Full Content descarcă pagina."
+msgid ""
+"Returns the whole article for an address. Answer it to replace the way Full "
+"Content downloads the page."
+msgstr ""
+"Returnează tot articolul pentru o adresă. Răspunde-i pentru a înlocui felul "
+"în care Full Content descarcă pagina."
 
 #: includes/data_load/wpematicohk_array_hooks.php:787
 msgid "The whole article HTML that Full Content read from the source page."
-msgstr "Tot HTML-ul articolului pe care Full Content l-a citit din pagina sursă."
+msgstr ""
+"Tot HTML-ul articolului pe care Full Content l-a citit din pagina sursă."
 
 #: includes/data_load/wpematicohk_array_hooks.php:796
 msgid "Fires once Full Content has the whole article of the item."
@@ -364,11 +488,14 @@ msgstr "Se declanșează imediat ce Full Content are tot articolul elementului."
 
 #: includes/data_load/wpematicohk_array_hooks.php:81
 msgid "Return true to skip this item, before anything else is done with it."
-msgstr "Returnează true pentru a sări peste acest element, înainte de a face orice altceva cu el."
+msgstr ""
+"Returnează true pentru a sări peste acest element, înainte de a face orice "
+"altceva cu el."
 
 #: includes/data_load/wpematicohk_array_hooks.php:810
 msgid "Whether the given translation service is configured and may be used."
-msgstr "Dacă serviciul de traducere indicat este configurat și poate fi folosit."
+msgstr ""
+"Dacă serviciul de traducere indicat este configurat și poate fi folosit."
 
 #: includes/data_load/wpematicohk_array_hooks.php:819
 msgid "The translation services offered on the campaign, as label to id."
@@ -379,12 +506,20 @@ msgid "The languages offered for translation."
 msgstr "Limbile oferite pentru traducere."
 
 #: includes/data_load/wpematicohk_array_hooks.php:837
-msgid "Which clean-up runs on the content before it is translated. The name answers the polyglot process filter for that type."
-msgstr "Ce curățare se face conținutului înainte de a fi tradus. Numele răspunde filtrului polyglot process al acelui tip."
+msgid ""
+"Which clean-up runs on the content before it is translated. The name answers "
+"the polyglot process filter for that type."
+msgstr ""
+"Ce curățare se face conținutului înainte de a fi tradus. Numele răspunde "
+"filtrului polyglot process al acelui tip."
 
 #: includes/data_load/wpematicohk_array_hooks.php:846
-msgid "Cleans the post arguments before they are translated. This is what polyglot process type selects, strip_tags by default."
-msgstr "Curăță argumentele articolului înainte de a fi traduse. Asta selectează polyglot process type, implicit strip_tags."
+msgid ""
+"Cleans the post arguments before they are translated. This is what polyglot "
+"process type selects, strip_tags by default."
+msgstr ""
+"Curăță argumentele articolului înainte de a fi traduse. Asta selectează "
+"polyglot process type, implicit strip_tags."
 
 #: includes/data_load/wpematicohk_array_hooks.php:860
 msgid "The Better Excerpts options, normalised with their defaults."
@@ -392,11 +527,17 @@ msgstr "Opțiunile Better Excerpts, normalizate cu valorile lor implicite."
 
 #: includes/data_load/wpematicohk_array_hooks.php:869
 msgid "Fires at the end of the Better Excerpts fields, to add your own."
-msgstr "Se declanșează la finalul câmpurilor Better Excerpts, ca să adaugi pe ale tale."
+msgstr ""
+"Se declanșează la finalul câmpurilor Better Excerpts, ca să adaugi pe ale "
+"tale."
 
 #: includes/data_load/wpematicohk_array_hooks.php:90
-msgid "The main content parser, and where most add-ons change the title, content and excerpt of an item."
-msgstr "Analizorul principal de conținut și locul unde majoritatea extensiilor schimbă titlul, conținutul și rezumatul unui element."
+msgid ""
+"The main content parser, and where most add-ons change the title, content "
+"and excerpt of an item."
+msgstr ""
+"Analizorul principal de conținut și locul unde majoritatea extensiilor "
+"schimbă titlul, conținutul și rezumatul unui element."
 
 #: includes/plugin_functions.php:49
 msgid "WPeMatico Custom Hooks DEACTIVATED."
@@ -410,13 +551,23 @@ msgstr "Mergi la pagina de setări WPeMatico Custom Hooks"
 msgid "Settings"
 msgstr "Setări"
 
-#: includes/settings/wpematicohk_settings_2_9.php:43 includes/settings/wpematicohk_widgets.php:69
+#: includes/settings/wpematicohk_settings_2_9.php:43
+#: includes/settings/wpematicohk_widgets.php:69
 msgid "Custom Hooks"
 msgstr "Custom Hooks"
 
 #: includes/settings/wpematicohk_settings_2_9.php:48
-msgid "Runs your own PHP on any of the hooks WPeMatico fires while a campaign works — to change a title, filter an item, add a custom field. What you write is checked before it is saved, so a mistake is reported instead of taking the site down."
-msgstr "Rulează propriul tău PHP pe oricare dintre hook-urile pe care WPeMatico le declanșează în timp ce lucrează o campanie — ca să schimbi un titlu, să filtrezi un element, să adaugi un câmp personalizat. Ce scrii este verificat înainte de a fi salvat, așa că o greșeală este raportată în loc să pună site-ul jos."
+msgid ""
+"Runs your own PHP on any of the hooks WPeMatico fires while a campaign works "
+"— to change a title, filter an item, add a custom field. What you write is "
+"checked before it is saved, so a mistake is reported instead of taking the "
+"site down."
+msgstr ""
+"Rulează propriul tău PHP pe oricare dintre hook-urile pe care WPeMatico le "
+"declanșează în timp ce lucrează o campanie — ca să schimbi un titlu, să "
+"filtrezi un element, să adaugi un câmp personalizat. Ce scrii este verificat "
+"înainte de a fi salvat, așa că o greșeală este raportată în loc să pună site-"
+"ul jos."
 
 #: includes/settings/wpematicohk_settings_2_9.php:49
 msgid "Details in the Help tab, top right."
@@ -432,8 +583,13 @@ msgid "Needs WPeMatico %s or newer."
 msgstr "Necesită WPeMatico %s sau mai nou."
 
 #: includes/settings/wpematicohk_widgets.php:75
-msgid "Write PHP for any of the hooks WPeMatico fires, straight from here. The code is checked before it is saved, so a typo cannot take the site down."
-msgstr "Scrie PHP pentru oricare dintre hook-urile pe care le declanșează WPeMatico, direct de aici. Codul este verificat înainte de a fi salvat, așa că o greșeală de tipar nu poate pune site-ul jos."
+msgid ""
+"Write PHP for any of the hooks WPeMatico fires, straight from here. The code "
+"is checked before it is saved, so a typo cannot take the site down."
+msgstr ""
+"Scrie PHP pentru oricare dintre hook-urile pe care le declanșează WPeMatico, "
+"direct de aici. Codul este verificat înainte de a fi salvat, așa că o "
+"greșeală de tipar nu poate pune site-ul jos."
 
 #: includes/settings/wpematicohk_widgets.php:81
 msgid "Plugin page on WordPress.org"
@@ -449,13 +605,23 @@ msgstr "Scrie o recenzie de 5 stele"
 
 #. translators: 1: hook name, 2: comma separated function names
 #: includes/wpematicohk_execute_action_filter.php:211
-msgid "WPeMatico Custom Hooks skipped the code for %1$s: the function %2$s is already declared somewhere else. Rename it, or remove it from one of the two hooks."
-msgstr "WPeMatico Custom Hooks a sărit peste codul pentru %1$s: funcția %2$s este deja declarată în altă parte. Redenumește-o sau scoate-o din unul dintre cele două hook-uri."
+msgid ""
+"WPeMatico Custom Hooks skipped the code for %1$s: the function %2$s is "
+"already declared somewhere else. Rename it, or remove it from one of the two "
+"hooks."
+msgstr ""
+"WPeMatico Custom Hooks a sărit peste codul pentru %1$s: funcția %2$s este "
+"deja declarată în altă parte. Redenumește-o sau scoate-o din unul dintre "
+"cele două hook-uri."
 
 #. translators: 1: function name, 2: hook name
 #: includes/wpematicohk_execute_action_filter.php:220
-msgid "WPeMatico Custom Hooks could not attach %1$s to %2$s: the code saved for that hook does not declare it."
-msgstr "WPeMatico Custom Hooks nu a putut atașa %1$s la %2$s: codul salvat pentru acel hook nu o declară."
+msgid ""
+"WPeMatico Custom Hooks could not attach %1$s to %2$s: the code saved for "
+"that hook does not declare it."
+msgstr ""
+"WPeMatico Custom Hooks nu a putut atașa %1$s la %2$s: codul salvat pentru "
+"acel hook nu o declară."
 
 #. translators: 1: hook name, 2: PHP error message
 #: includes/wpematicohk_execute_action_filter.php:229
@@ -482,7 +648,8 @@ msgstr "Verificarea sintaxei nu a putut fi dusă la capăt. Încearcă din nou."
 msgid "In hook:"
 msgstr "În hook:"
 
-#: includes/wpematicohk_settings.php:181 includes/wpematicohk_settings.php:516 includes/wpematicohk_sintax.php:44
+#: includes/wpematicohk_settings.php:181 includes/wpematicohk_settings.php:516
+#: includes/wpematicohk_sintax.php:44
 msgid "Security check."
 msgstr "Verificare de securitate."
 
@@ -495,16 +662,32 @@ msgid "What this does"
 msgstr "Ce face asta"
 
 #: includes/wpematicohk_settings.php:217
-msgid "WPeMatico announces every step of its work through hooks: it is about to read an item, it has built a title, it is ready to insert a post. This plugin lets you write PHP that runs at those moments, without a child theme and without an FTP client."
-msgstr "WPeMatico anunță fiecare pas al muncii lui prin hook-uri: e pe punctul de a citi un element, a construit un titlu, e gata să insereze un articol. Acest plugin îți permite să scrii PHP care rulează în acele momente, fără temă copil și fără client FTP."
+msgid ""
+"WPeMatico announces every step of its work through hooks: it is about to "
+"read an item, it has built a title, it is ready to insert a post. This "
+"plugin lets you write PHP that runs at those moments, without a child theme "
+"and without an FTP client."
+msgstr ""
+"WPeMatico anunță fiecare pas al muncii lui prin hook-uri: e pe punctul de a "
+"citi un element, a construit un titlu, e gata să insereze un articol. Acest "
+"plugin îți permite să scrii PHP care rulează în acele momente, fără temă "
+"copil și fără client FTP."
 
 #: includes/wpematicohk_settings.php:218
-msgid "Pick a hook, press <strong>Add Function</strong>, and an editor opens with the function signature already written. Fill in the body and save."
-msgstr "Alege un hook, apasă <strong>Adaugă funcție</strong> și se deschide un editor cu semnătura funcției deja scrisă. Completează corpul și salvează."
+msgid ""
+"Pick a hook, press <strong>Add Function</strong>, and an editor opens with "
+"the function signature already written. Fill in the body and save."
+msgstr ""
+"Alege un hook, apasă <strong>Adaugă funcție</strong> și se deschide un "
+"editor cu semnătura funcției deja scrisă. Completează corpul și salvează."
 
 #: includes/wpematicohk_settings.php:219
-msgid "Only users who may edit plugins or themes can reach this screen: the code written here runs with the rights of the site itself."
-msgstr "Doar utilizatorii care pot edita pluginuri sau teme ajung la acest ecran: codul scris aici rulează cu drepturile site-ului însuși."
+msgid ""
+"Only users who may edit plugins or themes can reach this screen: the code "
+"written here runs with the rights of the site itself."
+msgstr ""
+"Doar utilizatorii care pot edita pluginuri sau teme ajung la acest ecran: "
+"codul scris aici rulează cu drepturile site-ului însuși."
 
 #: includes/wpematicohk_settings.php:224
 msgid "Writing the code"
@@ -515,40 +698,70 @@ msgid "What goes in the editor"
 msgstr "Ce se pune în editor"
 
 #: includes/wpematicohk_settings.php:227
-msgid "The function body, and the function itself &mdash; the signature the editor writes for you already carries the parameters that hook receives, in the right order. Do not rename it: that name is what gets attached to the hook."
-msgstr "Corpul funcției și funcția însăși &mdash; semnătura pe care editorul o scrie pentru tine are deja parametrii pe care îi primește acel hook, în ordinea corectă. Nu o redenumi: acel nume este cel atașat hook-ului."
+msgid ""
+"The function body, and the function itself &mdash; the signature the editor "
+"writes for you already carries the parameters that hook receives, in the "
+"right order. Do not rename it: that name is what gets attached to the hook."
+msgstr ""
+"Corpul funcției și funcția însăși &mdash; semnătura pe care editorul o scrie "
+"pentru tine are deja parametrii pe care îi primește acel hook, în ordinea "
+"corectă. Nu o redenumi: acel nume este cel atașat hook-ului."
 
 #: includes/wpematicohk_settings.php:228
 msgid "Filters must return something"
 msgstr "Filtrele trebuie să returneze ceva"
 
 #: includes/wpematicohk_settings.php:229
-msgid "a filter is asked for a value and whatever it answers replaces the original. A filter that returns nothing empties the thing it was filtering. Actions return nothing and are just told that something happened."
-msgstr "un filtru este întrebat de o valoare, iar ce răspunde înlocuiește originalul. Un filtru care nu returnează nimic golește chiar lucrul pe care îl filtra. Acțiunile nu returnează nimic: lor doar li se spune că s-a întâmplat ceva."
+msgid ""
+"a filter is asked for a value and whatever it answers replaces the original. "
+"A filter that returns nothing empties the thing it was filtering. Actions "
+"return nothing and are just told that something happened."
+msgstr ""
+"un filtru este întrebat de o valoare, iar ce răspunde înlocuiește "
+"originalul. Un filtru care nu returnează nimic golește chiar lucrul pe care "
+"îl filtra. Acțiunile nu returnează nimic: lor doar li se spune că s-a "
+"întâmplat ceva."
 
 #: includes/wpematicohk_settings.php:230
 msgid "The badge next to each hook says which it is"
 msgstr "Insigna de lângă fiecare hook spune care este"
 
 #: includes/wpematicohk_settings.php:231
-msgid "<em>filter</em> or <em>action</em>, so you can tell at a glance whether a return is expected."
-msgstr "<em>filter</em> sau <em>action</em>, ca să vezi dintr-o privire dacă se așteaptă un return."
+msgid ""
+"<em>filter</em> or <em>action</em>, so you can tell at a glance whether a "
+"return is expected."
+msgstr ""
+"<em>filter</em> sau <em>action</em>, ca să vezi dintr-o privire dacă se "
+"așteaptă un return."
 
 #: includes/wpematicohk_settings.php:232
 msgid "The code is checked before it is saved"
 msgstr "Codul este verificat înainte de a fi salvat"
 
 #: includes/wpematicohk_settings.php:233
-msgid "a syntax error is reported with its line and reason and nothing is stored, so a typo cannot leave the site unable to load. The check runs in place and needs no connection back to your own server, which is what makes it work on managed and firewalled hosting."
-msgstr "o eroare de sintaxă este raportată cu linia și motivul ei și nu se salvează nimic, așa că o greșeală de tipar nu poate lăsa site-ul fără să se încarce. Verificarea rulează pe loc și nu are nevoie de nicio conexiune înapoi către serverul tău, ceea ce o face să funcționeze pe gazde administrate și în spatele unui firewall."
+msgid ""
+"a syntax error is reported with its line and reason and nothing is stored, "
+"so a typo cannot leave the site unable to load. The check runs in place and "
+"needs no connection back to your own server, which is what makes it work on "
+"managed and firewalled hosting."
+msgstr ""
+"o eroare de sintaxă este raportată cu linia și motivul ei și nu se salvează "
+"nimic, așa că o greșeală de tipar nu poate lăsa site-ul fără să se încarce. "
+"Verificarea rulează pe loc și nu are nevoie de nicio conexiune înapoi către "
+"serverul tău, ceea ce o face să funcționeze pe gazde administrate și în "
+"spatele unui firewall."
 
 #: includes/wpematicohk_settings.php:234
 msgid "One function per hook"
 msgstr "O funcție pe hook"
 
 #: includes/wpematicohk_settings.php:235
-msgid "each entry declares its own function, so two entries must not declare functions of the same name. PHP cannot recover from that."
-msgstr "fiecare intrare declară propria funcție, deci două intrări nu trebuie să declare funcții cu același nume. PHP nu se poate reface din asta."
+msgid ""
+"each entry declares its own function, so two entries must not declare "
+"functions of the same name. PHP cannot recover from that."
+msgstr ""
+"fiecare intrare declară propria funcție, deci două intrări nu trebuie să "
+"declare funcții cu același nume. PHP nu se poate reface din asta."
 
 #: includes/wpematicohk_settings.php:240
 msgid "The editor"
@@ -559,32 +772,50 @@ msgid "Working in the editor"
 msgstr "Lucrul în editor"
 
 #: includes/wpematicohk_settings.php:243
-msgid "It is the same code editor WordPress uses for its own file editors, with PHP highlighting, bracket matching and line numbers."
-msgstr "Este același editor de cod pe care WordPress îl folosește în propriile editoare de fișiere, cu evidențierea PHP, potrivirea parantezelor și numerotarea liniilor."
+msgid ""
+"It is the same code editor WordPress uses for its own file editors, with PHP "
+"highlighting, bracket matching and line numbers."
+msgstr ""
+"Este același editor de cod pe care WordPress îl folosește în propriile "
+"editoare de fișiere, cu evidențierea PHP, potrivirea parantezelor și "
+"numerotarea liniilor."
 
 #: includes/wpematicohk_settings.php:244
 msgid "Colour scheme"
 msgstr "Schemă de culori"
 
 #: includes/wpematicohk_settings.php:245
-msgid "Monokai, Blackboard or Cobalt. It changes nothing but how the editor looks, and it is remembered for you alone."
-msgstr "Monokai, Blackboard sau Cobalt. Nu schimbă nimic în afară de cum arată editorul și este ținut minte doar pentru tine."
+msgid ""
+"Monokai, Blackboard or Cobalt. It changes nothing but how the editor looks, "
+"and it is remembered for you alone."
+msgstr ""
+"Monokai, Blackboard sau Cobalt. Nu schimbă nimic în afară de cum arată "
+"editorul și este ținut minte doar pentru tine."
 
 #: includes/wpematicohk_settings.php:246
 msgid "The hook filter above the list"
 msgstr "Filtrul de hook-uri de deasupra listei"
 
 #: includes/wpematicohk_settings.php:247
-msgid "narrows the long list to one hook while you work, so you are not scrolling past the ones you are not using. It does not delete or disable anything."
-msgstr "restrânge lista lungă la un singur hook în timp ce lucrezi, ca să nu derulezi pe lângă cele pe care nu le folosești. Nu șterge și nu dezactivează nimic."
+msgid ""
+"narrows the long list to one hook while you work, so you are not scrolling "
+"past the ones you are not using. It does not delete or disable anything."
+msgstr ""
+"restrânge lista lungă la un singur hook în timp ce lucrezi, ca să nu "
+"derulezi pe lângă cele pe care nu le folosești. Nu șterge și nu dezactivează "
+"nimic."
 
 #: includes/wpematicohk_settings.php:248
 msgid "Saving"
 msgstr "Salvarea"
 
 #: includes/wpematicohk_settings.php:249
-msgid "either button on this screen saves the whole tab, and both run the check first."
-msgstr "oricare dintre butoanele de pe acest ecran salvează toată fila, iar amândouă rulează mai întâi verificarea."
+msgid ""
+"either button on this screen saves the whole tab, and both run the check "
+"first."
+msgstr ""
+"oricare dintre butoanele de pe acest ecran salvează toată fila, iar amândouă "
+"rulează mai întâi verificarea."
 
 #: includes/wpematicohk_settings.php:270
 msgid "Hooks"
@@ -595,8 +826,14 @@ msgid "Add a hook"
 msgstr "Adaugă un hook"
 
 #: includes/wpematicohk_settings.php:323
-msgid "Pick the hook you want to run code on and press Add Function: an editor opens below with the signature already written for you. The theme only changes how that editor looks."
-msgstr "Alege hook-ul pe care vrei să rulezi cod și apasă Adaugă funcție: mai jos se deschide un editor cu semnătura deja scrisă pentru tine. Tema schimbă doar cum arată acel editor."
+msgid ""
+"Pick the hook you want to run code on and press Add Function: an editor "
+"opens below with the signature already written for you. The theme only "
+"changes how that editor looks."
+msgstr ""
+"Alege hook-ul pe care vrei să rulezi cod și apasă Adaugă funcție: mai jos se "
+"deschide un editor cu semnătura deja scrisă pentru tine. Tema schimbă doar "
+"cum arată acel editor."
 
 #: includes/wpematicohk_settings.php:325
 msgid "Select theme for the editor"
@@ -630,7 +867,8 @@ msgstr "Adaugă funcție"
 msgid "Save Data"
 msgstr "Salvează datele"
 
-#: includes/wpematicohk_settings.php:376 includes/wpematicohk_settings.php:407 includes/settings/wpematicohk_settings_2_9.php:37
+#: includes/wpematicohk_settings.php:376 includes/wpematicohk_settings.php:407
+#: includes/settings/wpematicohk_settings_2_9.php:37
 msgid "Click to toggle"
 msgstr "Apasă pentru a desfășura"
 
@@ -647,8 +885,11 @@ msgid "Thanks for test, use and enjoy this plugin."
 msgstr "Mulțumim că testezi, folosești și te bucuri de acest plugin."
 
 #: includes/wpematicohk_settings.php:386
-msgid "If you like it and want to thank, you can write a 5 star review on Wordpress."
-msgstr "Dacă îți place și vrei să ne mulțumești, poți scrie o recenzie de 5 stele pe WordPress."
+msgid ""
+"If you like it and want to thank, you can write a 5 star review on Wordpress."
+msgstr ""
+"Dacă îți place și vrei să ne mulțumești, poți scrie o recenzie de 5 stele pe "
+"WordPress."
 
 #: includes/wpematicohk_settings.php:390
 msgid "Click here to rate the plugin on Wordpress"
@@ -679,8 +920,12 @@ msgid "No hook is running code yet."
 msgstr "Încă niciun hook nu rulează cod."
 
 #: includes/wpematicohk_settings.php:456
-msgid "Pick a hook in the box above and press Add Function. Its editor opens here, with the function signature already written for you."
-msgstr "Alege un hook în caseta de mai sus și apasă Adaugă funcție. Editorul lui se deschide aici, cu semnătura funcției deja scrisă pentru tine."
+msgid ""
+"Pick a hook in the box above and press Add Function. Its editor opens here, "
+"with the function signature already written for you."
+msgstr ""
+"Alege un hook în caseta de mai sus și apasă Adaugă funcție. Editorul lui se "
+"deschide aici, cu semnătura funcției deja scrisă pentru tine."
 
 #: includes/wpematicohk_settings.php:465
 msgid "in use"
@@ -698,28 +943,37 @@ msgstr "Codul nu a putut fi verificat: %s"
 
 #. translators: %s: parameter name
 #: includes/wpematicohk_sintax.php:74
-msgid "The parameter %s is named twice in the same function. PHP refuses to compile that, and the error cannot be caught, so it would take the whole site down."
-msgstr "Parametrul %s este numit de două ori în aceeași funcție. PHP refuză să compileze asta, iar eroarea nu poate fi prinsă, deci ar pune tot site-ul jos."
+msgid ""
+"The parameter %s is named twice in the same function. PHP refuses to compile "
+"that, and the error cannot be caught, so it would take the whole site down."
+msgstr ""
+"Parametrul %s este numit de două ori în aceeași funcție. PHP refuză să "
+"compileze asta, iar eroarea nu poate fi prinsă, deci ar pune tot site-ul jos."
 
 #. translators: 1: function name, 2: the other hook's name
 #: includes/wpematicohk_sintax.php:86
-msgid "The function %1$s is already declared in the code for %2$s. Two hooks cannot declare the same function name — rename one of them."
-msgstr "Funcția %1$s este deja declarată în codul pentru %2$s. Două hook-uri nu pot declara același nume de funcție — redenumește unul dintre ele."
+msgid ""
+"The function %1$s is already declared in the code for %2$s. Two hooks cannot "
+"declare the same function name — rename one of them."
+msgstr ""
+"Funcția %1$s este deja declarată în codul pentru %2$s. Două hook-uri nu pot "
+"declara același nume de funcție — redenumește unul dintre ele."
 
 #. translators: %s: function name
 #: includes/wpematicohk_sintax.php:98
-msgid "The function %s already exists in WordPress or in another plugin. Declaring it again would be a fatal error — pick a different name."
-msgstr "Funcția %s există deja în WordPress sau în alt plugin. Declararea ei din nou ar fi o eroare fatală — alege alt nume."
-
-#: wpematico_custom-hooks.php:180
-msgid "Plugin Name Settings"
-msgstr "Setări pentru Plugin Name"
-
-#: wpematico_custom-hooks.php:181
-msgid "Configure Plugin Name Settings"
-msgstr "Configurează setările pentru Plugin Name"
+msgid ""
+"The function %s already exists in WordPress or in another plugin. Declaring "
+"it again would be a fatal error — pick a different name."
+msgstr ""
+"Funcția %s există deja în WordPress sau în alt plugin. Declararea ei din nou "
+"ar fi o eroare fatală — alege alt nume."
 
 #. translators: 1: required WPeMatico version, 2: installed WPeMatico version
-#: wpematico_custom-hooks.php:238
-msgid "WPeMatico Custom Hooks needs WPeMatico %1$s or newer to run. You have %2$s installed, so the Hooks screen is disabled until you update."
-msgstr "WPeMatico Custom Hooks are nevoie de WPeMatico %1$s sau mai nou pentru a rula. Ai instalat %2$s, deci ecranul Hooks rămâne dezactivat până actualizezi."
+#: wpematico_custom-hooks.php:217
+msgid ""
+"WPeMatico Custom Hooks needs WPeMatico %1$s or newer to run. You have %2$s "
+"installed, so the Hooks screen is disabled until you update."
+msgstr ""
+"WPeMatico Custom Hooks are nevoie de WPeMatico %1$s sau mai nou pentru a "
+"rula. Ai instalat %2$s, deci ecranul Hooks rămâne dezactivat până "
+"actualizezi."
