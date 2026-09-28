@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPeMatico Custom Hooks 1.4\n"
 "Report-Msgid-Bugs-To: https://etruel.com/my-account/support/\n"
-"POT-Creation-Date: 2026-09-28 01:34+0000\n"
+"POT-Creation-Date: 2026-09-28 01:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Etruel Developments <translations@etruel.com>\n"
@@ -411,6 +411,22 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
+#: includes/plugin_functions.php:93
+msgid "etruel Store"
+msgstr ""
+
+#: includes/plugin_functions.php:94 includes/settings/wpematicohk_widgets.php:87
+msgid "Support"
+msgstr ""
+
+#: includes/plugin_functions.php:95 includes/wpematicohk_settings.php:390
+msgid "Click here to rate the plugin on WordPress.org"
+msgstr ""
+
+#: includes/plugin_functions.php:95
+msgid "Rate Plugin"
+msgstr ""
+
 #: includes/settings/wpematicohk_settings_2_9.php:43 includes/settings/wpematicohk_widgets.php:69
 msgid "Custom Hooks"
 msgstr ""
@@ -438,10 +454,6 @@ msgstr ""
 
 #: includes/settings/wpematicohk_widgets.php:81
 msgid "Plugin page on WordPress.org"
-msgstr ""
-
-#: includes/settings/wpematicohk_widgets.php:87
-msgid "Support"
 msgstr ""
 
 #: includes/settings/wpematicohk_widgets.php:93
@@ -644,15 +656,11 @@ msgid "Go to the plugin page on WordPress.org"
 msgstr ""
 
 #: includes/wpematicohk_settings.php:385
-msgid "Thanks for test, use and enjoy this plugin."
+msgid "Thanks for testing, using and enjoying this plugin."
 msgstr ""
 
 #: includes/wpematicohk_settings.php:386
-msgid "If you like it and want to thank, you can write a 5 star review on Wordpress."
-msgstr ""
-
-#: includes/wpematicohk_settings.php:390
-msgid "Click here to rate the plugin on Wordpress"
+msgid "If you like it and want to say thanks, you can write a 5 star review on WordPress.org."
 msgstr ""
 
 #: includes/wpematicohk_settings.php:390
@@ -664,7 +672,7 @@ msgid "Enjoy it"
 msgstr ""
 
 #: includes/wpematicohk_settings.php:412
-msgid "If you enjoy it please donate few dollars"
+msgid "If you enjoy it, please donate a few dollars"
 msgstr ""
 
 #: includes/wpematicohk_settings.php:413
