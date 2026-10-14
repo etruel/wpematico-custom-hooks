@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the WPeMatico Custom Hooks plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPeMatico Custom Hooks 1.4\n"
+"Project-Id-Version: WPeMatico Custom Hooks 1.5\n"
 "Report-Msgid-Bugs-To: https://etruel.com/my-account/support/\n"
-"POT-Creation-Date: 2026-09-28 01:47+0000\n"
+"POT-Creation-Date: 2026-10-14 19:54+0000\n"
 "PO-Revision-Date: 2026-09-27 00:00+0000\n"
 "Last-Translator: Etruel Developments <translations@etruel.com>\n"
 "Language-Team: Etruel Developments <translations@etruel.com>\n"
@@ -322,81 +322,93 @@ msgstr "按普通订阅源抓取的采集任务类型。列在这里的类型走
 msgid "The Processed Posts line of the run result. A campaign that imports nothing by design can report a count that means something."
 msgstr "运行结果中\"已处理文章\"那一行。按设计本就不导入任何东西的采集任务，可以借此报告一个有意义的数目。"
 
-#: includes/data_load/wpematicohk_array_hooks.php:710
-msgid "The Vimeo player embed built for the item."
-msgstr "为该条目构建的 Vimeo 内嵌播放器。"
+#: includes/data_load/wpematicohk_array_hooks.php:708
+msgid "Address the post is read from and links to. Applied once per item about to be published; duplicates are still detected by the feed's own link."
+msgstr "读取文章的地址，也是文章链接到的地址。每个即将发布的条目只应用一次；重复内容仍按订阅源自身的链接检测。"
 
-#: includes/data_load/wpematicohk_array_hooks.php:719
-msgid "Thumbnail address of the Vimeo video, before it is downloaded."
-msgstr "Vimeo 视频缩略图的地址，下载之前。"
+#: includes/data_load/wpematicohk_array_hooks.php:717
+msgid "Tags and attributes an imported post keeps from the feed, in wp_kses() format."
+msgstr "导入的文章从订阅源保留的标签和属性，采用 wp_kses() 格式。"
 
 #: includes/data_load/wpematicohk_array_hooks.php:72
 msgid "The raw content as the feed served it, before any parser touches it."
 msgstr "订阅源提供的原始内容，尚未经过任何解析器。"
 
-#: includes/data_load/wpematicohk_array_hooks.php:735
+#: includes/data_load/wpematicohk_array_hooks.php:726
+msgid "Social network scripts an imported post may load, as regular expressions over host and path."
+msgstr "导入的文章可以加载的社交网络脚本，以主机和路径上的正则表达式表示。"
+
+#: includes/data_load/wpematicohk_array_hooks.php:741
+msgid "The Vimeo player embed built for the item."
+msgstr "为该条目构建的 Vimeo 内嵌播放器。"
+
+#: includes/data_load/wpematicohk_array_hooks.php:750
+msgid "Thumbnail address of the Vimeo video, before it is downloaded."
+msgstr "Vimeo 视频缩略图的地址，下载之前。"
+
+#: includes/data_load/wpematicohk_array_hooks.php:766
 msgid "The author name read from the feed, before the user is looked up or created."
 msgstr "从订阅源读到的作者名，在查找或创建用户之前。"
 
-#: includes/data_load/wpematicohk_array_hooks.php:743
+#: includes/data_load/wpematicohk_array_hooks.php:774
 msgid "The XML namespace the item date is read from."
 msgstr "读取条目日期所用的 XML 命名空间。"
 
-#: includes/data_load/wpematicohk_array_hooks.php:760
+#: includes/data_load/wpematicohk_array_hooks.php:791
 msgid "The sites Full Content recognises as video pages."
 msgstr "Full Content 视为视频页面的站点。"
 
-#: includes/data_load/wpematicohk_array_hooks.php:769
+#: includes/data_load/wpematicohk_array_hooks.php:800
 msgid "Folder Full Content reads its per site extraction rules from."
 msgstr "Full Content 读取各站点抽取规则的文件夹。"
 
-#: includes/data_load/wpematicohk_array_hooks.php:778
+#: includes/data_load/wpematicohk_array_hooks.php:809
 msgid "Returns the whole article for an address. Answer it to replace the way Full Content downloads the page."
 msgstr "返回某个地址的整篇文章。响应它即可替换 Full Content 下载页面的方式。"
-
-#: includes/data_load/wpematicohk_array_hooks.php:787
-msgid "The whole article HTML that Full Content read from the source page."
-msgstr "Full Content 从来源页面读到的整篇文章 HTML。"
-
-#: includes/data_load/wpematicohk_array_hooks.php:796
-msgid "Fires once Full Content has the whole article of the item."
-msgstr "Full Content 拿到该条目的整篇文章后触发。"
 
 #: includes/data_load/wpematicohk_array_hooks.php:81
 msgid "Return true to skip this item, before anything else is done with it."
 msgstr "返回 true 可跳过该条目，在对它做任何其他处理之前。"
 
-#: includes/data_load/wpematicohk_array_hooks.php:810
+#: includes/data_load/wpematicohk_array_hooks.php:818
+msgid "The whole article HTML that Full Content read from the source page."
+msgstr "Full Content 从来源页面读到的整篇文章 HTML。"
+
+#: includes/data_load/wpematicohk_array_hooks.php:827
+msgid "Fires once Full Content has the whole article of the item."
+msgstr "Full Content 拿到该条目的整篇文章后触发。"
+
+#: includes/data_load/wpematicohk_array_hooks.php:841
 msgid "Whether the given translation service is configured and may be used."
 msgstr "指定的翻译服务是否已配置并且可用。"
 
-#: includes/data_load/wpematicohk_array_hooks.php:819
+#: includes/data_load/wpematicohk_array_hooks.php:850
 msgid "The translation services offered on the campaign, as label to id."
 msgstr "采集任务上提供的翻译服务，以标签对应 id。"
 
-#: includes/data_load/wpematicohk_array_hooks.php:828
+#: includes/data_load/wpematicohk_array_hooks.php:859
 msgid "The languages offered for translation."
 msgstr "可供翻译的语言。"
 
-#: includes/data_load/wpematicohk_array_hooks.php:837
+#: includes/data_load/wpematicohk_array_hooks.php:868
 msgid "Which clean-up runs on the content before it is translated. The name answers the polyglot process filter for that type."
 msgstr "翻译之前对内容做哪种清理。这个名称响应该类型的 polyglot process 过滤器。"
 
-#: includes/data_load/wpematicohk_array_hooks.php:846
+#: includes/data_load/wpematicohk_array_hooks.php:877
 msgid "Cleans the post arguments before they are translated. This is what polyglot process type selects, strip_tags by default."
 msgstr "在翻译之前清理文章参数。这正是 polyglot process type 所选择的，默认为 strip_tags。"
 
-#: includes/data_load/wpematicohk_array_hooks.php:860
+#: includes/data_load/wpematicohk_array_hooks.php:891
 msgid "The Better Excerpts options, normalised with their defaults."
 msgstr "Better Excerpts 的选项，已带默认值规范化。"
-
-#: includes/data_load/wpematicohk_array_hooks.php:869
-msgid "Fires at the end of the Better Excerpts fields, to add your own."
-msgstr "在 Better Excerpts 的字段末尾触发，用于添加你自己的字段。"
 
 #: includes/data_load/wpematicohk_array_hooks.php:90
 msgid "The main content parser, and where most add-ons change the title, content and excerpt of an item."
 msgstr "主要的内容解析器，也是多数扩展修改条目标题、内容和摘要的地方。"
+
+#: includes/data_load/wpematicohk_array_hooks.php:900
+msgid "Fires at the end of the Better Excerpts fields, to add your own."
+msgstr "在 Better Excerpts 的字段末尾触发，用于添加你自己的字段。"
 
 #: includes/plugin_functions.php:49
 msgid "WPeMatico Custom Hooks DEACTIVATED."

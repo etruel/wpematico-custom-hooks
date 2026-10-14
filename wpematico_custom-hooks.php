@@ -4,7 +4,7 @@
  * Requires Plugins: wpematico
  * Plugin URI:  https://etruel.com/downloads/wpematico-custom-hooks/
  * Description: WPeMatico Add-on starter point WPeMatico Custom Hooks plugin 
- * Version:     1.4
+ * Version:     1.5
  * Author:      etruel
  * Author URI:  https://www.netmdp.com
  * Text Domain: wpematico-custom-hooks
@@ -32,7 +32,7 @@ if (!defined('ABSPATH'))
 
 // Plugin version
 if (!defined('WPEMATICOHK_VER')) {
-	define('WPEMATICOHK_VER', '1.4');
+	define('WPEMATICOHK_VER', '1.5');
 }
 
 // Minimum required WPeMatico version

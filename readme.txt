@@ -5,7 +5,7 @@ Tags: autoblog, rss, feed, code, matic
 Requires at least: 4.1
 Requires PHP: 7.0
 Tested up to: 7.1
-Stable tag: 1.4
+Stable tag: 1.5
 License: GPLv2 or later.
 
 Customize how WPeMatico builds your posts. Write PHP for any of its hooks from the WordPress admin, with a real editor and instant validation.
@@ -68,6 +68,10 @@ No. The addon requires WPeMatico Free Version to be installed and activated.
 1. Settings page.  Fields to fill.
 
 == Changelog ==
+
+= 1.5 Oct 14, 2026 =
+
+* **Ready for WPeMatico 2.9.1.** Three new hooks join the list: the address each post is read from and links to, the HTML an imported post keeps from its feed, and the social network embeds it may load.
 
 = 1.4 Sep 30, 2026 =
 

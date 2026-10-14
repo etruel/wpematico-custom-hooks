@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the WPeMatico Custom Hooks plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPeMatico Custom Hooks 1.4\n"
+"Project-Id-Version: WPeMatico Custom Hooks 1.5\n"
 "Report-Msgid-Bugs-To: https://etruel.com/my-account/support/\n"
-"POT-Creation-Date: 2026-09-28 01:47+0000\n"
+"POT-Creation-Date: 2026-10-14 19:54+0000\n"
 "PO-Revision-Date: 2026-09-27 00:00+0000\n"
 "Last-Translator: Etruel Developments <translations@etruel.com>\n"
 "Language-Team: Etruel Developments <translations@etruel.com>\n"
@@ -322,81 +322,93 @@ msgstr "نوع‌های کمپین که به‌صورت خوراک ساده در
 msgid "The Processed Posts line of the run result. A campaign that imports nothing by design can report a count that means something."
 msgstr "سطر «نوشته‌های پردازش‌شده» در نتیجهٔ اجرا. کمپینی که به حکم طرحش چیزی درون‌ریزی نمی‌کند می‌تواند عددی گزارش کند که معنا داشته باشد."
 
-#: includes/data_load/wpematicohk_array_hooks.php:710
-msgid "The Vimeo player embed built for the item."
-msgstr "پخش‌کنندهٔ توکار Vimeo که برای آیتم ساخته شد."
+#: includes/data_load/wpematicohk_array_hooks.php:708
+msgid "Address the post is read from and links to. Applied once per item about to be published; duplicates are still detected by the feed's own link."
+msgstr "نشانی‌ای که نوشته از آن خوانده می‌شود و به آن پیوند می‌دهد. برای هر آیتمی که در آستانهٔ انتشار است یک بار اعمال می‌شود؛ تکراری‌ها همچنان با پیوند خود خوراک تشخیص داده می‌شوند."
 
-#: includes/data_load/wpematicohk_array_hooks.php:719
-msgid "Thumbnail address of the Vimeo video, before it is downloaded."
-msgstr "نشانی بندانگشتی ویدیوی Vimeo، پیش از بارگیری."
+#: includes/data_load/wpematicohk_array_hooks.php:717
+msgid "Tags and attributes an imported post keeps from the feed, in wp_kses() format."
+msgstr "برچسب‌ها و ویژگی‌هایی که یک نوشتهٔ درون‌ریزی‌شده از خوراک نگه می‌دارد، در قالب wp_kses()."
 
 #: includes/data_load/wpematicohk_array_hooks.php:72
 msgid "The raw content as the feed served it, before any parser touches it."
 msgstr "محتوای خام، همان‌گونه که خوراک آن را داد، پیش از آنکه هیچ پردازنده‌ای به آن دست بزند."
 
-#: includes/data_load/wpematicohk_array_hooks.php:735
+#: includes/data_load/wpematicohk_array_hooks.php:726
+msgid "Social network scripts an imported post may load, as regular expressions over host and path."
+msgstr "اسکریپت‌های شبکه‌های اجتماعی که یک نوشتهٔ درون‌ریزی‌شده می‌تواند بارگذاری کند، به صورت عبارت‌های باقاعده روی میزبان و مسیر."
+
+#: includes/data_load/wpematicohk_array_hooks.php:741
+msgid "The Vimeo player embed built for the item."
+msgstr "پخش‌کنندهٔ توکار Vimeo که برای آیتم ساخته شد."
+
+#: includes/data_load/wpematicohk_array_hooks.php:750
+msgid "Thumbnail address of the Vimeo video, before it is downloaded."
+msgstr "نشانی بندانگشتی ویدیوی Vimeo، پیش از بارگیری."
+
+#: includes/data_load/wpematicohk_array_hooks.php:766
 msgid "The author name read from the feed, before the user is looked up or created."
 msgstr "نام نویسنده که از خوراک خوانده شد، پیش از یافتن یا ساختن کاربر."
 
-#: includes/data_load/wpematicohk_array_hooks.php:743
+#: includes/data_load/wpematicohk_array_hooks.php:774
 msgid "The XML namespace the item date is read from."
 msgstr "فضای نام XML که تاریخ آیتم از آن خوانده می‌شود."
 
-#: includes/data_load/wpematicohk_array_hooks.php:760
+#: includes/data_load/wpematicohk_array_hooks.php:791
 msgid "The sites Full Content recognises as video pages."
 msgstr "سایت‌هایی که Full Content آن‌ها را صفحهٔ ویدیو می‌شناسد."
 
-#: includes/data_load/wpematicohk_array_hooks.php:769
+#: includes/data_load/wpematicohk_array_hooks.php:800
 msgid "Folder Full Content reads its per site extraction rules from."
 msgstr "پوشه‌ای که Full Content قواعد استخراج هر سایت را از آن می‌خواند."
 
-#: includes/data_load/wpematicohk_array_hooks.php:778
+#: includes/data_load/wpematicohk_array_hooks.php:809
 msgid "Returns the whole article for an address. Answer it to replace the way Full Content downloads the page."
 msgstr "تمام مقاله را برای یک نشانی برمی‌گرداند. به آن پاسخ دهید تا روش بارگیری صفحه در Full Content را جایگزین کنید."
-
-#: includes/data_load/wpematicohk_array_hooks.php:787
-msgid "The whole article HTML that Full Content read from the source page."
-msgstr "تمام HTML مقاله که Full Content از صفحهٔ مبدأ خواند."
-
-#: includes/data_load/wpematicohk_array_hooks.php:796
-msgid "Fires once Full Content has the whole article of the item."
-msgstr "به‌محض آنکه Full Content تمام مقالهٔ آیتم را داشت اجرا می‌شود."
 
 #: includes/data_load/wpematicohk_array_hooks.php:81
 msgid "Return true to skip this item, before anything else is done with it."
 msgstr "true برگردانید تا این آیتم رد شود، پیش از آنکه هر کار دیگری با آن انجام شود."
 
-#: includes/data_load/wpematicohk_array_hooks.php:810
+#: includes/data_load/wpematicohk_array_hooks.php:818
+msgid "The whole article HTML that Full Content read from the source page."
+msgstr "تمام HTML مقاله که Full Content از صفحهٔ مبدأ خواند."
+
+#: includes/data_load/wpematicohk_array_hooks.php:827
+msgid "Fires once Full Content has the whole article of the item."
+msgstr "به‌محض آنکه Full Content تمام مقالهٔ آیتم را داشت اجرا می‌شود."
+
+#: includes/data_load/wpematicohk_array_hooks.php:841
 msgid "Whether the given translation service is configured and may be used."
 msgstr "اینکه سرویس ترجمهٔ داده‌شده تنظیم شده است و می‌تواند به کار رود."
 
-#: includes/data_load/wpematicohk_array_hooks.php:819
+#: includes/data_load/wpematicohk_array_hooks.php:850
 msgid "The translation services offered on the campaign, as label to id."
 msgstr "سرویس‌های ترجمه‌ای که در کمپین عرضه می‌شوند، به شکل برچسب به شناسه."
 
-#: includes/data_load/wpematicohk_array_hooks.php:828
+#: includes/data_load/wpematicohk_array_hooks.php:859
 msgid "The languages offered for translation."
 msgstr "زبان‌هایی که برای ترجمه عرضه می‌شوند."
 
-#: includes/data_load/wpematicohk_array_hooks.php:837
+#: includes/data_load/wpematicohk_array_hooks.php:868
 msgid "Which clean-up runs on the content before it is translated. The name answers the polyglot process filter for that type."
 msgstr "چه پاک‌سازی‌ای پیش از ترجمه روی محتوا انجام می‌شود. نام، پالایهٔ polyglot process آن نوع را پاسخ می‌دهد."
 
-#: includes/data_load/wpematicohk_array_hooks.php:846
+#: includes/data_load/wpematicohk_array_hooks.php:877
 msgid "Cleans the post arguments before they are translated. This is what polyglot process type selects, strip_tags by default."
 msgstr "پارامترهای نوشته را پیش از ترجمه پاک می‌کند. این همان است که polyglot process type انتخاب می‌کند، به‌طور پیش‌فرض strip_tags."
 
-#: includes/data_load/wpematicohk_array_hooks.php:860
+#: includes/data_load/wpematicohk_array_hooks.php:891
 msgid "The Better Excerpts options, normalised with their defaults."
 msgstr "گزینه‌های Better Excerpts، هنجارشده با مقادیر پیش‌فرضشان."
-
-#: includes/data_load/wpematicohk_array_hooks.php:869
-msgid "Fires at the end of the Better Excerpts fields, to add your own."
-msgstr "در پایان فیلدهای Better Excerpts اجرا می‌شود، تا فیلدهای خودتان را بیفزایید."
 
 #: includes/data_load/wpematicohk_array_hooks.php:90
 msgid "The main content parser, and where most add-ons change the title, content and excerpt of an item."
 msgstr "پردازندهٔ اصلی محتوا، و جایی که بیشتر افزودنی‌ها عنوان، محتوا و خلاصهٔ یک آیتم را تغییر می‌دهند."
+
+#: includes/data_load/wpematicohk_array_hooks.php:900
+msgid "Fires at the end of the Better Excerpts fields, to add your own."
+msgstr "در پایان فیلدهای Better Excerpts اجرا می‌شود، تا فیلدهای خودتان را بیفزایید."
 
 #: includes/plugin_functions.php:49
 msgid "WPeMatico Custom Hooks DEACTIVATED."

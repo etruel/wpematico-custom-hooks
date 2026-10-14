@@ -697,6 +697,37 @@ if ( !defined('ABSPATH')) {
 		)	
 	);
 
+	// Added in WPeMatico 2.9.1.
+	array_push($wpematicohk_data_filter_action,
+		array( 
+			'name'=>'wpematico item permalink', 
+			'value'=>'wpematico_item_permalink', 
+			'parameters'=>4, 
+			'template_parameter'=>'$permalink, $item, $campaign, $feed', 
+			'type'=>'filter', 
+			'description' => __('Address the post is read from and links to. Applied once per item about to be published; duplicates are still detected by the feed\'s own link.', 'wpematico-custom-hooks'),
+			'group' => 'Permalink' 
+		),
+		array( 
+			'name'=>'wpematico feed allowed html', 
+			'value'=>'wpematico_feed_allowed_html', 
+			'parameters'=>1, 
+			'template_parameter'=>'$allowed', 
+			'type'=>'filter', 
+			'description' => __('Tags and attributes an imported post keeps from the feed, in wp_kses() format.', 'wpematico-custom-hooks'),
+			'group' => 'Content' 
+		),
+		array( 
+			'name'=>'wpematico feed embed scripts', 
+			'value'=>'wpematico_feed_embed_scripts', 
+			'parameters'=>1, 
+			'template_parameter'=>'$patterns', 
+			'type'=>'filter', 
+			'description' => __('Social network scripts an imported post may load, as regular expressions over host and path.', 'wpematico-custom-hooks'),
+			'group' => 'Content' 
+		)
+	);
+
 	//WPEMATICO VIMEO CAMPAIGN TYPE (core 2.9, only when the feature is enabled)
 	$wpematicohk_cfg = get_option('WPeMatico_Options');
 	if (is_array($wpematicohk_cfg) && !empty($wpematicohk_cfg['enable_vimeo'])) {
